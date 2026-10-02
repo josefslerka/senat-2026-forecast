@@ -1,0 +1,12 @@
+{
+  "id" : "20261009/jmsez/12.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":12},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Strakonice",
+  "platni" : [
+  [12,1,1,"Hrdinová Jana",50,"KDU-ČSL","KDU-ČSL","KDU-ČSL","výrobce lidových krojů","Čejetice",0,0,0,0,null,null,null,1,1],
+  [12,1722,2,"Fiala Tomáš MUDr. Bc. MBA",69,"NČ","NČ","NČ","ředitel nemocnice, senátor","Strakonice",0,0,0,0,null,null,null,1722,1722],
+  [12,1486,3,"Ušatý Miroslav Ing.",60,"Svob+SPD+Trikol","Svobodní","BEZPP","starosta Albrechtic nad Vltavou a ekonom","Albrechtice nad Vltavou",0,0,0,0,null,null,null,714,99]
+]
+}

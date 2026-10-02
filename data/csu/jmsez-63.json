@@ -1,0 +1,13 @@
+{
+  "id" : "20261009/jmsez/63.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":63},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Přerov",
+  "platni" : [
+  [63,2,1,"Obrtel Marek MUDr.",59,"ČSNS","ČSNS","ČSNS","lékař - záchranář","Rokytnice",0,0,0,0,null,null,null,2,2],
+  [63,768,2,"Vrána Petr Ing.",51,"ANO","ANO","ANO","primátor města Přerova","Přerov",0,0,0,0,null,null,null,768,768],
+  [63,1531,3,"Navařík Jakub Mgr. Ph.D.",40,"KDU+ODS+STA+TOP","ODS","ODS","vědec, podnikatel, uvolněný radní, sokol","Přerov",0,0,0,0,null,null,null,53,53],
+  [63,1114,4,"Chromec Dan",55,"SPD","SPD","SPD","radní Olomouckého kraje, zastupitel města Přerov","Přerov",0,0,0,0,null,null,null,1114,1114]
+]
+}

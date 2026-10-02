@@ -1,0 +1,11 @@
+{
+  "id" : "20261009/jmsez/48.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":48},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Rychnov nad Kněžnou",
+  "platni" : [
+  [48,768,1,"Sadovský Petr PhDr. MBA",57,"ANO","ANO","ANO","poslanec Parlamentu ČR","Dobruška",0,0,0,0,null,null,null,768,768],
+  [48,1857,2,"Grulich Jan Mgr.",51,"KDUODSSTPTOPLES","TOP 09","TOP 09","senátor, ředitel ZŠ a MŠ Trivium Plus v Dobřanech","Sedloňov",0,0,0,0,null,null,null,721,721]
+]
+}

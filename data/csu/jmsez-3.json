@@ -1,0 +1,15 @@
+{
+  "id" : "20261009/jmsez/3.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":3},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Cheb",
+  "platni" : [
+  [3,166,1,"Plevný Miroslav prof. Dr. Ing.",60,"STAN","STAN","BEZPP","senátor za Chebsko a Tachovsko, vysokoškolský profesor na Fakultě ekonomické ZČU","Cheb",0,0,0,0,null,null,null,166,99],
+  [3,1722,2,"Keblúšek Vladimír",46,"NČ","NČ","BEZPP","podnikatel, moderátor","Cheb",0,0,0,0,null,null,null,1722,99],
+  [3,47,3,"Hojda Pavel Ing.",73,"KSČM","KSČM","KSČM","vedoucí technický pracovník, nyní v důchodu","Cheb",0,0,0,0,null,null,null,47,47],
+  [3,768,4,"Tsoukernik Sandra Mgr.",41,"ANO","ANO","BEZPP","manažerka, filantropka","Chodová Planá",0,0,0,0,null,null,null,768,99],
+  [3,1118,5,"Černá Štěpánka Mgr. MBA",48,"VOK","VOK","VOK","ředitelka školy","Cheb",0,0,0,0,null,null,null,1118,1118],
+  [3,1114,6,"Reis Ivan",65,"SPD","SPD","SPD","hudebník, živnostník","Cheb",0,0,0,0,null,null,null,1114,1114]
+]
+}

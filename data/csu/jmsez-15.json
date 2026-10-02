@@ -1,0 +1,15 @@
+{
+  "id" : "20261009/jmsez/15.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":15},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Pelhřimov",
+  "platni" : [
+  [15,1740,1,"Chalupský Jaroslav Ing.",52,"HSR","HSR","HSR","nezávislý senátor, ekonom, zastupitel","Jindřichův Hradec",0,0,0,0,null,null,null,1740,1740],
+  [15,47,2,"Hodáč Pavel",57,"KSČM","KSČM","KSČM","jednatel firmy","Pelhřimov",0,0,0,0,null,null,null,47,47],
+  [15,1648,3,"Med Ladislav",66,"KDUODSSTANTOPST","ODS","ODS","starosta města","Pelhřimov",0,0,0,0,null,null,null,53,53],
+  [15,1114,4,"Pavlů Řádová Lucie Mgr.",43,"SPD","SPD","SPD","obchodní manažerka, lektorka jazyků","Želiv",0,0,0,0,null,null,null,1114,1114],
+  [15,768,5,"Kozár Michal Mgr. Ing. MBA",43,"ANO","ANO","ANO","starosta města Jindřichův Hradec","Jindřichův Hradec",0,0,0,0,null,null,null,768,768],
+  [15,1704,6,"Kubisková Karolína Ing.",41,"VÝZVA","VÝZVA","VÝZVA","podnikatelka","Kamenice nad Lipou",0,0,0,0,null,null,null,1704,1704]
+]
+}

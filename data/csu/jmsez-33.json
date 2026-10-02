@@ -1,0 +1,14 @@
+{
+  "id" : "20261009/jmsez/33.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":33},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Děčín",
+  "platni" : [
+  [33,1265,1,"Skalický Jan Ing.",61,"PRO","PRO","PRO","dopravní expert a vodohospodář","Děčín",0,0,0,0,null,null,null,1265,1265],
+  [33,112,2,"Lehká Anna Mgr. Ing.",54,"MÍSTNÍ HNHRM","MÍSTNÍ HNHRM","MÍSTNÍ HNHRM","náměstkyně primátora města","Děčín",0,0,0,0,null,null,null,112,112],
+  [33,1164,3,"Linhart Zbyněk Ing.",57,"STAN+SLK","STAN","BEZPP","Senátor, místostarosta města Krásná Lípa","Krásná Lípa",0,0,0,0,null,null,null,166,99],
+  [33,768,4,"Hejcman Michal prof. RNDr. Mgr. Ph.D. et Ph.D.",50,"ANO","ANO","BEZPP","univerzitní profesor, vědec","Mšec",0,0,0,0,null,null,null,768,99],
+  [33,1852,5,"Štross Miroslav Ing. arch.",41,"Zelen+Pirát+SEN","Zelení","Zelení","architekt","Děčín",0,0,0,0,null,null,null,5,5]
+]
+}

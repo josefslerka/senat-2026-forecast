@@ -1,0 +1,16 @@
+{
+  "id" : "20261009/jmsez/72.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":72},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Ostrava-město",
+  "platni" : [
+  [72,1535,1,"Loprais Milan",50,"SPD+PRO","PRO","PRO","ekonomický poradce","Frenštát pod Radhoštěm",0,0,0,0,null,null,null,1265,1265],
+  [72,755,2,"Jančík Petr doc. Ing. Ph.D.",66,"Ostravak","Ostravak","BEZPP","vysokoškolský pedagog","Ostrava",0,0,0,0,null,null,null,755,99],
+  [72,1655,3,"Šimetka Ondřej doc. MUDr. Ph.D., MBA",56,"KDUODSSTANPiTOP","ODS","BEZPP","lékař, vysokoškolský učitel, senátor","Háj ve Slezsku",0,0,0,0,null,null,null,53,99],
+  [72,768,4,"Baránková Vilamová Lucie Ing. Ph.D.",42,"ANO","ANO","ANO","starostka Poruby","Ostrava",0,0,0,0,null,null,null,768,768],
+  [72,752,5,"Štědroň Radoslav RNDr.",71,"Švýcarská dem.","Švýcarská dem.","Švýcarská dem.","geograf, OSVČ","Ostrava",0,0,0,0,null,null,null,752,752],
+  [72,759,6,"Iwoniak Radek Ing.",50,"ČSSD","ČSSD","ČSSD","OSVČ projektant","Ostrava",0,0,0,0,null,null,null,759,759],
+  [72,1293,7,"Režný Štefan",58,"ReMeK","ReMeK","ReMeK","OSVČ","Ostrava",0,0,0,0,null,null,null,1293,1293]
+]
+}

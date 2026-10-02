@@ -1,0 +1,16 @@
+{
+  "id" : "20261009/jmsez/45.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":45},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Hradec Králové",
+  "platni" : [
+  [45,80,1,"Nebeská Monika Ing.",57,"NK","NK","BEZPP","předsedkyně představenstva Zemědělské družstvo Všestary","Hradec Králové",0,0,0,0,null,null,null,80,99],
+  [45,759,2,"Dryml Vladimír MUDr.",74,"ČSSD","ČSSD","BEZPP","lékař chirurg, býv. senátor","Hradec Králové",0,0,0,0,null,null,null,759,99],
+  [45,768,3,"Hůlková Jana  DiS.",42,"ANO","ANO","ANO","náměstkyně hejtmana pro sociální oblast","Hradec Králové",0,0,0,0,null,null,null,768,768],
+  [45,1114,4,"Picek Ivan Mgr.",60,"SPD","SPD","SPD","IT specialista, zastupitel města Hradec Králové","Hradec Králové",0,0,0,0,null,null,null,1114,1114],
+  [45,1899,5,"Holásek Jan JUDr. LL.M.",53,"VPM+HP+MY+RH+NČ","RH","RH","senátor za Hradecko, právník, zastupitel města Hradec Králové a držitel ocenění Dělník protikorupční legislativy","Hradec Králové",0,0,0,0,null,null,null,1267,1267],
+  [45,53,6,"Ceralová Petrofová Zuzana Mgr.",58,"ODS","ODS","BEZPP","podnikatelka, prezidentka společnosti PETROF a předsedkyně Správní rady UHK","Hvozdnice",0,0,0,0,null,null,null,53,99],
+  [45,1867,7,"Dvořák Martin Ing.",69,"ZelSTANPiTOPHDK","STAN","STAN","diplomat, bývalý hradecký primátor a ministr","Hradec Králové",0,0,0,0,null,null,null,166,166]
+]
+}

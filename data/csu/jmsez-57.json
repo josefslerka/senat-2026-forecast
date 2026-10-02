@@ -1,0 +1,12 @@
+{
+  "id" : "20261009/jmsez/57.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":57},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Vyškov",
+  "platni" : [
+  [57,1245,1,"Fládr Jaroslav Bc.",54,"PŘÍSAHA","PŘÍSAHA","PŘÍSAHA","starosta obce","Studnice",0,0,0,0,null,null,null,1245,1245],
+  [57,1,2,"Grolich Jan Mgr.",42,"KDU-ČSL","KDU-ČSL","KDU-ČSL","hejtman Jihomoravského kraje","Velatice",0,0,0,0,null,null,null,1,1],
+  [57,768,3,"Absolonová Petra Bc. MBA",48,"ANO","ANO","ANO","vrchní sestra Masarykova onkologického ústavu","Modřice",0,0,0,0,null,null,null,768,768]
+]
+}

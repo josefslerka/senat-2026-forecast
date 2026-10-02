@@ -1,0 +1,15 @@
+{
+  "id" : "20261009/jmsez/54.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":54},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Znojmo",
+  "platni" : [
+  [54,80,1,"Růžička Jindřich",48,"NK","NK","BEZPP","podnikatel","Dobšice",0,0,0,0,null,null,null,80,99],
+  [54,1655,2,"Třetina Tomáš Mgr.",54,"KDUODSSTANPiTOP","TOP 09","TOP 09","senátor a bývalý starosta","Moravský Krumlov",0,0,0,0,null,null,null,721,721],
+  [54,768,3,"Kyněra Jiří",68,"ANO","ANO","BEZPP","trenér","Znojmo",0,0,0,0,null,null,null,768,99],
+  [54,1298,4,"Rédová Fajmonová Petra",50,"Stačilo!","Stačilo!","BEZPP","zdravotní sestra","Brno",0,0,0,0,null,null,null,1298,99],
+  [54,1715,5,"Beranová Bohumila",53,"HR","HR","BEZPP","místostarostka města Znojma","Znojmo",0,0,0,0,null,null,null,1715,99],
+  [54,1245,6,"Černý Pavel",52,"PŘÍSAHA","PŘÍSAHA","PŘÍSAHA","manažer a podnikatel","Loděnice",0,0,0,0,null,null,null,1245,1245]
+]
+}

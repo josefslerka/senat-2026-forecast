@@ -1,0 +1,13 @@
+{
+  "id" : "20261009/jmsez/39.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":39},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Trutnov",
+  "platni" : [
+  [39,1114,1,"Mráz Radek",57,"SPD","SPD","SPD","pracovník expedice, zastupitel města Úpice","Úpice",0,0,0,0,null,null,null,1114,1114],
+  [39,166,2,"Sobotka Jan Ing.",65,"STAN","STAN","BEZPP","starosta města a senátor","Vrchlabí",0,0,0,0,null,null,null,166,99],
+  [39,768,3,"Chovancová Zuzana MUDr.",60,"ANO","ANO","BEZPP","primářka očního oddělení ONT","Trutnov",0,0,0,0,null,null,null,768,99],
+  [39,1265,4,"Beran Hynek Ing.",65,"PRO","PRO","BEZPP","energetický poradce","Praha",0,0,0,0,null,null,null,1265,99]
+]
+}

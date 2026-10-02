@@ -1,0 +1,14 @@
+{
+  "id" : "20261009/jmsez/66.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":66},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Litovel",
+  "platni" : [
+  [66,1,1,"Kohajda Michael doc. JUDr. Ph.D.",45,"KDU-ČSL","KDU-ČSL","BEZPP","právník, rektor univerzity","Šumperk",0,0,0,0,null,null,null,1,99],
+  [66,1114,2,"Jelínek Pavel Ing. PhD.",63,"SPD","SPD","SPD","náměstek hejtmana, zastupitel města Olomouce","Olomouc",0,0,0,0,null,null,null,1114,1114],
+  [66,768,3,"Škurek Martin JUDr. Ph.D.",42,"ANO","ANO","ANO","vysokoškolský pedagog","Mohelnice",0,0,0,0,null,null,null,768,768],
+  [66,74,4,"Beil Zdeněk",73,"Levice","Levice","Levice","šachový trenér mládeže","Mladějov na Moravě",0,0,0,0,null,null,null,74,74],
+  [66,1747,5,"Ošťádal Marek",53,"24/7","24/7","24/7","senátor","Náklo",0,0,0,0,null,null,null,1747,1747]
+]
+}

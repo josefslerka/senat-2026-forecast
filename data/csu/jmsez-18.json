@@ -1,0 +1,15 @@
+{
+  "id" : "20261009/jmsez/18.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":18},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Příbram",
+  "platni" : [
+  [18,166,1,"Štěpánek Petr",62,"STAN","STAN","STAN","senátor","Petrovice",0,0,0,0,null,null,null,166,166],
+  [18,768,2,"Daňhová Barbora MUDr. MHA",52,"ANO","ANO","ANO","lékařka","Příbram",0,0,0,0,null,null,null,768,768],
+  [18,1202,3,"Vermach Pavel Ing. Ph.D.",68,"SMS","SMS","SMS","stavební inženýr, specialista státního fondu zaměřeného na rozvoj dostupného bydlení a investic v obcích, předseda spolku na ochranu přírody a krajiny a podporu občanských aktivit","Praha 9",0,0,0,0,null,null,null,1202,1202],
+  [18,1535,4,"Šorna Josef MUDr.",73,"SPD+PRO","PRO","PRO","lékař","Láz",0,0,0,0,null,null,null,1265,1265],
+  [18,1066,5,"Luftová Simona Mgr.",53,"Zelení+Piráti","Piráti","Piráti","zastupitelka města Příbram, středoškolská učitelka","Příbram",0,0,0,0,null,null,null,720,720],
+  [18,1295,6,"Podstatzky-Lichtenstein Frank Thomas",60,"ČZS","ČZS","BEZPP","stavební inženýr, elektrikář","Ohrobec",0,0,0,0,null,null,null,1295,99]
+]
+}

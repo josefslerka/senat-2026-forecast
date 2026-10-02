@@ -1,0 +1,15 @@
+{
+  "id" : "20261009/jmsez/81.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":81},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Uherské Hradiště",
+  "platni" : [
+  [81,143,1,"Březina Otakar",60,"SD-SN","SD-SN","BEZPP","20 let starosta obce, bývalý vyšetřovatel Policie ČR","Kozojídky",0,0,0,0,null,null,null,143,99],
+  [81,775,2,"Zelienková Kristýna Ing.",52,"ZVUK 12","ZVUK 12","BEZPP","ředitelka Nadační fond ZET","Uherský Ostroh",0,0,0,0,null,null,null,775,99],
+  [81,1114,3,"Skyba David",52,"SPD","SPD","SPD","jednatel společnosti, lektor a kouč","Otrokovice",0,0,0,0,null,null,null,1114,1114],
+  [81,768,4,"Vašica Jiří  DiS.",49,"ANO","ANO","BEZPP","zdravotnický záchranář","Uherské Hradiště",0,0,0,0,null,null,null,768,99],
+  [81,1732,5,"Balaštíková Margita Mgr.",59,"HOČ","HOČ","HOČ","manager","Tupesy",0,0,0,0,null,null,null,1732,1732],
+  [81,1,6,"Bazala Josef",66,"KDU-ČSL","KDU-ČSL","KDU-ČSL","senátor","Staré Město",0,0,0,0,null,null,null,1,1]
+]
+}

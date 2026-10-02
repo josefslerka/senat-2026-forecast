@@ -1,0 +1,16 @@
+{
+  "id" : "20261009/jmsez/75.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":75},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Karviná",
+  "platni" : [
+  [75,1154,1,"Polách Aleš MUDr.",48,"ODS+Soukromníci","ODS","BEZPP","lékař-stomatolog","Dětmarovice",0,0,0,0,null,null,null,53,99],
+  [75,1803,2,"Szyja Mariam MUDr.",45,"ZelSTAPirTOPSEN","Piráti","BEZPP","zubařka a digitální tvůrkyně","Karviná",0,0,0,0,null,null,null,720,99],
+  [75,1114,3,"Staněk Pavel Ing.",59,"SPD","SPD","SPD","člen rady Moravskoslezského kraje, místostarosta města Rychvald","Rychvald",0,0,0,0,null,null,null,1114,1114],
+  [75,1282,4,"Světnička Karel Mgr. et Bc.",66,"JaSaN","JaSaN","BEZPP","právník, nezávislý publicista","Havířov",0,0,0,0,null,null,null,1282,99],
+  [75,768,5,"Brzyszkowská Lenka",50,"ANO","ANO","ANO","starostka města Orlová","Orlová",0,0,0,0,null,null,null,768,768],
+  [75,7,6,"Galia Roman Mgr. Bc.",51,"SOCDEM","SOCDEM","SOCDEM","sociální pedagog","Orlová",0,0,0,0,null,null,null,7,7],
+  [75,1287,7,"Kazík Petr Ing. Ph.D.",62,"OK","OK","BEZPP","ředitel Slezského divadla v Opavě","Karviná",0,0,0,0,null,null,null,1287,99]
+]
+}

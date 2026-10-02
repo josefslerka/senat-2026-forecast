@@ -1,0 +1,17 @@
+{
+  "id" : "20261009/jmsez/9.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":9},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Plzeň-město",
+  "platni" : [
+  [9,1282,1,"Novák Jaroslav",72,"JaSaN","JaSaN","JaSaN","konzultant","Plzeň",0,0,0,0,null,null,null,1282,1282],
+  [9,1948,2,"Aschenbrenner Lumír Ing.",66,"ODS+KoruČes+TOP","ODS","ODS","starosta Městského obvodu Plzeň 2-Slovany, senátor","Plzeň",0,0,0,0,null,null,null,53,53],
+  [9,1014,3,"Pousková Daniela MUDr.",69,"PRO PLZEŇ","PRO PLZEŇ","BEZPP","lékařka","Plzeň",0,0,0,0,null,null,null,1014,99],
+  [9,1187,4,"Janský Bohumír prof. RNDr. CSc.",75,"SEN 21","SEN 21","BEZPP","univerzitní profesor","Praha",0,0,0,0,null,null,null,1187,99],
+  [9,166,5,"Řehka Karel",51,"STAN","STAN","BEZPP","bezpečnostní analytik, pedagog, válečný veterán","Bdeněves",0,0,0,0,null,null,null,166,99],
+  [9,47,6,"Valenta Jiří PhDr. Ing. DBA",60,"KSČM","KSČM","KSČM","pedagog, zastupitel kraje","Plzeň",0,0,0,0,null,null,null,47,47],
+  [9,768,7,"Kantorová Lucie Mgr. et Mgr.",40,"ANO","ANO","ANO","učitelka, náměstkyně primátora pro oblast školství","Plzeň",0,0,0,0,null,null,null,768,768],
+  [9,1114,8,"Líška Július Ing.",60,"SPD","SPD","SPD","manažer v mezinárodní společnosti","Plzeň",0,0,0,0,null,null,null,1114,1114]
+]
+}

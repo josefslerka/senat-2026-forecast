@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Journal</title><meta name="description" content="Czech Senate 2026 — a public AI forecasting experiment">
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1d1b;--muted:#6b6a64;--line:#e4e1d8;--card:#fff;--accent:#2f5d8a;--bar:#2f5d8a;--bar2:#c9d6e3;--warn:#9a5b00}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#151514;--fg:#ecebe6;--muted:#a3a19a;--line:#2e2d2a;--card:#1d1d1b;--accent:#8fb4dc;--bar:#8fb4dc;--bar2:#33424f;--warn:#e0a24a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:24px 16px 64px}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:24px}
+header a.brand{font-weight:700;color:var(--fg);text-decoration:none;font-size:18px}
+nav a{margin-left:14px;color:var(--accent);text-decoration:none;font-size:15px}nav a.lang{border:1px solid var(--line);padding:2px 8px;border-radius:6px}
+h1{font-size:28px;line-height:1.2;margin:8px 0 8px}h2{font-size:20px;margin:32px 0 10px}
+p.lead{color:var(--muted);margin-top:0}a{color:var(--accent)}
+table{width:100%;border-collapse:collapse;font-size:15px}th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.03em}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar{display:flex;height:10px;border-radius:5px;overflow:hidden;background:var(--bar2);min-width:120px}
+.bar span{display:block;height:100%}
+.pill{display:inline-block;font-size:12px;padding:1px 7px;border-radius:10px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:16px 0}
+.muted{color:var(--muted)}.warn{color:var(--warn)}
+.scroll{overflow-x:auto}
+footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+@media (max-width:640px){.hide-sm{display:none}h1{font-size:23px}}
+</style></head><body><div class="wrap">
+<header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Overview</a><a href="pravidla.html">Rules</a><a href="denik.html">Journal</a><a href="archiv.html">Archive</a><a class="lang" href="../denik.html">CS</a></nav></header>
+<h1>Journal</h1><div class="card"><h2 style="margin-top:0">2026-10-02 — Day 1: blind forecasts for all 27 districts</h2><p>We ran the full pipeline for all 27 districts. Brno 60 and Kladno 30 had older forecasts from 21 Sep, so they got a fresh blind update. <b>No stage saw betting odds.</b></p>
+<p><b>Big picture:</b> in 26 of 27 districts the favourite is an opposition candidate. The only exception is Karviná (75), where ANO defends an open seat. ANO often reaches the runoff but has a long record of losing it, especially when it is in government. The closest races are Pelhřimov (15), Litovel (66), Hradec Králové (45), Praha 5 (21) and Plzeň (9).</p>
+<p><b>What went wrong and how we caught it:</b></p>
+<ul>
+<li>In Plzeň, Česká Lípa, Zlín and Rychnov the red-team found a construction error. The runoff-pairing table did not match the round-1 share model; in Plzeň, for example, it put the incumbent's chance of reaching the runoff at 68 % instead of about 90 %.</li>
+<li>The shared brief failed to mark 2022 as a year when ANO was in opposition. Fixed mid-run.</li>
+<li>The Kladno update first came out at 55 % with no new evidence; an independent red-team pulled it to 51 %.</li>
+<li>The web-search budget ran out, so most research relied on directly fetched pages.</li>
+</ul>
+<p><b>Pre-publication check:</b> we checked all districts against the official ČSÚ candidate register (volby.gov.cz). Every candidate the model uses is on the ballot, and the model leaves out no one significant. We did fix some labels: the Cheb incumbent is Miroslav Plevný, not Jaroslav. In Kladno, Adéla Sucharda Šípová was nominated by the Pirates on behalf of a Greens/STAN/Pirates/TOP 09/SEN 21 coalition. The site now takes names and lists straight from ČSÚ data.</p>
+<h3>Reflection: why it happened and what we do about it</h3>
+<ol>
+<li><b>Construction errors in the runoff table</b> (4 districts plus Plzeň). <i>Cause:</i> the model estimated runoff-pair probabilities by hand, separately from round-1 shares, and the two contradicted each other. <i>Fix:</i> pairings are now derived by simulation directly from round-1 shares, so consistency holds by construction. Some districts already did this. Next time it will be a mandatory deterministic script, not model judgement.</li>
+<li><b>An error in the shared brief</b> (2022 not marked as an ANO-in-opposition year). <i>Cause:</i> one brief was sent to 24 parallel runs without a fact check, so the mistake was copied everywhere. <i>Fix:</i> shared base rates get an independent check before fan-out. Districts started before the fix will be checked at their next update.</li>
+<li><b>Unreachable web.</b> The search budget ran out and many sources are unreachable: volby.gov.cz is a JavaScript app, iROZHLAS returned 403, regional Deník is paywalled. Research often relied on Wikipedia alone. <i>Cause:</i> the tool that fetches pages as text can't handle JS-rendered pages, and search has a hard per-session cap. <i>Fix:</i> (a) fetch ČSÚ data once, centrally, via its JSON interface into a shared cache, instead of in every district; (b) use a real browser for unreachable pages; (c) raise the search cap and plan searches up front instead of exhausting them on the first districts.</li>
+<li><b>Insufficient independence between stages.</b> Because of a concurrency limit, in some districts one model did research, forecast and red-team. <i>Fix:</i> smaller waves instead of launching everything at once, with the red-team always a separate agent. We re-ran independent red-teams in the 4 affected districts; only one changed (Praha 5, by 3 points).</li>
+<li><b>“Recalibration” without new evidence</b> (Kladno 45 → 55). <i>Cause:</i> the update re-ran the model on unsupported assumptions and presented it as a refinement. <i>Fix:</i> a new rule that any move of more than 3 points without new evidence must pass an independent red-team. Here it pulled the number back to 51.</li>
+<li><b>Stale forecasts.</b> Earlier questions taught us that the biggest misses came not from a bad model but from forecasts nobody updated for weeks. <i>Fix:</i> a daily check of every district, even when the answer is “no change”, and a mandatory update after round 1.</li>
+</ol>
+<p><b>Next:</b> the market step (de-vigged odds) and final numbers, then daily news checks until the freeze on 9 Oct 14:00.</p></div>
+<footer>Forecasts are produced by an AI pipeline (Claude) with a human in the loop. Not betting tips. Content CC BY 4.0, code MIT. · <a href="https://github.com/josefslerka/senat-2026-forecast">GitHub</a></footer>
+</div></body></html>

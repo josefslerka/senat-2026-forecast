@@ -1,0 +1,16 @@
+{
+  "id" : "20261009/jmsez/69.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":69},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Frýdek-Místek",
+  "platni" : [
+  [69,47,1,"Hrnčárek Petr Ing.",73,"KSČM","KSČM","KSČM","elektroinženýr (důchodce)","Ostravice",0,0,0,0,null,null,null,47,47],
+  [69,799,2,"Korč Petr",50,"NMFM","NMFM","NMFM","lídr Našeho Města F-M","Frýdek-Místek",0,0,0,0,null,null,null,799,799],
+  [69,1701,3,"Lisková Nela",51,"NEZLOMNÍ","NEZLOMNÍ","NEZLOMNÍ","podnikatelka, spisovatelka","Krmelín",0,0,0,0,null,null,null,1701,1701],
+  [69,752,4,"Hompora René",55,"Švýcarská dem.","Švýcarská dem.","BEZPP","manažer ve zdravotnictví","Frýdek-Místek",0,0,0,0,null,null,null,752,99],
+  [69,1114,5,"Krpel Tomáš Mgr.",59,"SPD","SPD","SPD","pedagog, předseda kontrolního výboru města Frýdek-Místek","Frýdek-Místek",0,0,0,0,null,null,null,1114,1114],
+  [69,1472,6,"Pešatová Helena RNDr.",67,"STAN+Piráti+TOP","STAN","BEZPP","senátorka, starostka města","Frýdlant nad Ostravicí",0,0,0,0,null,null,null,166,99],
+  [69,1736,7,"Navrátil Zdeněk Ing.",62,"Evo","Evo","Evo","majitel společnosti, předseda, manažer a trenér sportovního klubu","Frýdek-Místek",0,0,0,0,null,null,null,1736,1736]
+]
+}

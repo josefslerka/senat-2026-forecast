@@ -1,0 +1,14 @@
+{
+  "id" : "20261009/jmsez/24.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":24},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Praha 9",
+  "platni" : [
+  [24,1707,1,"Batyiová Darina",44,"Kruh","Kruh","BEZPP","finanční analytička","Praha 9",0,0,0,0,null,null,null,1707,99],
+  [24,1955,2,"Smoljak David",67,"KDUZelSTANPiTOP","STAN","BEZPP","senátor, bojovník za nezávislost médií, cimrmanolog","Praha 9 - Vinoř",0,0,0,0,null,null,null,166,99],
+  [24,1647,3,"Laube Bedřich Bc.",57,"Svo+SPD+Tri+PRO","Svobodní","Svobodní","manažer v automobilovém průmyslu a dopravě, zastupitel Praha 9","Praha 9",0,0,0,0,null,null,null,714,714],
+  [24,768,4,"Žalud Radek  DiS.",40,"ANO","ANO","BEZPP","IT specialista, hudebník","Lipí",0,0,0,0,null,null,null,768,99],
+  [24,53,5,"Pecková Dagmar",65,"ODS","ODS","BEZPP","operní pěvkyně, herečka, spisovatelka a umělecká ředitelka festivalu Zlatá Pecka","Praha 4",0,0,0,0,null,null,null,53,99]
+]
+}

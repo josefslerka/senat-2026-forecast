@@ -1,0 +1,14 @@
+{
+  "id" : "20261009/jmsez/51.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":51},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Žďár nad Sázavou",
+  "platni" : [
+  [51,1114,1,"Koten Radek",61,"SPD","SPD","SPD","poslanec, zastupitel Kraje Vysočina","Vojnův Městec",0,0,0,0,null,null,null,1114,1114],
+  [51,1,2,"Klement Josef Ing.",55,"KDU-ČSL","KDU-ČSL","KDU-ČSL","senátor","Žďár nad Sázavou",0,0,0,0,null,null,null,1,1],
+  [51,1945,3,"Šmarda Michal",51,"SOM+Volt+HR","Volt","BEZPP","starosta Nového Města na Moravě","Nové Město na Moravě",0,0,0,0,null,null,null,1272,99],
+  [51,1946,4,"Černý Radek MUDr.",53,"ODS+Piráti+STO","ODS","ODS","lékař - ortoped","Žďár nad Sázavou",0,0,0,0,null,null,null,53,53],
+  [51,143,5,"Moos David",44,"SD-SN","SD-SN","BEZPP","IT a datový specialista, informatik","Senetářov",0,0,0,0,null,null,null,143,99]
+]
+}

@@ -1,0 +1,16 @@
+{
+  "id" : "20261009/jmsez/21.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":21},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Praha 5",
+  "platni" : [
+  [21,768,1,"Brož Lubomír Ing.",60,"ANO","ANO","ANO","člen rady městské části Praha 5, ekonom","Praha 5",0,0,0,0,null,null,null,768,768],
+  [21,1954,2,"Šarapatka Zdeněk PaedDr. Ph.D.",68,"Piráti+TOP+LES","TOP 09","TOP 09","publicista, politický komentátor, aktivní občan, bývalý radní ČT a pedagog","Praha",0,0,0,0,null,null,null,721,721],
+  [21,1187,3,"Láska Václav Mgr.",52,"SEN 21","SEN 21","SEN 21","senátor","Praha 5",0,0,0,0,null,null,null,1187,1187],
+  [21,1245,4,"Augustín Ľubomír",54,"PŘÍSAHA","PŘÍSAHA","PŘÍSAHA","právník, ekonom","Senohraby",0,0,0,0,null,null,null,1245,1245],
+  [21,1114,5,"Spirov Pavel Ing. Ph.D.",42,"SPD","SPD","SPD","vysokoškolský pedagog, vědecko-technický pracovník","Praha",0,0,0,0,null,null,null,1114,1114],
+  [21,1889,6,"Sáblík Radko Ing.",64,"KDUČSL+ODS+STAN","ODS","ODS","ředitel Smíchovské střední","Mníšek pod Brdy",0,0,0,0,null,null,null,53,53],
+  [21,47,7,"Prokšanová Petra Mgr.",41,"KSČM","KSČM","KSČM","socioložka, marketérka","Praha",0,0,0,0,null,null,null,47,47]
+]
+}

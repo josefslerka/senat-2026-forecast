@@ -1,0 +1,14 @@
+{
+  "id" : "20261009/jmsez/36.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":36},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Česká Lípa",
+  "platni" : [
+  [36,53,1,"Vomáčka Vít Ing. MBA",66,"ODS","ODS","ODS","místostarosta obce Kravaře","Kravaře",0,0,0,0,null,null,null,53,53],
+  [36,80,2,"Vosecký Jiří",75,"NK","NK","BEZPP","senátor Parlamentu ČR, regionální patriot, včelař","Okrouhlá",0,0,0,0,null,null,null,80,99],
+  [36,768,3,"Volfová Jitka Ing.",57,"ANO","ANO","ANO","starostka města Česká Lípa","Česká Lípa",0,0,0,0,null,null,null,768,768],
+  [36,47,4,"Hamrský Leoš",69,"KSČM","KSČM","KSČM","technik mlynářské a pekárenské výroby","Liberec",0,0,0,0,null,null,null,47,47],
+  [36,703,5,"Půta Martin",55,"SLK","SLK","SLK","hejtman Libereckého kraje","Hrádek nad Nisou",0,0,0,0,null,null,null,703,703]
+]
+}

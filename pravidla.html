@@ -1,0 +1,84 @@
+<!doctype html><html lang="cs"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pravidla</title><meta name="description" content="Senát 2026 — veřejný experiment s AI forecastingem">
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1d1b;--muted:#6b6a64;--line:#e4e1d8;--card:#fff;--accent:#2f5d8a;--bar:#2f5d8a;--bar2:#c9d6e3;--warn:#9a5b00}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#151514;--fg:#ecebe6;--muted:#a3a19a;--line:#2e2d2a;--card:#1d1d1b;--accent:#8fb4dc;--bar:#8fb4dc;--bar2:#33424f;--warn:#e0a24a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:24px 16px 64px}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:24px}
+header a.brand{font-weight:700;color:var(--fg);text-decoration:none;font-size:18px}
+nav a{margin-left:14px;color:var(--accent);text-decoration:none;font-size:15px}nav a.lang{border:1px solid var(--line);padding:2px 8px;border-radius:6px}
+h1{font-size:28px;line-height:1.2;margin:8px 0 8px}h2{font-size:20px;margin:32px 0 10px}
+p.lead{color:var(--muted);margin-top:0}a{color:var(--accent)}
+table{width:100%;border-collapse:collapse;font-size:15px}th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.03em}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar{display:flex;height:10px;border-radius:5px;overflow:hidden;background:var(--bar2);min-width:120px}
+.bar span{display:block;height:100%}
+.pill{display:inline-block;font-size:12px;padding:1px 7px;border-radius:10px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:16px 0}
+.muted{color:var(--muted)}.warn{color:var(--warn)}
+.scroll{overflow-x:auto}
+footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+@media (max-width:640px){.hide-sm{display:none}h1{font-size:23px}}
+</style></head><body><div class="wrap">
+<header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Přehled</a><a href="pravidla.html">Pravidla</a><a href="denik.html">Deník</a><a href="archiv.html">Archiv</a><a class="lang" href="en/pravidla.html">EN</a></nav></header>
+<h1>Pravidla</h1>
+<h2>Co předpovídáme</h2>
+<p>V každém z 27 obvodů: kdo bude zvolen senátorem, ať už nadpoloviční většinou v 1. kole, nebo vítězstvím ve 2. kole. Každý obvod má rozdělení pravděpodobností přes hlavní kandidáty a položku „ostatní“, které dává dohromady 100 %. Rozhoduje oficiální výsledek ČSÚ (volby.cz).</p>
+<h2>Fáze a zveřejňování</h2>
+<ul>
+<li><b>Blind:</b> odhad bez znalosti sázkových kurzů. Zveřejňuje se jako první.</li>
+<li><b>Final:</b> blind odhad zkombinovaný s trhem, tedy kurzy po odečtení marže sázkové kanceláře. Zveřejňuje se zvlášť a později. Blind číslo se tím nemění.</li>
+<li><b>Updaty:</b> nové verze při nových informacích, například po 1. kole. Každá verze je nový záznam, starší se nepřepisují.</li>
+<li>Každý den ukládáme neměnný snapshot do <a href="archiv.html">archivu</a> a commit do gitu. Opravu chyby zveřejníme jako novou verzi s vysvětlením, nikdy tichým přepsáním.</li>
+</ul>
+<h2>Co se vyhodnocuje</h2>
+<ul>
+<li><b>Hlavní hodnocený snapshot:</b> poslední zveřejněná verze před začátkem hlasování, tedy před 9. 10. 2026 ve 14:00. Hodnotí se zvlášť blind a zvlášť final.</li>
+<li><b>Updaty po 1. kole</b> se hodnotí odděleně jako sekundární. Po 1. kole je předpověď výrazně snazší, takže do hlavního skóre nevstupují.</li>
+<li><b>Metriky:</b> průměr přes všech 27 obvodů:
+  <ul>
+  <li>multi-outcome Brier, tedy Σ(p<sub>i</sub> − o<sub>i</sub>)²; čím nižší, tím lepší;</li>
+  <li>log skóre vítěze, ln p(vítěz); čím blíž nule, tím lepší;</li>
+  <li>počet obvodů, kde vyhrál náš favorit.</li>
+  </ul></li>
+<li><b>Srovnávací měřítka:</b>
+  <ul>
+  <li>sázkové kurzy po odečtení marže, kde jsou dostupné;</li>
+  <li>naivní pravidlo „vyhraje obhájce, a kde nekandiduje, kandidát s nejširší koaliční podporou“ (jen Brier a počet trefených favoritů);</li>
+  <li>rovnoměrné rozdělení mezi hlavní kandidáty.</li>
+  </ul></li>
+</ul>
+<h2>Důležité upozornění: korelace</h2>
+<p>27 obvodů nejsou nezávislé pokusy. Celostátní nálada, například nespokojenost s vládou, posouvá všechny obvody najednou. Ve většině obvodů je favoritem opoziční kandidát, takže výsledek je do značné míry jedna velká sázka. Při vyhodnocení to uvedeme.</p>
+<h2>Jak predikce vznikají</h2>
+<ol>
+<li>Upřesnění otázky.</li>
+<li>Research: kandidáti, historické výsledky obvodu, výsledky sněmovních voleb 2025 a místní kontext.</li>
+<li>Blind odhad: model podílů v 1. kole a dvojic ve 2. kole, s podmíněnou pravděpodobností výhry podle soupeře a podle toho, kdo vedl 1. kolo.</li>
+<li>Kontrola, že každé tvrzení má oporu v researchi.</li>
+<li>Red-team.</li>
+<li>Revize a agregace.</li>
+</ol>
+<p>Sdílené základní poznatky (base rates):</p>
+<ul>
+<li>Vítěz 1. kola vyhrává 2. kolo asi v 70 % případů (ČSÚ).</li>
+<li>Kandidáti ANO vyhráli v letech 2020–2024 jen asi 9 ze 44 druhých kol. V roce 2020, kdy ANO vládlo, to bylo asi 1 z 8.</li>
+</ul>
+<h2>Co nezveřejňujeme</h2>
+<p>Sázková doporučení ani výši sázek. Tohle není tipovací služba. Nezveřejňujeme ani surové pracovní soubory.</p>
+<h2>Známá omezení prvního běhu (2. 10.)</h2>
+<ul>
+<li>Během běhu došla kapacita webového vyhledávání. U většiny obvodů proto research stál jen na přímo načtených stránkách (Wikipedie, programydovoleb.cz, senat.cz). Chybí čerstvé místní zprávy a často i okresní výsledky z roku 2025. Na stránce obvodu je to označeno jako <code>research_limitation</code>.</li>
+<li>Kvůli limitu souběžných agentů neběžel ve 4 obvodech (12, 21, 24, 39) red-team nezávisle. Dodatečně jsme ho proto spustili zvlášť, ještě před zveřejněním.</li>
+<li>Několik odhadů bylo před zveřejněním revidováno po red-teamu. Zveřejněný stav je výchozí bod; od něj už platí jen nové verze.</li>
+<li><b>Průzkumy veřejného mínění blind odhad systematicky nepoužívá.</b> Průzkumy po obvodech se dělají jen výjimečně a kvůli vyčerpanému vyhledávání jsme je ve většině obvodů nemohli ani pořádně hledat. „Bez průzkumu“ proto znamená spíš „nenašli jsme“ než „neexistuje“. Celostátní průzkumy (STEM, Median, NMS, Kantar) sloužily jen jako kontext, ne jako vstup modelu. Plán: do pondělí 5. 10. (od 6. 10. platí moratorium na zveřejňování průzkumů) cíleně dohledat průzkumy obvodů a celostátní posun od voleb 2025 zapracovat jednotně do všech obvodů jako nový update.</li>
+<li>Plzeň (obvod 9) prošla krokem s trhem už dříve. Zde zveřejňujeme jen její blind číslo, final přijde spolu s ostatními.</li>
+</ul>
+<h2>Časová razítka</h2>
+<p>Každý denní stav je commit v gitu a zároveň snapshot v archive.org, aby šlo doložit, že predikce existovala před výsledkem.</p>
+
+<footer>Predikce generuje AI pipeline (Claude) s člověkem ve smyčce. Nejde o sázkové tipy. Obsah CC BY 4.0, kód MIT. · <a href="https://github.com/josefslerka/senat-2026-forecast">GitHub</a></footer>
+</div></body></html>

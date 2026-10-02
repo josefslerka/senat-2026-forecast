@@ -1,0 +1,15 @@
+{
+  "id" : "20261009/jmsez/60.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":60},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Brno-město",
+  "platni" : [
+  [60,1694,1,"Papoušek Zdeněk PhDr.",69,"KDUODSPirTOPFBr","ODS","BEZPP","senátor, sociolog, učitel","Brno",0,0,0,0,null,null,null,53,99],
+  [60,1298,2,"Samková Klára Alžběta JUDr. Ph.D.",63,"Stačilo!","Stačilo!","BEZPP","advokátka","Praha 2",0,0,0,0,null,null,null,1298,99],
+  [60,1707,3,"Holcnerová Veronika",42,"Kruh","Kruh","Kruh","datová inženýrka","Brno",0,0,0,0,null,null,null,1707,1707],
+  [60,768,4,"Štěrba Jaroslav prof. MUDr. Ph.D.",64,"ANO","ANO","BEZPP","přednosta kliniky dětské onkologie FN Brno a LF MU","Šlapanice",0,0,0,0,null,null,null,768,99],
+  [60,166,5,"Zitterbart Karel MUDr. Ph.D.",48,"STAN","STAN","BEZPP","dětský lékař z Polikliniky Lesná, senátor","Mokrá-Horákov",0,0,0,0,null,null,null,166,99],
+  [60,1114,6,"Turánek Jaroslav prof. RNDr. CSc., DSc.",68,"SPD","SPD","BEZPP","vědecký pracovník a vysokoškolský pedagog","Brno",0,0,0,0,null,null,null,1114,99]
+]
+}

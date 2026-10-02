@@ -1,0 +1,15 @@
+{
+  "id" : "20261009/jmsez/30.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":30},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Kladno",
+  "platni" : [
+  [30,1722,1,"Klas Jan Ing.",63,"NČ","NČ","BEZPP","manažer","Praha",0,0,0,0,null,null,null,1722,99],
+  [30,1803,2,"Sucharda Šípová Adéla Mgr.",46,"ZelSTAPirTOPSEN","Piráti","BEZPP","senátorka Parlamentu ČR, advokátka","Doksy",0,0,0,0,null,null,null,720,99],
+  [30,1245,3,"Pelc Jaroslav",55,"PŘÍSAHA","PŘÍSAHA","PŘÍSAHA","OSVČ","Kladno",0,0,0,0,null,null,null,1245,1245],
+  [30,1114,4,"Machalová Marcela Mgr. Bc. MBA",64,"SPD","SPD","SPD","pedagog, manažerka distančního studia Kladno, zastupitelka města","Kladno",0,0,0,0,null,null,null,1114,1114],
+  [30,53,5,"Paták Petr Mgr. DiS., MBA",41,"ODS","ODS","ODS","ředitel střední školy","Kladno",0,0,0,0,null,null,null,53,53],
+  [30,768,6,"Gerloch Aleš prof. JUDr. CSc.",71,"ANO","ANO","BEZPP","univerzitní profesor, expert na ústavní právo","Praha",0,0,0,0,null,null,null,768,99]
+]
+}

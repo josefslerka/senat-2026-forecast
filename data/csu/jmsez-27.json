@@ -1,0 +1,18 @@
+{
+  "id" : "20261009/jmsez/27.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":27},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Praha 1",
+  "platni" : [
+  [27,1291,1,"Morštadt Jiří Dipl. Ing.",59,"Generace","Generace","BEZPP","podnikatel, vydavatel, producent","Praha 1",0,0,0,0,null,null,null,1291,99],
+  [27,74,2,"Čižinský Pavel Mgr.",49,"Levice","Levice","Levice","advokát","Praha",0,0,0,0,null,null,null,74,74],
+  [27,1194,3,"Štern Jan Ing.",73,"TEAM","TEAM","TEAM","producent","Praha 4",0,0,0,0,null,null,null,1194,1194],
+  [27,1297,4,"Ryvola Vojtěch Ing.",61,"GEN","GEN","GEN","radní MČ Praha 1","Praha 1",0,0,0,0,null,null,null,1297,1297],
+  [27,768,5,"Dudra Ján doc. MUDr. Ph.D.,MPH",62,"ANO","ANO","BEZPP","ředitel VFN Praha, lékař urgentní medicíny, záchranář","Praha 4",0,0,0,0,null,null,null,768,99],
+  [27,752,6,"Pešek Jiří Pavel Ing.",68,"Švýcarská dem.","Švýcarská dem.","BEZPP","biochemik, pedagog a bývalý diplomat","Praha 4",0,0,0,0,null,null,null,752,99],
+  [27,1912,7,"Padevět Jiří PhDr.",60,"ODSSTANPirátTOP","STAN","BEZPP","nakladatel a spisovatel","Praha 4",0,0,0,0,null,null,null,166,99],
+  [27,1938,8,"Čižinský Jan",48,"KDU+Zel+PHASOBĚ","PRAHA SOBĚ","PRAHA SOBĚ","starosta Prahy 7, historik, středoškolský učitel","Praha 7",0,0,0,0,null,null,null,1180,1180],
+  [27,7,9,"Kolman Vladimír Ing. Ph.D., MBA",75,"SOCDEM","SOCDEM","SOCDEM","ekonom","Praha",0,0,0,0,null,null,null,7,7]
+]
+}

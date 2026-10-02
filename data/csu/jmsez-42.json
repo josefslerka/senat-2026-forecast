@@ -1,0 +1,16 @@
+{
+  "id" : "20261009/jmsez/42.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":42},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Kolín",
+  "platni" : [
+  [42,768,1,"Brzobohatá Andrea",55,"ANO","ANO","ANO","práce s handicapovanými lidmi","Škvorec",0,0,0,0,null,null,null,768,768],
+  [42,1173,2,"Sehnal Pavel Ing.",62,"APB","APB","APB","majitel Obchodních tiskáren Kolín","Praha 18",0,0,0,0,null,null,null,1173,1173],
+  [42,687,3,"Schulz Roman Mgr.",58,"ODS+TOP 09","ODS","ODS","starosta Poděbrad","Poděbrady",0,0,0,0,null,null,null,53,53],
+  [42,1282,4,"Třeštik František",70,"JaSaN","JaSaN","JaSaN","viceprezident Smíšené obchodní komory Česká republika - Indonésie","Poděbrady",0,0,0,0,null,null,null,1282,1282],
+  [42,47,5,"Rynekr Jiří",50,"KSČM","KSČM","KSČM","specialista pojistných událostí","Kouřim",0,0,0,0,null,null,null,47,47],
+  [42,1114,6,"Dušek Antonín Ing.",70,"SPD","SPD","SPD","ministerský rada, manažer ve výrobě","Malešov",0,0,0,0,null,null,null,1114,1114],
+  [42,166,7,"Kašpar Michael Mgr.",43,"STAN","STAN","STAN","starosta Kolína","Kolín",0,0,0,0,null,null,null,166,166]
+]
+}

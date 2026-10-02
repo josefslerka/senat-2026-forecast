@@ -1,0 +1,15 @@
+{
+  "id" : "20261009/jmsez/78.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":78},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Zlín",
+  "platni" : [
+  [78,1114,1,"Nečas Lubomír MUDr.",71,"SPD","SPD","SPD","praktický a tělovýchovný lékař, zastupitel Zlínského kraje, hlavní lékař rally","Zlín",0,0,0,0,null,null,null,1114,1114],
+  [78,1327,2,"Goláň Tomáš Ing.",57,"KDU+ODS+TOP 09","ODS","ODS","daňový poradce a senátor","Zlín",0,0,0,0,null,null,null,53,53],
+  [78,47,3,"Doleček Jan",54,"KSČM","KSČM","KSČM","vydavatel","Zubří",0,0,0,0,null,null,null,47,47],
+  [78,768,4,"Sedlařík Vladimír prof. Ing. Ph.D.",46,"ANO","ANO","BEZPP","akademický pracovník","Zlín",0,0,0,0,null,null,null,768,99],
+  [78,166,5,"Mitáček Ivo PhDr. Mgr.",54,"STAN","STAN","BEZPP","poradce pro bezpečnost a krizové řízení","Zlín",0,0,0,0,null,null,null,166,99],
+  [78,1187,6,"Dlouhý Pavel Mgr. MBA",56,"SEN 21","SEN 21","BEZPP","ředitel základní školy","Zlín",0,0,0,0,null,null,null,1187,99]
+]
+}

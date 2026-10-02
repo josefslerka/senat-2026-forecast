@@ -1,0 +1,15 @@
+{
+  "id" : "20261009/jmsez/6.json",
+  "param" : {"typ":"JMENSEZN","datumvoleb":20261009,"obvod":6},
+  "generovano" : "2026-09-16T09:22:15",
+  "popis" : "Jmenný seznam za senátní obvod",
+  "obvodNazev" : "Louny",
+  "platni" : [
+  [6,1114,1,"Hrbáček Vladislav Bc. et Bc.",48,"SPD","SPD","SPD","fyzioterapeut, zastupitel města Žatec","Žatec",0,0,0,0,null,null,null,1114,1114],
+  [6,1298,2,"Kobza Jiří",70,"Stačilo!","Stačilo!","BEZPP","geolog, diplomat, politik, důchodce","Petrov",0,0,0,0,null,null,null,1298,99],
+  [6,1126,3,"Steiner Leo Mgr.",55,"JsmePRO!","JsmePRO!","BEZPP","učitel, manažer a dotační expert, který vždy hraje fair play a umí přinést peníze obcím","Smolnice",0,0,0,0,null,null,null,1126,99],
+  [6,1066,4,"Hluštíková Ivana Bc.",53,"Zelení+Piráti","Zelení","Zelení","asistentka pedagoga, vychovatelka, zastupitelka města Louny","Louny",0,0,0,0,null,null,null,5,5],
+  [6,166,5,"Trešl Ivo MUDr.",54,"STAN","STAN","BEZPP","lékař - chirurg, traumatolog","Rakovník",0,0,0,0,null,null,null,166,99],
+  [6,768,6,"Mikoláš Jaroslav Ing.",71,"ANO","ANO","BEZPP","zemědělec","Lišany",0,0,0,0,null,null,null,768,99]
+]
+}

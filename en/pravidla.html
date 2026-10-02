@@ -1,0 +1,84 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rules</title><meta name="description" content="Czech Senate 2026 — a public AI forecasting experiment">
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1d1b;--muted:#6b6a64;--line:#e4e1d8;--card:#fff;--accent:#2f5d8a;--bar:#2f5d8a;--bar2:#c9d6e3;--warn:#9a5b00}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#151514;--fg:#ecebe6;--muted:#a3a19a;--line:#2e2d2a;--card:#1d1d1b;--accent:#8fb4dc;--bar:#8fb4dc;--bar2:#33424f;--warn:#e0a24a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:24px 16px 64px}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:24px}
+header a.brand{font-weight:700;color:var(--fg);text-decoration:none;font-size:18px}
+nav a{margin-left:14px;color:var(--accent);text-decoration:none;font-size:15px}nav a.lang{border:1px solid var(--line);padding:2px 8px;border-radius:6px}
+h1{font-size:28px;line-height:1.2;margin:8px 0 8px}h2{font-size:20px;margin:32px 0 10px}
+p.lead{color:var(--muted);margin-top:0}a{color:var(--accent)}
+table{width:100%;border-collapse:collapse;font-size:15px}th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.03em}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar{display:flex;height:10px;border-radius:5px;overflow:hidden;background:var(--bar2);min-width:120px}
+.bar span{display:block;height:100%}
+.pill{display:inline-block;font-size:12px;padding:1px 7px;border-radius:10px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:16px 0}
+.muted{color:var(--muted)}.warn{color:var(--warn)}
+.scroll{overflow-x:auto}
+footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+@media (max-width:640px){.hide-sm{display:none}h1{font-size:23px}}
+</style></head><body><div class="wrap">
+<header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Overview</a><a href="pravidla.html">Rules</a><a href="denik.html">Journal</a><a href="archiv.html">Archive</a><a class="lang" href="../pravidla.html">CS</a></nav></header>
+<h1>Rules</h1>
+<h2>What we forecast</h2>
+<p>For each of the 27 districts: who will be elected senator, either by an absolute majority in round 1 or by winning the runoff. Each district gets a probability distribution over the main candidates plus “others”, summing to 100 %. Resolution follows the official ČSÚ result (volby.cz).</p>
+<h2>Stages and publishing</h2>
+<ul>
+<li><b>Blind:</b> a forecast made without seeing betting odds. Published first.</li>
+<li><b>Final:</b> the blind forecast combined with the market (odds with the bookmaker's margin removed). Published separately and later; the blind number does not change.</li>
+<li><b>Updates:</b> new versions when new information arrives (e.g. after round 1). Every version is a new record; old ones are never overwritten.</li>
+<li>Every day an immutable snapshot goes to the <a href="archiv.html">archive</a> and a commit goes to git. Corrections are published as new versions with an explanation, never as silent edits.</li>
+</ul>
+<h2>What gets scored</h2>
+<ul>
+<li><b>Primary scored snapshot:</b> the last version published before voting opens, i.e. before 9 Oct 2026 14:00 CEST. Blind and final are scored separately.</li>
+<li><b>Post-round-1 updates</b> are scored separately as secondary. Forecasting gets much easier after round 1, so they don't count toward the main score.</li>
+<li><b>Metrics:</b> averaged over all 27 districts:
+  <ul>
+  <li>multi-outcome Brier score, Σ(p<sub>i</sub> − o<sub>i</sub>)²; lower is better;</li>
+  <li>log score of the winner, ln p(winner); closer to 0 is better;</li>
+  <li>number of districts where our favourite won.</li>
+  </ul></li>
+<li><b>Benchmarks:</b>
+  <ul>
+  <li>de-vigged betting odds, where available;</li>
+  <li>a naive rule, “the incumbent wins, otherwise the candidate with the broadest coalition” (Brier and favourite count only);</li>
+  <li>a uniform split across the main candidates.</li>
+  </ul></li>
+</ul>
+<h2>Important caveat: correlation</h2>
+<p>The 27 districts are not independent trials. The national mood, for example discontent with the government, moves all districts at once. In most districts the favourite is an opposition candidate, so the outcome is largely one big correlated bet. We will say so in the evaluation.</p>
+<h2>How the forecasts are made</h2>
+<ol>
+<li>Question normalization.</li>
+<li>Research: candidates, district history, 2025 Chamber results, local context.</li>
+<li>Blind forecast: a model of round-1 shares and runoff pairings, with win probabilities conditional on the opponent and on who led round 1.</li>
+<li>A grounding check that every claim rests on the research.</li>
+<li>Red-team.</li>
+<li>Revision and aggregation.</li>
+</ol>
+<p>Shared base rates:</p>
+<ul>
+<li>The round-1 leader wins the runoff about 70 % of the time (ČSÚ).</li>
+<li>ANO candidates won only about 9 of 44 runoffs in 2020–2024, and about 1 of 8 in 2020, when ANO was in government.</li>
+</ul>
+<h2>What we don't publish</h2>
+<p>Betting recommendations or stakes. This is not a tipping service. We don't publish raw working files either.</p>
+<h2>Known limitations of the first run (2 Oct)</h2>
+<ul>
+<li>The web-search budget ran out mid-run. For most districts, research relied on directly fetched pages (Wikipedia, programydovoleb.cz, senat.cz). Fresh local news and often 2025 district-level results are missing. District pages flag this as <code>research_limitation</code>.</li>
+<li>Because of a concurrency limit, the red-team in 4 districts (12, 21, 24, 39) did not run independently. We therefore ran independent red-teams separately before publication.</li>
+<li>Several forecasts were revised after the red-team before publication. The published state is the starting point; from here on only new versions count.</li>
+<li><b>The blind forecast does not use opinion polls systematically.</b> District-level polls are rare, and with the search budget exhausted most districts could not search for them properly. “No poll” therefore means “none found” rather than “none exists”. National polls (STEM, Median, NMS, Kantar) served only as context, not as a model input. Plan: by Monday 5 Oct (a poll-publication blackout starts on 6 Oct), search specifically for district polls and apply the national swing since the 2025 election uniformly to all districts as a new update.</li>
+<li>Plzeň (district 9) had already gone through the market step. We publish only its blind number here; its final comes with the others.</li>
+</ul>
+<h2>Timestamps</h2>
+<p>Each daily state is a git commit plus an archive.org snapshot, so it can be shown that a forecast existed before the result.</p>
+
+<footer>Forecasts are produced by an AI pipeline (Claude) with a human in the loop. Not betting tips. Content CC BY 4.0, code MIT. · <a href="https://github.com/josefslerka/senat-2026-forecast">GitHub</a></footer>
+</div></body></html>
