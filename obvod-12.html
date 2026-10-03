@@ -23,7 +23,7 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 @media (max-width:640px){.hide-sm{display:none}h1{font-size:23px}}
 </style></head><body><div class="wrap">
-<header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Přehled</a><a href="pravidla.html">Pravidla</a><a href="denik.html">Deník</a><a href="archiv.html">Archiv</a><a class="lang" href="en/obvod-12.html">EN</a></nav></header>
+<header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Přehled</a><a href="pravidla.html">Pravidla</a><a href="model.html">Model</a><a href="denik.html">Deník</a><a href="archiv.html">Archiv</a><a class="lang" href="en/obvod-12.html">EN</a></nav></header>
 
 <p><a href="index.html">← zpět na přehled</a></p>
 <h1>Obvod 12 — Strakonice</h1><p class="lead"><span class="pill">obhájce běží; jen 3 kandidáti</span>
@@ -32,6 +32,9 @@ footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:v
 <div class="scroll"><table style="margin-top:12px"><thead><tr><th>Kandidát</th><th>Strana / podpora</th><th>P(výhra)</th><th>Pásmo</th></tr></thead>
 <tbody><tr><td>Tomáš Fiala</td><td class="muted">NČ</td><td class="num"><b>87 %</b></td><td class="num">76–94 %</td></tr><tr><td>Jana Hrdinová</td><td class="muted">KDU-ČSL</td><td class="num"><b>7 %</b></td><td class="num">3–15 %</td></tr><tr><td>Miroslav Ušatý</td><td class="muted">Svob+SPD+Trikol (navrhl/a Svobodní)</td><td class="num"><b>6 %</b></td><td class="num">2–12 %</td></tr><tr><td>Ostatní</td><td class="muted"></td><td class="num"><b>0 %</b></td><td class="num">0–0 %</td></tr></tbody></table></div>
 <p class="muted" style="font-size:14px">Ostatní kandidáti na lístku: —. Kandidáti a volební strany podle oficiálního seznamu ČSÚ (volby.gov.cz).</p>
+<h2>AI agent (blind) vs. Statistický model</h2>
+<div class="scroll"><table><thead><tr><th>Kandidát</th><th>Strana / podpora</th><th>AI agent (blind)</th><th>Statistický model</th><th>Podíl v 1. kole (model, 80% interval)</th><th>P(postup / výhra v 1. kole)</th></tr></thead>
+<tbody><tr><td>Tomáš Fiala</td><td class="muted">NČ</td><td class="num">87 %</td><td class="num"><b>48 %</b></td><td class="num">38 % (29–46)</td><td class="num">84 %</td></tr><tr><td>Jana Hrdinová</td><td class="muted">KDU-ČSL</td><td class="num">7 %</td><td class="num"><b>31 %</b></td><td class="num">32 % (23–40)</td><td class="num">58 %</td></tr><tr><td>Miroslav Ušatý</td><td class="muted">Svob+SPD+Trikol</td><td class="num">6 %</td><td class="num"><b>21 %</b></td><td class="num">31 % (22–39)</td><td class="num">53 %</td></tr></tbody></table></div><p class="muted" style="font-size:14px">AI agent (blind) — Ostatní: 0 %. Model nezná kandidáty bez stranické i komunální základny (nová hnutí, osobní značka) — tam ho podceňuje. <a href="model.html">Model →</a></p>
 <h2>Proč</h2><p>Jen tři kandidáti, ANO ani ODS nekandidují. Obhájce má reálnou šanci vyhrát už v 1. kole (~43 %).</p>
 <h2>Na co se dívat</h2><p>Fiala nad 50 % = rozhodnuto. Jinak záleží na soupeři ve 2. kole.</p>
 <h2>Omezení běhu</h2><ul class="muted"><li>Riziko kontaminace kurzy: <code>possible</code></li><li>Red-team: <code>adjustment</code> · dodatečný nezávislý red-team</li><li>Grounding: <code>pass</code></li></ul>

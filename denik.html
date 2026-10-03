@@ -23,8 +23,20 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 @media (max-width:640px){.hide-sm{display:none}h1{font-size:23px}}
 </style></head><body><div class="wrap">
-<header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Přehled</a><a href="pravidla.html">Pravidla</a><a href="denik.html">Deník</a><a href="archiv.html">Archiv</a><a class="lang" href="en/denik.html">EN</a></nav></header>
-<h1>Deník</h1><div class="card"><h2 style="margin-top:0">2026-10-02 — Den 1: blind předpovědi všech 27 obvodů</h2><p>Spustili jsme plnou pipeline pro všech 27 obvodů. Brno 60 a Kladno 30 měly starší predikce z 21. 9., ty dostaly nový blind update. <b>Žádná fáze neviděla sázkové kurzy.</b></p>
+<header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Přehled</a><a href="pravidla.html">Pravidla</a><a href="model.html">Model</a><a href="denik.html">Deník</a><a href="archiv.html">Archiv</a><a class="lang" href="en/denik.html">EN</a></nav></header>
+<h1>Deník</h1><div class="card"><h2 style="margin-top:0">2026-10-03 — Den 2: statistický model jako druhá série</h2><p><b>Co jsme udělali:</b> postavili jsme statistický model podle návrhu „Model predikce senátních voleb 2026“ a zveřejňujeme ho jako samostatnou sérii. Popis je na stránce <a href="model.html">Model</a>. Kurzy model nevidí. Při validaci na 81 obvodech z let 2020–2024 poráží jednoduchá pravidla: Brier 0,673 proti 0,770 u nejlepší heuristiky.</p>
+<p><b>Kde se model a AI agent rozcházejí:</b> Praha 5 (model Sáblík 68 %, AI Láska 46 %), Praha 1 (Padevět 70 % vs. Čižinský 54 %), Pelhřimov (Med 75 % vs. 45 %) a Karviná (Brzyszkowská 40 % vs. 65 %). Jde o obvody se silnými místními nebo nezávislými kandidáty. Po volbách se tu ukáže, jestli agent přidává informaci, nebo šum.</p>
+<h3>Chyby a jejich nápravy</h3>
+<ol>
+<li><b>První verze trefila favorita jen ve 41 % obvodů.</b> <i>Příčina:</i> obhájce jsme poznávali podle slova „senátor“ v povolání, což často chybí. <i>Náprava:</i> obhájce se teď určuje z úplné historie voleb ČSÚ, včetně změny jména (Šípová → Sucharda Šípová).</li>
+<li><b>Model v roce 2020 nadhodnotil kandidáty ANO o 10–15 bodů.</b> <i>Příčina:</i> vládní strana má v senátních volbách nižší podíl než ve sněmovních, a validace bez roku 2020 neměla jiný cyklus, kdy ANO vládlo. <i>Náprava:</i> interakce mezi základnou a vládní stranou. V datech je ale jen jeden takový cyklus, proto to uvádíme jako slabinu.</li>
+<li><b>Model podceňoval kandidáty STAN a KDU-ČSL.</b> <i>Příčina:</i> jsou to strany starostů, takže v Senátu mají víc, než říká jejich sněmovní základna. <i>Náprava:</i> stranické efekty pro STAN a KDU-ČSL.</li>
+<li><b>Model byl přehnaně sebejistý.</b> V pásmu 70–90 % vyhrálo jen 32 % kandidátů. <i>Náprava:</i> kalibrace na validačních datech. Je nastavená na stejných datech, takže je mírně optimistická.</li>
+<li><b>Model nevidí místní hnutí</b> (Praha sobě, SLK, SEN 21, Rozvíjíme Hradec…). <i>Náprava:</i> místní základna z komunálních voleb. Brier se zlepšil z 0,693 na 0,673.</li>
+<li><b>Artefakt:</b> kandidát SOCDEM v Karviné vyskočil na 43 % kvůli síle ČSSD v komunálních volbách 2022, i když se strana celostátně zhroutila. <i>Náprava:</i> zavedené celostátní strany do místní základny nepočítáme.</li>
+<li><b>Tabulka průzkumů na Wikipedii nebyla k nalezení vyhledáváním</b> (anglická verze stránku pro rok 2029 nemá). <i>Náprava:</i> data jsme vzali z české Wikipedie přes její API. Výsledkem je průměr čtyř agentur místo úryvků z researche.</li>
+</ol>
+<p><b>Další krok (po 5. 10.):</b> průzkumy po obvodech před moratoriem, AI update s modelem jako vstupem, zamčení blind odhadu a potom trh.</p></div><div class="card"><h2 style="margin-top:0">2026-10-02 — Den 1: blind předpovědi všech 27 obvodů</h2><p>Spustili jsme plnou pipeline pro všech 27 obvodů. Brno 60 a Kladno 30 měly starší predikce z 21. 9., ty dostaly nový blind update. <b>Žádná fáze neviděla sázkové kurzy.</b></p>
 <p><b>Celkový obraz:</b> v 26 z 27 obvodů je favoritem opoziční kandidát. Jedinou výjimkou je Karviná (75), kde ANO obhajuje volné místo. ANO často postupuje do 2. kola, ale v něm dlouhodobě prohrává, zvlášť v letech, kdy vládne. Nejtěsnější jsou Pelhřimov (15), Litovel (66), Hradec Králové (45), Praha 5 (21) a Plzeň (9).</p>
 <p><b>Co se pokazilo a jak jsme to chytili:</b></p>
 <ul>

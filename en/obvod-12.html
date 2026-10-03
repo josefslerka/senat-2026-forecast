@@ -23,7 +23,7 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 @media (max-width:640px){.hide-sm{display:none}h1{font-size:23px}}
 </style></head><body><div class="wrap">
-<header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Overview</a><a href="pravidla.html">Rules</a><a href="denik.html">Journal</a><a href="archiv.html">Archive</a><a class="lang" href="../obvod-12.html">CS</a></nav></header>
+<header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Overview</a><a href="pravidla.html">Rules</a><a href="model.html">Model</a><a href="denik.html">Journal</a><a href="archiv.html">Archive</a><a class="lang" href="../obvod-12.html">CS</a></nav></header>
 
 <p><a href="index.html">← back to overview</a></p>
 <h1>District 12 — Strakonice</h1><p class="lead"><span class="pill">incumbent running; only 3 candidates</span>
@@ -32,6 +32,9 @@ footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:v
 <div class="scroll"><table style="margin-top:12px"><thead><tr><th>Candidate</th><th>Party / backing</th><th>P(win)</th><th>Band</th></tr></thead>
 <tbody><tr><td>Tomáš Fiala</td><td class="muted">NČ</td><td class="num"><b>87 %</b></td><td class="num">76–94 %</td></tr><tr><td>Jana Hrdinová</td><td class="muted">KDU-ČSL</td><td class="num"><b>7 %</b></td><td class="num">3–15 %</td></tr><tr><td>Miroslav Ušatý</td><td class="muted">Svob+SPD+Trikol (navrhl/a Svobodní)</td><td class="num"><b>6 %</b></td><td class="num">2–12 %</td></tr><tr><td>Others</td><td class="muted"></td><td class="num"><b>0 %</b></td><td class="num">0–0 %</td></tr></tbody></table></div>
 <p class="muted" style="font-size:14px">Other candidates on the ballot: —. Candidates and lists per the official ČSÚ register (volby.gov.cz).</p>
+<h2>AI agent (blind) vs. Statistical model</h2>
+<div class="scroll"><table><thead><tr><th>Candidate</th><th>Party / backing</th><th>AI agent (blind)</th><th>Statistical model</th><th>Round-1 share (model, 80% interval)</th><th>P(advance / win round 1)</th></tr></thead>
+<tbody><tr><td>Tomáš Fiala</td><td class="muted">NČ</td><td class="num">87 %</td><td class="num"><b>48 %</b></td><td class="num">38 % (29–46)</td><td class="num">84 %</td></tr><tr><td>Jana Hrdinová</td><td class="muted">KDU-ČSL</td><td class="num">7 %</td><td class="num"><b>31 %</b></td><td class="num">32 % (23–40)</td><td class="num">58 %</td></tr><tr><td>Miroslav Ušatý</td><td class="muted">Svob+SPD+Trikol</td><td class="num">6 %</td><td class="num"><b>21 %</b></td><td class="num">31 % (22–39)</td><td class="num">53 %</td></tr></tbody></table></div><p class="muted" style="font-size:14px">AI agent (blind) — Others: 0 %. The model cannot see candidates with neither party nor municipal base (new movements, personal brand) — it underrates them. <a href="model.html">Model →</a></p>
 <h2>Why</h2><p>Only three candidates; neither ANO nor ODS runs. The incumbent has a real chance of winning outright in round 1 (~43 %).</p>
 <h2>What to watch</h2><p>Fiala above 50 % settles it; otherwise the runoff opponent matters.</p>
 <h2>Run limitations</h2><ul class="muted"><li>Odds contamination risk: <code>possible</code></li><li>Red-team: <code>adjustment</code> · post-hoc independent red-team</li><li>Grounding: <code>pass</code></li></ul>

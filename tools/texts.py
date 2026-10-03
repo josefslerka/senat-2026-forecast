@@ -173,3 +173,106 @@ JOURNAL = [
 </ol>
 <p><b>Next:</b> the market step (de-vigged odds) and final numbers, then daily news checks until the freeze on 9 Oct 14:00.</p>"""),
 ]
+
+
+def _model_page(lang: str):
+    def render(m: dict) -> str:
+        v = m.get("validation") or {}
+        b = (m.get("coefficients") or {}).get("beta", {})
+        cyc = v.get("cycles", {})
+        if lang == "cs":
+            coef = "".join(f"<tr><td><code>{k}</code></td><td class='num'>{val:+.2f}</td></tr>" for k, val in b.items())
+            return f"""
+<p class="lead">Samostatná série: statistický model ze tří vrstev se simulací Monte Carlo. Pracuje jen s oficiálními daty ČSÚ a nevidí žádné sázkové kurzy. Od pondělí ho AI agent dostane jako vstup, takže půjde porovnat čtyři série: AI samotné (2. 10.), model samotný, AI s modelem a trh.</p>
+<h2>Vrstvy</h2>
+<ol>
+<li><b>Stranická základna:</b> výsledek sněmovních voleb (2025 pro letošek, 2021 pro historii) po okrscích, převedený na senátní obvody podle oficiálních převodníků ČSÚ. Základna kandidáta je součet podílů stran, které ho navrhly nebo podpořily. Celostátní posun od voleb 2025 se bere z průměru průzkumů (Kantar, Median, NMS, STEM za srpen a září 2026), je pro všechny obvody společný a v simulaci se losuje.</li>
+<li><b>Místní základna:</b> podíl místních a regionálních hnutí v komunálních volbách (2018 pro roky 2020 a 2022, 2022 pro roky 2024 a 2026), u subjektů, které ve sněmovních volbách nekandidují. Zavedené celostátní strany (SOCDEM, KSČM) jsou vyřazené.</li>
+<li><b>Efekt kandidáta (1. kolo):</b> regrese na 582 kandidátech z let 2020–2024. Rysy: obhájce a bývalý senátor (podle historie voleb), starosta nebo hejtman a poslanec (podle povolání), vládní strana, ANO, STAN, KDU-ČSL, kandidát bez stranické základny, počet podporujících stran a počet kandidátů.</li>
+<li><b>Druhé kolo:</b> model výsledku finalistů podle náskoku z 1. kola, rezervy hlasů ve stejném bloku (DEM / ANO / NAT / ostatní) a vládní příslušnosti. Fitovaný na zhruba 80 druhých kolech.</li>
+<li><b>Simulace:</b> 20 000 průběhů. Společný celostátní posun, šum kandidátů, výsledek 2. kola. Nakonec kalibrace p ∝ p<sup>0,55</sup>.</li>
+</ol>
+<h2>Validace (vynechání jednoho volebního cyklu, 81 obvodů 2020–2024)</h2>
+<table><thead><tr><th>Model / heuristika</th><th>Brier ↓</th><th>log skóre ↑</th></tr></thead><tbody>
+<tr><td><b>statistický model</b></td><td class="num"><b>{v.get('brier_model', 0):.3f}</b></td><td class="num"><b>−1,40</b></td></tr>
+<tr><td>pravděpodobnost úměrná stranické základně</td><td class="num">0,770</td><td class="num">−1,75</td></tr>
+<tr><td>obhájce 50 %, zbytek rovnoměrně</td><td class="num">0,783</td><td class="num">−1,78</td></tr>
+<tr><td>rovnoměrné rozdělení</td><td class="num">0,843</td><td class="num">−1,92</td></tr>
+</tbody></table>
+<p>Podle cyklů: 2020 {cyc.get('2020', {}).get('brier', 0):.3f} · 2022 {cyc.get('2022', {}).get('brier', 0):.3f} · 2024 {cyc.get('2024', {}).get('brier', 0):.3f}. Průměrná chyba odhadu podílu v 1. kole je {v.get('r1_mae', 0):.1f} procentního bodu. Favorit modelu vyhrál v {v.get('acc_model', 0)*100:.0f} % obvodů.</p>
+<h2>Poctivě o slabinách</h2>
+<ul>
+<li><b>Signál je mírný.</b> Model jednoduchá pravidla poráží, ale senátní volby jsou málo předvídatelné.</li>
+<li><b>Model bez kalibrace byl přehnaně sebejistý.</b> V pásmu 70–90 % vyhrálo jen 32 % kandidátů. Mocnina 0,55 je nastavená na stejných validačních datech, takže hodnoty po kalibraci jsou mírně optimistické.</li>
+<li><b>Nevidí osobní značku</b> nezávislých kandidátů a nová hnutí, která v roce 2022 ještě neexistovala (Vosecký, Chalupský, Ošťádal). Tady má přidat hodnotu AI agent.</li>
+<li><b>Vládní období ANO je v historických datech jen jedno</b> (2020). Efekt „ANO ve vládě“ je proto odhadnutý z malého vzorku.</li>
+<li><b>Ve sněmovních volbách 2021 kandidovali Piráti a STAN společně</b> a jejich podíl je rozdělený napůl (předpoklad). SPOLU je rozdělené jako ODS 60 %, KDU-ČSL 22 % a TOP 09 18 % (předpoklad).</li>
+</ul>
+<h2>Koeficienty 1. kola (procentní body)</h2>
+<div class="scroll"><table><tbody>{coef}</tbody></table></div>
+<p class="muted">Kód: <code>tools/senat_model/</code>, data: <code>data/snapshots/*-model.json</code>.</p>"""
+        coef = "".join(f"<tr><td><code>{k}</code></td><td class='num'>{val:+.2f}</td></tr>" for k, val in b.items())
+        return f"""
+<p class="lead">A separate series: a three-layer statistical model with Monte Carlo simulation. It uses only official ČSÚ data and sees no betting odds. From Monday the AI agent gets it as an input, so we can compare four series: AI alone (2 Oct), model alone, AI + model, and the market.</p>
+<h2>Layers</h2>
+<ol>
+<li><b>Party base:</b> the Chamber election result (2025 for this year, 2021 for history) by precinct, mapped to Senate districts with ČSÚ's official mapping tables. A candidate's base is the sum of the shares of the parties that nominated or backed them. The national swing since the 2025 election comes from the poll average (Kantar, Median, NMS, STEM, Aug–Sep 2026); it is shared by all districts and drawn in the simulation.</li>
+<li><b>Local base:</b> the municipal-election share (2018 for the 2020 and 2022 cycles, 2022 for 2024 and 2026) of local and regional movements that do not run in Chamber elections. Established national parties (SOCDEM, KSČM) are excluded.</li>
+<li><b>Candidate effect (round 1):</b> a regression on 582 candidates from 2020–2024. Features: incumbent and former senator (from election history), mayor or governor and MP (from occupation), government party, ANO, STAN, KDU-ČSL, no party base, number of backing parties, number of candidates.</li>
+<li><b>Runoff:</b> a model of the finalists' result from the round-1 margin, the same-bloc vote reservoir (DEM / ANO / NAT / other) and government affiliation. Fitted on about 80 runoffs.</li>
+<li><b>Simulation:</b> 20,000 runs with a shared national swing, candidate noise and the runoff outcome. Finally, calibration p ∝ p<sup>0.55</sup>.</li>
+</ol>
+<h2>Validation (leave one election cycle out, 81 districts 2020–2024)</h2>
+<table><thead><tr><th>Model / heuristic</th><th>Brier ↓</th><th>log score ↑</th></tr></thead><tbody>
+<tr><td><b>statistical model</b></td><td class="num"><b>{v.get('brier_model', 0):.3f}</b></td><td class="num"><b>−1.40</b></td></tr>
+<tr><td>probability proportional to party base</td><td class="num">0.770</td><td class="num">−1.75</td></tr>
+<tr><td>incumbent 50 %, rest uniform</td><td class="num">0.783</td><td class="num">−1.78</td></tr>
+<tr><td>uniform</td><td class="num">0.843</td><td class="num">−1.92</td></tr>
+</tbody></table>
+<p>By cycle: 2020 {cyc.get('2020', {}).get('brier', 0):.3f} · 2022 {cyc.get('2022', {}).get('brier', 0):.3f} · 2024 {cyc.get('2024', {}).get('brier', 0):.3f}. The mean absolute error of the round-1 share is {v.get('r1_mae', 0):.1f} pp. The model's favourite won in {v.get('acc_model', 0)*100:.0f} % of districts.</p>
+<h2>Honest limitations</h2>
+<ul>
+<li><b>The signal is modest.</b> The model beats simple rules, but Senate races are hard to predict.</li>
+<li><b>The raw model was overconfident.</b> In the 70–90 % bucket only 32 % won. The 0.55 exponent was fitted on the same validation data, so the calibrated numbers are slightly optimistic.</li>
+<li><b>It cannot see the personal brand</b> of independents or of movements that didn't exist in 2022 (Vosecký, Chalupský, Ošťádal). This is where the AI agent should add value.</li>
+<li><b>There is only one ANO-in-government cycle</b> in the historical data (2020), so the “ANO in government” effect rests on a small sample.</li>
+<li><b>In the 2021 Chamber election Pirates and STAN ran on a joint list</b>, which is split 50/50 (assumption). SPOLU is split ODS 60 %, KDU-ČSL 22 %, TOP 09 18 % (assumption).</li>
+</ul>
+<h2>Round-1 coefficients (percentage points)</h2>
+<div class="scroll"><table><tbody>{coef}</tbody></table></div>
+<p class="muted">Code: <code>tools/senat_model/</code>, data: <code>data/snapshots/*-model.json</code>.</p>"""
+    return render
+
+
+MODEL_PAGE = {"cs": _model_page("cs"), "en": _model_page("en")}
+
+JOURNAL.append(dict(
+    date="2026-10-03",
+    title_cs="Den 2: statistický model jako druhá série",
+    title_en="Day 2: a statistical model as a second series",
+    cs="""<p><b>Co jsme udělali:</b> postavili jsme statistický model podle návrhu „Model predikce senátních voleb 2026“ a zveřejňujeme ho jako samostatnou sérii. Popis je na stránce <a href="model.html">Model</a>. Kurzy model nevidí. Při validaci na 81 obvodech z let 2020–2024 poráží jednoduchá pravidla: Brier 0,673 proti 0,770 u nejlepší heuristiky.</p>
+<p><b>Kde se model a AI agent rozcházejí:</b> Praha 5 (model Sáblík 68 %, AI Láska 46 %), Praha 1 (Padevět 70 % vs. Čižinský 54 %), Pelhřimov (Med 75 % vs. 45 %) a Karviná (Brzyszkowská 40 % vs. 65 %). Jde o obvody se silnými místními nebo nezávislými kandidáty. Po volbách se tu ukáže, jestli agent přidává informaci, nebo šum.</p>
+<h3>Chyby a jejich nápravy</h3>
+<ol>
+<li><b>První verze trefila favorita jen ve 41 % obvodů.</b> <i>Příčina:</i> obhájce jsme poznávali podle slova „senátor“ v povolání, což často chybí. <i>Náprava:</i> obhájce se teď určuje z úplné historie voleb ČSÚ, včetně změny jména (Šípová → Sucharda Šípová).</li>
+<li><b>Model v roce 2020 nadhodnotil kandidáty ANO o 10–15 bodů.</b> <i>Příčina:</i> vládní strana má v senátních volbách nižší podíl než ve sněmovních, a validace bez roku 2020 neměla jiný cyklus, kdy ANO vládlo. <i>Náprava:</i> interakce mezi základnou a vládní stranou. V datech je ale jen jeden takový cyklus, proto to uvádíme jako slabinu.</li>
+<li><b>Model podceňoval kandidáty STAN a KDU-ČSL.</b> <i>Příčina:</i> jsou to strany starostů, takže v Senátu mají víc, než říká jejich sněmovní základna. <i>Náprava:</i> stranické efekty pro STAN a KDU-ČSL.</li>
+<li><b>Model byl přehnaně sebejistý.</b> V pásmu 70–90 % vyhrálo jen 32 % kandidátů. <i>Náprava:</i> kalibrace na validačních datech. Je nastavená na stejných datech, takže je mírně optimistická.</li>
+<li><b>Model nevidí místní hnutí</b> (Praha sobě, SLK, SEN 21, Rozvíjíme Hradec…). <i>Náprava:</i> místní základna z komunálních voleb. Brier se zlepšil z 0,693 na 0,673.</li>
+<li><b>Artefakt:</b> kandidát SOCDEM v Karviné vyskočil na 43 % kvůli síle ČSSD v komunálních volbách 2022, i když se strana celostátně zhroutila. <i>Náprava:</i> zavedené celostátní strany do místní základny nepočítáme.</li>
+<li><b>Tabulka průzkumů na Wikipedii nebyla k nalezení vyhledáváním</b> (anglická verze stránku pro rok 2029 nemá). <i>Náprava:</i> data jsme vzali z české Wikipedie přes její API. Výsledkem je průměr čtyř agentur místo úryvků z researche.</li>
+</ol>
+<p><b>Další krok (po 5. 10.):</b> průzkumy po obvodech před moratoriem, AI update s modelem jako vstupem, zamčení blind odhadu a potom trh.</p>""",
+    en="""<p><b>What we did:</b> we built a statistical model following the design note “Model predikce senátních voleb 2026” and publish it as a separate series. The description is on the <a href="model.html">Model</a> page. The model sees no odds. In validation on 81 districts from 2020–2024 it beats simple rules: Brier 0.673 vs. 0.770 for the best heuristic.</p>
+<p><b>Where the model and the AI agent disagree:</b> Praha 5 (model Sáblík 68 %, AI Láska 46 %), Praha 1 (Padevět 70 % vs. Čižinský 54 %), Pelhřimov (Med 75 % vs. 45 %) and Karviná (Brzyszkowská 40 % vs. 65 %). These are districts with strong local or independent candidates. After the election they will show whether the agent adds information or noise.</p>
+<h3>Mistakes and their fixes</h3>
+<ol>
+<li><b>The first version picked the right favourite in only 41 % of districts.</b> <i>Cause:</i> incumbents were detected from the word “senator” in the occupation field, which is often missing. <i>Fix:</i> incumbency now comes from the full ČSÚ election history, including name changes (Šípová → Sucharda Šípová).</li>
+<li><b>In 2020 the model overrated ANO candidates by 10–15 points.</b> <i>Cause:</i> a governing party gets a lower share in Senate elections than in Chamber elections, and validating without 2020 left no other cycle with ANO in government. <i>Fix:</i> an interaction between base and government party. There is only one such cycle in the data, so we list it as a limitation.</li>
+<li><b>The model underrated STAN and KDU-ČSL candidates.</b> <i>Cause:</i> they are mayors' parties and do better in the Senate than their Chamber base suggests. <i>Fix:</i> party effects for STAN and KDU-ČSL.</li>
+<li><b>The model was overconfident.</b> In the 70–90 % bucket only 32 % won. <i>Fix:</i> calibration on validation data. It is fitted on the same data, so it is slightly optimistic.</li>
+<li><b>The model couldn't see local movements</b> (Praha sobě, SLK, SEN 21, Rozvíjíme Hradec…). <i>Fix:</i> a local base from municipal elections. Brier improved from 0.693 to 0.673.</li>
+<li><b>Artefact:</b> the SOCDEM candidate in Karviná jumped to 43 % because of ČSSD's strength in the 2022 municipal elections, even though the party has collapsed nationally. <i>Fix:</i> established national parties don't count toward the local base.</li>
+<li><b>The Wikipedia poll table couldn't be found through search</b> (the English site has no 2029 polling page). <i>Fix:</i> we took the data from Czech Wikipedia via its API. The result is an average of four pollsters instead of snippets from research.</li>
+</ol>
+<p><b>Next (Mon 5 Oct):</b> district polls before the blackout, an AI update with the model as input, locking the blind forecast, then the market.</p>"""))

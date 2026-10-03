@@ -26,7 +26,7 @@ sys.path.insert(0, str(HERE))
 
 from forecast_math import read_distributions, read_frontmatter  # noqa: E402
 from meta import DISTRICTS  # noqa: E402
-from texts import JOURNAL, RULES, INTRO  # noqa: E402
+from texts import JOURNAL, RULES, INTRO, MODEL_PAGE  # noqa: E402
 
 FORECASTS = VAULT / "forecasts"
 
@@ -140,6 +140,39 @@ def snapshot(stage: str, date: str) -> dict:
             "districts": sorted(districts, key=lambda x: x["n"])}
 
 
+MODEL_JSON = VAULT / "data" / "senat-model" / "model_2026.json"
+
+
+def model_snapshot(date: str) -> dict:
+    m = json.loads(MODEL_JSON.read_text())
+    out = []
+    for d in m["prediction"]:
+        ballot = {" ".join(b["tokens"][1:] + b["tokens"][:1]): b for b in official_ballot(d["obvod"])}
+        cands = []
+        for c in sorted(d["candidates"], key=lambda c: -c["p_win"]):
+            cands.append(dict(name=c["name"], list=c["list"], p=c["p_win"], r1_mean=c["r1_mean"],
+                              r1_p10=c["r1_p10"], r1_p90=c["r1_p90"], p_advance=c["p_advance"],
+                              base=c["base"], local=c["local_extra"]))
+        out.append(dict(n=d["obvod"], leader=cands[0]["name"], leader_p=cands[0]["p"], candidates=cands))
+    return {"experiment": "senat-2026", "series": "statistical-model", "date": date,
+            "generated_utc": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+            "validation": m.get("validation"), "coefficients": m.get("coefficients"),
+            "districts": sorted(out, key=lambda x: x["n"])}
+
+
+def write_snapshot(out: Path, name: str, snap: dict) -> dict:
+    sdir = out / "data" / "snapshots"
+    sdir.mkdir(parents=True, exist_ok=True)
+    target = sdir / name
+    if target.exists():
+        old = json.loads(target.read_text())
+        if old["districts"] != snap["districts"]:
+            raise SystemExit(f"{name} exists with different content — snapshots are append-only")
+        return old
+    target.write_text(json.dumps(snap, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return snap
+
+
 # ── HTML ────────────────────────────────────────────────────────────────────
 
 CSS = """
@@ -175,7 +208,7 @@ L = {
                stage="Fáze", blind="blind (bez kurzů)", final="final (po zohlednění trhu)",
                snapshot="Snapshot", others="Ostatní", back="← zpět na přehled",
                limits="Omezení běhu", rt="Red-team", gr="Grounding", cont="Riziko kontaminace kurzy",
-               rl="Omezení researche", otherslist="Ostatní kandidáti na lístku", ballotsrc="Kandidáti a volební strany podle oficiálního seznamu ČSÚ (volby.gov.cz).", posthoc="dodatečný nezávislý red-team", updated="Stav k",
+               rl="Omezení researche", model="Model", ai="AI agent (blind)", stat="Statistický model", r1="Podíl v 1. kole (model, 80% interval)", adv="P(postup / výhra v 1. kole)", inothers="v „ostatních“", modelnote="Model nezná kandidáty bez stranické i komunální základny (nová hnutí, osobní značka) — tam ho podceňuje.", otherslist="Ostatní kandidáti na lístku", ballotsrc="Kandidáti a volební strany podle oficiálního seznamu ČSÚ (volby.gov.cz).", posthoc="dodatečný nezávislý red-team", updated="Stav k",
                foot="Predikce generuje AI pipeline (Claude) s člověkem ve smyčce. Nejde o sázkové tipy. Obsah CC BY 4.0, kód MIT."),
     "en": dict(title="Czech Senate 2026 — a public AI forecasting experiment", home="Overview", rules="Rules",
                journal="Journal", archive="Archive", other="CS", district="District", fav="Favourite",
@@ -184,7 +217,7 @@ L = {
                stage="Stage", blind="blind (no odds)", final="final (market-aware)",
                snapshot="Snapshot", others="Others", back="← back to overview",
                limits="Run limitations", rt="Red-team", gr="Grounding", cont="Odds contamination risk",
-               rl="Research limitation", otherslist="Other candidates on the ballot", ballotsrc="Candidates and lists per the official ČSÚ register (volby.gov.cz).", posthoc="post-hoc independent red-team", updated="As of",
+               rl="Research limitation", model="Model", ai="AI agent (blind)", stat="Statistical model", r1="Round-1 share (model, 80% interval)", adv="P(advance / win round 1)", inothers="in “others”", modelnote="The model cannot see candidates with neither party nor municipal base (new movements, personal brand) — it underrates them.", otherslist="Other candidates on the ballot", ballotsrc="Candidates and lists per the official ČSÚ register (volby.gov.cz).", posthoc="post-hoc independent red-team", updated="As of",
                foot="Forecasts are produced by an AI pipeline (Claude) with a human in the loop. Not betting tips. Content CC BY 4.0, code MIT."),
 }
 
@@ -215,7 +248,7 @@ def layout(lang: str, page: str, title: str, body: str) -> str:
     t = L[lang]
     prefix = "" if lang == "cs" else ""
     nav = (f'<a href="index.html">{t["home"]}</a><a href="pravidla.html">{t["rules"]}</a>'
-           f'<a href="denik.html">{t["journal"]}</a><a href="archiv.html">{t["archive"]}</a>'
+           f'<a href="model.html">{t["model"]}</a><a href="denik.html">{t["journal"]}</a><a href="archiv.html">{t["archive"]}</a>'
            f'<a class="lang" href="{other_lang_link(lang, page)}">{t["other"]}</a>')
     return f"""<!doctype html><html lang="{lang}"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -234,10 +267,13 @@ def bar(cands: list[dict]) -> str:
     return f'<div class="bar">{segs}</div>'
 
 
-def overview(lang: str, snap: dict) -> str:
+def overview(lang: str, snap: dict, msnap: dict | None = None) -> str:
     t = L[lang]
     rows = []
+    mby = {d["n"]: d for d in (msnap or {}).get("districts", [])}
     for d in snap["districts"]:
+        md = mby.get(d["n"])
+        mcell = (f'<td>{esc(md["leader"])}</td><td class="num"><b>{pct(md["leader_p"])}</b></td>') if md else '<td>—</td><td>—</td>'
         lead = next(c for c in d["candidates"] if c["key"] == d["leader"])
         b = d["leader_band"]
         band = f"{b[0]*100:.0f}–{b[1]*100:.0f} %" if b and None not in b else "—"
@@ -245,14 +281,14 @@ def overview(lang: str, snap: dict) -> str:
             f'<tr><td class="num">{d["n"]}</td><td><a href="obvod-{d["n"]:02d}.html">{esc(d["name"])}</a></td>'
             f'<td>{esc(lead["name"])}<div class="muted" style="font-size:13px">{esc(lead["party"])}</div></td>'
             f'<td class="num"><b>{pct(d["leader_p"])}</b></td><td class="num hide-sm">{band}</td>'
-            f'<td>{bar(d["candidates"])}</td><td class="hide-sm"><span class="pill">{esc(d["status_"+lang])}</span></td></tr>')
+            f'<td class="hide-sm">{bar(d["candidates"])}</td>' + mcell + f'<td class="hide-sm"><span class="pill">{esc(d["status_"+lang])}</span></td></tr>')
     intro = INTRO[lang]
     return layout(lang, "index.html", t["title"], f"""
 <h1>{esc(t['title'])}</h1><p class="lead">{intro['lead']}</p>
 <div class="card">{intro['body']}</div>
-<h2>{t['updated']} {esc(snap['date'])} · {t['stage']}: {t[snap['stage']]}</h2>
-<div class="scroll"><table><thead><tr><th>#</th><th>{t['district']}</th><th>{t['fav']}</th><th>{t['p']}</th>
-<th class="hide-sm">{t['band']}</th><th>{t['dist']}</th><th class="hide-sm">{t['status']}</th></tr></thead>
+<h2>{t['ai']}: {esc(snap['date'])} · {t['stat']}: {esc((msnap or {}).get('date', '—'))}</h2>
+<div class="scroll"><table><thead><tr><th>#</th><th>{t['district']}</th><th>{t['fav']} · {t['ai']}</th><th>{t['p']}</th>
+<th class="hide-sm">{t['band']}</th><th class="hide-sm">{t['dist']}</th><th>{t['fav']} · {t['stat']}</th><th>{t['p']}</th><th class="hide-sm">{t['status']}</th></tr></thead>
 <tbody>{''.join(rows)}</tbody></table></div>""")
 
 
@@ -260,7 +296,23 @@ def band_str(b) -> str:
     return f"{b[0] * 100:.0f}–{b[1] * 100:.0f} %" if b else "—"
 
 
-def district_page(lang: str, d: dict, snap: dict) -> str:
+def model_table(lang: str, d: dict, md: dict | None) -> str:
+    if not md:
+        return ""
+    t = L[lang]
+    ai = {c["name"]: c["p"] for c in d["candidates"] if c["key"] != "Someone_else"}
+    ai_other = next((c["p"] for c in d["candidates"] if c["key"] == "Someone_else"), 0.0)
+    rows = "".join(
+        f'<tr><td>{esc(c["name"])}</td><td class="muted">{esc(c["list"])}</td>'
+        f'<td class="num">{pct(ai[c["name"]]) if c["name"] in ai else t["inothers"]}</td>'
+        f'<td class="num"><b>{pct(c["p"])}</b></td><td class="num">{c["r1_mean"]:.0f} % ({c["r1_p10"]:.0f}–{c["r1_p90"]:.0f})</td>'
+        f'<td class="num">{pct(c["p_advance"])}</td></tr>' for c in md["candidates"])
+    return f"""<h2>{t['ai']} vs. {t['stat']}</h2>
+<div class="scroll"><table><thead><tr><th>{t['cand']}</th><th>{t['party']}</th><th>{t['ai']}</th><th>{t['stat']}</th><th>{t['r1']}</th><th>{t['adv']}</th></tr></thead>
+<tbody>{rows}</tbody></table></div><p class="muted" style="font-size:14px">{t['ai']} — {t['others']}: {pct(ai_other)}. {t['modelnote']} <a href="model.html">{t['model']} →</a></p>"""
+
+
+def district_page(lang: str, d: dict, snap: dict, md: dict | None = None) -> str:
     t = L[lang]
     rows = "".join(
         f'<tr><td>{esc(c["name"] if c["key"] != "Someone_else" else t["others"])}</td><td class="muted">{esc(c["party"])}</td>'
@@ -281,6 +333,7 @@ def district_page(lang: str, d: dict, snap: dict) -> str:
 <div class="scroll"><table style="margin-top:12px"><thead><tr><th>{t['cand']}</th><th>{t['party']}</th><th>{t['p']}</th><th>{t['band']}</th></tr></thead>
 <tbody>{rows}</tbody></table></div>
 <p class="muted" style="font-size:14px">{t['otherslist']}: {esc(', '.join(d['others_on_ballot'])) or '—'}. {t['ballotsrc']}</p>
+{model_table(lang, d, md)}
 <h2>{t['why']}</h2><p>{esc(d['why_'+lang])}</p>
 <h2>{t['watch']}</h2><p>{esc(d['watch_'+lang])}</p>
 <h2>{t['limits']}</h2><ul class="muted">{''.join(lim)}</ul>""")
@@ -302,32 +355,28 @@ def archive_page(lang: str, out: Path) -> str:
     return simple_page(lang, "archiv.html", t["archive"], f"<p>{txt}</p><ul>{items}</ul>")
 
 
-def build(out: Path, date: str, stage: str) -> None:
-    snap = snapshot(stage, date)
-    sdir = out / "data" / "snapshots"
-    sdir.mkdir(parents=True, exist_ok=True)
-    target = sdir / f"{date}-{stage}.json"
-    if target.exists():
-        old = json.loads(target.read_text())
-        if old["districts"] != snap["districts"]:
-            raise SystemExit(f"{target.name} exists with different content — snapshots are append-only; use a new date/stage")
-    else:
-        target.write_text(json.dumps(snap, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    (out / "data" / "latest.json").write_text(json.dumps(snap, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
+def build(out: Path, date: str, stage: str, model_date: str | None = None) -> None:
+    existing = out / "data" / "snapshots" / f"{date}-{stage}.json"
+    snap = json.loads(existing.read_text()) if existing.exists() else write_snapshot(out, f"{date}-{stage}.json", snapshot(stage, date))
+    msnap = write_snapshot(out, f"{model_date}-model.json", model_snapshot(model_date)) if model_date else None
+    latest = {"ai": snap, "model": msnap}
+    (out / "data" / "latest.json").write_text(json.dumps(latest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    mby = {d["n"]: d for d in (msnap or {}).get("districts", [])}
     for lang in ("cs", "en"):
         base = out if lang == "cs" else out / "en"
         base.mkdir(parents=True, exist_ok=True)
-        (base / "index.html").write_text(overview(lang, snap), encoding="utf-8")
+        (base / "index.html").write_text(overview(lang, snap, msnap), encoding="utf-8")
         for d in snap["districts"]:
-            (base / f"obvod-{d['n']:02d}.html").write_text(district_page(lang, d, snap), encoding="utf-8")
+            (base / f"obvod-{d['n']:02d}.html").write_text(district_page(lang, d, snap, mby.get(d["n"])), encoding="utf-8")
         (base / "pravidla.html").write_text(simple_page(lang, "pravidla.html", L[lang]["rules"], RULES[lang]), encoding="utf-8")
+        if msnap:
+            (base / "model.html").write_text(simple_page(lang, "model.html", L[lang]["stat"], MODEL_PAGE[lang](msnap)), encoding="utf-8")
         journal = "".join(f'<div class="card"><h2 style="margin-top:0">{esc(e["date"])} — {esc(e["title_"+lang])}</h2>{e[lang]}</div>'
                           for e in sorted(JOURNAL, key=lambda e: e["date"], reverse=True))
         (base / "denik.html").write_text(simple_page(lang, "denik.html", L[lang]["journal"], journal), encoding="utf-8")
         (base / "archiv.html").write_text(archive_page(lang, out), encoding="utf-8")
     (out / ".nojekyll").write_text("")
-    print(f"Built {len(snap['districts'])} districts, stage={stage}, date={date} → {out}")
+    print(f"Built {len(snap['districts'])} districts, AI {stage} {date}, model {model_date} → {out}")
 
 
 if __name__ == "__main__":
@@ -335,5 +384,6 @@ if __name__ == "__main__":
     ap.add_argument("--out", required=True)
     ap.add_argument("--date", default=dt.date.today().isoformat())
     ap.add_argument("--stage", default="blind", choices=["blind", "final"])
+    ap.add_argument("--model-date")
     a = ap.parse_args()
-    build(Path(a.out).resolve(), a.date, a.stage)
+    build(Path(a.out).resolve(), a.date, a.stage, a.model_date)

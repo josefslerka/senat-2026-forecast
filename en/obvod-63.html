@@ -23,7 +23,7 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 @media (max-width:640px){.hide-sm{display:none}h1{font-size:23px}}
 </style></head><body><div class="wrap">
-<header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Overview</a><a href="pravidla.html">Rules</a><a href="denik.html">Journal</a><a href="archiv.html">Archive</a><a class="lang" href="../obvod-63.html">CS</a></nav></header>
+<header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Overview</a><a href="pravidla.html">Rules</a><a href="model.html">Model</a><a href="denik.html">Journal</a><a href="archiv.html">Archive</a><a class="lang" href="../obvod-63.html">CS</a></nav></header>
 
 <p><a href="index.html">← back to overview</a></p>
 <h1>District 63 — Přerov</h1><p class="lead"><span class="pill">open seat (Seitlová retiring)</span>
@@ -32,6 +32,9 @@ footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:v
 <div class="scroll"><table style="margin-top:12px"><thead><tr><th>Candidate</th><th>Party / backing</th><th>P(win)</th><th>Band</th></tr></thead>
 <tbody><tr><td>Jakub Navařík</td><td class="muted">KDU+ODS+STA+TOP (navrhl/a ODS)</td><td class="num"><b>63 %</b></td><td class="num">44–77 %</td></tr><tr><td>Petr Vrána</td><td class="muted">ANO</td><td class="num"><b>36 %</b></td><td class="num">21–54 %</td></tr><tr><td>Dan Chromec</td><td class="muted">SPD</td><td class="num"><b>0.4 %</b></td><td class="num">0–2 %</td></tr><tr><td>Marek Obrtel</td><td class="muted">ČSNS</td><td class="num"><b>0.2 %</b></td><td class="num">0–1 %</td></tr><tr><td>Others</td><td class="muted"></td><td class="num"><b>0.2 %</b></td><td class="num">0–0 %</td></tr></tbody></table></div>
 <p class="muted" style="font-size:14px">Other candidates on the ballot: —. Candidates and lists per the official ČSÚ register (volby.gov.cz).</p>
+<h2>AI agent (blind) vs. Statistical model</h2>
+<div class="scroll"><table><thead><tr><th>Candidate</th><th>Party / backing</th><th>AI agent (blind)</th><th>Statistical model</th><th>Round-1 share (model, 80% interval)</th><th>P(advance / win round 1)</th></tr></thead>
+<tbody><tr><td>Jakub Navařík</td><td class="muted">KDU+ODS+STA+TOP</td><td class="num">63 %</td><td class="num"><b>73 %</b></td><td class="num">38 % (31–46)</td><td class="num">99 %</td></tr><tr><td>Petr Vrána</td><td class="muted">ANO</td><td class="num">36 %</td><td class="num"><b>20 %</b></td><td class="num">32 % (25–39)</td><td class="num">91 %</td></tr><tr><td>Dan Chromec</td><td class="muted">SPD</td><td class="num">0.4 %</td><td class="num"><b>4 %</b></td><td class="num">16 % (9–23)</td><td class="num">4 %</td></tr><tr><td>Marek Obrtel</td><td class="muted">ČSNS</td><td class="num">0.2 %</td><td class="num"><b>3 %</b></td><td class="num">13 % (6–21)</td><td class="num">2 %</td></tr></tbody></table></div><p class="muted" style="font-size:14px">AI agent (blind) — Others: 0.2 %. The model cannot see candidates with neither party nor municipal base (new movements, personal brand) — it underrates them. <a href="model.html">Model →</a></p>
 <h2>Why</h2><p>Vrána likely wins round 1, but ANO is 0–2 in runoffs here and wins only ~20 % of runoffs overall.</p>
 <h2>What to watch</h2><p>If Navařík leads → 80–85 %; if Vrána leads by 8+ pp above 43 % → ~45–50 %.</p>
 <h2>Run limitations</h2><ul class="muted"><li>Research limitation: <code>websearch_budget_exhausted</code></li><li>Odds contamination risk: <code>none</code></li><li>Red-team: <code>adjustment</code></li><li>Grounding: <code>pass</code></li></ul>

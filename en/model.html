@@ -1,0 +1,57 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Statistical model</title><meta name="description" content="Czech Senate 2026 — a public AI forecasting experiment">
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1d1b;--muted:#6b6a64;--line:#e4e1d8;--card:#fff;--accent:#2f5d8a;--bar:#2f5d8a;--bar2:#c9d6e3;--warn:#9a5b00}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#151514;--fg:#ecebe6;--muted:#a3a19a;--line:#2e2d2a;--card:#1d1d1b;--accent:#8fb4dc;--bar:#8fb4dc;--bar2:#33424f;--warn:#e0a24a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:24px 16px 64px}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:24px}
+header a.brand{font-weight:700;color:var(--fg);text-decoration:none;font-size:18px}
+nav a{margin-left:14px;color:var(--accent);text-decoration:none;font-size:15px}nav a.lang{border:1px solid var(--line);padding:2px 8px;border-radius:6px}
+h1{font-size:28px;line-height:1.2;margin:8px 0 8px}h2{font-size:20px;margin:32px 0 10px}
+p.lead{color:var(--muted);margin-top:0}a{color:var(--accent)}
+table{width:100%;border-collapse:collapse;font-size:15px}th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.03em}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar{display:flex;height:10px;border-radius:5px;overflow:hidden;background:var(--bar2);min-width:120px}
+.bar span{display:block;height:100%}
+.pill{display:inline-block;font-size:12px;padding:1px 7px;border-radius:10px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:16px 0}
+.muted{color:var(--muted)}.warn{color:var(--warn)}
+.scroll{overflow-x:auto}
+footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+@media (max-width:640px){.hide-sm{display:none}h1{font-size:23px}}
+</style></head><body><div class="wrap">
+<header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Overview</a><a href="pravidla.html">Rules</a><a href="model.html">Model</a><a href="denik.html">Journal</a><a href="archiv.html">Archive</a><a class="lang" href="../model.html">CS</a></nav></header>
+<h1>Statistical model</h1>
+<p class="lead">A separate series: a three-layer statistical model with Monte Carlo simulation. It uses only official ČSÚ data and sees no betting odds. From Monday the AI agent gets it as an input, so we can compare four series: AI alone (2 Oct), model alone, AI + model, and the market.</p>
+<h2>Layers</h2>
+<ol>
+<li><b>Party base:</b> the Chamber election result (2025 for this year, 2021 for history) by precinct, mapped to Senate districts with ČSÚ's official mapping tables. A candidate's base is the sum of the shares of the parties that nominated or backed them. The national swing since the 2025 election comes from the poll average (Kantar, Median, NMS, STEM, Aug–Sep 2026); it is shared by all districts and drawn in the simulation.</li>
+<li><b>Local base:</b> the municipal-election share (2018 for the 2020 and 2022 cycles, 2022 for 2024 and 2026) of local and regional movements that do not run in Chamber elections. Established national parties (SOCDEM, KSČM) are excluded.</li>
+<li><b>Candidate effect (round 1):</b> a regression on 582 candidates from 2020–2024. Features: incumbent and former senator (from election history), mayor or governor and MP (from occupation), government party, ANO, STAN, KDU-ČSL, no party base, number of backing parties, number of candidates.</li>
+<li><b>Runoff:</b> a model of the finalists' result from the round-1 margin, the same-bloc vote reservoir (DEM / ANO / NAT / other) and government affiliation. Fitted on about 80 runoffs.</li>
+<li><b>Simulation:</b> 20,000 runs with a shared national swing, candidate noise and the runoff outcome. Finally, calibration p ∝ p<sup>0.55</sup>.</li>
+</ol>
+<h2>Validation (leave one election cycle out, 81 districts 2020–2024)</h2>
+<table><thead><tr><th>Model / heuristic</th><th>Brier ↓</th><th>log score ↑</th></tr></thead><tbody>
+<tr><td><b>statistical model</b></td><td class="num"><b>0.673</b></td><td class="num"><b>−1.40</b></td></tr>
+<tr><td>probability proportional to party base</td><td class="num">0.770</td><td class="num">−1.75</td></tr>
+<tr><td>incumbent 50 %, rest uniform</td><td class="num">0.783</td><td class="num">−1.78</td></tr>
+<tr><td>uniform</td><td class="num">0.843</td><td class="num">−1.92</td></tr>
+</tbody></table>
+<p>By cycle: 2020 0.748 · 2022 0.625 · 2024 0.645. The mean absolute error of the round-1 share is 5.8 pp. The model's favourite won in 44 % of districts.</p>
+<h2>Honest limitations</h2>
+<ul>
+<li><b>The signal is modest.</b> The model beats simple rules, but Senate races are hard to predict.</li>
+<li><b>The raw model was overconfident.</b> In the 70–90 % bucket only 32 % won. The 0.55 exponent was fitted on the same validation data, so the calibrated numbers are slightly optimistic.</li>
+<li><b>It cannot see the personal brand</b> of independents or of movements that didn't exist in 2022 (Vosecký, Chalupský, Ošťádal). This is where the AI agent should add value.</li>
+<li><b>There is only one ANO-in-government cycle</b> in the historical data (2020), so the “ANO in government” effect rests on a small sample.</li>
+<li><b>In the 2021 Chamber election Pirates and STAN ran on a joint list</b>, which is split 50/50 (assumption). SPOLU is split ODS 60 %, KDU-ČSL 22 %, TOP 09 18 % (assumption).</li>
+</ul>
+<h2>Round-1 coefficients (percentage points)</h2>
+<div class="scroll"><table><tbody><tr><td><code>const</code></td><td class='num'>-4.10</td></tr><tr><td><code>base</code></td><td class='num'>+0.77</td></tr><tr><td><code>base_gov</code></td><td class='num'>-0.30</td></tr><tr><td><code>local_extra</code></td><td class='num'>+0.73</td></tr><tr><td><code>incumbent</code></td><td class='num'>+10.99</td></tr><tr><td><code>former_senator</code></td><td class='num'>+0.56</td></tr><tr><td><code>local_exec</code></td><td class='num'>+2.55</td></tr><tr><td><code>mp</code></td><td class='num'>+3.41</td></tr><tr><td><code>gov</code></td><td class='num'>+1.32</td></tr><tr><td><code>ano</code></td><td class='num'>+0.38</td></tr><tr><td><code>stan</code></td><td class='num'>+5.35</td></tr><tr><td><code>kdu</code></td><td class='num'>+6.08</td></tr><tr><td><code>no_base</code></td><td class='num'>+2.84</td></tr><tr><td><code>n_support</code></td><td class='num'>-1.28</td></tr><tr><td><code>inv_n</code></td><td class='num'>+65.17</td></tr></tbody></table></div>
+<p class="muted">Code: <code>tools/senat_model/</code>, data: <code>data/snapshots/*-model.json</code>.</p>
+<footer>Forecasts are produced by an AI pipeline (Claude) with a human in the loop. Not betting tips. Content CC BY 4.0, code MIT. · <a href="https://github.com/josefslerka/senat-2026-forecast">GitHub</a></footer>
+</div></body></html>

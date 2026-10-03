@@ -23,7 +23,7 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 @media (max-width:640px){.hide-sm{display:none}h1{font-size:23px}}
 </style></head><body><div class="wrap">
-<header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Overview</a><a href="pravidla.html">Rules</a><a href="denik.html">Journal</a><a href="archiv.html">Archive</a><a class="lang" href="../obvod-48.html">CS</a></nav></header>
+<header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Overview</a><a href="pravidla.html">Rules</a><a href="model.html">Model</a><a href="denik.html">Journal</a><a href="archiv.html">Archive</a><a class="lang" href="../obvod-48.html">CS</a></nav></header>
 
 <p><a href="index.html">← back to overview</a></p>
 <h1>District 48 — Rychnov nad Kněžnou</h1><p class="lead"><span class="pill">incumbent running; only 2 candidates — round 1 decides</span>
@@ -32,6 +32,9 @@ footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:v
 <div class="scroll"><table style="margin-top:12px"><thead><tr><th>Candidate</th><th>Party / backing</th><th>P(win)</th><th>Band</th></tr></thead>
 <tbody><tr><td>Jan Grulich</td><td class="muted">KDUODSSTPTOPLES (navrhl/a TOP 09)</td><td class="num"><b>71 %</b></td><td class="num">55–86 %</td></tr><tr><td>Petr Sadovský</td><td class="muted">ANO</td><td class="num"><b>29 %</b></td><td class="num">14–45 %</td></tr><tr><td>Others</td><td class="muted"></td><td class="num"><b>0.1 %</b></td><td class="num">0–0 %</td></tr></tbody></table></div>
 <p class="muted" style="font-size:14px">Other candidates on the ballot: —. Candidates and lists per the official ČSÚ register (volby.gov.cz).</p>
+<h2>AI agent (blind) vs. Statistical model</h2>
+<div class="scroll"><table><thead><tr><th>Candidate</th><th>Party / backing</th><th>AI agent (blind)</th><th>Statistical model</th><th>Round-1 share (model, 80% interval)</th><th>P(advance / win round 1)</th></tr></thead>
+<tbody><tr><td>Jan Grulich</td><td class="muted">KDUODSSTPTOPLES</td><td class="num">71 %</td><td class="num"><b>97 %</b></td><td class="num">62 % (57–67)</td><td class="num">100 %</td></tr><tr><td>Petr Sadovský</td><td class="muted">ANO</td><td class="num">29 %</td><td class="num"><b>3 %</b></td><td class="num">38 % (33–43)</td><td class="num">0.1 %</td></tr></tbody></table></div><p class="muted" style="font-size:14px">AI agent (blind) — Others: 0.1 %. The model cannot see candidates with neither party nor municipal base (new movements, personal brand) — it underrates them. <a href="model.html">Model →</a></p>
 <h2>Why</h2><p>Only two candidates, so round 1 decides. The model maps the 2025 Chamber result onto two candidates, with the usual Senate swing against the governing party.</p>
 <h2>What to watch</h2><p>The round-1 result on 10 Oct is final.</p>
 <h2>Run limitations</h2><ul class="muted"><li>Research limitation: <code>websearch_budget_exhausted</code></li><li>Odds contamination risk: <code>none</code></li><li>Red-team: <code>adjustment</code></li><li>Grounding: <code>pass</code></li></ul>
