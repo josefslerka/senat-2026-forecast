@@ -24,7 +24,27 @@ footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:v
 @media (max-width:640px){.hide-sm{display:none}h1{font-size:23px}}
 </style></head><body><div class="wrap">
 <header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Overview</a><a href="pravidla.html">Rules</a><a href="model.html">Model</a><a href="denik.html">Journal</a><a href="archiv.html">Archive</a><a class="lang" href="../denik.html">CS</a></nav></header>
-<h1>Journal</h1><div class="card"><h2 style="margin-top:0">2026-10-03 — Day 2: a statistical model as a second series</h2><p><b>What we did:</b> we built a statistical model following the design note “Model predikce senátních voleb 2026” and publish it as a separate series. The description is on the <a href="model.html">Model</a> page. The model sees no odds. In validation on 81 districts from 2020–2024 it beats simple rules: Brier 0.673 vs. 0.770 for the best heuristic.</p>
+<h1>Journal</h1><div class="card"><h2 style="margin-top:0">2026-10-04 — Day 3: getting ready for Monday, media sweep, numbers unchanged</h2><p><b>We did not change any forecasts today</b>, on purpose: the AI blind is still from 2 Oct and the model from 3 Oct. We are collecting new information and will fold it into one joint update on Monday. That update goes through the full pipeline, including an independent red-team, once the last polls before the blackout are out.</p>
+<h3>What we did</h3>
+<ul>
+<li><b>Pipeline fix.</b> The blind–market blend is now computed by a deterministic tool. Its ρ is the correlation between the blind forecast and the market, not the blind weight, and the pooling is in log-odds. This fixes the first-run bug (Plzeň) where the market got less weight than it should.</li>
+<li><b>Rules for Monday's update.</b> The AI agent starts from the statistical model. It may deviate only for a fact the model cannot see (personal brand, scandal, endorsement, district poll) and logs every deviation with its reason. It must not re-count what the model already contains.</li>
+<li><b>Media sweep.</b> Sunday's TV debates were about national politics (Havlíček on Poledne s Moravcem, Nedělní debata on pensions).
+  <ul>
+  <li><b>Praha 5:</b> a September NMS poll (Prague-wide, municipal) shows Láska is the best-known Prague politician (34 % unaided recall), but only about 10 % of voters consider his movement. This is indirect evidence against the large personal-brand premium the AI forecast assumed.</li>
+  <li><b>Přerov:</b> PM Babiš campaigned there on Saturday for the ANO candidate.</li>
+  <li><b>Campaign money:</b> Tsoukernik (Cheb) put in 1 million CZK, Dvořák (Hradec) 400k. Motoristé field no Senate candidates.</li>
+  <li><b>We found no poll for any individual Senate district.</b></li>
+  </ul></li>
+</ul>
+<h3>Mistakes and fixes</h3>
+<ol>
+<li><b>We stated the poll-blackout time without checking it</b> (“Monday 22:00”). <i>Fix:</i> the ban on publishing polls starts 3 days before election day, i.e. Tue 6 Oct. We could not verify the exact wording of the new law, so we state it as an assumption. We will keep searching for polls until Monday evening.</li>
+<li><b>The agent's search tool is exhausted.</b> <i>Fix:</i> we search via the browser (Google with a last-week filter). Sites that block content behind a cookie consent are opened only with the operator's approval.</li>
+<li><b>A wrong assumption about the TV schedule.</b> We looked for Otázky Václava Moravce, but the Sunday show is now called Poledne s Moravcem. The outcome was unaffected, but it is a reminder to verify small things too.</li>
+<li><b>Risk of odds contamination.</b> A search result showed an article on bookmakers' favourites. <i>Fix:</i> we did not open it and logged it. The blind forecast must stay free of odds until it is locked.</li>
+</ol>
+<p><b>Monday 5 Oct:</b> a final poll search, then an AI update of all 27 districts with the statistical model as input, locking the blind forecast, and only then the market and final numbers.</p></div><div class="card"><h2 style="margin-top:0">2026-10-03 — Day 2: a statistical model as a second series</h2><p><b>What we did:</b> we built a statistical model following the design note “Model predikce senátních voleb 2026” and publish it as a separate series. The description is on the <a href="model.html">Model</a> page. The model sees no odds. In validation on 81 districts from 2020–2024 it beats simple rules: Brier 0.673 vs. 0.770 for the best heuristic.</p>
 <p><b>Where the model and the AI agent disagree:</b> Praha 5 (model Sáblík 68 %, AI Láska 46 %), Praha 1 (Padevět 70 % vs. Čižinský 54 %), Pelhřimov (Med 75 % vs. 45 %) and Karviná (Brzyszkowská 40 % vs. 65 %). These are districts with strong local or independent candidates. After the election they will show whether the agent adds information or noise.</p>
 <h3>Mistakes and their fixes</h3>
 <ol>

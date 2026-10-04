@@ -276,3 +276,50 @@ JOURNAL.append(dict(
 <li><b>The Wikipedia poll table couldn't be found through search</b> (the English site has no 2029 polling page). <i>Fix:</i> we took the data from Czech Wikipedia via its API. The result is an average of four pollsters instead of snippets from research.</li>
 </ol>
 <p><b>Next (Mon 5 Oct):</b> district polls before the blackout, an AI update with the model as input, locking the blind forecast, then the market.</p>"""))
+
+JOURNAL.append(dict(
+    date="2026-10-04",
+    title_cs="Den 3: příprava na pondělí, průchod médii, čísla beze změny",
+    title_en="Day 3: getting ready for Monday, media sweep, numbers unchanged",
+    cs="""<p><b>Odhady jsme dnes neměnili</b>, a to záměrně: AI blind je pořád ze 2. 10., model ze 3. 10. Nové informace sbíráme a v pondělí je zapracujeme jedním společným updatem. Ten projde celou pipeline včetně nezávislého red-teamu, až budou venku poslední průzkumy před moratoriem.</p>
+<h3>Co jsme udělali</h3>
+<ul>
+<li><b>Oprava pipeline.</b> Kombinaci blind odhadu a trhu teď počítá deterministický nástroj. Parametr ρ v něm znamená korelaci mezi blind odhadem a trhem, ne váhu blind odhadu, a průměruje se v log-odds. Tím je opravená chyba z prvního běhu (Plzeň), kdy trh dostal menší váhu, než měl.</li>
+<li><b>Pravidla pro pondělní update.</b> AI agent vyjde ze statistického modelu. Odchýlit se smí jen kvůli faktu, který model nevidí (osobní značka, kauza, podpora, průzkum v obvodu), a každou odchylku zapíše i s důvodem. Nesmí znovu započítat to, co už je v modelu.</li>
+<li><b>Průchod médii.</b> Nedělní diskusní pořady byly o celostátní politice (Havlíček v Poledni s Moravcem, Nedělní debata o důchodech).
+  <ul>
+  <li><b>Praha 5:</b> zářijový průzkum NMS (celopražský, komunální) ukazuje, že Láska je nejznámější pražský politik (34 % si na něj vzpomene spontánně), ale jeho hnutí zvažuje jen asi 10 % voličů. Nepřímo to svědčí proti velké osobní značce, se kterou počítal AI odhad.</li>
+  <li><b>Přerov:</b> v sobotu tam podpořil kandidáta ANO premiér Babiš.</li>
+  <li><b>Peníze na kampaně:</b> Tsoukernik (Cheb) přispěla milionem, Dvořák (Hradec) 400 tisíci. Motoristé do Senátu nikoho nenasadili.</li>
+  <li><b>Průzkum přímo v senátním obvodu jsme nenašli žádný.</b></li>
+  </ul></li>
+</ul>
+<h3>Chyby a nápravy</h3>
+<ol>
+<li><b>Termín moratoria jsme uvedli bez ověření</b> („pondělí 22:00“). <i>Náprava:</i> zákaz zveřejňování průzkumů začíná 3 dny před dnem voleb, tedy v úterý 6. 10. Přesné znění nového zákona se nám ověřit nepodařilo, proto ho uvádíme jako předpoklad. Průzkumy budeme hledat do pondělního večera.</li>
+<li><b>Vyhledávání v nástroji agenta je vyčerpané.</b> <i>Náprava:</i> hledáme přes prohlížeč (Google s filtrem na poslední týden). Weby, které blokují obsah bez souhlasu s cookies, otevíráme jen se souhlasem provozovatele experimentu.</li>
+<li><b>Mylný předpoklad o vysílání.</b> Hledali jsme Otázky Václava Moravce, ale nedělní pořad se dnes jmenuje Poledne s Moravcem. Výsledek to neovlivnilo, je to ale připomínka ověřovat i drobnosti.</li>
+<li><b>Riziko ovlivnění kurzy.</b> Ve výsledcích vyhledávání se objevil článek o favoritech sázkových kanceláří. <i>Náprava:</i> neotevřeli jsme ho a zapsali jsme to. Blind odhad musí zůstat bez kurzů až do jeho zamčení.</li>
+</ol>
+<p><b>Pondělí 5. 10.:</b> poslední hledání průzkumů, potom AI update všech 27 obvodů se statistickým modelem jako vstupem, zamčení blind odhadu a teprve pak trh a final čísla.</p>""",
+    en="""<p><b>We did not change any forecasts today</b>, on purpose: the AI blind is still from 2 Oct and the model from 3 Oct. We are collecting new information and will fold it into one joint update on Monday. That update goes through the full pipeline, including an independent red-team, once the last polls before the blackout are out.</p>
+<h3>What we did</h3>
+<ul>
+<li><b>Pipeline fix.</b> The blind–market blend is now computed by a deterministic tool. Its ρ is the correlation between the blind forecast and the market, not the blind weight, and the pooling is in log-odds. This fixes the first-run bug (Plzeň) where the market got less weight than it should.</li>
+<li><b>Rules for Monday's update.</b> The AI agent starts from the statistical model. It may deviate only for a fact the model cannot see (personal brand, scandal, endorsement, district poll) and logs every deviation with its reason. It must not re-count what the model already contains.</li>
+<li><b>Media sweep.</b> Sunday's TV debates were about national politics (Havlíček on Poledne s Moravcem, Nedělní debata on pensions).
+  <ul>
+  <li><b>Praha 5:</b> a September NMS poll (Prague-wide, municipal) shows Láska is the best-known Prague politician (34 % unaided recall), but only about 10 % of voters consider his movement. This is indirect evidence against the large personal-brand premium the AI forecast assumed.</li>
+  <li><b>Přerov:</b> PM Babiš campaigned there on Saturday for the ANO candidate.</li>
+  <li><b>Campaign money:</b> Tsoukernik (Cheb) put in 1 million CZK, Dvořák (Hradec) 400k. Motoristé field no Senate candidates.</li>
+  <li><b>We found no poll for any individual Senate district.</b></li>
+  </ul></li>
+</ul>
+<h3>Mistakes and fixes</h3>
+<ol>
+<li><b>We stated the poll-blackout time without checking it</b> (“Monday 22:00”). <i>Fix:</i> the ban on publishing polls starts 3 days before election day, i.e. Tue 6 Oct. We could not verify the exact wording of the new law, so we state it as an assumption. We will keep searching for polls until Monday evening.</li>
+<li><b>The agent's search tool is exhausted.</b> <i>Fix:</i> we search via the browser (Google with a last-week filter). Sites that block content behind a cookie consent are opened only with the operator's approval.</li>
+<li><b>A wrong assumption about the TV schedule.</b> We looked for Otázky Václava Moravce, but the Sunday show is now called Poledne s Moravcem. The outcome was unaffected, but it is a reminder to verify small things too.</li>
+<li><b>Risk of odds contamination.</b> A search result showed an article on bookmakers' favourites. <i>Fix:</i> we did not open it and logged it. The blind forecast must stay free of odds until it is locked.</li>
+</ol>
+<p><b>Monday 5 Oct:</b> a final poll search, then an AI update of all 27 districts with the statistical model as input, locking the blind forecast, and only then the market and final numbers.</p>"""))
