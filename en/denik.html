@@ -24,7 +24,7 @@ footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:v
 @media (max-width:640px){.hide-sm{display:none}h1{font-size:23px}}
 </style></head><body><div class="wrap">
 <header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Overview</a><a href="pravidla.html">Rules</a><a href="model.html">Model</a><a href="denik.html">Journal</a><a href="archiv.html">Archive</a><a class="lang" href="../denik.html">CS</a></nav></header>
-<h1>Journal</h1><div class="card"><h2 style="margin-top:0">2026-10-05 — Day 4: five series — AI, Model, AI + model, Betting, Blend</h2><p><b>Today all series appear for the first time.</b> The order was fixed: first the AI update without the model (step A), then the AI with the model as input (step B). Both blind snapshots were locked with a git commit at 15:24. Only after that did we start reading odds (Fortuna from 15:35, then Tipsport).</p>
+<h1>Journal</h1><div class="card"><h2 style="margin-top:0">2026-10-05 — Day 4: five series — AI, Statistical model, AI + model, Betting, Blend</h2><p><b>Today all series appear for the first time.</b> The order was fixed: first the AI update without the model (step A), then the AI with the model as input (step B). Both blind snapshots were locked with a git commit at 15:24. Only after that did we start reading odds (Fortuna from 15:35, then Tipsport).</p>
 <h3>What changed</h3>
 <ul>
 <li><b>AI (no model):</b> only 2 districts changed since 2 Oct. In Litovel we moved 2 pp from Ošťádal to Kohajda after Ošťádal said he would not campaign. In Brno we fixed a 2 pp internal inconsistency in the previous version. The other 25 districts had no new facts and kept their forecast (rule: under 2 pp and no material event means no change).</li>
@@ -49,7 +49,7 @@ footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:v
   <li>KSČM had a zero base;</li>
   <li>calibration gives every minor candidate a floor of about 2 %.</li>
   </ul>
-  <i>Fix:</i> we deliberately leave model v1 unchanged today, so that the Model series changes only when its inputs do. The agents logged the bugs as deviations with reasons, and the fixes go into model v2 after round 1, published as a new version.</li>
+  <i>Fix:</i> we deliberately leave model v1 unchanged today, so that the Statistical model series changes only when its inputs do. The agents logged the bugs as deviations with reasons, and the fixes go into model v2 after round 1, published as a new version.</li>
 <li><b>Double-counting informal backing.</b> In Vyškov and Litovel the agent re-ran the model with informal support “coded in” from parties not on the ballot. The training data is not coded that way, so the effect would have been counted twice. <i>Fix:</i> we added a rule (no model re-runs, only a moderate deviation above the typical level), and an independent review corrected both districts before the lock. Vyškov stayed around 76 %; Litovel is Ošťádal 36.5 % and Kohajda 31 %.</li>
 <li><b>Channels through which odds could leak.</b> We found two:
   <ul>

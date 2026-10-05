@@ -60,7 +60,7 @@ RULES = {
 <h2>Pět sérií (od 5. 10.)</h2>
 <ul>
 <li><b>AI</b>: čistý AI agent bez modelu a bez kurzů. Mění se jen při nových faktech (zprávy, podpory, kauzy, průzkumy). Sloupec „AI 2. 10.“ ukazuje výchozí stav.</li>
-<li><b>Model</b>: statistický model (viz <a href="model.html">Statistický model</a>). Mění se jen při změně vstupů, například po 1. kole.</li>
+<li><b>Statistický model</b> (viz <a href="model.html">popis modelu</a>). Mění se jen při změně vstupů, například po 1. kole.</li>
 <li><b>AI s modelem</b>: AI agent, který vychází z modelu a odchyluje se jen kvůli faktům, které model nevidí. Každou odchylku zapisuje. Bez kurzů.</li>
 <li><b>Sázky</b>: kurzy Fortuny a Tipsportu na vítěze obvodu po odečtení marže (metoda power). Kde má Tipsport jen sázku Ano/Ne na jednoho kandidáta, průměrujeme ji s Fortunou a zbytek rozdělujeme v poměru Fortuny. Kurzy čteme až po zamčení blind sérií.</li>
 <li><b>Blend</b>: mechanická kombinace „AI s modelem“ a „Sázek“ v log-odds, ρ = 0,55 (w<sub>blind</sub> = 0,31). Žádný úsudek, jen nástroj.</li>
@@ -125,7 +125,7 @@ RULES = {
 <h2>Five series (from 5 Oct)</h2>
 <ul>
 <li><b>AI</b>: the pure AI agent, with no model and no odds. It changes only on new facts (news, endorsements, scandals, polls). The “AI 2 Oct” column shows the starting point.</li>
-<li><b>Model</b>: the statistical model (see <a href="model.html">Statistical model</a>). It changes only when its inputs change, e.g. after round 1.</li>
+<li><b>Statistical model</b> (see <a href="model.html">model description</a>). It changes only when its inputs change, e.g. after round 1.</li>
 <li><b>AI + model</b>: the AI agent starting from the model and deviating only for facts the model cannot see. Every deviation is logged. No odds.</li>
 <li><b>Betting</b>: Fortuna and Tipsport seat-winner odds with the margin removed (power method). Where Tipsport only offers a yes/no on one candidate, we average it with Fortuna and split the rest in Fortuna's ratios. Odds are read only after the blind series are locked.</li>
 <li><b>Blend</b>: a mechanical log-odds combination of “AI + model” and “Betting”, ρ = 0.55 (w<sub>blind</sub> = 0.31). No judgment, just a tool.</li>
@@ -344,8 +344,8 @@ JOURNAL.append(dict(
 
 JOURNAL.append(dict(
     date="2026-10-05",
-    title_cs="Den 4: pět sérií — AI, Model, AI s modelem, Sázky, Blend",
-    title_en="Day 4: five series — AI, Model, AI + model, Betting, Blend",
+    title_cs="Den 4: pět sérií — AI, Statistický model, AI s modelem, Sázky, Blend",
+    title_en="Day 4: five series — AI, Statistical model, AI + model, Betting, Blend",
     cs="""<p><b>Dnes se poprvé objevují všechny série.</b> Pořadí bylo pevné: nejdřív AI update bez modelu (krok A), potom AI s modelem jako vstupem (krok B). Oba blind snapshoty jsme v 15:24 zamkli commitem v gitu. Kurzy jsme začali číst až potom (Fortuna od 15:35, pak Tipsport).</p>
 <h3>Co se změnilo</h3>
 <ul>
@@ -371,7 +371,7 @@ JOURNAL.append(dict(
   <li>nulová základna KSČM;</li>
   <li>kalibrace dává každému menšímu kandidátovi zhruba 2 % jako podlahu.</li>
   </ul>
-  <i>Náprava:</i> model v1 dnes záměrně neměníme, aby se série Model měnila jen při změně vstupů. Chyby agenti zapsali jako odchylky s důvodem a opravy půjdou do modelu v2 po 1. kole. Zveřejníme to jako novou verzi.</li>
+  <i>Náprava:</i> model v1 dnes záměrně neměníme, aby se série Statistický model měnila jen při změně vstupů. Chyby agenti zapsali jako odchylky s důvodem a opravy půjdou do modelu v2 po 1. kole. Zveřejníme to jako novou verzi.</li>
 <li><b>Dvojí započítání neformální podpory.</b> Ve Vyškově a Litovli agent spustil model znovu a „dokódoval“ neformální podporu stran, které nejsou na hlasovacím lístku. V trénovacích datech ale takhle kódovaná není, takže by se efekt počítal dvakrát. <i>Náprava:</i> doplnili jsme pravidlo (bez přepočtu modelu, jen umírněná odchylka nad typickou úroveň) a nezávislá kontrola oba obvody ještě před zamčením opravila. Vyškov zůstal kolem 76 %, v Litovli vychází Ošťádal 36,5 % a Kohajda 31 %.</li>
 <li><b>Kanály, kterými mohly prosáknout kurzy.</b> Našli jsme dva:
   <ul>
@@ -409,7 +409,7 @@ JOURNAL.append(dict(
   <li>KSČM had a zero base;</li>
   <li>calibration gives every minor candidate a floor of about 2 %.</li>
   </ul>
-  <i>Fix:</i> we deliberately leave model v1 unchanged today, so that the Model series changes only when its inputs do. The agents logged the bugs as deviations with reasons, and the fixes go into model v2 after round 1, published as a new version.</li>
+  <i>Fix:</i> we deliberately leave model v1 unchanged today, so that the Statistical model series changes only when its inputs do. The agents logged the bugs as deviations with reasons, and the fixes go into model v2 after round 1, published as a new version.</li>
 <li><b>Double-counting informal backing.</b> In Vyškov and Litovel the agent re-ran the model with informal support “coded in” from parties not on the ballot. The training data is not coded that way, so the effect would have been counted twice. <i>Fix:</i> we added a rule (no model re-runs, only a moderate deviation above the typical level), and an independent review corrected both districts before the lock. Vyškov stayed around 76 %; Litovel is Ošťádal 36.5 % and Kohajda 31 %.</li>
 <li><b>Channels through which odds could leak.</b> We found two:
   <ul>

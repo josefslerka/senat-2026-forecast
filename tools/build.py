@@ -26,6 +26,12 @@ sys.path.insert(0, str(HERE))
 
 from forecast_math import read_distributions, read_frontmatter  # noqa: E402
 from meta import DISTRICTS  # noqa: E402
+# Display status from current meta (snapshots are immutable; wording fixes apply at render time).
+STATUS = {m["n"]: m for m in DISTRICTS}
+
+
+def status(d: dict, lang: str) -> str:
+    return STATUS.get(d["n"], d)["status_" + lang]
 from texts import JOURNAL, RULES, INTRO, MODEL_PAGE  # noqa: E402
 
 FORECASTS = VAULT / "forecasts"
@@ -302,7 +308,7 @@ def overview(lang: str, snap: dict, msnap: dict | None = None) -> str:
             f'<tr><td class="num">{d["n"]}</td><td><a href="obvod-{d["n"]:02d}.html">{esc(d["name"])}</a></td>'
             f'<td>{esc(lead["name"])}<div class="muted" style="font-size:13px">{esc(lead["party"])}</div></td>'
             f'<td class="num"><b>{pct(d["leader_p"])}</b></td><td class="num hide-sm">{band}</td>'
-            f'<td class="hide-sm">{bar(d["candidates"])}</td>' + mcell + f'<td class="hide-sm"><span class="pill">{esc(d["status_"+lang])}</span></td></tr>')
+            f'<td class="hide-sm">{bar(d["candidates"])}</td>' + mcell + f'<td class="hide-sm"><span class="pill">{esc(status(d, lang))}</span></td></tr>')
     intro = INTRO[lang]
     return layout(lang, "index.html", t["title"], f"""
 <h1>{esc(t['title'])}</h1><p class="lead">{intro['lead']}</p>
@@ -348,7 +354,7 @@ def district_page(lang: str, d: dict, snap: dict, md: dict | None = None) -> str
     title = f"{t['district']} {d['n']} — {d['name']}"
     return layout(lang, f"obvod-{d['n']:02d}.html", title, f"""
 <p><a href="index.html">{t['back']}</a></p>
-<h1>{esc(title)}</h1><p class="lead"><span class="pill">{esc(d['status_'+lang])}</span>
+<h1>{esc(title)}</h1><p class="lead"><span class="pill">{esc(status(d, lang))}</span>
 &nbsp;{t['updated']} {esc(snap['date'])} · {t['stage']}: {t[d['stage']]} · v{esc(d['version'])}</p>
 {bar(d['candidates'])}
 <div class="scroll"><table style="margin-top:12px"><thead><tr><th>{t['cand']}</th><th>{t['party']}</th><th>{t['p']}</th><th>{t['band']}</th></tr></thead>
@@ -412,8 +418,8 @@ if __name__ == "__main__":
 
 # ── Five-series build (from 2026-10-05): AI · Model · AI s modelem · Sázky · Blend ───────────
 SERIES_LABELS = {
-    "cs": dict(ai="AI", model="Model", aimodel="AI s modelem", market="Sázky", blend="Blend", ai0="AI 2. 10."),
-    "en": dict(ai="AI", model="Model", aimodel="AI + model", market="Betting", blend="Blend", ai0="AI 2 Oct"),
+    "cs": dict(ai="AI", model="Statistický model", aimodel="AI s modelem", market="Sázky", blend="Blend", ai0="AI 2. 10."),
+    "en": dict(ai="AI", model="Statistical model", aimodel="AI + model", market="Betting", blend="Blend", ai0="AI 2 Oct"),
 }
 MARKET_DIR = VAULT / "data" / "senat-market"
 
@@ -448,8 +454,11 @@ def build_five(out: Path, date: str, model_date: str, ai0_date: str = "2026-10-0
     snaps = out / "data" / "snapshots"
     ai0 = json.loads((snaps / f"{ai0_date}-blind.json").read_text())
     msnap = json.loads((snaps / f"{model_date}-model.json").read_text())
-    ai = write_snapshot(out, f"{date}-ai.json", snapshot("blind", date, "ai", max_date=date))
-    aim = write_snapshot(out, f"{date}-aimodel.json", snapshot("blind", date, "aimodel", max_date=date))
+    def locked(name: str, make):  # existing snapshots are immutable: load, never regenerate
+        f = snaps / name
+        return json.loads(f.read_text()) if f.exists() else write_snapshot(out, name, make())
+    ai = locked(f"{date}-ai.json", lambda: snapshot("blind", date, "ai", max_date=date))
+    aim = locked(f"{date}-aimodel.json", lambda: snapshot("blind", date, "aimodel", max_date=date))
     market = blend = None
     if market_date:
         mk = json.loads((MARKET_DIR / f"{market_date}.json").read_text())
@@ -484,7 +493,7 @@ def build_five(out: Path, date: str, model_date: str, ai0_date: str = "2026-10-0
                         + leader_cell(dist_of(d), names) + leader_cell(md, names, True)
                         + leader_cell(dist_of(AIM[n]) if n in AIM else None, names)
                         + leader_cell(mk, names, True) + leader_cell(dist_of(BL[n]) if n in BL else None, names)
-                        + f'<td class="hide-sm"><span class="pill">{esc(d["status_"+lang])}</span></td></tr>')
+                        + f'<td class="hide-sm"><span class="pill">{esc(status(d, lang))}</span></td></tr>')
             # district page
             def col(dist):  # noqa: E306
                 return lambda k: (pct(dist[k]) if dist and dist.get(k) is not None else "—")
