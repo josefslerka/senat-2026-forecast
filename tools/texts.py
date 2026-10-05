@@ -422,3 +422,20 @@ JOURNAL.append(dict(
 <li><b>Tipsport rate limiting.</b> The site temporarily blocked betting during fast browsing. <i>Fix:</i> slower reading with pauses. We have odds for all 27 districts from both bookmakers.</li>
 </ol>
 <p><b>Next:</b> the poll blackout starts Tue 6 Oct. AI changes only on new facts; Betting is read daily. Forecasts freeze Fri 9 Oct by 12:00, and the last version before 14:00 is the one scored.</p>"""))
+
+# "What's new today" box at the top of the overview, per date (short, hand-written; auto moves are added below it).
+CHANGES = {
+    "2026-10-05": dict(
+        cs="""<ul>
+<li><b>Nově tři série:</b> AI s modelem (AI agent, který vychází ze statistického modelu), Sázky (Fortuna a Tipsport po odečtení marže) a Blend (mechanická kombinace obou).</li>
+<li><b>AI bez modelu</b> se proti 2. 10. změnila jen nepatrně: v Litovli a v Brně o 2 p.b. Jinde nepřibyly nové fakty.</li>
+<li><b>AI s modelem</b> mění favorita proti AI ve dvou obvodech: v Praze 5 (Sáblík místo Lásky) a v Praze 1 (Padevět místo Čižinského).</li>
+<li><b>Trh</b> má jiného favorita než AI s modelem v 9 z 27 obvodů. Výrazně víc věří kandidátům ANO (Přerov, Cheb, Pelhřimov) a osobním značkám (Láska, Čižinský, Řehka, Korč, Kohajda, Paták).</li>
+</ul>""",
+        en="""<ul>
+<li><b>Three new series:</b> AI + model (the AI agent starting from the statistical model), Betting (Fortuna and Tipsport with the margin removed) and Blend (a mechanical combination of the two).</li>
+<li><b>AI without the model</b> barely moved since 2 Oct: 2 pp in Litovel and in Brno. No new facts elsewhere.</li>
+<li><b>AI + model</b> changes the favourite vs. AI in two districts: Praha 5 (Sáblík instead of Láska) and Praha 1 (Padevět instead of Čižinský).</li>
+<li><b>The market</b> has a different favourite from AI + model in 9 of 27 districts. It is much more confident in ANO candidates (Přerov, Cheb, Pelhřimov) and in personal brands (Láska, Čižinský, Řehka, Korč, Kohajda, Paták).</li>
+</ul>"""),
+}

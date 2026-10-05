@@ -32,7 +32,7 @@ STATUS = {m["n"]: m for m in DISTRICTS}
 
 def status(d: dict, lang: str) -> str:
     return STATUS.get(d["n"], d)["status_" + lang]
-from texts import JOURNAL, RULES, INTRO, MODEL_PAGE  # noqa: E402
+from texts import JOURNAL, RULES, INTRO, MODEL_PAGE, CHANGES  # noqa: E402
 
 FORECASTS = VAULT / "forecasts"
 
@@ -447,6 +447,49 @@ def leader_cell(dist: dict[str, float] | None, names: dict[str, str], hide: bool
     return f'<td{cls}>{esc(nm.split()[-1] if k != "Someone_else" else "Ostatní")} <b>{pct(dist[k])}</b></td>'
 
 
+def prev_snapshot(snaps: Path, series: str, date: str) -> dict | None:
+    """Latest snapshot of the same series strictly before `date` (AI falls back to the 2. 10. blind)."""
+    pats = [f"*-{series}.json"] + (["*-blind.json"] if series == "ai" else [])
+    files = sorted(f for pat in pats for f in snaps.glob(pat) if f.name[:10] < date)
+    return json.loads(files[-1].read_text()) if files else None
+
+
+def changes_html(lang: str, cur: dict[str, dict | None], prev: dict[str, dict | None],
+                 names_by_n: dict[int, dict[str, str]], labels: dict[str, str], min_pp: float = 5.0,
+                 kept: dict[str, str] | None = None) -> str:
+    """Per series: districts where the favourite flipped or any candidate moved >= min_pp."""
+    items = []
+    for key, snap in cur.items():
+        if not snap:
+            continue
+        if kept and key in kept:  # series not re-run today
+            items.append(f"<li><b>{esc(labels[key])}</b>: " + (f"beze změny (stav k {kept[key]})" if lang == "cs"
+                         else f"unchanged (as of {kept[key]})") + "</li>")
+            continue
+        old = prev.get(key)
+        if not old:
+            items.append(f"<li><b>{esc(labels[key])}</b>: " + ("nová série" if lang == "cs" else "new series") + "</li>")
+            continue
+        P = {d["n"]: {c["key"]: c["p"] for c in d["candidates"]} for d in old["districts"]}
+        moves = []
+        for d in snap["districts"]:
+            n, a = d["n"], {c["key"]: c["p"] for c in d["candidates"]}
+            b = P.get(n)
+            if not b:
+                continue
+            nm = lambda k: (names_by_n.get(n, {}).get(k, k).split()[-1] if k != "Someone_else" else ("ostatní" if lang == "cs" else "others"))  # noqa: E731
+            la, lb = max(a, key=a.get), max(b, key=b.get)
+            big = max(a, key=lambda k: abs(a[k] - b.get(k, 0)))
+            dpp = (a[big] - b.get(big, 0)) * 100
+            if la != lb:
+                moves.append(f"{n}: {esc(nm(lb))} → <b>{esc(nm(la))}</b> {pct(a[la])}")
+            elif abs(dpp) >= min_pp:
+                moves.append(f"{n}: {esc(nm(big))} {pct(b.get(big, 0))} → {pct(a[big])}")
+        none = "beze změny nad 5 p.b." if lang == "cs" else "no change above 5 pp"
+        items.append(f"<li><b>{esc(labels[key])}</b>: " + ("; ".join(moves) if moves else none) + "</li>")
+    return "<ul>" + "".join(items) + "</ul>"
+
+
 def build_five(out: Path, date: str, model_date: str, ai0_date: str = "2026-10-02",
                market_date: str | None = None, rho: float = 0.55) -> None:
     sys.path.insert(0, str(VAULT / "scripts"))
@@ -479,6 +522,12 @@ def build_five(out: Path, date: str, model_date: str, ai0_date: str = "2026-10-0
     by = lambda snap: {d["n"]: d for d in (snap or {}).get("districts", [])}  # noqa: E731
     AI0, AI, AIM, MD, MK, BL = by(ai0), by(ai), by(aim), by(msnap), by(market), by(blend)
 
+    cur_series = {"ai": ai, "model": msnap, "aimodel": aim, "market": market, "blend": blend}
+    prev_series = {"ai": prev_snapshot(snaps, "ai", date), "model": prev_snapshot(snaps, "model", model_date),
+                   "aimodel": prev_snapshot(snaps, "aimodel", date),
+                   "market": prev_snapshot(snaps, "market", market_date or date),
+                   "blend": prev_snapshot(snaps, "blend", market_date or date)}
+    names_by_n = {d["n"]: {c["key"]: c["name"] for c in d["candidates"]} for d in ai["districts"]}
     for lang in ("cs", "en"):
         t, S = L[lang], SERIES_LABELS[lang]
         base = out if lang == "cs" else out / "en"
@@ -514,6 +563,11 @@ def build_five(out: Path, date: str, model_date: str, ai0_date: str = "2026-10-0
         intro = INTRO[lang]
         ov = layout(lang, "index.html", t["title"], f"""
 <h1>{esc(t['title'])}</h1><p class="lead">{intro['lead']}</p>
+<div class="card" style="border-left:4px solid var(--accent, #3b5b8c)"><h2 style="margin-top:0">{"Co je dnes nového" if lang == "cs" else "What's new today"} ({esc(date)})</h2>
+{CHANGES.get(date, {}).get(lang, "")}
+<p class="muted" style="font-size:14px;margin-bottom:0">{"Posuny oproti předchozímu snapshotu každé série (změna favorita nebo ≥ 5 p.b.):" if lang == "cs" else "Moves vs. each series' previous snapshot (favourite change or ≥ 5 pp):"}</p>
+{changes_html(lang, cur_series, prev_series, names_by_n, S, kept={'model': model_date} if model_date < date else None)}
+<p style="margin-bottom:0"><a href="denik.html">{"Podrobně v deníku →" if lang == "cs" else "Details in the journal →"}</a></p></div>
 <div class="card">{intro['body']}</div>
 <h2>{t['updated']} {esc(date)}</h2>
 <div class="scroll"><table><thead><tr><th>#</th><th>{t['district']}</th><th>{S['ai']}</th><th class="hide-sm">{S['model']}</th>

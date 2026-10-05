@@ -26,6 +26,16 @@ footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:v
 <header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Overview</a><a href="pravidla.html">Rules</a><a href="model.html">Model</a><a href="denik.html">Journal</a><a href="archiv.html">Archive</a><a class="lang" href="../index.html">CS</a></nav></header>
 
 <h1>Czech Senate 2026 — a public AI forecasting experiment</h1><p class="lead">Probabilistic forecasts for all 27 Czech Senate districts up for election in 2026, published day by day: first without odds, then market-aware, with daily updates and a final evaluation.</p>
+<div class="card" style="border-left:4px solid var(--accent, #3b5b8c)"><h2 style="margin-top:0">What's new today (2026-10-05)</h2>
+<ul>
+<li><b>Three new series:</b> AI + model (the AI agent starting from the statistical model), Betting (Fortuna and Tipsport with the margin removed) and Blend (a mechanical combination of the two).</li>
+<li><b>AI without the model</b> barely moved since 2 Oct: 2 pp in Litovel and in Brno. No new facts elsewhere.</li>
+<li><b>AI + model</b> changes the favourite vs. AI in two districts: Praha 5 (Sáblík instead of Láska) and Praha 1 (Padevět instead of Čižinský).</li>
+<li><b>The market</b> has a different favourite from AI + model in 9 of 27 districts. It is much more confident in ANO candidates (Přerov, Cheb, Pelhřimov) and in personal brands (Láska, Čižinský, Řehka, Korč, Kohajda, Paták).</li>
+</ul>
+<p class="muted" style="font-size:14px;margin-bottom:0">Moves vs. each series' previous snapshot (favourite change or ≥ 5 pp):</p>
+<ul><li><b>AI</b>: no change above 5 pp</li><li><b>Statistical model</b>: unchanged (as of 2026-10-03)</li><li><b>AI + model</b>: new series</li><li><b>Betting</b>: new series</li><li><b>Blend</b>: new series</li></ul>
+<p style="margin-bottom:0"><a href="denik.html">Details in the journal →</a></p></div>
 <div class="card"><p><b>What this is.</b> A test of how good a forecaster an AI agent can be. Forecasts come from a multi-stage AI pipeline (Claude): question normalization, research, forecast, a check that every claim rests on a source, and an adversarial red-team. A human runs and supervises it.</p>
 <p><b>Why “blind”.</b> The first published number is made <i>without seeing betting odds</i>. Odds are added later, as a separate step. After the election this lets us measure whether the model adds information or just echoes the market.</p>
 <p><b>Dates.</b> Round 1 on 9–10 Oct 2026 (together with municipal elections), runoff on 16–17 Oct 2026. Scoring rules are published in advance, see <a href="pravidla.html">Rules</a>. The <a href="denik.html">Journal</a> records the process day by day.</p></div>
