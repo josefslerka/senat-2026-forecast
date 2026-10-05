@@ -92,10 +92,30 @@ def read_bands(path: Path, key: str) -> dict[str, tuple[float, float]]:
     return out
 
 
-def snapshot(stage: str, date: str) -> dict:
+def series_note(d: dict, kind: str = "ai", max_date: str | None = None) -> Path:
+    """Latest note of the district's AI series (kind='ai') or AI-with-model series (kind='aimodel')."""
+    base = read_frontmatter(FORECASTS / d["note"]).get("forecast_series_id")
+    want = base if kind == "ai" else f"{base}-aimodel"
+    best = None
+    for p in FORECASTS.glob("*.md"):
+        if max_date and p.name[:10] > max_date:
+            continue
+        fm = read_frontmatter(p)
+        if fm.get("forecast_series_id") == want:
+            key = (int(fm.get("forecast_version") or 1), p.name)
+            if best is None or key > best[0]:
+                best = (key, p)
+    if best is None:
+        if kind == "ai":
+            return FORECASTS / d["note"]
+        raise SystemExit(f"no {kind} note for series {want}")
+    return best[1]
+
+
+def snapshot(stage: str, date: str, kind: str = "ai", max_date: str | None = None) -> dict:
     districts = []
     for d in DISTRICTS:
-        path = FORECASTS / d["note"]
+        path = FORECASTS / d["note"] if kind == "day1" else series_note(d, kind, max_date)
         fm = read_frontmatter(path)
         dists = read_distributions(path)
         dist = dists[f"{stage}_distribution"]
@@ -134,8 +154,9 @@ def snapshot(stage: str, date: str) -> dict:
             "contamination_risk": fm.get("contamination_risk") or "none",
             "research_limitation": fm.get("research_limitation"),
             "independent_redteam_posthoc": bool(fm.get("independent_redteam_posthoc")),
+            "note": path.name, "created": str(fm.get("created")),
         })
-    return {"experiment": "senat-2026", "date": date, "stage": stage,
+    return {"experiment": "senat-2026", "date": date, "stage": stage, "series": kind,
             "generated_utc": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
             "districts": sorted(districts, key=lambda x: x["n"])}
 
@@ -387,3 +408,113 @@ if __name__ == "__main__":
     ap.add_argument("--model-date")
     a = ap.parse_args()
     build(Path(a.out).resolve(), a.date, a.stage, a.model_date)
+
+
+# ── Five-series build (from 2026-10-05): AI · Model · AI s modelem · Sázky · Blend ───────────
+SERIES_LABELS = {
+    "cs": dict(ai="AI", model="Model", aimodel="AI s modelem", market="Sázky", blend="Blend", ai0="AI 2. 10."),
+    "en": dict(ai="AI", model="Model", aimodel="AI + model", market="Betting", blend="Blend", ai0="AI 2 Oct"),
+}
+MARKET_DIR = VAULT / "data" / "senat-market"
+
+
+def keyed_model(md: dict, keys: list[str], names: dict[str, str]) -> dict[str, float]:
+    """Map model candidates (by display name) onto AI ASCII keys; the rest -> Someone_else."""
+    out = {k: 0.0 for k in keys}
+    inv = {v: k for k, v in names.items()}
+    for c in md["candidates"]:
+        k = inv.get(c["name"], "Someone_else")
+        out[k if k in out else "Someone_else"] = out.get(k if k in out else "Someone_else", 0.0) + c["p"]
+    return out
+
+
+def dist_of(snap_d: dict) -> dict[str, float]:
+    return {c["key"]: c["p"] for c in snap_d["candidates"]}
+
+
+def leader_cell(dist: dict[str, float] | None, names: dict[str, str], hide: bool = False) -> str:
+    cls = ' class="hide-sm"' if hide else ""
+    if not dist:
+        return f"<td{cls}>—</td>"
+    k = max(dist, key=dist.get)
+    nm = names.get(k, k)
+    return f'<td{cls}>{esc(nm.split()[-1] if k != "Someone_else" else "Ostatní")} <b>{pct(dist[k])}</b></td>'
+
+
+def build_five(out: Path, date: str, model_date: str, ai0_date: str = "2026-10-02",
+               market_date: str | None = None, rho: float = 0.55) -> None:
+    sys.path.insert(0, str(VAULT / "scripts"))
+    from forecast_math import blend_dist  # noqa: E402
+    snaps = out / "data" / "snapshots"
+    ai0 = json.loads((snaps / f"{ai0_date}-blind.json").read_text())
+    msnap = json.loads((snaps / f"{model_date}-model.json").read_text())
+    ai = write_snapshot(out, f"{date}-ai.json", snapshot("blind", date, "ai", max_date=date))
+    aim = write_snapshot(out, f"{date}-aimodel.json", snapshot("blind", date, "aimodel", max_date=date))
+    market = blend = None
+    if market_date:
+        mk = json.loads((MARKET_DIR / f"{market_date}.json").read_text())
+        market = write_snapshot(out, f"{market_date}-market.json", mk)
+        bl = {"experiment": "senat-2026", "series": "blend", "date": market_date, "rho": rho,
+              "method": "log-odds pool of AI s modelem and de-vigged market, w_blind=(1-rho)/(2-rho)", "districts": []}
+        mby = {d["n"]: d for d in mk["districts"]}
+        for d in aim["districts"]:
+            m = mby.get(d["n"])
+            if not m or not m.get("consensus"):
+                continue
+            fin = blend_dist(dist_of(d), m["consensus"], rho)
+            bl["districts"].append({"n": d["n"], "candidates": [{"key": k, "p": round(v, 4)} for k, v in fin.items()]})
+        blend = write_snapshot(out, f"{market_date}-blend.json", bl)
+    latest = {"ai": ai, "model": msnap, "aimodel": aim, "market": market, "blend": blend, "ai_2026-10-02": ai0}
+    (out / "data" / "latest.json").write_text(json.dumps(latest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    by = lambda snap: {d["n"]: d for d in (snap or {}).get("districts", [])}  # noqa: E731
+    AI0, AI, AIM, MD, MK, BL = by(ai0), by(ai), by(aim), by(msnap), by(market), by(blend)
+
+    for lang in ("cs", "en"):
+        t, S = L[lang], SERIES_LABELS[lang]
+        base = out if lang == "cs" else out / "en"
+        rows = []
+        for d in ai["districts"]:
+            n = d["n"]
+            names = {c["key"]: c["name"] for c in d["candidates"]}
+            keys = list(names)
+            md = keyed_model(MD[n], keys, names) if n in MD else None
+            mk = (MK.get(n) or {}).get("consensus")
+            rows.append(f'<tr><td class="num">{n}</td><td><a href="obvod-{n:02d}.html">{esc(d["name"])}</a></td>'
+                        + leader_cell(dist_of(d), names) + leader_cell(md, names, True)
+                        + leader_cell(dist_of(AIM[n]) if n in AIM else None, names)
+                        + leader_cell(mk, names, True) + leader_cell(dist_of(BL[n]) if n in BL else None, names)
+                        + f'<td class="hide-sm"><span class="pill">{esc(d["status_"+lang])}</span></td></tr>')
+            # district page
+            def col(dist):  # noqa: E306
+                return lambda k: (pct(dist[k]) if dist and dist.get(k) is not None else "—")
+            cols = [(S["ai0"], col(dist_of(AI0[n]) if n in AI0 else None)), (S["ai"], col(dist_of(d))),
+                    (S["model"], col(md)), (S["aimodel"], col(dist_of(AIM[n]) if n in AIM else None)),
+                    (S["market"], col(mk)), (S["blend"], col(dist_of(BL[n]) if n in BL else None))]
+            head = "".join(f"<th>{esc(h)}</th>" for h, _ in cols)
+            body = "".join(f'<tr><td>{esc(names[k] if k != "Someone_else" else t["others"])}</td>'
+                           + "".join(f'<td class="num">{f(k)}</td>' for _, f in cols) + "</tr>" for k in keys)
+            comp = (f'<h2>{esc(S["ai"])} · {esc(S["model"])} · {esc(S["aimodel"])} · {esc(S["market"])} · {esc(S["blend"])}</h2>'
+                    f'<div class="scroll"><table><thead><tr><th>{t["cand"]}</th>{head}</tr></thead><tbody>{body}</tbody></table></div>')
+            mnote = (MK.get(n) or {}).get("note_" + lang) or (MK.get(n) or {}).get("note", "")
+            if mnote:
+                comp += f'<p class="muted" style="font-size:14px">{esc(S["market"])}: {esc(mnote)}</p>'
+            page = district_page(lang, d, ai, MD.get(n))
+            page = page.replace(f"<h2>{t['why']}</h2>", comp + f"<h2>{t['why']}</h2>", 1)
+            (base / f"obvod-{n:02d}.html").write_text(page, encoding="utf-8")
+        intro = INTRO[lang]
+        ov = layout(lang, "index.html", t["title"], f"""
+<h1>{esc(t['title'])}</h1><p class="lead">{intro['lead']}</p>
+<div class="card">{intro['body']}</div>
+<h2>{t['updated']} {esc(date)}</h2>
+<div class="scroll"><table><thead><tr><th>#</th><th>{t['district']}</th><th>{S['ai']}</th><th class="hide-sm">{S['model']}</th>
+<th>{S['aimodel']}</th><th class="hide-sm">{S['market']}</th><th>{S['blend']}</th><th class="hide-sm">{t['status']}</th></tr></thead>
+<tbody>{''.join(rows)}</tbody></table></div>""")
+        (base / "index.html").write_text(ov, encoding="utf-8")
+        (base / "pravidla.html").write_text(simple_page(lang, "pravidla.html", L[lang]["rules"], RULES[lang]), encoding="utf-8")
+        (base / "model.html").write_text(simple_page(lang, "model.html", L[lang]["stat"], MODEL_PAGE[lang](msnap)), encoding="utf-8")
+        journal = "".join(f'<div class="card"><h2 style="margin-top:0">{esc(e["date"])} — {esc(e["title_"+lang])}</h2>{e[lang]}</div>'
+                          for e in sorted(JOURNAL, key=lambda e: e["date"], reverse=True))
+        (base / "denik.html").write_text(simple_page(lang, "denik.html", L[lang]["journal"], journal), encoding="utf-8")
+        (base / "archiv.html").write_text(archive_page(lang, out), encoding="utf-8")
+    print(f"Built five-series site for {date} (market: {market_date}) → {out}")

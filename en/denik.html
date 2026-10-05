@@ -24,7 +24,44 @@ footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:v
 @media (max-width:640px){.hide-sm{display:none}h1{font-size:23px}}
 </style></head><body><div class="wrap">
 <header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Overview</a><a href="pravidla.html">Rules</a><a href="model.html">Model</a><a href="denik.html">Journal</a><a href="archiv.html">Archive</a><a class="lang" href="../denik.html">CS</a></nav></header>
-<h1>Journal</h1><div class="card"><h2 style="margin-top:0">2026-10-04 — Day 3: getting ready for Monday, media sweep, numbers unchanged</h2><p><b>We did not change any forecasts today</b>, on purpose: the AI blind is still from 2 Oct and the model from 3 Oct. We are collecting new information and will fold it into one joint update on Monday. That update goes through the full pipeline, including an independent red-team, once the last polls before the blackout are out.</p>
+<h1>Journal</h1><div class="card"><h2 style="margin-top:0">2026-10-05 — Day 4: five series — AI, Model, AI + model, Betting, Blend</h2><p><b>Today all series appear for the first time.</b> The order was fixed: first the AI update without the model (step A), then the AI with the model as input (step B). Both blind snapshots were locked with a git commit at 15:24. Only after that did we start reading odds (Fortuna from 15:35, then Tipsport).</p>
+<h3>What changed</h3>
+<ul>
+<li><b>AI (no model):</b> only 2 districts changed since 2 Oct. In Litovel we moved 2 pp from Ošťádal to Kohajda after Ošťádal said he would not campaign. In Brno we fixed a 2 pp internal inconsistency in the previous version. The other 25 districts had no new facts and kept their forecast (rule: under 2 pp and no material event means no change).</li>
+<li><b>AI + model:</b> the favourite changed in two districts: 21 (Sáblík instead of Láska) and 27 (Padevět instead of Čižinský). Favourites with a strong coalition base in the model got much stronger (Kladno, Praha 9, Pelhřimov, Hradec). Those whose personal brand the model cannot see got weaker (Strakonice, Karviná, Česká Lípa, Uherské Hradiště).</li>
+<li><b>Betting:</b> the market favourite differs from “AI + model” in 9 of 27 districts. The market is much more confident in:
+  <ul>
+  <li>ANO candidates in Cheb (Tsoukernik), Pelhřimov (Kozár) and Přerov (Vrána, 82 % vs our 24 %);</li>
+  <li>personal brands and local leaders: Láska, Čižinský, Řehka, Korč, Kohajda and Paták.</li>
+  </ul>
+  Our series lean more on the breadth of coalition support. This is the experiment's main bet, and the election will show who was right.</li>
+<li><b>Blend</b> combines “AI + model” with the market mechanically (ρ = 0.55, AI weight about 31 %).</li>
+</ul>
+<h3>Mistakes and fixes</h3>
+<ol>
+<li><b>Bugs in the statistical model's inputs.</b> While auditing the inputs in step B, the agents found about a dozen bugs:
+  <ul>
+  <li>the “mayor” flag also fired on “former mayor”;</li>
+  <li>former senators were matched by name only, so namesakes got mixed up (two Martin Dvořáks);</li>
+  <li>a municipal coalition list was credited in full to every member party;</li>
+  <li>the 2018 Prague list “Praha 7 SOBĚ” was not mapped;</li>
+  <li>SLK was missing from the opposition bloc;</li>
+  <li>KSČM had a zero base;</li>
+  <li>calibration gives every minor candidate a floor of about 2 %.</li>
+  </ul>
+  <i>Fix:</i> we deliberately leave model v1 unchanged today, so that the Model series changes only when its inputs do. The agents logged the bugs as deviations with reasons, and the fixes go into model v2 after round 1, published as a new version.</li>
+<li><b>Double-counting informal backing.</b> In Vyškov and Litovel the agent re-ran the model with informal support “coded in” from parties not on the ballot. The training data is not coded that way, so the effect would have been counted twice. <i>Fix:</i> we added a rule (no model re-runs, only a moderate deviation above the typical level), and an independent review corrected both districts before the lock. Vyškov stayed around 76 %; Litovel is Ošťádal 36.5 % and Kohajda 31 %.</li>
+<li><b>Channels through which odds could leak.</b> We found two:
+  <ul>
+  <li>the news file given to the agents contained our note about the model's favourite;</li>
+  <li>the agent's auto-loaded memory contained numbers from an earlier market step for Plzeň, Brno and Kladno.</li>
+  </ul>
+  <i>Fix:</i> both were cleaned during the run, and the affected districts log it as a contamination risk. We cannot fully guarantee they are clean.</li>
+<li><b>A bug in the update tool.</b> It copied the final (market-aware) number as the default “previous probability” instead of the blind one. The agent caught it in Plzeň. <i>Fix:</i> the updates started from the blind number; the tool fix comes before the next update.</li>
+<li><b>An unclear market definition.</b> It was not clear whether Fortuna's market means the round-1 winner or the elected senator. <i>Resolution:</i> Tipsport explicitly says “overall”, and its numbers match Fortuna's, so we treat both as the seat winner. Fortuna's margin is high (11–78 %).</li>
+<li><b>Tipsport rate limiting.</b> The site temporarily blocked betting during fast browsing. <i>Fix:</i> slower reading with pauses. We have odds for all 27 districts from both bookmakers.</li>
+</ol>
+<p><b>Next:</b> the poll blackout starts Tue 6 Oct. AI changes only on new facts; Betting is read daily. Forecasts freeze Fri 9 Oct by 12:00, and the last version before 14:00 is the one scored.</p></div><div class="card"><h2 style="margin-top:0">2026-10-04 — Day 3: getting ready for Monday, media sweep, numbers unchanged</h2><p><b>We did not change any forecasts today</b>, on purpose: the AI blind is still from 2 Oct and the model from 3 Oct. We are collecting new information and will fold it into one joint update on Monday. That update goes through the full pipeline, including an independent red-team, once the last polls before the blackout are out.</p>
 <h3>What we did</h3>
 <ul>
 <li><b>Pipeline fix.</b> The blind–market blend is now computed by a deterministic tool. Its ρ is the correlation between the blind forecast and the market, not the blind weight, and the pooling is in log-odds. This fixes the first-run bug (Plzeň) where the market got less weight than it should.</li>

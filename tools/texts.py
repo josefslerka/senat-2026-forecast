@@ -57,6 +57,15 @@ RULES = {
 <li>Vítěz 1. kola vyhrává 2. kolo asi v 70 % případů (ČSÚ).</li>
 <li>Kandidáti ANO vyhráli v letech 2020–2024 jen asi 9 ze 44 druhých kol. V roce 2020, kdy ANO vládlo, to bylo asi 1 z 8.</li>
 </ul>
+<h2>Pět sérií (od 5. 10.)</h2>
+<ul>
+<li><b>AI</b>: čistý AI agent bez modelu a bez kurzů. Mění se jen při nových faktech (zprávy, podpory, kauzy, průzkumy). Sloupec „AI 2. 10.“ ukazuje výchozí stav.</li>
+<li><b>Model</b>: statistický model (viz <a href="model.html">Statistický model</a>). Mění se jen při změně vstupů, například po 1. kole.</li>
+<li><b>AI s modelem</b>: AI agent, který vychází z modelu a odchyluje se jen kvůli faktům, které model nevidí. Každou odchylku zapisuje. Bez kurzů.</li>
+<li><b>Sázky</b>: kurzy Fortuny a Tipsportu na vítěze obvodu po odečtení marže (metoda power). Kde má Tipsport jen sázku Ano/Ne na jednoho kandidáta, průměrujeme ji s Fortunou a zbytek rozdělujeme v poměru Fortuny. Kurzy čteme až po zamčení blind sérií.</li>
+<li><b>Blend</b>: mechanická kombinace „AI s modelem“ a „Sázek“ v log-odds, ρ = 0,55 (w<sub>blind</sub> = 0,31). Žádný úsudek, jen nástroj.</li>
+</ul>
+<p>Série AI, Model a AI s modelem jsou <b>blind</b>. Snapshoty vznikají před čtením kurzů a v gitu jsou zamčené dřív, než kurzy přibydou. Pokud by se pozdější update AI vytvářel až po zobrazení kurzů, označíme ho jako <i>post-market</i>. Hodnotí se všech pět sérií.</p>
 <h2>Co nezveřejňujeme</h2>
 <p>Sázková doporučení ani výši sázek. Tohle není tipovací služba. Nezveřejňujeme ani surové pracovní soubory.</p>
 <h2>Známá omezení prvního běhu (2. 10.)</h2>
@@ -113,6 +122,15 @@ RULES = {
 <li>The round-1 leader wins the runoff about 70 % of the time (ČSÚ).</li>
 <li>ANO candidates won only about 9 of 44 runoffs in 2020–2024, and about 1 of 8 in 2020, when ANO was in government.</li>
 </ul>
+<h2>Five series (from 5 Oct)</h2>
+<ul>
+<li><b>AI</b>: the pure AI agent, with no model and no odds. It changes only on new facts (news, endorsements, scandals, polls). The “AI 2 Oct” column shows the starting point.</li>
+<li><b>Model</b>: the statistical model (see <a href="model.html">Statistical model</a>). It changes only when its inputs change, e.g. after round 1.</li>
+<li><b>AI + model</b>: the AI agent starting from the model and deviating only for facts the model cannot see. Every deviation is logged. No odds.</li>
+<li><b>Betting</b>: Fortuna and Tipsport seat-winner odds with the margin removed (power method). Where Tipsport only offers a yes/no on one candidate, we average it with Fortuna and split the rest in Fortuna's ratios. Odds are read only after the blind series are locked.</li>
+<li><b>Blend</b>: a mechanical log-odds combination of “AI + model” and “Betting”, ρ = 0.55 (w<sub>blind</sub> = 0.31). No judgment, just a tool.</li>
+</ul>
+<p>AI, Model and AI + model are <b>blind</b>. Their snapshots are made before any odds are read and are locked in git before the odds are added. Any later AI update made after seeing odds will be labelled <i>post-market</i>. All five series are scored.</p>
 <h2>What we don't publish</h2>
 <p>Betting recommendations or stakes. This is not a tipping service. We don't publish raw working files either.</p>
 <h2>Known limitations of the first run (2 Oct)</h2>
@@ -323,3 +341,84 @@ JOURNAL.append(dict(
 <li><b>Risk of odds contamination.</b> A search result showed an article on bookmakers' favourites. <i>Fix:</i> we did not open it and logged it. The blind forecast must stay free of odds until it is locked.</li>
 </ol>
 <p><b>Monday 5 Oct:</b> a final poll search, then an AI update of all 27 districts with the statistical model as input, locking the blind forecast, and only then the market and final numbers.</p>"""))
+
+JOURNAL.append(dict(
+    date="2026-10-05",
+    title_cs="Den 4: pět sérií — AI, Model, AI s modelem, Sázky, Blend",
+    title_en="Day 4: five series — AI, Model, AI + model, Betting, Blend",
+    cs="""<p><b>Dnes se poprvé objevují všechny série.</b> Pořadí bylo pevné: nejdřív AI update bez modelu (krok A), potom AI s modelem jako vstupem (krok B). Oba blind snapshoty jsme v 15:24 zamkli commitem v gitu. Kurzy jsme začali číst až potom (Fortuna od 15:35, pak Tipsport).</p>
+<h3>Co se změnilo</h3>
+<ul>
+<li><b>AI (bez modelu):</b> od 2. 10. se změnily jen 2 obvody. V Litovli jsme posunuli 2 p.b. od Ošťádala ke Kohajdovi, protože Ošťádal prohlásil „kampaň dělat nebudu“. V Brně jsme opravili 2 p.b. kvůli vnitřní nekonzistenci předchozí verze. Ve zbylých 25 obvodech nové fakty nepřibyly a odhad zůstal (pravidlo: menší pohyb než 2 p.b. a žádná podstatná událost = beze změny).</li>
+<li><b>AI s modelem:</b> ve dvou obvodech se změnil favorit: 21 (Sáblík místo Lásky) a 27 (Padevět místo Čižinského). Hodně zesílili favorité, kde model vidí silnou koaliční základnu (Kladno, Praha 9, Pelhřimov, Hradec). Oslabili tam, kde model nevidí osobní značku (Strakonice, Karviná, Česká Lípa, Uherské Hradiště).</li>
+<li><b>Sázky:</b> favorit trhu se od „AI s modelem“ liší v 9 z 27 obvodů. Trh výrazně víc věří:
+  <ul>
+  <li>kandidátům ANO v Chebu (Tsoukernik), Pelhřimově (Kozár) a Přerově (Vrána, 82 % proti našim 24 %);</li>
+  <li>osobním značkám a místním lídrům: Láska, Čižinský, Řehka, Korč, Kohajda a Paták.</li>
+  </ul>
+  Naše série naopak stojí víc na šíři koaliční podpory. Tohle je hlavní sázka experimentu a po volbách uvidíme, kdo měl pravdu.</li>
+<li><b>Blend</b> kombinuje „AI s modelem“ a trh mechanicky (ρ = 0,55, váha AI asi 31 %).</li>
+</ul>
+<h3>Chyby a nápravy</h3>
+<ol>
+<li><b>Chyby ve vstupech statistického modelu.</b> Agenti v kroku B při kontrole vstupů našli asi tucet chyb:
+  <ul>
+  <li>příznak „starosta“ se chytal i na „bývalý starosta“;</li>
+  <li>bývalé senátory model párová jen podle jména, takže se pletli jmenovci (dva Martinové Dvořákové);</li>
+  <li>koaliční kandidátka v komunálních volbách se připisovala celá každé straně v koalici;</li>
+  <li>pražská kandidátka „Praha 7 SOBĚ“ z roku 2018 nebyla namapovaná;</li>
+  <li>chybějící SLK v opozičním bloku;</li>
+  <li>nulová základna KSČM;</li>
+  <li>kalibrace dává každému menšímu kandidátovi zhruba 2 % jako podlahu.</li>
+  </ul>
+  <i>Náprava:</i> model v1 dnes záměrně neměníme, aby se série Model měnila jen při změně vstupů. Chyby agenti zapsali jako odchylky s důvodem a opravy půjdou do modelu v2 po 1. kole. Zveřejníme to jako novou verzi.</li>
+<li><b>Dvojí započítání neformální podpory.</b> Ve Vyškově a Litovli agent spustil model znovu a „dokódoval“ neformální podporu stran, které nejsou na hlasovacím lístku. V trénovacích datech ale takhle kódovaná není, takže by se efekt počítal dvakrát. <i>Náprava:</i> doplnili jsme pravidlo (bez přepočtu modelu, jen umírněná odchylka nad typickou úroveň) a nezávislá kontrola oba obvody ještě před zamčením opravila. Vyškov zůstal kolem 76 %, v Litovli vychází Ošťádal 36,5 % a Kohajda 31 %.</li>
+<li><b>Kanály, kterými mohly prosáknout kurzy.</b> Našli jsme dva:
+  <ul>
+  <li>v souboru se zprávami pro agenty byla naše poznámka o favoritovi modelu;</li>
+  <li>automaticky načítaná paměť agenta obsahovala čísla z dřívějšího kroku s trhem pro Plzeň, Brno a Kladno.</li>
+  </ul>
+  <i>Náprava:</i> obojí jsme vyčistili během běhu a v dotčených obvodech to zapsali jako riziko kontaminace. Plně čisté to u nich zaručit neumíme.</li>
+<li><b>Chyba v nástroji pro updaty.</b> Jako výchozí „předchozí pravděpodobnost“ nástroj kopíroval final číslo (s trhem) místo blind čísla. Agent to chytil v Plzni. <i>Náprava:</i> v updatech jsme vycházeli z blind čísla; opravu nástroje uděláme před dalším updatem.</li>
+<li><b>Nejasná definice trhu.</b> U Fortuny nebylo jasné, jestli jde o vítěze 1. kola, nebo o zvolení. <i>Řešení:</i> Tipsport výslovně vypisuje „celkově“ a jeho čísla s Fortunou sedí, proto obojí bereme jako vítěze obvodu. Marže Fortuny je vysoká (11–78 %).</li>
+<li><b>Omezení přístupu na Tipsportu.</b> Při rychlém procházení web dočasně zablokoval sázení. <i>Náprava:</i> pomalejší čtení s pauzami. Kurzy máme pro všech 27 obvodů z obou kanceláří.</li>
+</ol>
+<p><b>Dál:</b> od úterý 6. 10. platí moratorium na průzkumy. AI se změní jen při nových faktech, Sázky budeme číst denně. Odhady zamrazíme v pátek 9. 10. do 12:00 a hodnotit budeme poslední verzi před 14:00.</p>""",
+    en="""<p><b>Today all series appear for the first time.</b> The order was fixed: first the AI update without the model (step A), then the AI with the model as input (step B). Both blind snapshots were locked with a git commit at 15:24. Only after that did we start reading odds (Fortuna from 15:35, then Tipsport).</p>
+<h3>What changed</h3>
+<ul>
+<li><b>AI (no model):</b> only 2 districts changed since 2 Oct. In Litovel we moved 2 pp from Ošťádal to Kohajda after Ošťádal said he would not campaign. In Brno we fixed a 2 pp internal inconsistency in the previous version. The other 25 districts had no new facts and kept their forecast (rule: under 2 pp and no material event means no change).</li>
+<li><b>AI + model:</b> the favourite changed in two districts: 21 (Sáblík instead of Láska) and 27 (Padevět instead of Čižinský). Favourites with a strong coalition base in the model got much stronger (Kladno, Praha 9, Pelhřimov, Hradec). Those whose personal brand the model cannot see got weaker (Strakonice, Karviná, Česká Lípa, Uherské Hradiště).</li>
+<li><b>Betting:</b> the market favourite differs from “AI + model” in 9 of 27 districts. The market is much more confident in:
+  <ul>
+  <li>ANO candidates in Cheb (Tsoukernik), Pelhřimov (Kozár) and Přerov (Vrána, 82 % vs our 24 %);</li>
+  <li>personal brands and local leaders: Láska, Čižinský, Řehka, Korč, Kohajda and Paták.</li>
+  </ul>
+  Our series lean more on the breadth of coalition support. This is the experiment's main bet, and the election will show who was right.</li>
+<li><b>Blend</b> combines “AI + model” with the market mechanically (ρ = 0.55, AI weight about 31 %).</li>
+</ul>
+<h3>Mistakes and fixes</h3>
+<ol>
+<li><b>Bugs in the statistical model's inputs.</b> While auditing the inputs in step B, the agents found about a dozen bugs:
+  <ul>
+  <li>the “mayor” flag also fired on “former mayor”;</li>
+  <li>former senators were matched by name only, so namesakes got mixed up (two Martin Dvořáks);</li>
+  <li>a municipal coalition list was credited in full to every member party;</li>
+  <li>the 2018 Prague list “Praha 7 SOBĚ” was not mapped;</li>
+  <li>SLK was missing from the opposition bloc;</li>
+  <li>KSČM had a zero base;</li>
+  <li>calibration gives every minor candidate a floor of about 2 %.</li>
+  </ul>
+  <i>Fix:</i> we deliberately leave model v1 unchanged today, so that the Model series changes only when its inputs do. The agents logged the bugs as deviations with reasons, and the fixes go into model v2 after round 1, published as a new version.</li>
+<li><b>Double-counting informal backing.</b> In Vyškov and Litovel the agent re-ran the model with informal support “coded in” from parties not on the ballot. The training data is not coded that way, so the effect would have been counted twice. <i>Fix:</i> we added a rule (no model re-runs, only a moderate deviation above the typical level), and an independent review corrected both districts before the lock. Vyškov stayed around 76 %; Litovel is Ošťádal 36.5 % and Kohajda 31 %.</li>
+<li><b>Channels through which odds could leak.</b> We found two:
+  <ul>
+  <li>the news file given to the agents contained our note about the model's favourite;</li>
+  <li>the agent's auto-loaded memory contained numbers from an earlier market step for Plzeň, Brno and Kladno.</li>
+  </ul>
+  <i>Fix:</i> both were cleaned during the run, and the affected districts log it as a contamination risk. We cannot fully guarantee they are clean.</li>
+<li><b>A bug in the update tool.</b> It copied the final (market-aware) number as the default “previous probability” instead of the blind one. The agent caught it in Plzeň. <i>Fix:</i> the updates started from the blind number; the tool fix comes before the next update.</li>
+<li><b>An unclear market definition.</b> It was not clear whether Fortuna's market means the round-1 winner or the elected senator. <i>Resolution:</i> Tipsport explicitly says “overall”, and its numbers match Fortuna's, so we treat both as the seat winner. Fortuna's margin is high (11–78 %).</li>
+<li><b>Tipsport rate limiting.</b> The site temporarily blocked betting during fast browsing. <i>Fix:</i> slower reading with pauses. We have odds for all 27 districts from both bookmakers.</li>
+</ol>
+<p><b>Next:</b> the poll blackout starts Tue 6 Oct. AI changes only on new facts; Betting is read daily. Forecasts freeze Fri 9 Oct by 12:00, and the last version before 14:00 is the one scored.</p>"""))

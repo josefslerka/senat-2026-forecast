@@ -67,6 +67,15 @@ footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:v
 <li>The round-1 leader wins the runoff about 70 % of the time (ČSÚ).</li>
 <li>ANO candidates won only about 9 of 44 runoffs in 2020–2024, and about 1 of 8 in 2020, when ANO was in government.</li>
 </ul>
+<h2>Five series (from 5 Oct)</h2>
+<ul>
+<li><b>AI</b>: the pure AI agent, with no model and no odds. It changes only on new facts (news, endorsements, scandals, polls). The “AI 2 Oct” column shows the starting point.</li>
+<li><b>Model</b>: the statistical model (see <a href="model.html">Statistical model</a>). It changes only when its inputs change, e.g. after round 1.</li>
+<li><b>AI + model</b>: the AI agent starting from the model and deviating only for facts the model cannot see. Every deviation is logged. No odds.</li>
+<li><b>Betting</b>: Fortuna and Tipsport seat-winner odds with the margin removed (power method). Where Tipsport only offers a yes/no on one candidate, we average it with Fortuna and split the rest in Fortuna's ratios. Odds are read only after the blind series are locked.</li>
+<li><b>Blend</b>: a mechanical log-odds combination of “AI + model” and “Betting”, ρ = 0.55 (w<sub>blind</sub> = 0.31). No judgment, just a tool.</li>
+</ul>
+<p>AI, Model and AI + model are <b>blind</b>. Their snapshots are made before any odds are read and are locked in git before the odds are added. Any later AI update made after seeing odds will be labelled <i>post-market</i>. All five series are scored.</p>
 <h2>What we don't publish</h2>
 <p>Betting recommendations or stakes. This is not a tipping service. We don't publish raw working files either.</p>
 <h2>Known limitations of the first run (2 Oct)</h2>
