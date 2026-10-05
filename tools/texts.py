@@ -383,6 +383,17 @@ JOURNAL.append(dict(
 <li><b>Nejasná definice trhu.</b> U Fortuny nebylo jasné, jestli jde o vítěze 1. kola, nebo o zvolení. <i>Řešení:</i> Tipsport výslovně vypisuje „celkově“ a jeho čísla s Fortunou sedí, proto obojí bereme jako vítěze obvodu. Marže Fortuny je vysoká (11–78 %).</li>
 <li><b>Omezení přístupu na Tipsportu.</b> Při rychlém procházení web dočasně zablokoval sázení. <i>Náprava:</i> pomalejší čtení s pauzami. Kurzy máme pro všech 27 obvodů z obou kanceláří.</li>
 </ol>
+<h3>Předem zapsaná očekávání (5. 10., před výsledky)</h3>
+<p>Výsledky zatím nikdo nezná. Proto teď zapisujeme, co od jednotlivých sérií čekáme, abychom po volbách mohli ověřit i vlastní odhad slabin.</p>
+<ul>
+<li><b>Očekávané pořadí podle Brieru:</b> Blend ≈ Sázky &gt; AI s modelem &gt; Statistický model ≈ AI. Kombinace dvou různých zdrojů obvykle vychází nejlépe. Trh v našich dřívějších otázkách porazil náš final v 5 ze 6 případů.</li>
+<li><b>AI:</b> research byl tenký (vyčerpané vyhledávání), opakovaně se objevovala chyba v konstrukci (dvojice ve 2. kole neseděly s podíly v 1. kole) a odhad se od 2. 10. téměř neměnil.</li>
+<li><b>Statistický model:</b> má jen 3 volební cykly v datech, nevidí osobní značky a obsahuje známé chyby ve vstupech. Jako samostatný odhad je hrubý.</li>
+<li><b>AI s modelem:</b> riziko je přílišné přimknutí k modelu a přehnaná jistota u favoritů se silnou koalicí (Kladno 80 %, Praha 9 79 %, Znojmo 84 %).</li>
+<li><b>Sázky:</b> tenký trh s vysokou marží; obě kanceláře se pravděpodobně navzájem sledují.</li>
+</ul>
+<p><b>Hlavní hypotéza.</b> V 9 obvodech má trh jiného favorita než AI s modelem: 3 Cheb, 9 Plzeň, 15 Pelhřimov, 21 Praha 5, 27 Praha 1, 30 Kladno, 63 Přerov, 66 Litovel a 69 Frýdek-Místek. Proti sobě tu stojí dvě teorie. Podle naší rozhoduje šíře koaliční podpory a slabost ANO ve 2. kolech. Trh věří osobním značkám, místním lídrům a kandidátům ANO. Kdo v těchto 9 obvodech trefí víc vítězů, rozhodne o pořadí sérií víc než zbylých 18 obvodů dohromady.</p>
+<p><b>Jak budeme hodnotit.</b> 27 obvodů je silně korelovaných, takže rozdíly v průměrném Brieru nebudou statisticky průkazné. Kromě celkového skóre proto zveřejníme párové srovnání po obvodech a zvlášť rozbor 9 sporných obvodů.</p>
 <p><b>Dál:</b> od úterý 6. 10. platí moratorium na průzkumy. AI se změní jen při nových faktech, Sázky budeme číst denně. Odhady zamrazíme v pátek 9. 10. do 12:00 a hodnotit budeme poslední verzi před 14:00.</p>""",
     en="""<p><b>Today all series appear for the first time.</b> The order was fixed: first the AI update without the model (step A), then the AI with the model as input (step B). Both blind snapshots were locked with a git commit at 15:24. Only after that did we start reading odds (Fortuna from 15:35, then Tipsport).</p>
 <h3>What changed</h3>
@@ -421,6 +432,17 @@ JOURNAL.append(dict(
 <li><b>An unclear market definition.</b> It was not clear whether Fortuna's market means the round-1 winner or the elected senator. <i>Resolution:</i> Tipsport explicitly says “overall”, and its numbers match Fortuna's, so we treat both as the seat winner. Fortuna's margin is high (11–78 %).</li>
 <li><b>Tipsport rate limiting.</b> The site temporarily blocked betting during fast browsing. <i>Fix:</i> slower reading with pauses. We have odds for all 27 districts from both bookmakers.</li>
 </ol>
+<h3>Expectations recorded in advance (5 Oct, before any results)</h3>
+<p>Nobody knows the results yet. So we write down now what we expect from each series, so that after the election we can also check our own read of where our weaknesses are.</p>
+<ul>
+<li><b>Expected ranking by Brier:</b> Blend ≈ Betting &gt; AI + model &gt; Statistical model ≈ AI. Combining two different sources usually scores best. In our earlier questions, the market beat our final in 5 of 6 cases.</li>
+<li><b>AI:</b> its research was thin (search budget exhausted), it repeatedly made a construction error (runoff pairings inconsistent with round-1 shares), and it has barely changed since 2 Oct.</li>
+<li><b>Statistical model:</b> only 3 election cycles of data, blind to personal brands, and known input bugs. On its own it is a rough estimate.</li>
+<li><b>AI + model:</b> the risk is sticking too closely to the model, and overconfidence for favourites with a strong coalition (Kladno 80 %, Praha 9 79 %, Znojmo 84 %).</li>
+<li><b>Betting:</b> a thin market with high margins; the two bookmakers likely watch each other.</li>
+</ul>
+<p><b>Main hypothesis.</b> In 9 districts the market has a different favourite from AI + model: 3 Cheb, 9 Plzeň, 15 Pelhřimov, 21 Praha 5, 27 Praha 1, 30 Kladno, 63 Přerov, 66 Litovel and 69 Frýdek-Místek. Two theories clash here. Ours says what matters is the breadth of coalition support and ANO's weakness in runoffs. The market trusts personal brands, local leaders and ANO candidates. Whoever calls more winners in these 9 districts will decide the series ranking more than the other 18 districts combined.</p>
+<p><b>How we will score it.</b> The 27 districts are strongly correlated, so differences in mean Brier will not be statistically significant. Besides the overall score we will therefore publish a paired district-by-district comparison and a separate analysis of the 9 disputed districts.</p>
 <p><b>Next:</b> the poll blackout starts Tue 6 Oct. AI changes only on new facts; Betting is read daily. Forecasts freeze Fri 9 Oct by 12:00, and the last version before 14:00 is the one scored.</p>"""))
 
 # "What's new today" box at the top of the overview, per date (short, hand-written; auto moves are added below it).
