@@ -223,6 +223,14 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 .scroll{overflow-x:auto}
 footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 @media (max-width:640px){.hide-sm{display:none}h1{font-size:23px}}
+@media (max-width:640px){table.cards thead{display:none}table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:auto}
+table.cards tr{border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin:10px 0;background:var(--card)}
+table.cards td{border:0;padding:3px 0;display:flex;justify-content:space-between;gap:12px;text-align:right}
+table.cards td::before{content:attr(data-label);color:var(--muted);text-align:left}
+table.cards td.head{font-weight:600;font-size:17px}table.cards td.head::before{content:none}
+table.cards td.nolabel{display:none}.sm-only{display:inline!important}}
+.sm-only{display:none}
+table.cards td b{white-space:nowrap}table.cards .pill{white-space:normal}
 """
 
 PALETTE = ["#2f5d8a", "#c0703a", "#5b8a3c", "#8a4f7d", "#a8a39a", "#6a8fb0", "#b79b4e"]
@@ -438,13 +446,13 @@ def dist_of(snap_d: dict) -> dict[str, float]:
     return {c["key"]: c["p"] for c in snap_d["candidates"]}
 
 
-def leader_cell(dist: dict[str, float] | None, names: dict[str, str], hide: bool = False) -> str:
-    cls = ' class="hide-sm"' if hide else ""
+def leader_cell(dist: dict[str, float] | None, names: dict[str, str], hide: bool = False, label: str = "") -> str:
+    cls = (' class="hide-sm"' if hide else "") + (f' data-label="{esc(label)}"' if label else "")
     if not dist:
         return f"<td{cls}>—</td>"
     k = max(dist, key=dist.get)
     nm = names.get(k, k)
-    return f'<td{cls}>{esc(nm.split()[-1] if k != "Someone_else" else "Ostatní")} <b>{pct(dist[k])}</b></td>'
+    return f'<td{cls}><span>{esc(nm.split()[-1] if k != "Someone_else" else "Ostatní")} <b>{pct(dist[k])}</b></span></td>'
 
 
 def prev_snapshot(snaps: Path, series: str, date: str) -> dict | None:
@@ -538,11 +546,11 @@ def build_five(out: Path, date: str, model_date: str, ai0_date: str = "2026-10-0
             keys = list(names)
             md = keyed_model(MD[n], keys, names) if n in MD else None
             mk = (MK.get(n) or {}).get("consensus")
-            rows.append(f'<tr><td class="num">{n}</td><td><a href="obvod-{n:02d}.html">{esc(d["name"])}</a></td>'
-                        + leader_cell(dist_of(d), names) + leader_cell(md, names, True)
-                        + leader_cell(dist_of(AIM[n]) if n in AIM else None, names)
-                        + leader_cell(mk, names, True) + leader_cell(dist_of(BL[n]) if n in BL else None, names)
-                        + f'<td class="hide-sm"><span class="pill">{esc(status(d, lang))}</span></td></tr>')
+            rows.append(f'<tr><td class="num nolabel">{n}</td><td class="head"><a href="obvod-{n:02d}.html"><span class="sm-only">{n} · </span>{esc(d["name"])}</a></td>'
+                        + leader_cell(dist_of(d), names, label=S["ai"]) + leader_cell(md, names, label=S["model"])
+                        + leader_cell(dist_of(AIM[n]) if n in AIM else None, names, label=S["aimodel"])
+                        + leader_cell(mk, names, label=S["market"]) + leader_cell(dist_of(BL[n]) if n in BL else None, names, label=S["blend"])
+                        + f'<td data-label="{esc(t["status"])}"><span class="pill">{esc(status(d, lang))}</span></td></tr>')
             # district page
             def col(dist):  # noqa: E306
                 return lambda k: (pct(dist[k]) if dist and dist.get(k) is not None else "—")
@@ -570,8 +578,8 @@ def build_five(out: Path, date: str, model_date: str, ai0_date: str = "2026-10-0
 <p style="margin-bottom:0"><a href="denik.html">{"Podrobně v deníku →" if lang == "cs" else "Details in the journal →"}</a></p></div>
 <div class="card">{intro['body']}</div>
 <h2>{t['updated']} {esc(date)}</h2>
-<div class="scroll"><table><thead><tr><th>#</th><th>{t['district']}</th><th>{S['ai']}</th><th class="hide-sm">{S['model']}</th>
-<th>{S['aimodel']}</th><th class="hide-sm">{S['market']}</th><th>{S['blend']}</th><th class="hide-sm">{t['status']}</th></tr></thead>
+<div class="scroll"><table class="cards"><thead><tr><th>#</th><th>{t['district']}</th><th>{S['ai']}</th><th>{S['model']}</th>
+<th>{S['aimodel']}</th><th>{S['market']}</th><th>{S['blend']}</th><th>{t['status']}</th></tr></thead>
 <tbody>{''.join(rows)}</tbody></table></div>""")
         (base / "index.html").write_text(ov, encoding="utf-8")
         (base / "pravidla.html").write_text(simple_page(lang, "pravidla.html", L[lang]["rules"], RULES[lang]), encoding="utf-8")

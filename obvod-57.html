@@ -22,6 +22,14 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 .scroll{overflow-x:auto}
 footer{margin-top:48px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 @media (max-width:640px){.hide-sm{display:none}h1{font-size:23px}}
+@media (max-width:640px){table.cards thead{display:none}table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:auto}
+table.cards tr{border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin:10px 0;background:var(--card)}
+table.cards td{border:0;padding:3px 0;display:flex;justify-content:space-between;gap:12px;text-align:right}
+table.cards td::before{content:attr(data-label);color:var(--muted);text-align:left}
+table.cards td.head{font-weight:600;font-size:17px}table.cards td.head::before{content:none}
+table.cards td.nolabel{display:none}.sm-only{display:inline!important}}
+.sm-only{display:none}
+table.cards td b{white-space:nowrap}table.cards .pill{white-space:normal}
 </style></head><body><div class="wrap">
 <header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Přehled</a><a href="pravidla.html">Pravidla</a><a href="model.html">Model</a><a href="denik.html">Deník</a><a href="archiv.html">Archiv</a><a class="lang" href="en/obvod-57.html">EN</a></nav></header>
 
