@@ -1,0 +1,2138 @@
+{
+  "experiment": "senat-2026",
+  "date": "2026-10-06",
+  "stage": "blind",
+  "series": "aimodel",
+  "generated_utc": "2026-10-06T14:08:41+00:00",
+  "districts": [
+    {
+      "n": 3,
+      "name": "Cheb",
+      "series": "cheb-senat-obvod3-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Plevny",
+      "leader_p": 0.74,
+      "leader_band": [
+        0.6,
+        0.85
+      ],
+      "candidates": [
+        {
+          "key": "Plevny",
+          "name": "Miroslav Plevný",
+          "party": "STAN",
+          "p": 0.74,
+          "band": [
+            0.6,
+            0.85
+          ]
+        },
+        {
+          "key": "Tsoukernik",
+          "name": "Sandra Tsoukernik",
+          "party": "ANO",
+          "p": 0.18,
+          "band": [
+            0.1,
+            0.3
+          ]
+        },
+        {
+          "key": "Cerna",
+          "name": "Štěpánka Černá",
+          "party": "VOK",
+          "p": 0.027,
+          "band": [
+            0.01,
+            0.06
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.053,
+          "band": [
+            0.02,
+            0.1
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Vladimír Keblúšek (NČ)",
+        "Pavel Hojda (KSČM)",
+        "Ivan Reis (SPD)"
+      ],
+      "ballot_size": 6,
+      "status_cs": "obhájce kandiduje",
+      "status_en": "incumbent running",
+      "why_cs": "Obhájce s širokou koaliční podporou; druhé kolo v roce 2020 vyhrál 70 : 30. ANO má silnou základnu, ale ve druhých kolech dlouhodobě prohrává.",
+      "why_en": "Incumbent with broad coalition backing; won the 2020 runoff 70–30. ANO has a strong base but a weak long-run runoff record.",
+      "watch_cs": "Pořadí v 1. kole: vede-li Tsoukernik o 5+ bodů, klesá Plevný k ~55–62 %.",
+      "watch_en": "Round-1 order: if Tsoukernik leads by 5+ pp, Plevný drops to ~55–62 %.",
+      "redteam": null,
+      "grounding": "pass   # first pass warn (3 low-materiality labels), fixed in revision",
+      "contamination_risk": "none   # this run: no odds seen; parent's \"possible\" (two odds-page titles, unopened) carries over to the AI series",
+      "research_limitation": "websearch_budget_exhausted — WebFetch + Bing News only; Aktuálně items via WebFetch summary; FORUM 24 / Blesk / Metro / Chebský deník Senate articles not opened; Plevný's informal multi-party backing not verified on volby.cz; no district poll",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-cheb-senat-obvod3-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 6,
+      "name": "Louny",
+      "series": "louny-senat-obvod6-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Tresl",
+      "leader_p": 0.71,
+      "leader_band": [
+        0.54,
+        0.83
+      ],
+      "candidates": [
+        {
+          "key": "Tresl",
+          "name": "Ivo Trešl",
+          "party": "STAN",
+          "p": 0.71,
+          "band": [
+            0.54,
+            0.83
+          ]
+        },
+        {
+          "key": "Mikolas",
+          "name": "Jaroslav Mikoláš",
+          "party": "ANO",
+          "p": 0.2,
+          "band": [
+            0.11,
+            0.36
+          ]
+        },
+        {
+          "key": "Steiner",
+          "name": "Leo Steiner",
+          "party": "JsmePRO!",
+          "p": 0.02,
+          "band": [
+            0.005,
+            0.05
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.07,
+          "band": [
+            0.02,
+            0.14
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Vladislav Hrbáček (SPD)",
+        "Jiří Kobza (Stačilo!)",
+        "Ivana Hluštíková (Zelení+Piráti)"
+      ],
+      "ballot_size": 6,
+      "status_cs": "obhájce kandiduje",
+      "status_en": "incumbent running",
+      "why_cs": "Souboj obhájce s kandidátem ANO v okrese, kde je ANO silné. Rozhoduje, kdo povede po 1. kole.",
+      "why_en": "Incumbent vs. ANO in an ANO-strong area; who leads after round 1 is decisive.",
+      "watch_cs": "Vede-li Mikoláš po 1. kole, je to zhruba 50 : 50. Sledovat účast v Rakovnicku (Treślova základna).",
+      "watch_en": "If Mikoláš leads after round 1 it is roughly a coin flip. Watch turnout around Rakovník (Trešl's base).",
+      "redteam": "adjustment",
+      "grounding": "warn",
+      "contamination_risk": "possible   # inherited from parent research (one incidental quarantined summary, never passed on); none in Step A/B inputs",
+      "research_limitation": "websearch_budget_exhausted",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-louny-senat-obvod6-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 9,
+      "name": "Plzeň-město",
+      "series": "plzen-mesto-senat-obvod9-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Aschenbrenner",
+      "leader_p": 0.57,
+      "leader_band": [
+        0.46,
+        0.66
+      ],
+      "candidates": [
+        {
+          "key": "Aschenbrenner",
+          "name": "Lumír Aschenbrenner",
+          "party": "ODS+KoruČes+TOP (navrhl/a ODS)",
+          "p": 0.57,
+          "band": [
+            0.46,
+            0.66
+          ]
+        },
+        {
+          "key": "Rehka",
+          "name": "Karel Řehka",
+          "party": "STAN",
+          "p": 0.29,
+          "band": [
+            0.2,
+            0.38
+          ]
+        },
+        {
+          "key": "Kantorova",
+          "name": "Lucie Kantorová",
+          "party": "ANO",
+          "p": 0.06,
+          "band": [
+            0.03,
+            0.1
+          ]
+        },
+        {
+          "key": "Pouskova",
+          "name": "Daniela Pousková",
+          "party": "PRO PLZEŇ",
+          "p": 0.05,
+          "band": [
+            0.02,
+            0.09
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.03,
+          "band": [
+            0.01,
+            0.05
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Jaroslav Novák (JaSaN)",
+        "Bohumír Janský (SEN 21)",
+        "Jiří Valenta (KSČM)",
+        "Július Líška (SPD)"
+      ],
+      "ballot_size": 8,
+      "status_cs": "obhájce kandiduje",
+      "status_en": "incumbent running",
+      "why_cs": "Obhájce se nejpravděpodobněji utká s Kantorovou (ANO), kterou by ve 2. kole měl porazit. Hlavní riziko: bývalý náčelník generálního štábu Řehka mu bere centristické voliče.",
+      "why_en": "The incumbent most likely meets Kantorová (ANO) in the runoff and should beat her. Main risk: former Chief of General Staff Řehka splitting the centre-right vote.",
+      "watch_cs": "Předběhne-li Řehka v 1. kole Aschenbrennera, stává se favoritem (~55 %).",
+      "watch_en": "If Řehka finishes ahead of Aschenbrenner in round 1, he becomes the favourite (~55 %).",
+      "redteam": "adjustment",
+      "grounding": "pass",
+      "contamination_risk": "possible   # this run: none at every stage; inherited from parent blind (odds in parent's stage-1 search snippets, quarantined)",
+      "research_limitation": "websearch_budget_exhausted   # delta research front-pages only; KDU→Pousková single-sourced",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-plzen-mesto-senat-obvod9-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 12,
+      "name": "Strakonice",
+      "series": "strakonice-senat-obvod12-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Fiala",
+      "leader_p": 0.69,
+      "leader_band": [
+        0.55,
+        0.81
+      ],
+      "candidates": [
+        {
+          "key": "Fiala",
+          "name": "Tomáš Fiala",
+          "party": "NČ",
+          "p": 0.69,
+          "band": [
+            0.55,
+            0.81
+          ]
+        },
+        {
+          "key": "Hrdinova",
+          "name": "Jana Hrdinová",
+          "party": "KDU-ČSL",
+          "p": 0.25,
+          "band": [
+            0.13,
+            0.37
+          ]
+        },
+        {
+          "key": "Usaty",
+          "name": "Miroslav Ušatý",
+          "party": "Svob+SPD+Trikol (navrhl/a Svobodní)",
+          "p": 0.06,
+          "band": [
+            0.02,
+            0.12
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.0,
+          "band": [
+            0.0,
+            0.005
+          ]
+        }
+      ],
+      "others_on_ballot": [],
+      "ballot_size": 3,
+      "status_cs": "obhájce kandiduje; jen 3 kandidáti",
+      "status_en": "incumbent running; only 3 candidates",
+      "why_cs": "Jen tři kandidáti, ANO ani ODS nekandidují. Obhájce má reálnou šanci vyhrát už v 1. kole (~43 %).",
+      "why_en": "Only three candidates; neither ANO nor ODS runs. The incumbent has a real chance of winning outright in round 1 (~43 %).",
+      "watch_cs": "Fiala nad 50 % = rozhodnuto. Jinak záleží na soupeři ve 2. kole.",
+      "watch_en": "Fiala above 50 % settles it; otherwise the runoff opponent matters.",
+      "redteam": "adjustment",
+      "grounding": "pass   # first pass warn (magnitudes unlabelled) → revised: tied to sim rows / labelled priors",
+      "contamination_risk": "none   # parent v1 carries \"possible\" (one quarantined snippet); no odds in this run",
+      "research_limitation": "websearch_budget_exhausted",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-strakonice-senat-obvod12-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 15,
+      "name": "Pelhřimov",
+      "series": "pelhrimov-senat-obvod15-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Med",
+      "leader_p": 0.69,
+      "leader_band": [
+        0.48,
+        0.82
+      ],
+      "candidates": [
+        {
+          "key": "Med",
+          "name": "Ladislav Med",
+          "party": "KDUODSSTANTOPST (navrhl/a ODS)",
+          "p": 0.69,
+          "band": [
+            0.48,
+            0.82
+          ]
+        },
+        {
+          "key": "Chalupsky",
+          "name": "Jaroslav Chalupský",
+          "party": "HSR",
+          "p": 0.23,
+          "band": [
+            0.1,
+            0.42
+          ]
+        },
+        {
+          "key": "Kozar",
+          "name": "Michal Kozár",
+          "party": "ANO",
+          "p": 0.06,
+          "band": [
+            0.025,
+            0.15
+          ]
+        },
+        {
+          "key": "PavluRadova",
+          "name": "Lucie Pavlů Řádová",
+          "party": "SPD",
+          "p": 0.01,
+          "band": [
+            0.003,
+            0.03
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.01,
+          "band": [
+            0.003,
+            0.04
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Pavel Hodáč (KSČM)",
+        "Karolína Kubisková (VÝZVA)"
+      ],
+      "ballot_size": 6,
+      "status_cs": "obhájce kandiduje proti kandidátovi vlastního bloku",
+      "status_en": "incumbent running against his own bloc's candidate",
+      "why_cs": "Nejtěsnější obvod: koalice podporuje Meda proti obhájci Chalupskému. Kandidát ANO má ve 2. kole slabé vyhlídky.",
+      "why_en": "One of the closest races: the coalition backs Med against incumbent Chalupský. The ANO candidate's runoff prospects are weak.",
+      "watch_cs": "Pořadí Med vs. Chalupský v 1. kole prakticky rozhodne mandát.",
+      "watch_en": "The Med vs. Chalupský order in round 1 will practically decide the seat.",
+      "redteam": "adjustment",
+      "grounding": "pass",
+      "contamination_risk": "none",
+      "research_limitation": "websearch_budget_exhausted; WebFetch only (regional front pages, Google News RSS headlines; iRozhlas 403; Seznam/Novinky search not fetched); absence of post-2. 10. news is weak evidence; why the coalition did not back Chalupský still unknown",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-pelhrimov-senat-obvod15-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 18,
+      "name": "Příbram",
+      "series": "pribram-senat-obvod18-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Stepanek",
+      "leader_p": 0.815,
+      "leader_band": [
+        0.68,
+        0.88
+      ],
+      "candidates": [
+        {
+          "key": "Stepanek",
+          "name": "Petr Štěpánek",
+          "party": "STAN",
+          "p": 0.815,
+          "band": [
+            0.68,
+            0.88
+          ]
+        },
+        {
+          "key": "Danhova",
+          "name": "Barbora Daňhová",
+          "party": "ANO",
+          "p": 0.13,
+          "band": [
+            0.07,
+            0.25
+          ]
+        },
+        {
+          "key": "Luftova",
+          "name": "Simona Luftová",
+          "party": "Zelení+Piráti (navrhl/a Piráti)",
+          "p": 0.025,
+          "band": [
+            0.01,
+            0.06
+          ]
+        },
+        {
+          "key": "Sorna",
+          "name": "Josef Šorna",
+          "party": "SPD+PRO (navrhl/a PRO)",
+          "p": 0.015,
+          "band": [
+            0.005,
+            0.03
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.015,
+          "band": [
+            0.003,
+            0.03
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Pavel Vermach (SMS)",
+        "Frank Thomas Podstatzky-Lichtenstein (ČZS)"
+      ],
+      "ballot_size": 6,
+      "status_cs": "obhájce kandiduje",
+      "status_en": "incumbent running",
+      "why_cs": "Bloky jsou v okrese zhruba vyrovnané (krajské volby 2024), ale ANO ve 2. kolech výrazně ztrácí.",
+      "why_en": "The blocs are roughly level locally (2024 regional vote), but ANO loses ground in runoffs.",
+      "watch_cs": "Vede-li Daňhová po 1. kole, Štěpánek klesá k ~60 %.",
+      "watch_en": "If Daňhová leads after round 1, Štěpánek drops to ~60 %.",
+      "redteam": null,
+      "grounding": "pass",
+      "contamination_risk": "none",
+      "research_limitation": "websearch_budget_exhausted",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-pribram-senat-obvod18-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 21,
+      "name": "Praha 5",
+      "series": "praha-5-senat-obvod21-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Sablik",
+      "leader_p": 0.55,
+      "leader_band": [
+        0.43,
+        0.68
+      ],
+      "candidates": [
+        {
+          "key": "Sablik",
+          "name": "Radko Sáblík",
+          "party": "KDUČSL+ODS+STAN (navrhl/a ODS)",
+          "p": 0.55,
+          "band": [
+            0.43,
+            0.68
+          ]
+        },
+        {
+          "key": "Laska",
+          "name": "Václav Láska",
+          "party": "SEN 21",
+          "p": 0.27,
+          "band": [
+            0.16,
+            0.38
+          ]
+        },
+        {
+          "key": "Sarapatka",
+          "name": "Zdeněk Šarapatka",
+          "party": "Piráti+TOP+LES (navrhl/a TOP 09)",
+          "p": 0.14,
+          "band": [
+            0.06,
+            0.22
+          ]
+        },
+        {
+          "key": "Broz",
+          "name": "Lubomír Brož",
+          "party": "ANO",
+          "p": 0.03,
+          "band": [
+            0.01,
+            0.07
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.01,
+          "band": [
+            0.003,
+            0.03
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Ľubomír Augustín (PŘÍSAHA)",
+        "Pavel Spirov (SPD)",
+        "Petra Prokšanová (KSČM)"
+      ],
+      "ballot_size": 7,
+      "status_cs": "obhájce kandiduje bez podpory stran",
+      "status_en": "incumbent running without party support",
+      "why_cs": "Láska má osobní značku, ale strany, které ho podpořily v roce 2020, teď stojí za jeho soupeři. Rozštěpený pravý střed.",
+      "why_en": "Láska has a personal brand, but the parties that backed him in 2020 now back his rivals. Split centre-right field.",
+      "watch_cs": "Láska první → ~65–70 %; Láska třetí → mimo hru. Podpory mezi koly.",
+      "watch_en": "Láska first → ~65–70 %; Láska third → out. Endorsements between rounds.",
+      "redteam": "none",
+      "grounding": "warn",
+      "contamination_risk": "none",
+      "research_limitation": "websearch_budget_exhausted",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-praha-5-senat-obvod21-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 24,
+      "name": "Praha 9",
+      "series": "praha-9-senat-obvod24-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Smoljak",
+      "leader_p": 0.79,
+      "leader_band": [
+        0.6,
+        0.86
+      ],
+      "candidates": [
+        {
+          "key": "Smoljak",
+          "name": "David Smoljak",
+          "party": "KDUZelSTANPiTOP (navrhl/a STAN)",
+          "p": 0.79,
+          "band": [
+            0.6,
+            0.86
+          ]
+        },
+        {
+          "key": "Peckova",
+          "name": "Dagmar Pecková",
+          "party": "ODS",
+          "p": 0.175,
+          "band": [
+            0.1,
+            0.33
+          ]
+        },
+        {
+          "key": "Zalud",
+          "name": "Radek Žalud",
+          "party": "ANO",
+          "p": 0.022,
+          "band": [
+            0.008,
+            0.06
+          ]
+        },
+        {
+          "key": "Laube",
+          "name": "Bedřich Laube",
+          "party": "Svo+SPD+Tri+PRO (navrhl/a Svobodní)",
+          "p": 0.008,
+          "band": [
+            0.003,
+            0.02
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.005,
+          "band": [
+            0.001,
+            0.015
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Darina Batyiová (Kruh)"
+      ],
+      "ballot_size": 5,
+      "status_cs": "obhájce kandiduje",
+      "status_en": "incumbent running",
+      "why_cs": "Nejpravděpodobnější 2. kolo Smoljak vs. Pecková. ODS je v Praze 9 lokálně silná a 1. kolo se koná s komunálními volbami.",
+      "why_en": "Most likely runoff: Smoljak vs. Pecková. ODS is locally strong in Praha 9, and round 1 coincides with municipal elections.",
+      "watch_cs": "Pecková první → favoritka (~60 %); Žalud druhý → Smoljak ~90 %.",
+      "watch_en": "Pecková first → she is the favourite (~60 %); Žalud second → Smoljak ~90 %.",
+      "redteam": "adjustment",
+      "grounding": "pass   # draft (subagent) + revised (inline); helper flags = labelled assumptions / arithmetic",
+      "contamination_risk": "possible   # this run: none seen; inherited from the parent researcher's quarantined snippets (parent reasoning used as context)",
+      "research_limitation": "websearch_budget_exhausted   # WebFetch only; iROZHLAS 403; absence of late news unverified",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-praha-9-senat-obvod24-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 27,
+      "name": "Praha 1",
+      "series": "praha-1-senat-obvod27-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Padevet",
+      "leader_p": 0.7,
+      "leader_band": [
+        0.5,
+        0.82
+      ],
+      "candidates": [
+        {
+          "key": "Padevet",
+          "name": "Jiří Padevět",
+          "party": "ODSSTANPirátTOP (navrhl/a STAN)",
+          "p": 0.7,
+          "band": [
+            0.5,
+            0.82
+          ]
+        },
+        {
+          "key": "J_Cizinsky",
+          "name": "Jan Čižinský",
+          "party": "KDU+Zel+PHASOBĚ (navrhl/a PRAHA SOBĚ)",
+          "p": 0.27,
+          "band": [
+            0.16,
+            0.46
+          ]
+        },
+        {
+          "key": "Dudra",
+          "name": "Ján Dudra",
+          "party": "ANO",
+          "p": 0.02,
+          "band": [
+            0.01,
+            0.05
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.01,
+          "band": [
+            0.005,
+            0.03
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Jiří Morštadt (Generace)",
+        "Pavel Čižinský (Levice)",
+        "Jan Štern (TEAM)",
+        "Vojtěch Ryvola (GEN)",
+        "Jiří Pavel Pešek (Švýcarská dem.)",
+        "Vladimír Kolman (SOCDEM)"
+      ],
+      "ballot_size": 9,
+      "status_cs": "volné místo (Němcová nekandiduje)",
+      "status_en": "open seat (Němcová not running)",
+      "why_cs": "Souboj dvou silných kandidátů; Čižinský má silnou základnu v Praze 7. Odhad se po red-teamu otočil (z 48 : 49).",
+      "why_en": "Two strong candidates; Čižinský has a strong base in Praha 7. The lead flipped after the red-team (from 48–49).",
+      "watch_cs": "Kdo vede 1. kolo, má ~70 %. Rozdíl Praha 7 vs. Praha 1.",
+      "watch_en": "Whoever leads round 1 gets ~70 %. Praha 7 vs. Praha 1 margins.",
+      "redteam": "adjustment",
+      "grounding": "pass   # draft + revised; helper regex flags all model-derived/arithmetic/labelled",
+      "contamination_risk": "possible   # this run: none seen; inherited from the parent researcher's quarantined snippets (parent reasoning used as context)",
+      "research_limitation": "websearch_budget_exhausted   # delta research + red-teams used WebFetch / vault files only; irozhlas 403, idnes blocked",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-praha-1-senat-obvod27-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 30,
+      "name": "Kladno",
+      "series": "sipova-senat-kladno-obvod30-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Sipova",
+      "leader_p": 0.8,
+      "leader_band": [
+        0.64,
+        0.87
+      ],
+      "candidates": [
+        {
+          "key": "Sipova",
+          "name": "Adéla Sucharda Šípová",
+          "party": "ZelSTAPirTOPSEN (navrhl/a Piráti)",
+          "p": 0.8,
+          "band": [
+            0.64,
+            0.87
+          ]
+        },
+        {
+          "key": "Patak",
+          "name": "Petr Paták",
+          "party": "ODS",
+          "p": 0.09,
+          "band": [
+            0.04,
+            0.16
+          ]
+        },
+        {
+          "key": "Gerloch",
+          "name": "Aleš Gerloch",
+          "party": "ANO",
+          "p": 0.075,
+          "band": [
+            0.03,
+            0.15
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.035,
+          "band": [
+            0.01,
+            0.06
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Jan Klas (NČ)",
+        "Jaroslav Pelc (PŘÍSAHA)",
+        "Marcela Machalová (SPD)"
+      ],
+      "ballot_size": 6,
+      "status_cs": "obhájkyně kandiduje",
+      "status_en": "incumbent running",
+      "why_cs": "Tříčlenný souboj. Šípová je mírná favoritka; klíčové je, zda se ve 2. kole utká s ANO (lepší pro ni), nebo s ODS.",
+      "why_en": "Three-way race. Šípová is a slight favourite; the key is whether her runoff opponent is ANO (better for her) or ODS.",
+      "watch_cs": "Kdo obsadí druhé postupové místo (Gerloch vs. Paták).",
+      "watch_en": "Who takes the second runoff slot (Gerloch vs. Paták).",
+      "redteam": null,
+      "grounding": "pass      # helper raw fail 10 → all false positives (checker); revision re-ground 3 flags, all derived/verified",
+      "contamination_risk": "possible      # incidental only: auto-loaded session memory index carries a one-line summary of the v1 series incl. a post-market final; declared + quarantined by red-team B; not used by any stage; no odds pages opened",
+      "research_limitation": "websearch_budget_exhausted",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-sipova-senat-kladno-obvod30-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 33,
+      "name": "Děčín",
+      "series": "decin-senat-obvod33-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Linhart",
+      "leader_p": 0.821,
+      "leader_band": [
+        0.7,
+        0.9
+      ],
+      "candidates": [
+        {
+          "key": "Linhart",
+          "name": "Zbyněk Linhart",
+          "party": "STAN+SLK (navrhl/a STAN)",
+          "p": 0.821,
+          "band": [
+            0.7,
+            0.9
+          ]
+        },
+        {
+          "key": "Hejcman",
+          "name": "Michal Hejcman",
+          "party": "ANO",
+          "p": 0.094,
+          "band": [
+            0.05,
+            0.2
+          ]
+        },
+        {
+          "key": "Lehka",
+          "name": "Anna Lehká",
+          "party": "MÍSTNÍ HNHRM",
+          "p": 0.063,
+          "band": [
+            0.02,
+            0.11
+          ]
+        },
+        {
+          "key": "Skalicky",
+          "name": "Jan Skalický",
+          "party": "PRO",
+          "p": 0.012,
+          "band": [
+            0.003,
+            0.03
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.01,
+          "band": [
+            0.002,
+            0.025
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Miroslav Štross (Zelen+Pirát+SEN)"
+      ],
+      "ballot_size": 5,
+      "status_cs": "obhájce kandiduje",
+      "status_en": "incumbent running",
+      "why_cs": "Obhájce v roce 2020 vyhrál už v 1. kole (52,8 %). ANO je v okrese silné, ale druhé kolo by Linhart pravděpodobně vyhrál.",
+      "why_en": "The incumbent won outright in round 1 in 2020 (52.8 %). ANO is strong locally, but Linhart would likely win a runoff.",
+      "watch_cs": "Vede-li Hejcman 1. kolo, Linhart klesá k ~45 %.",
+      "watch_en": "If Hejcman leads round 1, Linhart drops to ~45 %.",
+      "redteam": null,
+      "grounding": "pass",
+      "contamination_risk": "none          # no odds seen in either step; parent's one incidental snippet stayed quarantined",
+      "research_limitation": "websearch_budget_exhausted   # WebFetch only; Google News RSS empty; iROZHLAS 403; Děčínský deník 404 → no verified news after 2. 10.",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-decin-senat-obvod33-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 36,
+      "name": "Česká Lípa",
+      "series": "ceska-lipa-senat-obvod36-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Puta",
+      "leader_p": 0.394,
+      "leader_band": [
+        0.28,
+        0.52
+      ],
+      "candidates": [
+        {
+          "key": "Puta",
+          "name": "Martin Půta",
+          "party": "SLK",
+          "p": 0.394,
+          "band": [
+            0.28,
+            0.52
+          ]
+        },
+        {
+          "key": "Volfova",
+          "name": "Jitka Volfová",
+          "party": "ANO",
+          "p": 0.283,
+          "band": [
+            0.17,
+            0.41
+          ]
+        },
+        {
+          "key": "Vosecky",
+          "name": "Jiří Vosecký",
+          "party": "NK",
+          "p": 0.23,
+          "band": [
+            0.12,
+            0.34
+          ]
+        },
+        {
+          "key": "Vomacka",
+          "name": "Vít Vomáčka",
+          "party": "ODS",
+          "p": 0.085,
+          "band": [
+            0.03,
+            0.15
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.008,
+          "band": [
+            0.002,
+            0.02
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Leoš Hamrský (KSČM)"
+      ],
+      "ballot_size": 5,
+      "status_cs": "obhájce kandiduje jako nezávislý",
+      "status_en": "incumbent running as an independent",
+      "why_cs": "Volfová (ANO) téměř jistě postoupí, ale ve 2. kole je slabší. Rizika pro Půtu: nepravomocné odsouzení (odvolání) a Vosecký, který mu může vzít postup.",
+      "why_en": "Volfová (ANO) will almost surely advance but is weaker in a runoff. Risks for Půta: a non-final conviction (under appeal) and Vosecký taking a runoff slot.",
+      "watch_cs": "Půta první → 80+ %; Vosecký před Půtou → ~50 %.",
+      "watch_en": "Půta first → 80+ %; Vosecký ahead of Půta → ~50 %.",
+      "redteam": "adjustment",
+      "grounding": "pass",
+      "contamination_risk": "none",
+      "research_limitation": "websearch_budget_exhausted — WebFetch direct URLs only (cs.wikipedia, Deník homepages, ct24, Seznam article); irozhlas 403, idnes blocked; no court press releases/ČTK reached; no district poll exists.",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-ceska-lipa-senat-obvod36-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 39,
+      "name": "Trutnov",
+      "series": "trutnov-senat-obvod39-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Sobotka",
+      "leader_p": 0.875,
+      "leader_band": [
+        0.74,
+        0.93
+      ],
+      "candidates": [
+        {
+          "key": "Sobotka",
+          "name": "Jan Sobotka",
+          "party": "STAN",
+          "p": 0.875,
+          "band": [
+            0.74,
+            0.93
+          ]
+        },
+        {
+          "key": "Chovancova",
+          "name": "Zuzana Chovancová",
+          "party": "ANO",
+          "p": 0.107,
+          "band": [
+            0.06,
+            0.23
+          ]
+        },
+        {
+          "key": "Mraz",
+          "name": "Radek Mráz",
+          "party": "SPD",
+          "p": 0.012,
+          "band": [
+            0.003,
+            0.03
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.006,
+          "band": [
+            0.002,
+            0.025
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Hynek Beran (PRO)"
+      ],
+      "ballot_size": 4,
+      "status_cs": "obhájce kandiduje",
+      "status_en": "incumbent running",
+      "why_cs": "Silný obhájce (2020: 41,7 % v 1. kole, 74,6 % ve 2.). Šance na výhru už v 1. kole kolem 31 %.",
+      "why_en": "Strong incumbent (2020: 41.7 % in round 1, 74.6 % in the runoff). About a 31 % chance of an outright round-1 win.",
+      "watch_cs": "Vede-li Chovancová, Sobotka klesá k ~45–50 %.",
+      "watch_en": "If Chovancová leads, Sobotka drops to ~45–50 %.",
+      "redteam": "adjustment",
+      "grounding": "pass",
+      "contamination_risk": "none   # this step; parent legacy flag \"possible\" (quarantined generic snippet, 2. 10.)",
+      "research_limitation": "websearch_budget_exhausted",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-trutnov-senat-obvod39-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 42,
+      "name": "Kolín",
+      "series": "kolin-senat-obvod42-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Kaspar",
+      "leader_p": 0.72,
+      "leader_band": [
+        0.58,
+        0.85
+      ],
+      "candidates": [
+        {
+          "key": "Kaspar",
+          "name": "Michael Kašpar",
+          "party": "STAN",
+          "p": 0.72,
+          "band": [
+            0.58,
+            0.85
+          ]
+        },
+        {
+          "key": "Schulz",
+          "name": "Roman Schulz",
+          "party": "ODS+TOP 09 (navrhl/a ODS)",
+          "p": 0.15,
+          "band": [
+            0.06,
+            0.27
+          ]
+        },
+        {
+          "key": "Brzobohata",
+          "name": "Andrea Brzobohatá",
+          "party": "ANO",
+          "p": 0.065,
+          "band": [
+            0.025,
+            0.13
+          ]
+        },
+        {
+          "key": "Sehnal",
+          "name": "Pavel Sehnal",
+          "party": "APB",
+          "p": 0.03,
+          "band": [
+            0.005,
+            0.09
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.035,
+          "band": [
+            0.01,
+            0.07
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "František Třeštik (JaSaN)",
+        "Jiří Rynekr (KSČM)",
+        "Antonín Dušek (SPD)"
+      ],
+      "ballot_size": 7,
+      "status_cs": "volné místo (Kárník nekandiduje)",
+      "status_en": "open seat (Kárník not running)",
+      "why_cs": "Starosta Kolína je jasný favorit; hlavní riziko je 2. kolo proti Schulzovi (pravý střed proti pravému středu).",
+      "why_en": "The mayor of Kolín is a clear favourite; the main risk is a runoff against Schulz (centre-right vs. centre-right).",
+      "watch_cs": "Kašpar vede o 10+ bodů → 92+ %; souboj se Schulzem → ~53 %.",
+      "watch_en": "Kašpar leads by 10+ pp → 92+ %; runoff against Schulz → ~53 %.",
+      "redteam": "adjustment",
+      "grounding": "pass",
+      "contamination_risk": "none",
+      "research_limitation": "websearch_budget_exhausted — WebFetch of front/aggregator pages only (Kolínský/Nymburský deník, programydovoleb, wiki, iPrima, kolin.cz); no article-level/candidate-site access; endorsements and Kolín/Nymburk/Praha-východ split still unverified",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-kolin-senat-obvod42-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 45,
+      "name": "Hradec Králové",
+      "series": "hradec-kralove-senat-obvod45-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Dvorak",
+      "leader_p": 0.68,
+      "leader_band": [
+        0.53,
+        0.78
+      ],
+      "candidates": [
+        {
+          "key": "Dvorak",
+          "name": "Martin Dvořák",
+          "party": "ZelSTANPiTOPHDK (navrhl/a STAN)",
+          "p": 0.68,
+          "band": [
+            0.53,
+            0.78
+          ]
+        },
+        {
+          "key": "Holasek",
+          "name": "Jan Holásek",
+          "party": "VPM+HP+MY+RH+NČ (navrhl/a RH)",
+          "p": 0.13,
+          "band": [
+            0.05,
+            0.22
+          ]
+        },
+        {
+          "key": "Ceralova_Petrofova",
+          "name": "Zuzana Ceralová Petrofová",
+          "party": "ODS",
+          "p": 0.11,
+          "band": [
+            0.05,
+            0.2
+          ]
+        },
+        {
+          "key": "Hulkova",
+          "name": "Jana Hůlková",
+          "party": "ANO",
+          "p": 0.06,
+          "band": [
+            0.03,
+            0.14
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.02,
+          "band": [
+            0.005,
+            0.05
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Monika Nebeská (NK)",
+        "Vladimír Dryml (ČSSD)",
+        "Ivan Picek (SPD)"
+      ],
+      "ballot_size": 7,
+      "status_cs": "obhájce kandiduje",
+      "status_en": "incumbent running",
+      "why_cs": "Tři kandidáti pravého středu se dělí o voliče; Hůlková (ANO) postoupí asi v 79 % scénářů, ale 2. kolo vyhrává jen zřídka.",
+      "why_en": "Three centre-right candidates split the vote; Hůlková (ANO) reaches the runoff in ~79 % of scenarios but rarely wins it.",
+      "watch_cs": "Kdo z pravého středu skončí v 1. kole první; souboj Dvořák vs. Holásek je zhruba 50 : 50.",
+      "watch_en": "Which centre-right candidate finishes first; Dvořák vs. Holásek is roughly a coin flip.",
+      "redteam": null,
+      "grounding": "pass      # first pass warn (unverifiable \"~7 pp\" 2020 hand calc), removed from point in revision; re-ground pass",
+      "contamination_risk": "none          # no odds seen in either step; parent's one incidental snippet stayed quarantined",
+      "research_limitation": "websearch_budget_exhausted   # WebFetch only; Google News RSS headlines (consent walls); KDU support of Ceralová headline-only",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-hradec-kralove-senat-obvod45-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 48,
+      "name": "Rychnov nad Kněžnou",
+      "series": "rychnov-nad-kneznou-senat-obvod48-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Grulich",
+      "leader_p": 0.82,
+      "leader_band": [
+        0.66,
+        0.92
+      ],
+      "candidates": [
+        {
+          "key": "Grulich",
+          "name": "Jan Grulich",
+          "party": "KDUODSSTPTOPLES (navrhl/a TOP 09)",
+          "p": 0.82,
+          "band": [
+            0.66,
+            0.92
+          ]
+        },
+        {
+          "key": "Sadovsky",
+          "name": "Petr Sadovský",
+          "party": "ANO",
+          "p": 0.179,
+          "band": [
+            0.08,
+            0.34
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.001,
+          "band": [
+            0.0005,
+            0.002
+          ]
+        }
+      ],
+      "others_on_ballot": [],
+      "ballot_size": 2,
+      "status_cs": "obhájce kandiduje; jen 2 kandidáti — rozhodne 1. kolo",
+      "status_en": "incumbent running; only 2 candidates — round 1 decides",
+      "why_cs": "Jen dva kandidáti, takže rozhodne přímo 1. kolo. Model převádí výsledek sněmovních voleb 2025 v okrese na dva kandidáty, přičemž v senátních volbách obvykle oslabuje vládní strana.",
+      "why_en": "Only two candidates, so round 1 decides. The model maps the 2025 Chamber result onto two candidates, with the usual Senate swing against the governing party.",
+      "watch_cs": "Výsledek 1. kola 10. 10. je konečný.",
+      "watch_en": "The round-1 result on 10 Oct is final.",
+      "redteam": "adjustment",
+      "grounding": "pass",
+      "contamination_risk": "none",
+      "research_limitation": "websearch_budget_exhausted",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-rychnov-nad-kneznou-senat-obvod48-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 51,
+      "name": "Žďár nad Sázavou",
+      "series": "zdar-nad-sazavou-senat-obvod51-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Klement",
+      "leader_p": 0.592,
+      "leader_band": [
+        0.46,
+        0.75
+      ],
+      "candidates": [
+        {
+          "key": "Klement",
+          "name": "Josef Klement",
+          "party": "KDU-ČSL",
+          "p": 0.592,
+          "band": [
+            0.46,
+            0.75
+          ]
+        },
+        {
+          "key": "Cerny",
+          "name": "Radek Černý",
+          "party": "ODS+Piráti+STO (navrhl/a ODS)",
+          "p": 0.172,
+          "band": [
+            0.07,
+            0.29
+          ]
+        },
+        {
+          "key": "Smarda",
+          "name": "Michal Šmarda",
+          "party": "SOM+Volt+HR (navrhl/a Volt)",
+          "p": 0.144,
+          "band": [
+            0.06,
+            0.28
+          ]
+        },
+        {
+          "key": "Koten",
+          "name": "Radek Koten",
+          "party": "SPD",
+          "p": 0.081,
+          "band": [
+            0.03,
+            0.14
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.011,
+          "band": [
+            0.003,
+            0.03
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "David Moos (SD-SN)"
+      ],
+      "ballot_size": 5,
+      "status_cs": "obhájce kandiduje; ANO nekandiduje",
+      "status_en": "incumbent running; no ANO candidate",
+      "why_cs": "Repríza roku 2020 (Klement porazil Šmardu 59,8 : 40,2). ANO tu nemá kandidáta.",
+      "why_en": "A rematch of 2020 (Klement beat Šmarda 59.8–40.2). ANO fields no candidate.",
+      "watch_cs": "Vede-li Šmarda po 1. kole, Klement klesá k ~45 %.",
+      "watch_en": "If Šmarda leads after round 1, Klement drops to ~45 %.",
+      "redteam": "adjustment",
+      "grounding": "warn",
+      "contamination_risk": "none",
+      "research_limitation": "websearch_budget_exhausted; WebFetch only (Google News RSS headlines, Wikipedia summarizing fetch, Deník homepage, starostove.cz); article bodies behind consent walls; okres-level 2025 Chamber JSON 404; no district poll; absence of post-2. 10. news is weak evidence",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-zdar-nad-sazavou-senat-obvod51-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 54,
+      "name": "Znojmo",
+      "series": "znojmo-senat-obvod54-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Tretina",
+      "leader_p": 0.84,
+      "leader_band": [
+        0.7,
+        0.91
+      ],
+      "candidates": [
+        {
+          "key": "Tretina",
+          "name": "Tomáš Třetina",
+          "party": "KDUODSSTANPiTOP (navrhl/a TOP 09)",
+          "p": 0.84,
+          "band": [
+            0.7,
+            0.91
+          ]
+        },
+        {
+          "key": "Kynera",
+          "name": "Jiří Kyněra",
+          "party": "ANO",
+          "p": 0.105,
+          "band": [
+            0.05,
+            0.22
+          ]
+        },
+        {
+          "key": "Beranova",
+          "name": "Bohumila Beranová",
+          "party": "HR",
+          "p": 0.033,
+          "band": [
+            0.012,
+            0.075
+          ]
+        },
+        {
+          "key": "RedovaFajmonova",
+          "name": "Petra Rédová Fajmonová",
+          "party": "Stačilo!",
+          "p": 0.009,
+          "band": [
+            0.002,
+            0.025
+          ]
+        },
+        {
+          "key": "Ruzicka",
+          "name": "Jindřich Růžička",
+          "party": "NK",
+          "p": 0.007,
+          "band": [
+            0.001,
+            0.02
+          ]
+        },
+        {
+          "key": "Cerny",
+          "name": "Pavel Černý",
+          "party": "PŘÍSAHA",
+          "p": 0.005,
+          "band": [
+            0.001,
+            0.015
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.001,
+          "band": [
+            0.0,
+            0.005
+          ]
+        }
+      ],
+      "others_on_ballot": [],
+      "ballot_size": 6,
+      "status_cs": "obhájce kandiduje",
+      "status_en": "incumbent running",
+      "why_cs": "Kyněra je jedinou volbou pro vládní voliče (SPD ani Motoristé nekandidují), ale obhájce s širokou koalicí je favorit.",
+      "why_en": "Kyněra is the only option for government voters (no SPD or Motoristé candidate), but the broadly backed incumbent is favoured.",
+      "watch_cs": "Vede-li Kyněra, Třetina klesá k ~42 %.",
+      "watch_en": "If Kyněra leads, Třetina drops to ~42 %.",
+      "redteam": "adjustment",
+      "grounding": "warn",
+      "contamination_risk": "none",
+      "research_limitation": "websearch_budget_exhausted",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-znojmo-senat-obvod54-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 57,
+      "name": "Vyškov",
+      "series": "vyskov-senat-obvod57-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Grolich",
+      "leader_p": 0.755,
+      "leader_band": [
+        0.62,
+        0.86
+      ],
+      "candidates": [
+        {
+          "key": "Grolich",
+          "name": "Jan Grolich",
+          "party": "KDU-ČSL",
+          "p": 0.755,
+          "band": [
+            0.62,
+            0.86
+          ]
+        },
+        {
+          "key": "Absolonova",
+          "name": "Petra Absolonová",
+          "party": "ANO",
+          "p": 0.225,
+          "band": [
+            0.12,
+            0.35
+          ]
+        },
+        {
+          "key": "Fladr",
+          "name": "Jaroslav Fládr",
+          "party": "PŘÍSAHA",
+          "p": 0.015,
+          "band": [
+            0.005,
+            0.04
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.005,
+          "band": [
+            0.001,
+            0.01
+          ]
+        }
+      ],
+      "others_on_ballot": [],
+      "ballot_size": 3,
+      "status_cs": "volné místo (Zitterbart kandiduje v Brně)",
+      "status_en": "open seat (Zitterbart runs in Brno)",
+      "why_cs": "Bloky, které se v roce 2020 dělily, teď stojí za jedním kandidátem. Šance na výhru v 1. kole ~50 %.",
+      "why_en": "Blocs that split in 2020 now back a single candidate. ~50 % chance of an outright round-1 win.",
+      "watch_cs": "Grolich nad 50 % = rozhodnuto; vede-li Absolonová, ~58 %.",
+      "watch_en": "Grolich above 50 % settles it; if Absolonová leads, ~58 %.",
+      "redteam": null,
+      "grounding": "pass",
+      "contamination_risk": "none",
+      "research_limitation": "websearch_budget_exhausted",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-vyskov-senat-obvod57-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 60,
+      "name": "Brno-město",
+      "series": "brno-mesto-senat-obvod60-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Papousek",
+      "leader_p": 0.75,
+      "leader_band": [
+        0.64,
+        0.84
+      ],
+      "candidates": [
+        {
+          "key": "Papousek",
+          "name": "Zdeněk Papoušek",
+          "party": "KDUODSPirTOPFBr (navrhl/a ODS)",
+          "p": 0.75,
+          "band": [
+            0.64,
+            0.84
+          ]
+        },
+        {
+          "key": "Zitterbart",
+          "name": "Karel Zitterbart",
+          "party": "STAN",
+          "p": 0.14,
+          "band": [
+            0.07,
+            0.23
+          ]
+        },
+        {
+          "key": "Sterba",
+          "name": "Jaroslav Štěrba",
+          "party": "ANO",
+          "p": 0.07,
+          "band": [
+            0.03,
+            0.14
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.04,
+          "band": [
+            0.02,
+            0.07
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Klára Alžběta Samková (Stačilo!)",
+        "Veronika Holcnerová (Kruh)",
+        "Jaroslav Turánek (SPD)"
+      ],
+      "ballot_size": 6,
+      "status_cs": "obhájce kandiduje",
+      "status_en": "incumbent running",
+      "why_cs": "Obhájce v městském obvodě, kde ANO v roce 2024 ve 2. kole prohrálo 32 : 68. Druhé postupové místo je otevřené.",
+      "why_en": "Incumbent in an urban district where ANO lost the 2024 runoff 32–68. The second runoff slot is open.",
+      "watch_cs": "Kdo skončí druhý: Štěrba, nebo Zitterbart.",
+      "watch_en": "Who finishes second: Štěrba or Zitterbart.",
+      "redteam": "adjustment",
+      "grounding": "pass",
+      "contamination_risk": "none",
+      "research_limitation": "websearch_budget_exhausted",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-brno-mesto-senat-obvod60-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 63,
+      "name": "Přerov",
+      "series": "prerov-senat-obvod63-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Navarik",
+      "leader_p": 0.737,
+      "leader_band": [
+        0.52,
+        0.85
+      ],
+      "candidates": [
+        {
+          "key": "Navarik",
+          "name": "Jakub Navařík",
+          "party": "KDU+ODS+STA+TOP (navrhl/a ODS)",
+          "p": 0.737,
+          "band": [
+            0.52,
+            0.85
+          ]
+        },
+        {
+          "key": "Vrana",
+          "name": "Petr Vrána",
+          "party": "ANO",
+          "p": 0.238,
+          "band": [
+            0.14,
+            0.45
+          ]
+        },
+        {
+          "key": "Chromec",
+          "name": "Dan Chromec",
+          "party": "SPD",
+          "p": 0.015,
+          "band": [
+            0.004,
+            0.04
+          ]
+        },
+        {
+          "key": "Obrtel",
+          "name": "Marek Obrtel",
+          "party": "ČSNS",
+          "p": 0.008,
+          "band": [
+            0.002,
+            0.03
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.002,
+          "band": [
+            0.0005,
+            0.005
+          ]
+        }
+      ],
+      "others_on_ballot": [],
+      "ballot_size": 4,
+      "status_cs": "volné místo (Seitlová končí)",
+      "status_en": "open seat (Seitlová retiring)",
+      "why_cs": "Vrána pravděpodobně vyhraje 1. kolo, ale ANO tu ve 2. kolech prohrálo 0 : 2 a celkově vyhrává jen ~20 % 2. kol.",
+      "why_en": "Vrána likely wins round 1, but ANO is 0–2 in runoffs here and wins only ~20 % of runoffs overall.",
+      "watch_cs": "Vede-li Navařík → 80–85 %; vede-li Vrána o 8+ bodů nad 43 % → ~45–50 %.",
+      "watch_en": "If Navařík leads → 80–85 %; if Vrána leads by 8+ pp above 43 % → ~45–50 %.",
+      "redteam": "adjustment",
+      "grounding": "pass",
+      "contamination_risk": "none",
+      "research_limitation": "websearch_budget_exhausted",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-prerov-senat-obvod63-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 66,
+      "name": "Litovel",
+      "series": "litovel-senat-obvod66-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Ostadal",
+      "leader_p": 0.365,
+      "leader_band": [
+        0.22,
+        0.5
+      ],
+      "candidates": [
+        {
+          "key": "Ostadal",
+          "name": "Marek Ošťádal",
+          "party": "24/7",
+          "p": 0.365,
+          "band": [
+            0.22,
+            0.5
+          ]
+        },
+        {
+          "key": "Kohajda",
+          "name": "Michael Kohajda",
+          "party": "KDU-ČSL",
+          "p": 0.31,
+          "band": [
+            0.17,
+            0.46
+          ]
+        },
+        {
+          "key": "Skurek",
+          "name": "Martin Škurek",
+          "party": "ANO",
+          "p": 0.24,
+          "band": [
+            0.12,
+            0.37
+          ]
+        },
+        {
+          "key": "Jelinek",
+          "name": "Pavel Jelínek",
+          "party": "SPD",
+          "p": 0.06,
+          "band": [
+            0.02,
+            0.12
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.025,
+          "band": [
+            0.005,
+            0.05
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Zdeněk Beil (Levice)"
+      ],
+      "ballot_size": 5,
+      "status_cs": "obhájce kandiduje bez podpory stran",
+      "status_en": "incumbent running without party support",
+      "why_cs": "Velmi těsné: Ošťádal vs. Kohajda o místo ve 2. kole proti Škurkovi, který postoupí asi v 70 % scénářů, ale 2. kolo vyhrává zřídka.",
+      "why_en": "Very close: Ošťádal vs. Kohajda for the runoff slot against Škurek, who advances in ~70 % of scenarios but rarely wins a runoff.",
+      "watch_cs": "Kdo z dvojice Ošťádal/Kohajda postoupí.",
+      "watch_en": "Which of Ošťádal/Kohajda advances.",
+      "redteam": "adjustment",
+      "grounding": "pass",
+      "contamination_risk": "none",
+      "research_limitation": "websearch_budget_exhausted",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-litovel-senat-obvod66-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 69,
+      "name": "Frýdek-Místek",
+      "series": "frydek-mistek-senat-obvod69-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Pesatova",
+      "leader_p": 0.81,
+      "leader_band": [
+        0.66,
+        0.88
+      ],
+      "candidates": [
+        {
+          "key": "Pesatova",
+          "name": "Helena Pešatová",
+          "party": "STAN+Piráti+TOP (navrhl/a STAN)",
+          "p": 0.81,
+          "band": [
+            0.66,
+            0.88
+          ]
+        },
+        {
+          "key": "Korc",
+          "name": "Petr Korč",
+          "party": "NMFM",
+          "p": 0.1,
+          "band": [
+            0.05,
+            0.21
+          ]
+        },
+        {
+          "key": "Krpel",
+          "name": "Tomáš Krpel",
+          "party": "SPD",
+          "p": 0.04,
+          "band": [
+            0.02,
+            0.08
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.05,
+          "band": [
+            0.02,
+            0.08
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Petr Hrnčárek (KSČM)",
+        "Nela Lisková (NEZLOMNÍ)",
+        "René Hompora (Švýcarská dem.)",
+        "Zdeněk Navrátil (Evo)"
+      ],
+      "ballot_size": 7,
+      "status_cs": "obhájkyně kandiduje; ANO ani ODS nekandidují",
+      "status_en": "incumbent running; no ANO or ODS candidate",
+      "why_cs": "Bez kandidáta ANO a ODS; Korč je hlavní soupeř a útočiště pro voliče ANO ve 2. kole.",
+      "why_en": "No ANO or ODS candidate; Korč is the main rival and the runoff refuge for ANO voters.",
+      "watch_cs": "Náskok Pešatové 10+ bodů → 85–90 %; pod 5 bodů → 60–65 %.",
+      "watch_en": "Pešatová lead of 10+ pp → 85–90 %; under 5 pp → 60–65 %.",
+      "redteam": "adjustment",
+      "grounding": "pass",
+      "contamination_risk": "none",
+      "research_limitation": "websearch_budget_exhausted — direct WebFetch only; no local news retrieved (denik.cz redirect, wiki/novinky/kv2022 404); NMFM 2022 municipal share not retrieved; okres 2025 figures single fetch",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-frydek-mistek-senat-obvod69-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 72,
+      "name": "Ostrava-město",
+      "series": "ostrava-mesto-senat-obvod72-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Simetka",
+      "leader_p": 0.84,
+      "leader_band": [
+        0.72,
+        0.91
+      ],
+      "candidates": [
+        {
+          "key": "Simetka",
+          "name": "Ondřej Šimetka",
+          "party": "KDUODSSTANPiTOP (navrhl/a ODS)",
+          "p": 0.84,
+          "band": [
+            0.72,
+            0.91
+          ]
+        },
+        {
+          "key": "Barankova_Vilamova",
+          "name": "Lucie Baránková Vilamová",
+          "party": "ANO",
+          "p": 0.11,
+          "band": [
+            0.05,
+            0.24
+          ]
+        },
+        {
+          "key": "Loprais",
+          "name": "Milan Loprais",
+          "party": "SPD+PRO (navrhl/a PRO)",
+          "p": 0.02,
+          "band": [
+            0.005,
+            0.04
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.03,
+          "band": [
+            0.01,
+            0.05
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Petr Jančík (Ostravak)",
+        "Radoslav Štědroň (Švýcarská dem.)",
+        "Radek Iwoniak (ČSSD)",
+        "Štefan Režný (ReMeK)"
+      ],
+      "ballot_size": 7,
+      "status_cs": "obhájce kandiduje",
+      "status_en": "incumbent running",
+      "why_cs": "Ostravská bilance ANO ve 2. kolech je lepší než celostátní, ale v letech, kdy vládne, slabá. Baránková má základnu v Porubě.",
+      "why_en": "ANO's Ostrava runoff record is better than nationally but weak in governing years. Baránková's base is Poruba.",
+      "watch_cs": "Baránková vede o 5+ bodů → ~62 : 35; Šimetka vede o 5+ → 85–88 %.",
+      "watch_en": "Baránková leads by 5+ pp → ~62–35; Šimetka leads by 5+ → 85–88 %.",
+      "redteam": "adjustment",
+      "grounding": "pass",
+      "contamination_risk": "none",
+      "research_limitation": "websearch_budget_exhausted",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-ostrava-mesto-senat-obvod72-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 75,
+      "name": "Karviná",
+      "series": "karvina-senat-obvod75-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Brzyszkowska",
+      "leader_p": 0.46,
+      "leader_band": [
+        0.33,
+        0.6
+      ],
+      "candidates": [
+        {
+          "key": "Brzyszkowska",
+          "name": "Lenka Brzyszkowská",
+          "party": "ANO",
+          "p": 0.46,
+          "band": [
+            0.33,
+            0.6
+          ]
+        },
+        {
+          "key": "Szyja",
+          "name": "Mariam Szyja",
+          "party": "ZelSTAPirTOPSEN (navrhl/a Piráti)",
+          "p": 0.26,
+          "band": [
+            0.15,
+            0.38
+          ]
+        },
+        {
+          "key": "Polach",
+          "name": "Aleš Polách",
+          "party": "ODS+Soukromníci (navrhl/a ODS)",
+          "p": 0.11,
+          "band": [
+            0.05,
+            0.19
+          ]
+        },
+        {
+          "key": "Stanek",
+          "name": "Pavel Staněk",
+          "party": "SPD",
+          "p": 0.11,
+          "band": [
+            0.05,
+            0.19
+          ]
+        },
+        {
+          "key": "Kazik",
+          "name": "Petr Kazík",
+          "party": "OK",
+          "p": 0.03,
+          "band": [
+            0.01,
+            0.07
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.03,
+          "band": [
+            0.01,
+            0.07
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Karel Světnička (JaSaN)",
+        "Roman Galia (SOCDEM)"
+      ],
+      "ballot_size": 7,
+      "status_cs": "volné místo ANO (Feber nekandiduje)",
+      "status_en": "open ANO-held seat (Feber not running)",
+      "why_cs": "Jediný obvod, kde je favoritkou kandidátka ANO: silná lokální základna a rozdělená opozice. V roce 2020 rozhodlo 84 hlasů při účasti 7,7 %.",
+      "why_en": "The only district with an ANO favourite: a strong local base and a split opposition. In 2020 the runoff was decided by 84 votes at 7.7 % turnout.",
+      "watch_cs": "Náskok v 1. kole: 20+ bodů → 75+ %; pod 10 bodů → zhruba 50 : 50. Dohoda Polách–Szyja.",
+      "watch_en": "Round-1 margin: 20+ pp → 75+ %; under 10 pp → about a coin flip. A Polách–Szyja deal.",
+      "redteam": null,
+      "grounding": "pass",
+      "contamination_risk": "none   # one odds-titled headline (Respekt) seen in a news list, not opened; quarantined",
+      "research_limitation": "websearch_budget_exhausted — WebFetch only (Bing News, Karvinský deník, Polar TV, programydovoleb); no district-specific Senate news 2.–5. 10.; no district poll",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-karvina-senat-obvod75-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 78,
+      "name": "Zlín",
+      "series": "zlin-senat-obvod78-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Golan",
+      "leader_p": 0.77,
+      "leader_band": [
+        0.58,
+        0.88
+      ],
+      "candidates": [
+        {
+          "key": "Golan",
+          "name": "Tomáš Goláň",
+          "party": "KDU+ODS+TOP 09 (navrhl/a ODS)",
+          "p": 0.77,
+          "band": [
+            0.58,
+            0.88
+          ]
+        },
+        {
+          "key": "Mitacek",
+          "name": "Ivo Mitáček",
+          "party": "STAN",
+          "p": 0.11,
+          "band": [
+            0.04,
+            0.24
+          ]
+        },
+        {
+          "key": "Sedlarik",
+          "name": "Vladimír Sedlařík",
+          "party": "ANO",
+          "p": 0.1,
+          "band": [
+            0.04,
+            0.24
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.02,
+          "band": [
+            0.005,
+            0.06
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Lubomír Nečas (SPD)",
+        "Jan Doleček (KSČM)",
+        "Pavel Dlouhý (SEN 21)"
+      ],
+      "ballot_size": 6,
+      "status_cs": "obhájce kandiduje",
+      "status_en": "incumbent running",
+      "why_cs": "Obhájce proti silnému kandidátovi ANO; primátor Korec (ANO) vede komunální kandidátku ve stejný den.",
+      "why_en": "Incumbent vs. a strong ANO candidate; Mayor Korec (ANO) heads the municipal list on the same day.",
+      "watch_cs": "Sedlařík před Goláněm → Goláň ~58 %.",
+      "watch_en": "Sedlařík ahead of Goláň → Goláň ~58 %.",
+      "redteam": "adjustment",
+      "grounding": "pass",
+      "contamination_risk": "none",
+      "research_limitation": "websearch_budget_exhausted — WebFetch of homepage/section pages only (zlin.cz/volby, Zlínský deník, Rozhlas Zlín, Seznam/Novinky Senate sections, programydovoleb, wiki); idnes blocked; no article-level local coverage; Sedlařík brand evidence = self-presentation only",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-zlin-senat-obvod78-2026-aimodel.md",
+      "created": "2026-10-05"
+    },
+    {
+      "n": 81,
+      "name": "Uherské Hradiště",
+      "series": "uherske-hradiste-senat-obvod81-2026-aimodel",
+      "version": 1,
+      "stage": "blind",
+      "leader": "Bazala",
+      "leader_p": 0.71,
+      "leader_band": [
+        0.58,
+        0.82
+      ],
+      "candidates": [
+        {
+          "key": "Bazala",
+          "name": "Josef Bazala",
+          "party": "KDU-ČSL",
+          "p": 0.71,
+          "band": [
+            0.58,
+            0.82
+          ]
+        },
+        {
+          "key": "Vasica",
+          "name": "Jiří Vašica",
+          "party": "ANO",
+          "p": 0.18,
+          "band": [
+            0.09,
+            0.28
+          ]
+        },
+        {
+          "key": "Balastikova",
+          "name": "Margita Balaštíková",
+          "party": "HOČ",
+          "p": 0.03,
+          "band": [
+            0.01,
+            0.07
+          ]
+        },
+        {
+          "key": "Someone_else",
+          "name": "Ostatní",
+          "party": "",
+          "p": 0.08,
+          "band": [
+            0.03,
+            0.16
+          ]
+        }
+      ],
+      "others_on_ballot": [
+        "Otakar Březina (SD-SN)",
+        "Kristýna Zelienková (ZVUK 12)",
+        "David Skyba (SPD)"
+      ],
+      "ballot_size": 6,
+      "status_cs": "obhájce kandiduje",
+      "status_en": "incumbent running",
+      "why_cs": "Obhájce v baště KDU-ČSL proti nováčkovi za ANO; bývalá poslankyně ANO Balaštíková kandiduje za jinou stranu.",
+      "why_en": "Incumbent in a KDU-ČSL stronghold vs. an ANO newcomer; former ANO MP Balaštíková runs for another party.",
+      "watch_cs": "Je-li Vašica do 5 bodů za Bazalou, 2. kolo se zúží na ~65–70 %.",
+      "watch_en": "If Vašica is within 5 pp of Bazala, the runoff tightens to ~65–70 %.",
+      "redteam": null,
+      "grounding": "pass_with_warning",
+      "contamination_risk": "none",
+      "research_limitation": "websearch_budget_exhausted",
+      "independent_redteam_posthoc": false,
+      "note": "2026-10-05-uherske-hradiste-senat-obvod81-2026-aimodel.md",
+      "created": "2026-10-05"
+    }
+  ]
+}
