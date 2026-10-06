@@ -32,7 +32,23 @@ table.cards td.nolabel{display:none}.sm-only{display:inline!important}}
 table.cards td b{white-space:nowrap}table.cards .pill{white-space:normal}
 </style></head><body><div class="wrap">
 <header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Přehled</a><a href="pravidla.html">Pravidla</a><a href="model.html">Model</a><a href="denik.html">Deník</a><a href="archiv.html">Archiv</a><a class="lang" href="en/denik.html">EN</a></nav></header>
-<h1>Deník</h1><div class="card"><h2 style="margin-top:0">2026-10-05 — Den 4: pět sérií — AI, Statistický model, AI s modelem, Sázky, Blend</h2><p><b>Dnes se poprvé objevují všechny série.</b> Pořadí bylo pevné: nejdřív AI update bez modelu (krok A), potom AI s modelem jako vstupem (krok B). Oba blind snapshoty jsme v 15:24 zamkli commitem v gitu. Kurzy jsme začali číst až potom (Fortuna od 15:35, pak Tipsport).</p>
+<h1>Deník</h1><div class="card"><h2 style="margin-top:0">2026-10-06 — Den 5: moratorium na průzkumy, AI beze změny, pohyb trhu v Kladně</h2><p><b>Dnes začalo moratorium na průzkumy.</b> Ve zprávách za poslední den jsme nenašli nic, co by změnilo situaci v některém obvodu. Proto jsme podle pravidel <b>AI ani AI s modelem neměnili</b>. Blind snapshoty jsme i tak zamkli commitem ještě před čtením kurzů. Jsou totožné s 5. 10.</p>
+<h3>Co se změnilo</h3>
+<ul>
+<li><b>Zprávy:</b> Seznam Zprávy zveřejnily analýzu osmi „nejistých“ obvodů pro ANO (Trutnov, Příbram, Hradec Králové, Zlín, Kolín, Vyškov, Plzeň, Kladno). V Chebu kampaň Sandry Tsoukernik veřejně podporuje Michal David. Sociolog STEM upozorňuje, že ve Vyškově může Grolich vyhrát už v 1. kole. Jsou to spíš komentáře než nová fakta, odhady jsme kvůli nim neměnili.</li>
+<li><b>Sázky:</b> největší pohyb je v Kladně. Fortuna zkrátila kurz na Klase z 20 na 6 a prodloužila Šípovou z 2,0 na 2,8. Šípová v konsenzu klesla o 5 p.b. na 29 %, Paták zůstává favoritem (42 %). Menší posuny: Žďár (Klement +6), Litovel (Kohajda +4), Česká Lípa (Volfová +3). Favorit trhu se nezměnil nikde.</li>
+<li><b>Blend</b> se mění jen s trhem.</li>
+</ul>
+<h3>Externí benchmark: datový model Seznam Zpráv</h3>
+<p>Seznam Zprávy 5. 10. zveřejnily <a href="https://www.seznamzpravy.cz/clanek/volby-do-senatu-datovy-model-predpovida-dva-scenare-boje-ano-o-senat-316700">datový model</a>. Ten odhaduje jen šanci kandidátů ANO na postup do 2. kola a jejich procenta v 1. kole, a to ve dvou scénářích. Viděli jsme ho 6. 10. <b>Jako vstup ho nepoužíváme</b>. Čísla jsme uložili zvlášť a do podkladů pro agenty se nedostanou. Po 1. kole jeho střední scénář porovnáme s naším statistickým modelem a s AI s modelem na 23 kandidátech ANO (Brier na postup a chyba v procentech).</p>
+<p><b>Předem zapsáno:</b> SZ čeká 13,4 postupů ANO v nepříznivém, 17,3 ve středním a 21,2 v příznivém scénáři. Náš statistický model čeká 14,5. Podle stupnice SZ (16 a méně = neúspěch) tedy předpovídáme spíš neúspěch ANO v 1. kole. Největší rozdíly proti střednímu scénáři SZ jsou v Hradci Králové, ve Zlíně, ve Znojmě a v Praze 5 (u nás slabší ANO) a ve Vyškově (u nás silnější).</p>
+<h3>Chyby a nápravy</h3>
+<ol>
+<li><b>Chybějící seznam trhů Tipsportu.</b> Ze včerejška jsme měli zapsaná ID trhů jen pro polovinu obvodů. <i>Náprava:</i> našli jsme stránku kategorie se všemi 27 obvody a ID jsme zapsali do postupu.</li>
+<li><b>Zjednodušené čtení Tipsportu.</b> Přehledová stránka ukazuje jen kurz „Ano“. Detail jsme otevřeli jen u pěti obvodů, kde se kurz Ano změnil. U ostatních jsme kurz „Ne“ převzali z 5. 10. <i>Riziko:</i> malé, pokud se změnil jen kurz Ne. Od zítřka budeme Ne kontrolovat namátkově.</li>
+<li><b>Chyba v generátoru webu.</b> Box „Co je dnes nového“ spadl při porovnání Sázek s předchozím dnem, protože snapshot trhu ukládá rozdělení v jiném tvaru. Dnes šlo o první den, kdy předchozí snapshot trhu existoval. <i>Náprava:</i> opravili jsme načítání. Snapshoty se nezměnily.</li>
+</ol>
+<p><b>Dál:</b> ve středu a ve čtvrtek opět zprávy a Sázky. Odhady zamrazíme v pátek 9. 10. do 12:00.</p></div><div class="card"><h2 style="margin-top:0">2026-10-05 — Den 4: pět sérií — AI, Statistický model, AI s modelem, Sázky, Blend</h2><p><b>Dnes se poprvé objevují všechny série.</b> Pořadí bylo pevné: nejdřív AI update bez modelu (krok A), potom AI s modelem jako vstupem (krok B). Oba blind snapshoty jsme v 15:24 zamkli commitem v gitu. Kurzy jsme začali číst až potom (Fortuna od 15:35, pak Tipsport).</p>
 <h3>Co se změnilo</h3>
 <ul>
 <li><b>AI (bez modelu):</b> od 2. 10. se změnily jen 2 obvody. V Litovli jsme posunuli 2 p.b. od Ošťádala ke Kohajdovi, protože Ošťádal prohlásil „kampaň dělat nebudu“. V Brně jsme opravili 2 p.b. kvůli vnitřní nekonzistenci předchozí verze. Ve zbylých 25 obvodech nové fakty nepřibyly a odhad zůstal (pravidlo: menší pohyb než 2 p.b. a žádná podstatná událost = beze změny).</li>

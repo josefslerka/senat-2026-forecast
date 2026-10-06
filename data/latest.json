@@ -1,10 +1,10 @@
 {
   "ai": {
     "experiment": "senat-2026",
-    "date": "2026-10-05",
+    "date": "2026-10-06",
     "stage": "blind",
     "series": "ai",
-    "generated_utc": "2026-10-05T13:24:31+00:00",
+    "generated_utc": "2026-10-06T14:08:40+00:00",
     "districts": [
       {
         "n": 3,
@@ -66,7 +66,7 @@
           "Ivan Reis (SPD)"
         ],
         "ballot_size": 6,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Obhájce s širokou koaliční podporou; druhé kolo v roce 2020 vyhrál 70 : 30. ANO má silnou základnu, ale ve druhých kolech dlouhodobě prohrává.",
         "why_en": "Incumbent with broad coalition backing; won the 2020 runoff 70–30. ANO has a strong base but a weak long-run runoff record.",
@@ -140,7 +140,7 @@
           "Ivana Hluštíková (Zelení+Piráti)"
         ],
         "ballot_size": 6,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Souboj obhájce s kandidátem ANO v okrese, kde je ANO silné. Rozhoduje, kdo povede po 1. kole.",
         "why_en": "Incumbent vs. ANO in an ANO-strong area; who leads after round 1 is decisive.",
@@ -225,7 +225,7 @@
           "Július Líška (SPD)"
         ],
         "ballot_size": 8,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Obhájce se nejpravděpodobněji utká s Kantorovou (ANO), kterou by ve 2. kole měl porazit. Hlavní riziko: bývalý náčelník generálního štábu Řehka mu bere centristické voliče.",
         "why_en": "The incumbent most likely meets Kantorová (ANO) in the runoff and should beat her. Main risk: former Chief of General Staff Řehka splitting the centre-right vote.",
@@ -295,7 +295,7 @@
         ],
         "others_on_ballot": [],
         "ballot_size": 3,
-        "status_cs": "obhájce běží; jen 3 kandidáti",
+        "status_cs": "obhájce kandiduje; jen 3 kandidáti",
         "status_en": "incumbent running; only 3 candidates",
         "why_cs": "Jen tři kandidáti, ANO ani ODS nekandidují. Obhájce má reálnou šanci vyhrát už v 1. kole (~43 %).",
         "why_en": "Only three candidates; neither ANO nor ODS runs. The incumbent has a real chance of winning outright in round 1 (~43 %).",
@@ -378,7 +378,7 @@
           "Karolína Kubisková (VÝZVA)"
         ],
         "ballot_size": 6,
-        "status_cs": "obhájce běží proti kandidátovi vlastního bloku",
+        "status_cs": "obhájce kandiduje proti kandidátovi vlastního bloku",
         "status_en": "incumbent running against his own bloc's candidate",
         "why_cs": "Nejtěsnější obvod: koalice podporuje Meda proti obhájci Chalupskému. Kandidát ANO má ve 2. kole slabé vyhlídky.",
         "why_en": "One of the closest races: the coalition backs Med against incumbent Chalupský. The ANO candidate's runoff prospects are weak.",
@@ -461,7 +461,7 @@
           "Frank Thomas Podstatzky-Lichtenstein (ČZS)"
         ],
         "ballot_size": 6,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Bloky jsou v okrese zhruba vyrovnané (krajské volby 2024), ale ANO ve 2. kolech výrazně ztrácí.",
         "why_en": "The blocs are roughly level locally (2024 regional vote), but ANO loses ground in runoffs.",
@@ -545,7 +545,7 @@
           "Petra Prokšanová (KSČM)"
         ],
         "ballot_size": 7,
-        "status_cs": "obhájce běží bez podpory stran",
+        "status_cs": "obhájce kandiduje bez podpory stran",
         "status_en": "incumbent running without party support",
         "why_cs": "Láska má osobní značku, ale strany, které ho podpořily v roce 2020, teď stojí za jeho soupeři. Rozštěpený pravý střed.",
         "why_en": "Láska has a personal brand, but the parties that backed him in 2020 now back his rivals. Split centre-right field.",
@@ -627,7 +627,7 @@
           "Darina Batyiová (Kruh)"
         ],
         "ballot_size": 5,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Nejpravděpodobnější 2. kolo Smoljak vs. Pecková. ODS je v Praze 9 lokálně silná a 1. kolo se koná s komunálními volbami.",
         "why_en": "Most likely runoff: Smoljak vs. Pecková. ODS is locally strong in Praha 9, and round 1 coincides with municipal elections.",
@@ -778,7 +778,7 @@
           "Marcela Machalová (SPD)"
         ],
         "ballot_size": 6,
-        "status_cs": "obhájkyně běží",
+        "status_cs": "obhájkyně kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Tříčlenný souboj. Šípová je mírná favoritka; klíčové je, zda se ve 2. kole utká s ANO (lepší pro ni), nebo s ODS.",
         "why_en": "Three-way race. Šípová is a slight favourite; the key is whether her runoff opponent is ANO (better for her) or ODS.",
@@ -860,7 +860,7 @@
           "Miroslav Štross (Zelen+Pirát+SEN)"
         ],
         "ballot_size": 5,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Obhájce v roce 2020 vyhrál už v 1. kole (52,8 %). ANO je v okrese silné, ale druhé kolo by Linhart pravděpodobně vyhrál.",
         "why_en": "The incumbent won outright in round 1 in 2020 (52.8 %). ANO is strong locally, but Linhart would likely win a runoff.",
@@ -942,7 +942,7 @@
           "Leoš Hamrský (KSČM)"
         ],
         "ballot_size": 5,
-        "status_cs": "obhájce běží jako nezávislý",
+        "status_cs": "obhájce kandiduje jako nezávislý",
         "status_en": "incumbent running as an independent",
         "why_cs": "Volfová (ANO) téměř jistě postoupí, ale ve 2. kole je slabší. Rizika pro Půtu: nepravomocné odsouzení (odvolání) a Vosecký, který mu může vzít postup.",
         "why_en": "Volfová (ANO) will almost surely advance but is weaker in a runoff. Risks for Půta: a non-final conviction (under appeal) and Vosecký taking a runoff slot.",
@@ -1014,7 +1014,7 @@
           "Hynek Beran (PRO)"
         ],
         "ballot_size": 4,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Silný obhájce (2020: 41,7 % v 1. kole, 74,6 % ve 2.). Šance na výhru už v 1. kole kolem 31 %.",
         "why_en": "Strong incumbent (2020: 41.7 % in round 1, 74.6 % in the runoff). About a 31 % chance of an outright round-1 win.",
@@ -1182,7 +1182,7 @@
           "Ivan Picek (SPD)"
         ],
         "ballot_size": 7,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Tři kandidáti pravého středu se dělí o voliče; Hůlková (ANO) postoupí asi v 79 % scénářů, ale 2. kolo vyhrává jen zřídka.",
         "why_en": "Three centre-right candidates split the vote; Hůlková (ANO) reaches the runoff in ~79 % of scenarios but rarely wins it.",
@@ -1242,7 +1242,7 @@
         ],
         "others_on_ballot": [],
         "ballot_size": 2,
-        "status_cs": "obhájce běží; jen 2 kandidáti — rozhodne 1. kolo",
+        "status_cs": "obhájce kandiduje; jen 2 kandidáti — rozhodne 1. kolo",
         "status_en": "incumbent running; only 2 candidates — round 1 decides",
         "why_cs": "Jen dva kandidáti, takže rozhodne přímo 1. kolo. Model převádí výsledek sněmovních voleb 2025 v okrese na dva kandidáty, přičemž v senátních volbách obvykle oslabuje vládní strana.",
         "why_en": "Only two candidates, so round 1 decides. The model maps the 2025 Chamber result onto two candidates, with the usual Senate swing against the governing party.",
@@ -1324,7 +1324,7 @@
           "David Moos (SD-SN)"
         ],
         "ballot_size": 5,
-        "status_cs": "obhájce běží; ANO nekandiduje",
+        "status_cs": "obhájce kandiduje; ANO nekandiduje",
         "status_en": "incumbent running; no ANO candidate",
         "why_cs": "Repríza roku 2020 (Klement porazil Šmardu 59,8 : 40,2). ANO tu nemá kandidáta.",
         "why_en": "A rematch of 2020 (Klement beat Šmarda 59.8–40.2). ANO fields no candidate.",
@@ -1424,7 +1424,7 @@
         ],
         "others_on_ballot": [],
         "ballot_size": 6,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Kyněra je jedinou volbou pro vládní voliče (SPD ani Motoristé nekandidují), ale obhájce s širokou koalicí je favorit.",
         "why_en": "Kyněra is the only option for government voters (no SPD or Motoristé candidate), but the broadly backed incumbent is favoured.",
@@ -1568,7 +1568,7 @@
           "Jaroslav Turánek (SPD)"
         ],
         "ballot_size": 6,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Obhájce v městském obvodě, kde ANO v roce 2024 ve 2. kole prohrálo 32 : 68. Druhé postupové místo je otevřené.",
         "why_en": "Incumbent in an urban district where ANO lost the 2024 runoff 32–68. The second runoff slot is open.",
@@ -1730,7 +1730,7 @@
           "Zdeněk Beil (Levice)"
         ],
         "ballot_size": 5,
-        "status_cs": "obhájce běží bez podpory stran",
+        "status_cs": "obhájce kandiduje bez podpory stran",
         "status_en": "incumbent running without party support",
         "why_cs": "Velmi těsné: Ošťádal vs. Kohajda o místo ve 2. kole proti Škurkovi, který postoupí asi v 70 % scénářů, ale 2. kolo vyhrává zřídka.",
         "why_en": "Very close: Ošťádal vs. Kohajda for the runoff slot against Škurek, who advances in ~70 % of scenarios but rarely wins a runoff.",
@@ -1805,7 +1805,7 @@
           "Zdeněk Navrátil (Evo)"
         ],
         "ballot_size": 7,
-        "status_cs": "obhájkyně běží; ANO ani ODS nekandidují",
+        "status_cs": "obhájkyně kandiduje; ANO ani ODS nekandidují",
         "status_en": "incumbent running; no ANO or ODS candidate",
         "why_cs": "Bez kandidáta ANO a ODS; Korč je hlavní soupeř a útočiště pro voliče ANO ve 2. kole.",
         "why_en": "No ANO or ODS candidate; Korč is the main rival and the runoff refuge for ANO voters.",
@@ -1880,7 +1880,7 @@
           "Štefan Režný (ReMeK)"
         ],
         "ballot_size": 7,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Ostravská bilance ANO ve 2. kolech je lepší než celostátní, ale v letech, kdy vládne, slabá. Baránková má základnu v Porubě.",
         "why_en": "ANO's Ostrava runoff record is better than nationally but weak in governing years. Baránková's base is Poruba.",
@@ -2047,7 +2047,7 @@
           "Pavel Dlouhý (SEN 21)"
         ],
         "ballot_size": 6,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Obhájce proti silnému kandidátovi ANO; primátor Korec (ANO) vede komunální kandidátku ve stejný den.",
         "why_en": "Incumbent vs. a strong ANO candidate; Mayor Korec (ANO) heads the municipal list on the same day.",
@@ -2121,7 +2121,7 @@
           "David Skyba (SPD)"
         ],
         "ballot_size": 6,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Obhájce v baště KDU-ČSL proti nováčkovi za ANO; bývalá poslankyně ANO Balaštíková kandiduje za jinou stranu.",
         "why_en": "Incumbent in a KDU-ČSL stronghold vs. an ANO newcomer; former ANO MP Balaštíková runs for another party.",
@@ -4081,10 +4081,10 @@
   },
   "aimodel": {
     "experiment": "senat-2026",
-    "date": "2026-10-05",
+    "date": "2026-10-06",
     "stage": "blind",
     "series": "aimodel",
-    "generated_utc": "2026-10-05T13:24:31+00:00",
+    "generated_utc": "2026-10-06T14:08:41+00:00",
     "districts": [
       {
         "n": 3,
@@ -4146,7 +4146,7 @@
           "Ivan Reis (SPD)"
         ],
         "ballot_size": 6,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Obhájce s širokou koaliční podporou; druhé kolo v roce 2020 vyhrál 70 : 30. ANO má silnou základnu, ale ve druhých kolech dlouhodobě prohrává.",
         "why_en": "Incumbent with broad coalition backing; won the 2020 runoff 70–30. ANO has a strong base but a weak long-run runoff record.",
@@ -4220,7 +4220,7 @@
           "Ivana Hluštíková (Zelení+Piráti)"
         ],
         "ballot_size": 6,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Souboj obhájce s kandidátem ANO v okrese, kde je ANO silné. Rozhoduje, kdo povede po 1. kole.",
         "why_en": "Incumbent vs. ANO in an ANO-strong area; who leads after round 1 is decisive.",
@@ -4305,7 +4305,7 @@
           "Július Líška (SPD)"
         ],
         "ballot_size": 8,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Obhájce se nejpravděpodobněji utká s Kantorovou (ANO), kterou by ve 2. kole měl porazit. Hlavní riziko: bývalý náčelník generálního štábu Řehka mu bere centristické voliče.",
         "why_en": "The incumbent most likely meets Kantorová (ANO) in the runoff and should beat her. Main risk: former Chief of General Staff Řehka splitting the centre-right vote.",
@@ -4375,7 +4375,7 @@
         ],
         "others_on_ballot": [],
         "ballot_size": 3,
-        "status_cs": "obhájce běží; jen 3 kandidáti",
+        "status_cs": "obhájce kandiduje; jen 3 kandidáti",
         "status_en": "incumbent running; only 3 candidates",
         "why_cs": "Jen tři kandidáti, ANO ani ODS nekandidují. Obhájce má reálnou šanci vyhrát už v 1. kole (~43 %).",
         "why_en": "Only three candidates; neither ANO nor ODS runs. The incumbent has a real chance of winning outright in round 1 (~43 %).",
@@ -4458,7 +4458,7 @@
           "Karolína Kubisková (VÝZVA)"
         ],
         "ballot_size": 6,
-        "status_cs": "obhájce běží proti kandidátovi vlastního bloku",
+        "status_cs": "obhájce kandiduje proti kandidátovi vlastního bloku",
         "status_en": "incumbent running against his own bloc's candidate",
         "why_cs": "Nejtěsnější obvod: koalice podporuje Meda proti obhájci Chalupskému. Kandidát ANO má ve 2. kole slabé vyhlídky.",
         "why_en": "One of the closest races: the coalition backs Med against incumbent Chalupský. The ANO candidate's runoff prospects are weak.",
@@ -4541,7 +4541,7 @@
           "Frank Thomas Podstatzky-Lichtenstein (ČZS)"
         ],
         "ballot_size": 6,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Bloky jsou v okrese zhruba vyrovnané (krajské volby 2024), ale ANO ve 2. kolech výrazně ztrácí.",
         "why_en": "The blocs are roughly level locally (2024 regional vote), but ANO loses ground in runoffs.",
@@ -4625,7 +4625,7 @@
           "Petra Prokšanová (KSČM)"
         ],
         "ballot_size": 7,
-        "status_cs": "obhájce běží bez podpory stran",
+        "status_cs": "obhájce kandiduje bez podpory stran",
         "status_en": "incumbent running without party support",
         "why_cs": "Láska má osobní značku, ale strany, které ho podpořily v roce 2020, teď stojí za jeho soupeři. Rozštěpený pravý střed.",
         "why_en": "Láska has a personal brand, but the parties that backed him in 2020 now back his rivals. Split centre-right field.",
@@ -4707,7 +4707,7 @@
           "Darina Batyiová (Kruh)"
         ],
         "ballot_size": 5,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Nejpravděpodobnější 2. kolo Smoljak vs. Pecková. ODS je v Praze 9 lokálně silná a 1. kolo se koná s komunálními volbami.",
         "why_en": "Most likely runoff: Smoljak vs. Pecková. ODS is locally strong in Praha 9, and round 1 coincides with municipal elections.",
@@ -4858,7 +4858,7 @@
           "Marcela Machalová (SPD)"
         ],
         "ballot_size": 6,
-        "status_cs": "obhájkyně běží",
+        "status_cs": "obhájkyně kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Tříčlenný souboj. Šípová je mírná favoritka; klíčové je, zda se ve 2. kole utká s ANO (lepší pro ni), nebo s ODS.",
         "why_en": "Three-way race. Šípová is a slight favourite; the key is whether her runoff opponent is ANO (better for her) or ODS.",
@@ -4940,7 +4940,7 @@
           "Miroslav Štross (Zelen+Pirát+SEN)"
         ],
         "ballot_size": 5,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Obhájce v roce 2020 vyhrál už v 1. kole (52,8 %). ANO je v okrese silné, ale druhé kolo by Linhart pravděpodobně vyhrál.",
         "why_en": "The incumbent won outright in round 1 in 2020 (52.8 %). ANO is strong locally, but Linhart would likely win a runoff.",
@@ -5022,7 +5022,7 @@
           "Leoš Hamrský (KSČM)"
         ],
         "ballot_size": 5,
-        "status_cs": "obhájce běží jako nezávislý",
+        "status_cs": "obhájce kandiduje jako nezávislý",
         "status_en": "incumbent running as an independent",
         "why_cs": "Volfová (ANO) téměř jistě postoupí, ale ve 2. kole je slabší. Rizika pro Půtu: nepravomocné odsouzení (odvolání) a Vosecký, který mu může vzít postup.",
         "why_en": "Volfová (ANO) will almost surely advance but is weaker in a runoff. Risks for Půta: a non-final conviction (under appeal) and Vosecký taking a runoff slot.",
@@ -5094,7 +5094,7 @@
           "Hynek Beran (PRO)"
         ],
         "ballot_size": 4,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Silný obhájce (2020: 41,7 % v 1. kole, 74,6 % ve 2.). Šance na výhru už v 1. kole kolem 31 %.",
         "why_en": "Strong incumbent (2020: 41.7 % in round 1, 74.6 % in the runoff). About a 31 % chance of an outright round-1 win.",
@@ -5262,7 +5262,7 @@
           "Ivan Picek (SPD)"
         ],
         "ballot_size": 7,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Tři kandidáti pravého středu se dělí o voliče; Hůlková (ANO) postoupí asi v 79 % scénářů, ale 2. kolo vyhrává jen zřídka.",
         "why_en": "Three centre-right candidates split the vote; Hůlková (ANO) reaches the runoff in ~79 % of scenarios but rarely wins it.",
@@ -5322,7 +5322,7 @@
         ],
         "others_on_ballot": [],
         "ballot_size": 2,
-        "status_cs": "obhájce běží; jen 2 kandidáti — rozhodne 1. kolo",
+        "status_cs": "obhájce kandiduje; jen 2 kandidáti — rozhodne 1. kolo",
         "status_en": "incumbent running; only 2 candidates — round 1 decides",
         "why_cs": "Jen dva kandidáti, takže rozhodne přímo 1. kolo. Model převádí výsledek sněmovních voleb 2025 v okrese na dva kandidáty, přičemž v senátních volbách obvykle oslabuje vládní strana.",
         "why_en": "Only two candidates, so round 1 decides. The model maps the 2025 Chamber result onto two candidates, with the usual Senate swing against the governing party.",
@@ -5404,7 +5404,7 @@
           "David Moos (SD-SN)"
         ],
         "ballot_size": 5,
-        "status_cs": "obhájce běží; ANO nekandiduje",
+        "status_cs": "obhájce kandiduje; ANO nekandiduje",
         "status_en": "incumbent running; no ANO candidate",
         "why_cs": "Repríza roku 2020 (Klement porazil Šmardu 59,8 : 40,2). ANO tu nemá kandidáta.",
         "why_en": "A rematch of 2020 (Klement beat Šmarda 59.8–40.2). ANO fields no candidate.",
@@ -5504,7 +5504,7 @@
         ],
         "others_on_ballot": [],
         "ballot_size": 6,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Kyněra je jedinou volbou pro vládní voliče (SPD ani Motoristé nekandidují), ale obhájce s širokou koalicí je favorit.",
         "why_en": "Kyněra is the only option for government voters (no SPD or Motoristé candidate), but the broadly backed incumbent is favoured.",
@@ -5648,7 +5648,7 @@
           "Jaroslav Turánek (SPD)"
         ],
         "ballot_size": 6,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Obhájce v městském obvodě, kde ANO v roce 2024 ve 2. kole prohrálo 32 : 68. Druhé postupové místo je otevřené.",
         "why_en": "Incumbent in an urban district where ANO lost the 2024 runoff 32–68. The second runoff slot is open.",
@@ -5810,7 +5810,7 @@
           "Zdeněk Beil (Levice)"
         ],
         "ballot_size": 5,
-        "status_cs": "obhájce běží bez podpory stran",
+        "status_cs": "obhájce kandiduje bez podpory stran",
         "status_en": "incumbent running without party support",
         "why_cs": "Velmi těsné: Ošťádal vs. Kohajda o místo ve 2. kole proti Škurkovi, který postoupí asi v 70 % scénářů, ale 2. kolo vyhrává zřídka.",
         "why_en": "Very close: Ošťádal vs. Kohajda for the runoff slot against Škurek, who advances in ~70 % of scenarios but rarely wins a runoff.",
@@ -5885,7 +5885,7 @@
           "Zdeněk Navrátil (Evo)"
         ],
         "ballot_size": 7,
-        "status_cs": "obhájkyně běží; ANO ani ODS nekandidují",
+        "status_cs": "obhájkyně kandiduje; ANO ani ODS nekandidují",
         "status_en": "incumbent running; no ANO or ODS candidate",
         "why_cs": "Bez kandidáta ANO a ODS; Korč je hlavní soupeř a útočiště pro voliče ANO ve 2. kole.",
         "why_en": "No ANO or ODS candidate; Korč is the main rival and the runoff refuge for ANO voters.",
@@ -5960,7 +5960,7 @@
           "Štefan Režný (ReMeK)"
         ],
         "ballot_size": 7,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Ostravská bilance ANO ve 2. kolech je lepší než celostátní, ale v letech, kdy vládne, slabá. Baránková má základnu v Porubě.",
         "why_en": "ANO's Ostrava runoff record is better than nationally but weak in governing years. Baránková's base is Poruba.",
@@ -6127,7 +6127,7 @@
           "Pavel Dlouhý (SEN 21)"
         ],
         "ballot_size": 6,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Obhájce proti silnému kandidátovi ANO; primátor Korec (ANO) vede komunální kandidátku ve stejný den.",
         "why_en": "Incumbent vs. a strong ANO candidate; Mayor Korec (ANO) heads the municipal list on the same day.",
@@ -6201,7 +6201,7 @@
           "David Skyba (SPD)"
         ],
         "ballot_size": 6,
-        "status_cs": "obhájce běží",
+        "status_cs": "obhájce kandiduje",
         "status_en": "incumbent running",
         "why_cs": "Obhájce v baště KDU-ČSL proti nováčkovi za ANO; bývalá poslankyně ANO Balaštíková kandiduje za jinou stranu.",
         "why_en": "Incumbent in a KDU-ČSL stronghold vs. an ANO newcomer; former ANO MP Balaštíková runs for another party.",
@@ -6220,7 +6220,7 @@
   "market": {
     "experiment": "senat-2026",
     "series": "market",
-    "date": "2026-10-05",
+    "date": "2026-10-06",
     "method": "Fortuna power de-vig (full book) + Tipsport power de-vig (binary on one candidate), 50/50 on the Tipsport candidate, rest in Fortuna ratios; mapped to AI keys",
     "districts": [
       {
@@ -6233,17 +6233,17 @@
         },
         "tipsport": {
           "candidate": "Plevný_Miroslav",
-          "ano": 1.95,
-          "ne": 1.74
+          "ano": 2.05,
+          "ne": 1.67
         },
         "consensus": {
-          "Tsoukernik": 0.4977,
-          "Plevny": 0.4214,
-          "Cerna": 0.0347,
-          "Someone_else": 0.0461
+          "Tsoukernik": 0.5087,
+          "Plevny": 0.4086,
+          "Cerna": 0.0355,
+          "Someone_else": 0.0472
         },
-        "note": "Fortuna margin 32 %; Tipsport Miroslav Plevný fair 47 % (margin 9 %)",
-        "note_cs": "Fortuna marže 32 %; Tipsport Miroslav Plevný fair 47 % (marže 9 %)"
+        "note": "Fortuna margin 32 %; Tipsport Miroslav Plevný fair 44 % (margin 9 %)",
+        "note_cs": "Fortuna marže 32 %; Tipsport Miroslav Plevný fair 44 % (marže 9 %)"
       },
       {
         "n": 6,
@@ -6270,11 +6270,11 @@
       {
         "n": 9,
         "fortuna": {
-          "Rehka": 0.6758,
-          "Aschenbrenner": 0.2093,
-          "Kantorova": 0.0547,
-          "Someone_else": 0.0488,
-          "Pouskova": 0.0114
+          "Rehka": 0.6442,
+          "Aschenbrenner": 0.2333,
+          "Kantorova": 0.0577,
+          "Someone_else": 0.0524,
+          "Pouskova": 0.0124
         },
         "tipsport": {
           "candidate": "Aschenbrenner_Lumír",
@@ -6282,11 +6282,11 @@
           "ne": 1.47
         },
         "consensus": {
-          "Rehka": 0.6125,
-          "Aschenbrenner": 0.2834,
-          "Kantorova": 0.0496,
-          "Someone_else": 0.0442,
-          "Pouskova": 0.0103
+          "Rehka": 0.592,
+          "Aschenbrenner": 0.2954,
+          "Kantorova": 0.0531,
+          "Someone_else": 0.0482,
+          "Pouskova": 0.0114
         },
         "note": "Fortuna margin 49 %; Tipsport Lumír Aschenbrenner fair 36 % (margin 9 %)",
         "note_cs": "Fortuna marže 49 %; Tipsport Lumír Aschenbrenner fair 36 % (marže 9 %)"
@@ -6294,9 +6294,9 @@
       {
         "n": 12,
         "fortuna": {
-          "Fiala": 0.8756,
-          "Hrdinova": 0.093,
-          "Usaty": 0.0314
+          "Fiala": 0.9053,
+          "Hrdinova": 0.0717,
+          "Usaty": 0.023
         },
         "tipsport": {
           "candidate": "Fiala_Tomáš",
@@ -6304,22 +6304,22 @@
           "ne": 8.8
         },
         "consensus": {
-          "Fiala": 0.9168,
-          "Hrdinova": 0.0623,
-          "Usaty": 0.021,
+          "Fiala": 0.9316,
+          "Hrdinova": 0.0518,
+          "Usaty": 0.0166,
           "Someone_else": 0.0
         },
-        "note": "Fortuna margin 17 %; Tipsport Tomáš Fiala fair 96 % (margin 8 %)",
-        "note_cs": "Fortuna marže 17 %; Tipsport Tomáš Fiala fair 96 % (marže 8 %)"
+        "note": "Fortuna margin 18 %; Tipsport Tomáš Fiala fair 96 % (margin 8 %)",
+        "note_cs": "Fortuna marže 18 %; Tipsport Tomáš Fiala fair 96 % (marže 8 %)"
       },
       {
         "n": 15,
         "fortuna": {
-          "Kozar": 0.5182,
-          "Chalupsky": 0.2151,
-          "Med": 0.1965,
-          "PavluRadova": 0.0399,
-          "Someone_else": 0.0303
+          "Kozar": 0.5031,
+          "Chalupsky": 0.2215,
+          "Med": 0.2215,
+          "PavluRadova": 0.0296,
+          "Someone_else": 0.0242
         },
         "tipsport": {
           "candidate": "Chalupský_Jaroslav",
@@ -6327,14 +6327,14 @@
           "ne": 1.3
         },
         "consensus": {
-          "Kozar": 0.5023,
-          "Chalupsky": 0.2391,
-          "Med": 0.1905,
-          "PavluRadova": 0.0387,
-          "Someone_else": 0.0294
+          "Kozar": 0.4897,
+          "Chalupsky": 0.2423,
+          "Med": 0.2156,
+          "PavluRadova": 0.0288,
+          "Someone_else": 0.0235
         },
-        "note": "Fortuna margin 47 %; Tipsport Jaroslav Chalupský fair 26 % (margin 9 %)",
-        "note_cs": "Fortuna marže 47 %; Tipsport Jaroslav Chalupský fair 26 % (marže 9 %)"
+        "note": "Fortuna margin 43 %; Tipsport Jaroslav Chalupský fair 26 % (margin 9 %)",
+        "note_cs": "Fortuna marže 43 %; Tipsport Jaroslav Chalupský fair 26 % (marže 9 %)"
       },
       {
         "n": 18,
@@ -6363,26 +6363,26 @@
       {
         "n": 21,
         "fortuna": {
-          "Laska": 0.5106,
-          "Sablik": 0.2637,
-          "Sarapatka": 0.1369,
-          "Broz": 0.0614,
-          "Someone_else": 0.0274
+          "Laska": 0.5136,
+          "Sablik": 0.2667,
+          "Sarapatka": 0.1393,
+          "Broz": 0.0629,
+          "Someone_else": 0.0174
         },
         "tipsport": {
           "candidate": "Láska_Václav",
-          "ano": 1.72,
-          "ne": 1.98
+          "ano": 1.67,
+          "ne": 2.05
         },
         "consensus": {
-          "Laska": 0.5253,
-          "Sablik": 0.2558,
-          "Sarapatka": 0.1328,
-          "Broz": 0.0595,
-          "Someone_else": 0.0266
+          "Laska": 0.5358,
+          "Sablik": 0.2546,
+          "Sarapatka": 0.1329,
+          "Broz": 0.06,
+          "Someone_else": 0.0166
         },
-        "note": "Fortuna margin 42 %; Tipsport Václav Láska fair 54 % (margin 9 %)",
-        "note_cs": "Fortuna marže 42 %; Tipsport Václav Láska fair 54 % (marže 9 %)"
+        "note": "Fortuna margin 39 %; Tipsport Václav Láska fair 56 % (margin 9 %)",
+        "note_cs": "Fortuna marže 39 %; Tipsport Václav Láska fair 56 % (marže 9 %)"
       },
       {
         "n": 24,
@@ -6433,10 +6433,10 @@
       {
         "n": 30,
         "fortuna": {
-          "Patak": 0.3949,
-          "Sipova": 0.3949,
-          "Gerloch": 0.156,
-          "Someone_else": 0.0541
+          "Patak": 0.4175,
+          "Sipova": 0.2975,
+          "Someone_else": 0.1637,
+          "Gerloch": 0.1213
         },
         "tipsport": {
           "candidate": "Sucharda_Šípová_Adéla",
@@ -6444,13 +6444,13 @@
           "ne": 1.33
         },
         "consensus": {
-          "Patak": 0.4319,
-          "Sipova": 0.3383,
-          "Gerloch": 0.1706,
-          "Someone_else": 0.0592
+          "Patak": 0.4222,
+          "Sipova": 0.2896,
+          "Someone_else": 0.1655,
+          "Gerloch": 0.1227
         },
-        "note": "Fortuna margin 40 %; Tipsport Adéla Sucharda Šípová fair 28 % (margin 9 %)",
-        "note_cs": "Fortuna marže 40 %; Tipsport Adéla Sucharda Šípová fair 28 % (marže 9 %)"
+        "note": "Fortuna margin 24 %; Tipsport Adéla Sucharda Šípová fair 28 % (margin 9 %)",
+        "note_cs": "Fortuna marže 24 %; Tipsport Adéla Sucharda Šípová fair 28 % (marže 9 %)"
       },
       {
         "n": 33,
@@ -6479,26 +6479,26 @@
       {
         "n": 36,
         "fortuna": {
-          "Puta": 0.6695,
-          "Volfova": 0.1773,
-          "Vosecky": 0.1201,
-          "Vomacka": 0.0296,
-          "Someone_else": 0.0036
+          "Puta": 0.6462,
+          "Volfova": 0.2012,
+          "Vosecky": 0.1197,
+          "Vomacka": 0.0294,
+          "Someone_else": 0.0035
         },
         "tipsport": {
           "candidate": "Půta_Martin",
-          "ano": 1.53,
-          "ne": 2.31
+          "ano": 1.6,
+          "ne": 2.16
         },
         "consensus": {
-          "Puta": 0.6425,
-          "Volfova": 0.1918,
-          "Vosecky": 0.1299,
+          "Puta": 0.6155,
+          "Volfova": 0.2186,
+          "Vosecky": 0.1301,
           "Vomacka": 0.032,
           "Someone_else": 0.0038
         },
-        "note": "Fortuna margin 47 %; Tipsport Martin Půta fair 62 % (margin 9 %)",
-        "note_cs": "Fortuna marže 47 %; Tipsport Martin Půta fair 62 % (marže 9 %)"
+        "note": "Fortuna margin 48 %; Tipsport Martin Půta fair 58 % (margin 9 %)",
+        "note_cs": "Fortuna marže 48 %; Tipsport Martin Půta fair 58 % (marže 9 %)"
       },
       {
         "n": 39,
@@ -6533,27 +6533,27 @@
         },
         "tipsport": {
           "candidate": "Kašpar_Michael",
-          "ano": 1.35,
-          "ne": 2.89
+          "ano": 1.32,
+          "ne": 3.04
         },
         "consensus": {
-          "Kaspar": 0.6429,
-          "Brzobohata": 0.1796,
-          "Schulz": 0.1108,
-          "Sehnal": 0.0532,
-          "Someone_else": 0.0135
+          "Kaspar": 0.6518,
+          "Brzobohata": 0.1751,
+          "Schulz": 0.1081,
+          "Sehnal": 0.0519,
+          "Someone_else": 0.0132
         },
-        "note": "Fortuna margin 69 %; Tipsport Michael Kašpar fair 71 % (margin 9 %)",
-        "note_cs": "Fortuna marže 69 %; Tipsport Michael Kašpar fair 71 % (marže 9 %)"
+        "note": "Fortuna margin 69 %; Tipsport Michael Kašpar fair 72 % (margin 9 %)",
+        "note_cs": "Fortuna marže 69 %; Tipsport Michael Kašpar fair 72 % (marže 9 %)"
       },
       {
         "n": 45,
         "fortuna": {
-          "Dvorak": 0.508,
-          "Ceralova_Petrofova": 0.2054,
-          "Holasek": 0.179,
-          "Hulkova": 0.0858,
-          "Someone_else": 0.0218
+          "Dvorak": 0.4848,
+          "Ceralova_Petrofova": 0.2043,
+          "Holasek": 0.2043,
+          "Hulkova": 0.0851,
+          "Someone_else": 0.0215
         },
         "tipsport": {
           "candidate": "Holásek_Jan",
@@ -6561,14 +6561,14 @@
           "ne": 1.26
         },
         "consensus": {
-          "Dvorak": 0.49,
-          "Ceralova_Petrofova": 0.1981,
-          "Holasek": 0.2082,
-          "Hulkova": 0.0827,
-          "Someone_else": 0.0211
+          "Dvorak": 0.4748,
+          "Ceralova_Petrofova": 0.2001,
+          "Holasek": 0.2208,
+          "Hulkova": 0.0833,
+          "Someone_else": 0.021
         },
-        "note": "Fortuna margin 54 %; Tipsport Jan Holásek fair 24 % (margin 9 %)",
-        "note_cs": "Fortuna marže 54 %; Tipsport Jan Holásek fair 24 % (marže 9 %)"
+        "note": "Fortuna margin 55 %; Tipsport Jan Holásek fair 24 % (margin 9 %)",
+        "note_cs": "Fortuna marže 55 %; Tipsport Jan Holásek fair 24 % (marže 9 %)"
       },
       {
         "n": 48,
@@ -6592,26 +6592,26 @@
       {
         "n": 51,
         "fortuna": {
-          "Klement": 0.5242,
-          "Cerny": 0.3184,
-          "Smarda": 0.1348,
-          "Koten": 0.0163,
-          "Someone_else": 0.0063
+          "Klement": 0.6132,
+          "Cerny": 0.2493,
+          "Smarda": 0.12,
+          "Koten": 0.0128,
+          "Someone_else": 0.0047
         },
         "tipsport": {
           "candidate": "Klement_Josef",
-          "ano": 1.47,
-          "ne": 2.46
+          "ano": 1.4,
+          "ne": 2.68
         },
         "consensus": {
-          "Klement": 0.5838,
-          "Cerny": 0.2786,
-          "Smarda": 0.1179,
-          "Koten": 0.0143,
-          "Someone_else": 0.0055
+          "Klement": 0.6459,
+          "Cerny": 0.2282,
+          "Smarda": 0.1098,
+          "Koten": 0.0118,
+          "Someone_else": 0.0043
         },
-        "note": "Fortuna margin 37 %; Tipsport Josef Klement fair 64 % (margin 9 %)",
-        "note_cs": "Fortuna marže 37 %; Tipsport Josef Klement fair 64 % (marže 9 %)"
+        "note": "Fortuna margin 41 %; Tipsport Josef Klement fair 68 % (margin 9 %)",
+        "note_cs": "Fortuna marže 41 %; Tipsport Josef Klement fair 68 % (marže 9 %)"
       },
       {
         "n": 54,
@@ -6709,11 +6709,11 @@
       {
         "n": 66,
         "fortuna": {
-          "Kohajda": 0.5485,
-          "Ostadal": 0.2361,
-          "Skurek": 0.1706,
-          "Jelinek": 0.033,
-          "Someone_else": 0.0118
+          "Kohajda": 0.6307,
+          "Ostadal": 0.185,
+          "Skurek": 0.1492,
+          "Jelinek": 0.0251,
+          "Someone_else": 0.01
         },
         "tipsport": {
           "candidate": "Kohajda_Michael",
@@ -6721,11 +6721,11 @@
           "ne": 2.89
         },
         "consensus": {
-          "Kohajda": 0.6277,
-          "Ostadal": 0.1947,
-          "Skurek": 0.1407,
-          "Jelinek": 0.0272,
-          "Someone_else": 0.0098
+          "Kohajda": 0.6687,
+          "Ostadal": 0.1659,
+          "Skurek": 0.1338,
+          "Jelinek": 0.0225,
+          "Someone_else": 0.009
         },
         "note": "Fortuna margin 50 %; Tipsport Michael Kohajda fair 71 % (margin 9 %)",
         "note_cs": "Fortuna marže 50 %; Tipsport Michael Kohajda fair 71 % (marže 9 %)"
@@ -6733,10 +6733,10 @@
       {
         "n": 69,
         "fortuna": {
-          "Korc": 0.4344,
-          "Pesatova": 0.4023,
-          "Krpel": 0.0787,
-          "Someone_else": 0.0845
+          "Korc": 0.4182,
+          "Pesatova": 0.4182,
+          "Krpel": 0.0789,
+          "Someone_else": 0.0848
         },
         "tipsport": {
           "candidate": "Pešatová_Helena",
@@ -6744,10 +6744,10 @@
           "ne": 1.58
         },
         "consensus": {
-          "Korc": 0.4328,
-          "Pesatova": 0.4045,
-          "Krpel": 0.0785,
-          "Someone_else": 0.0842
+          "Korc": 0.4223,
+          "Pesatova": 0.4124,
+          "Krpel": 0.0797,
+          "Someone_else": 0.0856
         },
         "note": "Fortuna margin 49 %; Tipsport Helena Pešatová fair 41 % (margin 9 %)",
         "note_cs": "Fortuna marže 49 %; Tipsport Helena Pešatová fair 41 % (marže 9 %)"
@@ -6777,12 +6777,12 @@
       {
         "n": 75,
         "fortuna": {
-          "Brzyszkowska": 0.7267,
-          "Stanek": 0.0883,
-          "Szyja": 0.0883,
-          "Kazik": 0.0434,
-          "Polach": 0.0331,
-          "Someone_else": 0.0203
+          "Brzyszkowska": 0.7269,
+          "Stanek": 0.0885,
+          "Szyja": 0.0885,
+          "Kazik": 0.0379,
+          "Polach": 0.0379,
+          "Someone_else": 0.0204
         },
         "tipsport": {
           "candidate": "Brzyszkowská_Lenka",
@@ -6790,12 +6790,12 @@
           "ne": 5.62
         },
         "consensus": {
-          "Brzyszkowska": 0.8067,
-          "Stanek": 0.0624,
-          "Szyja": 0.0624,
-          "Kazik": 0.0307,
-          "Polach": 0.0234,
-          "Someone_else": 0.0143
+          "Brzyszkowska": 0.8068,
+          "Stanek": 0.0626,
+          "Szyja": 0.0626,
+          "Kazik": 0.0268,
+          "Polach": 0.0268,
+          "Someone_else": 0.0144
         },
         "note": "Fortuna margin 78 %; Tipsport Lenka Brzyszkowská fair 89 % (margin 9 %)",
         "note_cs": "Fortuna marže 78 %; Tipsport Lenka Brzyszkowská fair 89 % (marže 9 %)"
@@ -6849,7 +6849,7 @@
   "blend": {
     "experiment": "senat-2026",
     "series": "blend",
-    "date": "2026-10-05",
+    "date": "2026-10-06",
     "rho": 0.55,
     "method": "log-odds pool of AI s modelem and de-vigged market, w_blind=(1-rho)/(2-rho)",
     "districts": [
@@ -6858,19 +6858,19 @@
         "candidates": [
           {
             "key": "Plevny",
-            "p": 0.5319
+            "p": 0.5231
           },
           {
             "key": "Tsoukernik",
-            "p": 0.387
+            "p": 0.3945
           },
           {
             "key": "Cerna",
-            "p": 0.0324
+            "p": 0.033
           },
           {
             "key": "Someone_else",
-            "p": 0.0486
+            "p": 0.0495
           }
         ]
       },
@@ -6900,23 +6900,23 @@
         "candidates": [
           {
             "key": "Aschenbrenner",
-            "p": 0.3714
+            "p": 0.3807
           },
           {
             "key": "Rehka",
-            "p": 0.518
+            "p": 0.5026
           },
           {
             "key": "Kantorova",
-            "p": 0.0535
+            "p": 0.056
           },
           {
             "key": "Pouskova",
-            "p": 0.0172
+            "p": 0.0184
           },
           {
             "key": "Someone_else",
-            "p": 0.0399
+            "p": 0.0423
           }
         ]
       },
@@ -6925,15 +6925,15 @@
         "candidates": [
           {
             "key": "Fiala",
-            "p": 0.8717
+            "p": 0.8874
           },
           {
             "key": "Hrdinova",
-            "p": 0.0989
+            "p": 0.0875
           },
           {
             "key": "Usaty",
-            "p": 0.0293
+            "p": 0.0249
           },
           {
             "key": "Someone_else",
@@ -6946,23 +6946,23 @@
         "candidates": [
           {
             "key": "Med",
-            "p": 0.3551
+            "p": 0.3769
           },
           {
             "key": "Chalupsky",
-            "p": 0.2614
+            "p": 0.2607
           },
           {
             "key": "Kozar",
-            "p": 0.3319
+            "p": 0.32
           },
           {
             "key": "PavluRadova",
-            "p": 0.0283
+            "p": 0.0227
           },
           {
             "key": "Someone_else",
-            "p": 0.0233
+            "p": 0.0197
           }
         ]
       },
@@ -6996,23 +6996,23 @@
         "candidates": [
           {
             "key": "Sablik",
-            "p": 0.3441
+            "p": 0.3427
           },
           {
             "key": "Laska",
-            "p": 0.4491
+            "p": 0.4559
           },
           {
             "key": "Sarapatka",
-            "p": 0.1376
+            "p": 0.1375
           },
           {
             "key": "Broz",
-            "p": 0.0492
+            "p": 0.0494
           },
           {
             "key": "Someone_else",
-            "p": 0.0201
+            "p": 0.0144
           }
         ]
       },
@@ -7067,19 +7067,19 @@
         "candidates": [
           {
             "key": "Sipova",
-            "p": 0.5106
+            "p": 0.4791
           },
           {
             "key": "Patak",
-            "p": 0.2985
+            "p": 0.2983
           },
           {
             "key": "Gerloch",
-            "p": 0.1386
+            "p": 0.1117
           },
           {
             "key": "Someone_else",
-            "p": 0.0523
+            "p": 0.1108
           }
         ]
       },
@@ -7113,15 +7113,15 @@
         "candidates": [
           {
             "key": "Puta",
-            "p": 0.5734
+            "p": 0.5533
           },
           {
             "key": "Volfova",
-            "p": 0.2198
+            "p": 0.2399
           },
           {
             "key": "Vosecky",
-            "p": 0.1579
+            "p": 0.158
           },
           {
             "key": "Vomacka",
@@ -7159,23 +7159,23 @@
         "candidates": [
           {
             "key": "Kaspar",
-            "p": 0.6777
+            "p": 0.6834
           },
           {
             "key": "Schulz",
-            "p": 0.1237
+            "p": 0.1216
           },
           {
             "key": "Brzobohata",
-            "p": 0.1349
+            "p": 0.1324
           },
           {
             "key": "Sehnal",
-            "p": 0.0453
+            "p": 0.0445
           },
           {
             "key": "Someone_else",
-            "p": 0.0184
+            "p": 0.0182
           }
         ]
       },
@@ -7184,23 +7184,23 @@
         "candidates": [
           {
             "key": "Dvorak",
-            "p": 0.5547
+            "p": 0.5449
           },
           {
             "key": "Holasek",
-            "p": 0.1819
+            "p": 0.1899
           },
           {
             "key": "Ceralova_Petrofova",
-            "p": 0.1672
+            "p": 0.1686
           },
           {
             "key": "Hulkova",
-            "p": 0.0754
+            "p": 0.0758
           },
           {
             "key": "Someone_else",
-            "p": 0.0209
+            "p": 0.0208
           }
         ]
       },
@@ -7226,23 +7226,23 @@
         "candidates": [
           {
             "key": "Klement",
-            "p": 0.5952
+            "p": 0.6384
           },
           {
             "key": "Cerny",
-            "p": 0.2453
+            "p": 0.2124
           },
           {
             "key": "Smarda",
-            "p": 0.1274
+            "p": 0.1213
           },
           {
             "key": "Koten",
-            "p": 0.0251
+            "p": 0.022
           },
           {
             "key": "Someone_else",
-            "p": 0.0069
+            "p": 0.0058
           }
         ]
       },
@@ -7351,23 +7351,23 @@
         "candidates": [
           {
             "key": "Ostadal",
-            "p": 0.2444
+            "p": 0.221
           },
           {
             "key": "Kohajda",
-            "p": 0.5368
+            "p": 0.5701
           },
           {
             "key": "Skurek",
-            "p": 0.17
+            "p": 0.165
           },
           {
             "key": "Jelinek",
-            "p": 0.0355
+            "p": 0.0312
           },
           {
             "key": "Someone_else",
-            "p": 0.0133
+            "p": 0.0126
           }
         ]
       },
@@ -7376,19 +7376,19 @@
         "candidates": [
           {
             "key": "Pesatova",
-            "p": 0.5586
+            "p": 0.5637
           },
           {
             "key": "Korc",
-            "p": 0.3026
+            "p": 0.296
           },
           {
             "key": "Krpel",
-            "p": 0.0654
+            "p": 0.066
           },
           {
             "key": "Someone_else",
-            "p": 0.0735
+            "p": 0.0742
           }
         ]
       },
@@ -7418,7 +7418,7 @@
         "candidates": [
           {
             "key": "Brzyszkowska",
-            "p": 0.7328
+            "p": 0.7318
           },
           {
             "key": "Szyja",
@@ -7426,7 +7426,7 @@
           },
           {
             "key": "Polach",
-            "p": 0.0391
+            "p": 0.0428
           },
           {
             "key": "Stanek",
@@ -7434,7 +7434,7 @@
           },
           {
             "key": "Kazik",
-            "p": 0.0311
+            "p": 0.0283
           },
           {
             "key": "Someone_else",

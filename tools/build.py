@@ -443,6 +443,8 @@ def keyed_model(md: dict, keys: list[str], names: dict[str, str]) -> dict[str, f
 
 
 def dist_of(snap_d: dict) -> dict[str, float]:
+    if "candidates" not in snap_d:  # market snapshots store the de-vigged consensus as a dict
+        return dict(snap_d.get("consensus") or {})
     return {c["key"]: c["p"] for c in snap_d["candidates"]}
 
 
@@ -478,12 +480,12 @@ def changes_html(lang: str, cur: dict[str, dict | None], prev: dict[str, dict | 
         if not old:
             items.append(f"<li><b>{esc(labels[key])}</b>: " + ("nová série" if lang == "cs" else "new series") + "</li>")
             continue
-        P = {d["n"]: {c["key"]: c["p"] for c in d["candidates"]} for d in old["districts"]}
+        P = {d["n"]: dist_of(d) for d in old["districts"]}
         moves = []
         for d in snap["districts"]:
-            n, a = d["n"], {c["key"]: c["p"] for c in d["candidates"]}
+            n, a = d["n"], dist_of(d)
             b = P.get(n)
-            if not b:
+            if not a or not b:
                 continue
             nm = lambda k: (names_by_n.get(n, {}).get(k, k).split()[-1] if k != "Someone_else" else ("ostatní" if lang == "cs" else "others"))  # noqa: E731
             la, lb = max(a, key=a.get), max(b, key=b.get)
