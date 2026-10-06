@@ -458,7 +458,7 @@ JOURNAL.append(dict(
 </ul>
 <h3>Externí benchmark: datový model Seznam Zpráv</h3>
 <p>Seznam Zprávy 5. 10. zveřejnily <a href="https://www.seznamzpravy.cz/clanek/volby-do-senatu-datovy-model-predpovida-dva-scenare-boje-ano-o-senat-316700">datový model</a>. Ten odhaduje jen šanci kandidátů ANO na postup do 2. kola a jejich procenta v 1. kole, a to ve dvou scénářích. Viděli jsme ho 6. 10. <b>Jako vstup ho nepoužíváme</b>. Čísla jsme uložili zvlášť a do podkladů pro agenty se nedostanou. Po 1. kole jeho střední scénář porovnáme s naším statistickým modelem a s AI s modelem na 23 kandidátech ANO (Brier na postup a chyba v procentech).</p>
-<p><b>Předem zapsáno:</b> SZ čeká 13,4 postupů ANO v nepříznivém, 17,3 ve středním a 21,2 v příznivém scénáři. Náš statistický model čeká 14,5. Podle stupnice SZ (16 a méně = neúspěch) tedy předpovídáme spíš neúspěch ANO v 1. kole. Největší rozdíly proti střednímu scénáři SZ jsou v Hradci Králové, ve Zlíně, ve Znojmě a v Praze 5 (u nás slabší ANO) a ve Vyškově (u nás silnější).</p>
+<p><b>Předem zapsáno:</b> Seznam Zprávy čekají 13,4 postupů ANO v nepříznivém, 17,3 ve středním a 21,2 v příznivém scénáři. Náš statistický model čeká 14,5. Podle stupnice Seznam Zpráv (16 a méně = neúspěch) tedy předpovídáme spíš neúspěch ANO v 1. kole. Největší rozdíly proti střednímu scénáři Seznam Zpráv jsou v Hradci Králové, ve Zlíně, ve Znojmě a v Praze 5 (u nás slabší ANO) a ve Vyškově (u nás silnější).</p>
 <h3>Nové zdroje dne</h3>
 <p>Zdroje jsme dnes jen zapsali, žádný z nich nezměnil odhady.</p>
 <ul>
@@ -484,7 +484,7 @@ JOURNAL.append(dict(
 </ul>
 <h3>External benchmark: the Seznam Zprávy data model</h3>
 <p>On 5 Oct Seznam Zprávy published a <a href="https://www.seznamzpravy.cz/clanek/volby-do-senatu-datovy-model-predpovida-dva-scenare-boje-ano-o-senat-316700">data model</a>. It estimates only ANO candidates' chances of reaching the runoff and their round-1 shares, in two scenarios. We saw it on 6 Oct. <b>We do not use it as an input</b>: its numbers are stored separately and are kept out of the agents' materials. After round 1 we will compare its middle scenario with our statistical model and AI + model on the 23 ANO candidates (Brier on advancing and error in vote share).</p>
-<p><b>Recorded in advance:</b> SZ expects 13.4 ANO candidates to advance in the unfavourable scenario, 17.3 in the middle and 21.2 in the favourable one. Our statistical model expects 14.5. On the SZ scale (16 or fewer = failure) we therefore forecast a weak round 1 for ANO. The biggest differences from the SZ middle scenario are Hradec Králové, Zlín, Znojmo and Praha 5 (ANO weaker in our model) and Vyškov (stronger in ours).</p>
+<p><b>Recorded in advance:</b> Seznam Zprávy expects 13.4 ANO candidates to advance in the unfavourable scenario, 17.3 in the middle and 21.2 in the favourable one. Our statistical model expects 14.5. On the Seznam Zprávy scale (16 or fewer = failure) we therefore forecast a weak round 1 for ANO. The biggest differences from the Seznam Zprávy middle scenario are Hradec Králové, Zlín, Znojmo and Praha 5 (ANO weaker in our model) and Vyškov (stronger in ours).</p>
 <h3>New sources today</h3>
 <p>Today's sources were only logged; none of them changed the forecasts.</p>
 <ul>
@@ -521,11 +521,11 @@ CHANGES = {
         cs="""<ul>
 <li><b>Moratorium na průzkumy:</b> nové fakty, které by změnily situaci v obvodech, nepřibyly, takže AI ani AI s modelem se nemění.</li>
 <li><b>Sázky:</b> největší pohyb je v Kladně, kde Šípová klesla o 5 p.b. a Klas posílil (Fortuna 20 → 6). Paták zůstává favoritem. Favorit trhu se nezměnil v žádném obvodu.</li>
-<li><b>Externí benchmark:</b> datový model Seznam Zpráv (jen postupy ANO) jsme viděli a zapsali. Nepoužíváme ho jako vstup, srovnáme ho po 1. kole. Náš model čeká 14,5 postupů ANO, SZ ve středním scénáři 17,3.</li>
+<li><b>Externí benchmark:</b> datový model Seznam Zpráv (jen postupy ANO) jsme viděli a zapsali. Nepoužíváme ho jako vstup, srovnáme ho po 1. kole. Náš model čeká 14,5 postupů ANO, Seznam Zprávy ve středním scénáři 17,3.</li>
 </ul>""",
         en="""<ul>
 <li><b>Poll blackout:</b> no new facts that change any race, so AI and AI + model are unchanged.</li>
 <li><b>Betting:</b> the biggest move is in Kladno, where Šípová fell 5 pp and Klas strengthened (Fortuna 20 → 6). Paták remains the favourite. The market favourite did not change in any district.</li>
-<li><b>External benchmark:</b> we saw and recorded the Seznam Zprávy data model (ANO runoff chances only). It is not an input and we will compare it after round 1. Our model expects 14.5 ANO candidates to advance, SZ's middle scenario 17.3.</li>
+<li><b>External benchmark:</b> we saw and recorded the Seznam Zprávy data model (ANO runoff chances only). It is not an input and we will compare it after round 1. Our model expects 14.5 ANO candidates to advance, Seznam Zprávy's middle scenario 17.3.</li>
 </ul>"""),
 }
