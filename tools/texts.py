@@ -459,6 +459,15 @@ JOURNAL.append(dict(
 <h3>Externí benchmark: datový model Seznam Zpráv</h3>
 <p>Seznam Zprávy 5. 10. zveřejnily <a href="https://www.seznamzpravy.cz/clanek/volby-do-senatu-datovy-model-predpovida-dva-scenare-boje-ano-o-senat-316700">datový model</a>. Ten odhaduje jen šanci kandidátů ANO na postup do 2. kola a jejich procenta v 1. kole, a to ve dvou scénářích. Viděli jsme ho 6. 10. <b>Jako vstup ho nepoužíváme</b>. Čísla jsme uložili zvlášť a do podkladů pro agenty se nedostanou. Po 1. kole jeho střední scénář porovnáme s naším statistickým modelem a s AI s modelem na 23 kandidátech ANO (Brier na postup a chyba v procentech).</p>
 <p><b>Předem zapsáno:</b> SZ čeká 13,4 postupů ANO v nepříznivém, 17,3 ve středním a 21,2 v příznivém scénáři. Náš statistický model čeká 14,5. Podle stupnice SZ (16 a méně = neúspěch) tedy předpovídáme spíš neúspěch ANO v 1. kole. Největší rozdíly proti střednímu scénáři SZ jsou v Hradci Králové, ve Zlíně, ve Znojmě a v Praze 5 (u nás slabší ANO) a ve Vyškově (u nás silnější).</p>
+<h3>Nové zdroje dne</h3>
+<p>Zdroje jsme dnes jen zapsali, žádný z nich nezměnil odhady.</p>
+<ul>
+<li>Seznam Zprávy (6. 10.): <a href="https://www.seznamzpravy.cz/clanek/volby-do-senatu-chce-ano-triumf-v-senatu-nasli-jsme-osm-mist-kde-musi-zabrat-316682">Chce ANO triumf v Senátu? Našli jsme osm míst, kde musí zabrat</a>. Jde o nejisté obvody pro ANO, Michala Davida v Chebu a komentář STEM k Vyškovu a České Lípě.</li>
+<li>Seznam Zprávy (5. 10.): <a href="https://www.seznamzpravy.cz/clanek/volby-do-senatu-datovy-model-predpovida-dva-scenare-boje-ano-o-senat-316700">Datový model předpovídá dva scénáře boje ANO o Senát</a>. Je to externí benchmark, ne vstup (viz výše).</li>
+<li>Noviny Zblízka (5. 10.): <a href="https://noviny-zblizka.cz/ostatni/ivo-tresl-v-senatu-odpracoval-sest-let-ted-zkusi-znovu-ziskat-duveru-volicu-jako-lekar-dostal-podporu-i-od-kolegy-jana-pirka/">Ivo Trešl v Senátu odpracoval šest let…</a> Obhájce v Lounech (obvod 6) podpořil lékař Jan Pirek. Malá zpráva.</li>
+<li>Orlický.net (5. 10.): <a href="https://www.orlicky.net/clanek.php?id_zpravy=11547167091791211887">Senátní duel na Rychnovsku a Pardubicku</a>. Odpovědi Sadovského, Grulich odpověděl později (obvod 48). Bez dopadu.</li>
+<li>Prověřeno a vyřazeno: Seznam Zprávy, <a href="https://www.seznamzpravy.cz/clanek/domaci-kauzy-chirurg-podle-zalobce-zproneveril-penize-trva-na-nevine-a-kandiduje-za-ods-316751">Chirurg podle žalobce zpronevěřil peníze…</a> Jde o komunálního kandidáta na Praze 3, ne do Senátu.</li>
+</ul>
 <h3>Chyby a nápravy</h3>
 <ol>
 <li><b>Chybějící seznam trhů Tipsportu.</b> Ze včerejška jsme měli zapsaná ID trhů jen pro polovinu obvodů. <i>Náprava:</i> našli jsme stránku kategorie se všemi 27 obvody a ID jsme zapsali do postupu.</li>
@@ -476,6 +485,15 @@ JOURNAL.append(dict(
 <h3>External benchmark: the Seznam Zprávy data model</h3>
 <p>On 5 Oct Seznam Zprávy published a <a href="https://www.seznamzpravy.cz/clanek/volby-do-senatu-datovy-model-predpovida-dva-scenare-boje-ano-o-senat-316700">data model</a>. It estimates only ANO candidates' chances of reaching the runoff and their round-1 shares, in two scenarios. We saw it on 6 Oct. <b>We do not use it as an input</b>: its numbers are stored separately and are kept out of the agents' materials. After round 1 we will compare its middle scenario with our statistical model and AI + model on the 23 ANO candidates (Brier on advancing and error in vote share).</p>
 <p><b>Recorded in advance:</b> SZ expects 13.4 ANO candidates to advance in the unfavourable scenario, 17.3 in the middle and 21.2 in the favourable one. Our statistical model expects 14.5. On the SZ scale (16 or fewer = failure) we therefore forecast a weak round 1 for ANO. The biggest differences from the SZ middle scenario are Hradec Králové, Zlín, Znojmo and Praha 5 (ANO weaker in our model) and Vyškov (stronger in ours).</p>
+<h3>New sources today</h3>
+<p>Today's sources were only logged; none of them changed the forecasts.</p>
+<ul>
+<li>Seznam Zprávy (6 Oct): <a href="https://www.seznamzpravy.cz/clanek/volby-do-senatu-chce-ano-triumf-v-senatu-nasli-jsme-osm-mist-kde-musi-zabrat-316682">Chce ANO triumf v Senátu? Našli jsme osm míst, kde musí zabrat</a>. It covers uncertain districts for ANO, Michal David in Cheb, and STEM's comment on Vyškov and Česká Lípa.</li>
+<li>Seznam Zprávy (5 Oct): <a href="https://www.seznamzpravy.cz/clanek/volby-do-senatu-datovy-model-predpovida-dva-scenare-boje-ano-o-senat-316700">Datový model předpovídá dva scénáře boje ANO o Senát</a>. External benchmark, not an input (see above).</li>
+<li>Noviny Zblízka (5 Oct): <a href="https://noviny-zblizka.cz/ostatni/ivo-tresl-v-senatu-odpracoval-sest-let-ted-zkusi-znovu-ziskat-duveru-volicu-jako-lekar-dostal-podporu-i-od-kolegy-jana-pirka/">Ivo Trešl v Senátu odpracoval šest let…</a> The incumbent in Louny (district 6) was endorsed by physician Jan Pirek. Minor.</li>
+<li>Orlický.net (5 Oct): <a href="https://www.orlicky.net/clanek.php?id_zpravy=11547167091791211887">Senátní duel na Rychnovsku a Pardubicku</a>. Sadovský's answers; Grulich answered later (district 48). No impact.</li>
+<li>Checked and discarded: Seznam Zprávy, <a href="https://www.seznamzpravy.cz/clanek/domaci-kauzy-chirurg-podle-zalobce-zproneveril-penize-trva-na-nevine-a-kandiduje-za-ods-316751">Chirurg podle žalobce zpronevěřil peníze…</a> The person is a municipal candidate in Praha 3, not a Senate candidate.</li>
+</ul>
 <h3>Mistakes and fixes</h3>
 <ol>
 <li><b>Missing list of Tipsport markets.</b> Yesterday we had recorded market IDs for only half of the districts. <i>Fix:</i> we found the category page with all 27 districts and recorded the IDs in our procedure.</li>
