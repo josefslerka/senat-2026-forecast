@@ -502,6 +502,61 @@ JOURNAL.append(dict(
 </ol>
 <p><b>Next:</b> news and Betting again on Wednesday and Thursday. Forecasts freeze Fri 9 Oct by 12:00.</p>"""))
 
+JOURNAL.append(dict(
+    date="2026-10-07",
+    title_cs="Den 6: AI beze změny, objevená mezera v profilech kandidátů, trh posiluje Volfovou",
+    title_en="Day 6: AI unchanged, a gap in candidate profiles, the market warms to Volfová",
+    cs="""<p><b>AI ani AI s modelem se dnes nemění.</b> Prošli jsme zprávy o všech 154 kandidátech za poslední dva dny. Nenašli jsme nic, co by změnilo situaci v některém obvodu. Blind snapshoty jsme zamkli commitem ve 21:42, ještě před čtením kurzů. Jsou totožné s 6. 10.</p>
+<h3>Co se změnilo</h3>
+<ul>
+<li><b>Zprávy:</b> v České Lípě musel Babiš kvůli nemoci vynechat závěrečné mítinky. Volfovou místo něj podpořili ministři a on se připojoval z postele přes mobil. V Chebu pokračuje negativní mediální obraz Sandry Tsoukernik. Ve Vyškově se ostře pře ministryně Schillerová s Grolichem. Jde o drobnosti, odhady jsme kvůli nim neměnili.</li>
+<li><b>Sázky:</b> největší posuny jsou v České Lípě (Volfová +6 p.b. na 28 %, Půta 56 %), na Kolínsku (Kašpar +6 na 71 %), v Praze 5 (Láska +6 na 59 %) a v Příbrami (Štěpánek +5). Ve Frýdku-Místku se favorit trhu otočil: Pešatová 43 %, Korč 41 %. Rozdíl je ale v mezích šumu. V Kladně se trh téměř nehnul (Paták 44, Šípová 28).</li>
+<li><b>Blend</b> se mění jen s trhem.</li>
+</ul>
+<p>Kurzy jsme četli kolem 21:45–22:10, tedy během večerní debaty lídrů nebo těsně po ní. Pohyby proti včerejšku proto zahrnují celý den a efekt debaty od nich neumíme oddělit.</p>
+<h3>Nové zdroje dne</h3>
+<p>Zdroje jsme dnes jen zapsali, žádný z nich nezměnil odhady.</p>
+<ul>
+<li>Deník N (7. 10.): <a href="https://denikn.cz/2208353/nemocny-premier-agitoval-z-postele-na-ceskolipsku-babis-chce-sebrat-klicovy-senatni-obvod/">Nemocný premiér agitoval z postele na Českolipsku</a>. Česká Lípa (36), Babiš chybí v závěru kampaně. Malý dopad.</li>
+<li>forum24 (7. 10.): <a href="https://www.forum24.cz/kde-je-17-milionu-pane-tsoukernik-olga-menzelova-vytahla-na-senatni-kandidatku-ano-dluh-jejiho-manzela">Kde je 1,7 milionu, pane Tsoukernik?</a> Cheb (3), spor o dluh manžela kandidátky. Nic nového pro výsledek.</li>
+<li>Zdopravy.cz: <a href="https://zdopravy.cz/jan-klas-po-19-letech-konci-v-cele-rizeni-letoveho-provozu-racionalni-zaver-napsal-zamestnancum-295549/">Jan Klas po 19 letech končí v čele Řízení letového provozu</a>. Kladno (30), starší zpráva, viz Chyby a nápravy.</li>
+<li>iROZHLAS: <a href="https://www.irozhlas.cz/zpravy-domov/budoval-si-kolem-sebe-kult-osobnosti-zastupitele-odvolali-primatora-frydku_2606101327_vaa">Zastupitelé odvolali primátora Frýdku-Místku Petra Korče</a> (červen 2026). Frýdek-Místek (69), starší zpráva, viz Chyby a nápravy.</li>
+<li>CNN Prima NEWS: <a href="https://cnn.iprima.cz/anketa-kdo-ma-byt-senatorem-za-kladensko-a-litovelsko-hlasujte-pro-sveho-favorita-522624">divácká anketa po debatě 23. 9.</a> Kladno: nejvíc hlasů získal Gerloch. Jde o anketu pro přihlášené diváky bez čísel, takže váha je zanedbatelná.</li>
+<li>Prověřeno a vyřazeno: Novinky, „Špičky ODS vyzvaly lídra Prahy 1 Dvořáka, aby odstoupil“. Týká se komunální kandidátky, ne Senátu.</li>
+</ul>
+<h3>Chyby a nápravy</h3>
+<ol>
+<li><b>Chybějící profily „vedlejších“ kandidátů.</b> Research z 2. 10. běžel bez webového vyhledávání (vyčerpaný limit). U kandidátů mimo hlavní dvojici proto chybí životopis. Dnes jsme narazili na dva případy. Jan Klas (Kladno, Naše Česko) byl 19 let generálním ředitelem Řízení letového provozu. U nás figuroval jako obecný minoritní kandidát. Petra Korče (Frýdek-Místek) zastupitelé v červnu odvolali z funkce primátora, náš research znal jen „funkce neobsazena“. <i>Proč jsme odhady neměnili:</i> na Klase jsme se zaměřili kvůli včerejšímu pohybu kurzů. Update vyvolaný trhem by z AI série udělal kopii Sázek a znehodnotil srovnání. Navíc odhadovaný dopad na to, kdo vyhraje, je malý (1–3 p.b.). U Korče není jasný ani směr dopadu. <i>Náprava:</i> do zadání pro příští běhy přidáváme povinný krok „životopis každého kandidáta na lístku“. Mezeru po 1. kole vyhodnotíme jako známé omezení AI série.</li>
+<li><b>Kurzy zahlédnuté před zámkem.</b> Při hledání zpráv ukázal Google ve výsledcích úryvek ze sázkového webu s kurzy pro Prahu 5, 9 a 1. Bylo to asi hodinu před zamčením snapshotů. Dnes to nemělo vliv, protože AI ani AI s modelem jsme neměnili. <i>Náprava:</i> dotazy na zprávy teď vylučují sázkové weby.</li>
+<li><b>Výpadek Tipsportu.</b> Po otevření 12 detailů Tipsport zablokoval přístup („nedostupnost internetového sázení“). U tří obvodů, kde se změnil kurz Ano (Žďár, Brno, Frýdek-Místek), jsme kurz Ne dopočítali tak, že jsme zachovali včerejší marži sázkové kanceláře. U deseti obvodů, kde jsme měli oba kurzy, se marže od včerejška lišila nejvýš o 0,15 %. Namátková kontrola Ne u nezměněných obvodů (Kladno, Hradec Králové) potvrdila, že se Ne nezměnilo.</li>
+</ol>
+<p><b>Dál:</b> ve čtvrtek naposledy zprávy a Sázky. Odhady zamrazíme v pátek 9. 10. do 12:00.</p>""",
+    en="""<p><b>AI and AI + model are unchanged today.</b> We went through the last two days of news on all 154 candidates and found nothing that changes the race in any district. The blind snapshots were locked with a commit at 21:42, before reading the odds. They are identical to 6 Oct.</p>
+<h3>What changed</h3>
+<ul>
+<li><b>News:</b> in Česká Lípa, Babiš was ill and missed the final rallies. Ministers campaigned for Volfová in his place and he joined by phone video from bed. In Cheb, negative press around Sandra Tsoukernik continues. In Vyškov, minister Schillerová and Grolich traded sharp attacks. These are minor; we did not change our forecasts.</li>
+<li><b>Betting:</b> the biggest moves are in Česká Lípa (Volfová +6 pp to 28 %, Půta 56 %), Kolín (Kašpar +6 to 71 %), Praha 5 (Láska +6 to 59 %) and Příbram (Štěpánek +5). In Frýdek-Místek the market favourite flipped: Pešatová 43 %, Korč 41 %. The gap is within noise. In Kladno the market barely moved (Paták 44, Šípová 28).</li>
+<li><b>Blend</b> moves only with the market.</li>
+</ul>
+<p>Odds were read around 21:45–22:10, during or just after the evening leaders' debate. The moves since yesterday therefore cover the whole day, and we cannot separate the effect of the debate.</p>
+<h3>New sources today</h3>
+<p>Today's sources were only logged; none of them changed the forecasts.</p>
+<ul>
+<li>Deník N (7 Oct): <a href="https://denikn.cz/2208353/nemocny-premier-agitoval-z-postele-na-ceskolipsku-babis-chce-sebrat-klicovy-senatni-obvod/">Nemocný premiér agitoval z postele na Českolipsku</a>. Česká Lípa (36): Babiš missing at the end of the campaign. Small impact.</li>
+<li>forum24 (7 Oct): <a href="https://www.forum24.cz/kde-je-17-milionu-pane-tsoukernik-olga-menzelova-vytahla-na-senatni-kandidatku-ano-dluh-jejiho-manzela">Kde je 1,7 milionu, pane Tsoukernik?</a> Cheb (3): a dispute over the candidate's husband's debt. Nothing new for the outcome.</li>
+<li>Zdopravy.cz: <a href="https://zdopravy.cz/jan-klas-po-19-letech-konci-v-cele-rizeni-letoveho-provozu-racionalni-zaver-napsal-zamestnancum-295549/">Jan Klas po 19 letech končí v čele Řízení letového provozu</a>. Kladno (30), older news; see Mistakes and fixes.</li>
+<li>iROZHLAS: <a href="https://www.irozhlas.cz/zpravy-domov/budoval-si-kolem-sebe-kult-osobnosti-zastupitele-odvolali-primatora-frydku_2606101327_vaa">Zastupitelé odvolali primátora Frýdku-Místku Petra Korče</a> (June 2026). Frýdek-Místek (69), older news; see Mistakes and fixes.</li>
+<li>CNN Prima NEWS: <a href="https://cnn.iprima.cz/anketa-kdo-ma-byt-senatorem-za-kladensko-a-litovelsko-hlasujte-pro-sveho-favorita-522624">viewer poll after the 23 Sep debate</a>. Kladno: Gerloch got the most votes. A poll for logged-in viewers with no numbers, so negligible weight.</li>
+<li>Checked and discarded: Novinky, “ODS leaders asked Praha 1 list leader Dvořák to step down”. This concerns a municipal list, not the Senate.</li>
+</ul>
+<h3>Mistakes and fixes</h3>
+<ol>
+<li><b>Missing profiles of “minor” candidates.</b> The 2 Oct research ran without web search (the limit was used up), so candidates outside the main pair lack a CV. Today we found two cases. Jan Klas (Kladno, Naše Česko) ran Czech air traffic control (ŘLP) for 19 years; we treated him as a generic minor candidate. Petr Korč (Frýdek-Místek) was removed as mayor by the city council in June; our research only knew the post was vacant. <i>Why we did not change the forecasts:</i> we looked into Klas because the odds moved yesterday. A market-triggered update would turn the AI series into a copy of Betting and spoil the comparison. The estimated effect on who wins is also small (1–3 pp), and for Korč even the direction is unclear. <i>Fix:</i> future briefs get a mandatory “CV of every candidate on the ballot” step. After round 1 we will score this gap as a known limitation of the AI series.</li>
+<li><b>Odds seen before the lock.</b> While searching the news, Google showed a snippet from a betting site with odds for Praha 5, 9 and 1, about an hour before the snapshots were locked. It had no effect today because AI and AI + model were not changed. <i>Fix:</i> news queries now exclude betting sites.</li>
+<li><b>Tipsport outage.</b> After 12 detail pages Tipsport blocked access (“betting unavailable”). For the three districts where the Yes price changed (Žďár, Brno, Frýdek-Místek) we computed the No price by keeping yesterday's bookmaker margin. In the ten districts where we had both prices, the margin moved by at most 0.15 % since yesterday. Spot-checks of No prices in unchanged districts (Kladno, Hradec Králové) confirmed they had not moved.</li>
+</ol>
+<p><b>Next:</b> news and Betting for the last time on Thursday. Forecasts freeze Fri 9 Oct by 12:00.</p>"""))
+
 # "What's new today" box at the top of the overview, per date (short, hand-written; auto moves are added below it).
 CHANGES = {
     "2026-10-05": dict(
@@ -527,5 +582,16 @@ CHANGES = {
 <li><b>Poll blackout:</b> no new facts that change any race, so AI and AI + model are unchanged.</li>
 <li><b>Betting:</b> the biggest move is in Kladno, where Šípová fell 5 pp and Klas strengthened (Fortuna 20 → 6). Paták remains the favourite. The market favourite did not change in any district.</li>
 <li><b>External benchmark:</b> we saw and recorded the Seznam Zprávy data model (ANO runoff chances only). It is not an input and we will compare it after round 1. Our model expects 14.5 ANO candidates to advance, Seznam Zprávy's middle scenario 17.3.</li>
+</ul>"""),
+    "2026-10-07": dict(
+        cs="""<ul>
+<li><b>AI ani AI s modelem se nemění:</b> ve zprávách o 154 kandidátech jsme nenašli nic, co by změnilo situaci v některém obvodu.</li>
+<li><b>Sázky:</b> trh posiluje Volfovou v České Lípě (+6 p.b.), Kašpara na Kolínsku, Lásku v Praze 5 a Štěpánka v Příbrami. Ve Frýdku-Místku se favorit otočil na Pešatovou, ale jen o 2 p.b.</li>
+<li><b>Chyba dne:</b> research z 2. 10. neznal profily některých vedlejších kandidátů (Klas v Kladně, Korč ve Frýdku-Místku). Proč jsme odhady neměnili a co měníme do budoucna, píšeme v deníku.</li>
+</ul>""",
+        en="""<ul>
+<li><b>AI and AI + model unchanged:</b> the news on all 154 candidates contained nothing that changes the race in any district.</li>
+<li><b>Betting:</b> the market warms to Volfová in Česká Lípa (+6 pp), Kašpar in Kolín, Láska in Praha 5 and Štěpánek in Příbram. In Frýdek-Místek the favourite flipped to Pešatová, but only by 2 pp.</li>
+<li><b>Mistake of the day:</b> the 2 Oct research lacked the profiles of some minor candidates (Klas in Kladno, Korč in Frýdek-Místek). The journal explains why we did not change the forecasts and what we are changing for the future.</li>
 </ul>"""),
 }

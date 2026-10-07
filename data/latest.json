@@ -1,10 +1,10 @@
 {
   "ai": {
     "experiment": "senat-2026",
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "stage": "blind",
     "series": "ai",
-    "generated_utc": "2026-10-06T14:08:40+00:00",
+    "generated_utc": "2026-10-07T19:42:44+00:00",
     "districts": [
       {
         "n": 3,
@@ -4081,10 +4081,10 @@
   },
   "aimodel": {
     "experiment": "senat-2026",
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "stage": "blind",
     "series": "aimodel",
-    "generated_utc": "2026-10-06T14:08:41+00:00",
+    "generated_utc": "2026-10-07T19:42:44+00:00",
     "districts": [
       {
         "n": 3,
@@ -6220,76 +6220,76 @@
   "market": {
     "experiment": "senat-2026",
     "series": "market",
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "method": "Fortuna power de-vig (full book) + Tipsport power de-vig (binary on one candidate), 50/50 on the Tipsport candidate, rest in Fortuna ratios; mapped to AI keys",
     "districts": [
       {
         "n": 3,
         "fortuna": {
-          "Tsoukernik": 0.5374,
-          "Plevny": 0.3752,
-          "Cerna": 0.0375,
-          "Someone_else": 0.0498
+          "Tsoukernik": 0.5861,
+          "Plevny": 0.3435,
+          "Cerna": 0.034,
+          "Someone_else": 0.0364
         },
         "tipsport": {
           "candidate": "Plevný_Miroslav",
-          "ano": 2.05,
-          "ne": 1.67
+          "ano": 2.08,
+          "ne": 1.65
         },
         "consensus": {
-          "Tsoukernik": 0.5087,
-          "Plevny": 0.4086,
-          "Cerna": 0.0355,
-          "Someone_else": 0.0472
+          "Tsoukernik": 0.5455,
+          "Plevny": 0.389,
+          "Cerna": 0.0317,
+          "Someone_else": 0.0339
         },
-        "note": "Fortuna margin 32 %; Tipsport Miroslav Plevný fair 44 % (margin 9 %)",
-        "note_cs": "Fortuna marže 32 %; Tipsport Miroslav Plevný fair 44 % (marže 9 %)"
+        "note": "Fortuna margin 29 %; Tipsport Miroslav Plevný fair 43 % (margin 9 %)",
+        "note_cs": "Fortuna marže 29 %; Tipsport Miroslav Plevný fair 43 % (marže 9 %)"
       },
       {
         "n": 6,
         "fortuna": {
-          "Tresl": 0.686,
-          "Mikolas": 0.2064,
-          "Steiner": 0.0426,
-          "Someone_else": 0.0651
+          "Tresl": 0.6362,
+          "Mikolas": 0.2506,
+          "Steiner": 0.0611,
+          "Someone_else": 0.0521
         },
         "tipsport": {
           "candidate": "Trešl_Ivo",
-          "ano": 1.45,
-          "ne": 2.52
+          "ano": 1.48,
+          "ne": 2.43
         },
         "consensus": {
-          "Tresl": 0.6696,
-          "Mikolas": 0.2171,
-          "Steiner": 0.0448,
-          "Someone_else": 0.0684
+          "Tresl": 0.6372,
+          "Mikolas": 0.2499,
+          "Steiner": 0.0609,
+          "Someone_else": 0.0519
         },
-        "note": "Fortuna margin 42 %; Tipsport Ivo Trešl fair 65 % (margin 9 %)",
-        "note_cs": "Fortuna marže 42 %; Tipsport Ivo Trešl fair 65 % (marže 9 %)"
+        "note": "Fortuna margin 34 %; Tipsport Ivo Trešl fair 64 % (margin 9 %)",
+        "note_cs": "Fortuna marže 34 %; Tipsport Ivo Trešl fair 64 % (marže 9 %)"
       },
       {
         "n": 9,
         "fortuna": {
-          "Rehka": 0.6442,
-          "Aschenbrenner": 0.2333,
-          "Kantorova": 0.0577,
-          "Someone_else": 0.0524,
-          "Pouskova": 0.0124
+          "Rehka": 0.6468,
+          "Aschenbrenner": 0.2364,
+          "Kantorova": 0.0488,
+          "Someone_else": 0.055,
+          "Pouskova": 0.0129
         },
         "tipsport": {
           "candidate": "Aschenbrenner_Lumír",
-          "ano": 2.45,
-          "ne": 1.47
+          "ano": 2.6,
+          "ne": 1.42
         },
         "consensus": {
-          "Rehka": 0.592,
-          "Aschenbrenner": 0.2954,
-          "Kantorova": 0.0531,
-          "Someone_else": 0.0482,
-          "Pouskova": 0.0114
+          "Rehka": 0.6061,
+          "Aschenbrenner": 0.2844,
+          "Kantorova": 0.0458,
+          "Someone_else": 0.0516,
+          "Pouskova": 0.0121
         },
-        "note": "Fortuna margin 49 %; Tipsport Lumír Aschenbrenner fair 36 % (margin 9 %)",
-        "note_cs": "Fortuna marže 49 %; Tipsport Lumír Aschenbrenner fair 36 % (marže 9 %)"
+        "note": "Fortuna margin 47 %; Tipsport Lumír Aschenbrenner fair 33 % (margin 9 %)",
+        "note_cs": "Fortuna marže 47 %; Tipsport Lumír Aschenbrenner fair 33 % (marže 9 %)"
       },
       {
         "n": 12,
@@ -6315,35 +6315,35 @@
       {
         "n": 15,
         "fortuna": {
-          "Kozar": 0.5031,
-          "Chalupsky": 0.2215,
-          "Med": 0.2215,
-          "PavluRadova": 0.0296,
-          "Someone_else": 0.0242
+          "Kozar": 0.5046,
+          "Med": 0.223,
+          "Chalupsky": 0.223,
+          "PavluRadova": 0.0301,
+          "Someone_else": 0.0192
         },
         "tipsport": {
           "candidate": "Chalupský_Jaroslav",
-          "ano": 3.15,
-          "ne": 1.3
+          "ano": 3.48,
+          "ne": 1.25
         },
         "consensus": {
-          "Kozar": 0.4897,
-          "Chalupsky": 0.2423,
-          "Med": 0.2156,
-          "PavluRadova": 0.0288,
-          "Someone_else": 0.0235
+          "Kozar": 0.5021,
+          "Med": 0.2219,
+          "Chalupsky": 0.2269,
+          "PavluRadova": 0.03,
+          "Someone_else": 0.0191
         },
-        "note": "Fortuna margin 43 %; Tipsport Jaroslav Chalupský fair 26 % (margin 9 %)",
-        "note_cs": "Fortuna marže 43 %; Tipsport Jaroslav Chalupský fair 26 % (marže 9 %)"
+        "note": "Fortuna margin 42 %; Tipsport Jaroslav Chalupský fair 23 % (margin 9 %)",
+        "note_cs": "Fortuna marže 42 %; Tipsport Jaroslav Chalupský fair 23 % (marže 9 %)"
       },
       {
         "n": 18,
         "fortuna": {
-          "Stepanek": 0.7615,
-          "Danhova": 0.126,
-          "Luftova": 0.061,
-          "Sorna": 0.032,
-          "Someone_else": 0.0195
+          "Stepanek": 0.8606,
+          "Danhova": 0.0793,
+          "Luftova": 0.0314,
+          "Sorna": 0.0176,
+          "Someone_else": 0.011
         },
         "tipsport": {
           "candidate": "Štěpánek_Petr",
@@ -6351,47 +6351,47 @@
           "ne": 6.21
         },
         "consensus": {
-          "Stepanek": 0.8335,
-          "Danhova": 0.088,
-          "Luftova": 0.0426,
-          "Sorna": 0.0224,
-          "Someone_else": 0.0136
+          "Stepanek": 0.883,
+          "Danhova": 0.0666,
+          "Luftova": 0.0264,
+          "Sorna": 0.0148,
+          "Someone_else": 0.0092
         },
-        "note": "Fortuna margin 43 %; Tipsport Petr Štěpánek fair 91 % (margin 9 %)",
-        "note_cs": "Fortuna marže 43 %; Tipsport Petr Štěpánek fair 91 % (marže 9 %)"
+        "note": "Fortuna margin 37 %; Tipsport Petr Štěpánek fair 91 % (margin 9 %)",
+        "note_cs": "Fortuna marže 37 %; Tipsport Petr Štěpánek fair 91 % (marže 9 %)"
       },
       {
         "n": 21,
         "fortuna": {
-          "Laska": 0.5136,
-          "Sablik": 0.2667,
-          "Sarapatka": 0.1393,
-          "Broz": 0.0629,
-          "Someone_else": 0.0174
+          "Laska": 0.5338,
+          "Sablik": 0.2528,
+          "Sarapatka": 0.1341,
+          "Broz": 0.0622,
+          "Someone_else": 0.0171
         },
         "tipsport": {
           "candidate": "Láska_Václav",
-          "ano": 1.67,
-          "ne": 2.05
+          "ano": 1.45,
+          "ne": 2.52
         },
         "consensus": {
-          "Laska": 0.5358,
-          "Sablik": 0.2546,
-          "Sarapatka": 0.1329,
-          "Broz": 0.06,
-          "Someone_else": 0.0166
+          "Laska": 0.5935,
+          "Sablik": 0.2204,
+          "Sarapatka": 0.1169,
+          "Broz": 0.0542,
+          "Someone_else": 0.0149
         },
-        "note": "Fortuna margin 39 %; Tipsport Václav Láska fair 56 % (margin 9 %)",
-        "note_cs": "Fortuna marže 39 %; Tipsport Václav Láska fair 56 % (marže 9 %)"
+        "note": "Fortuna margin 39 %; Tipsport Václav Láska fair 65 % (margin 9 %)",
+        "note_cs": "Fortuna marže 39 %; Tipsport Václav Láska fair 65 % (marže 9 %)"
       },
       {
         "n": 24,
         "fortuna": {
-          "Smoljak": 0.7783,
-          "Peckova": 0.1719,
-          "Zalud": 0.0242,
-          "Laube": 0.0163,
-          "Someone_else": 0.0093
+          "Smoljak": 0.7453,
+          "Peckova": 0.2074,
+          "Zalud": 0.0282,
+          "Laube": 0.0113,
+          "Someone_else": 0.0078
         },
         "tipsport": {
           "candidate": "Smoljak_David",
@@ -6399,44 +6399,44 @@
           "ne": 4.18
         },
         "consensus": {
-          "Smoljak": 0.7992,
-          "Peckova": 0.1557,
-          "Zalud": 0.0219,
-          "Laube": 0.0147,
-          "Someone_else": 0.0084
+          "Smoljak": 0.7826,
+          "Peckova": 0.177,
+          "Zalud": 0.0241,
+          "Laube": 0.0097,
+          "Someone_else": 0.0066
         },
-        "note": "Fortuna margin 26 %; Tipsport David Smoljak fair 82 % (margin 9 %)",
-        "note_cs": "Fortuna marže 26 %; Tipsport David Smoljak fair 82 % (marže 9 %)"
+        "note": "Fortuna margin 23 %; Tipsport David Smoljak fair 82 % (margin 9 %)",
+        "note_cs": "Fortuna marže 23 %; Tipsport David Smoljak fair 82 % (marže 9 %)"
       },
       {
         "n": 27,
         "fortuna": {
-          "Padevet": 0.4334,
-          "J_Cizinsky": 0.4013,
-          "Dudra": 0.0782,
-          "Someone_else": 0.0871
+          "Padevet": 0.4422,
+          "J_Cizinsky": 0.4102,
+          "Dudra": 0.0671,
+          "Someone_else": 0.0804
         },
         "tipsport": {
           "candidate": "Čižinský_Jan",
-          "ano": 1.88,
-          "ne": 1.8
+          "ano": 1.95,
+          "ne": 1.74
         },
         "consensus": {
-          "Padevet": 0.4022,
-          "J_Cizinsky": 0.4445,
-          "Dudra": 0.0726,
-          "Someone_else": 0.0808
+          "Padevet": 0.4207,
+          "J_Cizinsky": 0.4389,
+          "Dudra": 0.0639,
+          "Someone_else": 0.0765
         },
-        "note": "Fortuna margin 52 %; Tipsport Jan Čižinský fair 49 % (margin 9 %)",
-        "note_cs": "Fortuna marže 52 %; Tipsport Jan Čižinský fair 49 % (marže 9 %)"
+        "note": "Fortuna margin 47 %; Tipsport Jan Čižinský fair 47 % (margin 9 %)",
+        "note_cs": "Fortuna marže 47 %; Tipsport Jan Čižinský fair 47 % (marže 9 %)"
       },
       {
         "n": 30,
         "fortuna": {
-          "Patak": 0.4175,
-          "Sipova": 0.2975,
-          "Someone_else": 0.1637,
-          "Gerloch": 0.1213
+          "Patak": 0.4446,
+          "Sipova": 0.2768,
+          "Gerloch": 0.1231,
+          "Someone_else": 0.1556
         },
         "tipsport": {
           "candidate": "Sucharda_Šípová_Adéla",
@@ -6444,22 +6444,22 @@
           "ne": 1.33
         },
         "consensus": {
-          "Patak": 0.4222,
-          "Sipova": 0.2896,
-          "Someone_else": 0.1655,
-          "Gerloch": 0.1227
+          "Patak": 0.4431,
+          "Sipova": 0.2792,
+          "Gerloch": 0.1226,
+          "Someone_else": 0.155
         },
-        "note": "Fortuna margin 24 %; Tipsport Adéla Sucharda Šípová fair 28 % (margin 9 %)",
-        "note_cs": "Fortuna marže 24 %; Tipsport Adéla Sucharda Šípová fair 28 % (marže 9 %)"
+        "note": "Fortuna margin 23 %; Tipsport Adéla Sucharda Šípová fair 28 % (margin 9 %)",
+        "note_cs": "Fortuna marže 23 %; Tipsport Adéla Sucharda Šípová fair 28 % (marže 9 %)"
       },
       {
         "n": 33,
         "fortuna": {
-          "Linhart": 0.8122,
-          "Hejcman": 0.1066,
-          "Lehka": 0.0552,
-          "Someone_else": 0.0178,
-          "Skalicky": 0.0083
+          "Linhart": 0.8147,
+          "Hejcman": 0.1102,
+          "Lehka": 0.0474,
+          "Someone_else": 0.0188,
+          "Skalicky": 0.0089
         },
         "tipsport": {
           "candidate": "Linhart_Zbyněk",
@@ -6467,46 +6467,46 @@
           "ne": 5.62
         },
         "consensus": {
-          "Linhart": 0.8494,
-          "Hejcman": 0.0854,
-          "Lehka": 0.0443,
-          "Someone_else": 0.0142,
-          "Skalicky": 0.0067
+          "Linhart": 0.8507,
+          "Hejcman": 0.0888,
+          "Lehka": 0.0382,
+          "Someone_else": 0.0152,
+          "Skalicky": 0.0072
         },
-        "note": "Fortuna margin 34 %; Tipsport Zbyněk Linhart fair 89 % (margin 9 %)",
-        "note_cs": "Fortuna marže 34 %; Tipsport Zbyněk Linhart fair 89 % (marže 9 %)"
+        "note": "Fortuna margin 32 %; Tipsport Zbyněk Linhart fair 89 % (margin 9 %)",
+        "note_cs": "Fortuna marže 32 %; Tipsport Zbyněk Linhart fair 89 % (marže 9 %)"
       },
       {
         "n": 36,
         "fortuna": {
-          "Puta": 0.6462,
-          "Volfova": 0.2012,
-          "Vosecky": 0.1197,
-          "Vomacka": 0.0294,
-          "Someone_else": 0.0035
+          "Puta": 0.5593,
+          "Volfova": 0.2817,
+          "Vosecky": 0.1043,
+          "Vomacka": 0.0472,
+          "Someone_else": 0.0075
         },
         "tipsport": {
           "candidate": "Půta_Martin",
-          "ano": 1.6,
-          "ne": 2.16
+          "ano": 1.65,
+          "ne": 2.08
         },
         "consensus": {
-          "Puta": 0.6155,
-          "Volfova": 0.2186,
-          "Vosecky": 0.1301,
-          "Vomacka": 0.032,
-          "Someone_else": 0.0038
+          "Puta": 0.5624,
+          "Volfova": 0.2797,
+          "Vosecky": 0.1036,
+          "Vomacka": 0.0469,
+          "Someone_else": 0.0075
         },
-        "note": "Fortuna margin 48 %; Tipsport Martin Půta fair 58 % (margin 9 %)",
-        "note_cs": "Fortuna marže 48 %; Tipsport Martin Půta fair 58 % (marže 9 %)"
+        "note": "Fortuna margin 34 %; Tipsport Martin Půta fair 57 % (margin 9 %)",
+        "note_cs": "Fortuna marže 34 %; Tipsport Martin Půta fair 57 % (marže 9 %)"
       },
       {
         "n": 39,
         "fortuna": {
-          "Sobotka": 0.9399,
-          "Chovancova": 0.0519,
-          "Mraz": 0.0046,
-          "Someone_else": 0.0036
+          "Sobotka": 0.9412,
+          "Chovancova": 0.0495,
+          "Mraz": 0.0052,
+          "Someone_else": 0.0041
         },
         "tipsport": {
           "candidate": "Sobotka_Jan",
@@ -6514,46 +6514,46 @@
           "ne": 9.5
         },
         "consensus": {
-          "Sobotka": 0.9548,
-          "Chovancova": 0.039,
-          "Mraz": 0.0035,
-          "Someone_else": 0.0027
+          "Sobotka": 0.9555,
+          "Chovancova": 0.0375,
+          "Mraz": 0.004,
+          "Someone_else": 0.0031
         },
-        "note": "Fortuna margin 18 %; Tipsport Jan Sobotka fair 97 % (margin 9 %)",
-        "note_cs": "Fortuna marže 18 %; Tipsport Jan Sobotka fair 97 % (marže 9 %)"
+        "note": "Fortuna margin 17 %; Tipsport Jan Sobotka fair 97 % (margin 9 %)",
+        "note_cs": "Fortuna marže 17 %; Tipsport Jan Sobotka fair 97 % (marže 9 %)"
       },
       {
         "n": 42,
         "fortuna": {
-          "Kaspar": 0.5789,
-          "Brzobohata": 0.2118,
-          "Schulz": 0.1307,
-          "Sehnal": 0.0627,
-          "Someone_else": 0.0159
+          "Kaspar": 0.6855,
+          "Brzobohata": 0.136,
+          "Schulz": 0.1148,
+          "Sehnal": 0.0423,
+          "Someone_else": 0.0214
         },
         "tipsport": {
           "candidate": "Kašpar_Michael",
-          "ano": 1.32,
-          "ne": 3.04
+          "ano": 1.3,
+          "ne": 3.15
         },
         "consensus": {
-          "Kaspar": 0.6518,
-          "Brzobohata": 0.1751,
-          "Schulz": 0.1081,
-          "Sehnal": 0.0519,
-          "Someone_else": 0.0132
+          "Kaspar": 0.7112,
+          "Brzobohata": 0.1249,
+          "Schulz": 0.1054,
+          "Sehnal": 0.0389,
+          "Someone_else": 0.0196
         },
-        "note": "Fortuna margin 69 %; Tipsport Michael Kašpar fair 72 % (margin 9 %)",
-        "note_cs": "Fortuna marže 69 %; Tipsport Michael Kašpar fair 72 % (marže 9 %)"
+        "note": "Fortuna margin 45 %; Tipsport Michael Kašpar fair 74 % (margin 9 %)",
+        "note_cs": "Fortuna marže 45 %; Tipsport Michael Kašpar fair 74 % (marže 9 %)"
       },
       {
         "n": 45,
         "fortuna": {
-          "Dvorak": 0.4848,
-          "Ceralova_Petrofova": 0.2043,
-          "Holasek": 0.2043,
-          "Hulkova": 0.0851,
-          "Someone_else": 0.0215
+          "Dvorak": 0.4955,
+          "Ceralova_Petrofova": 0.1875,
+          "Holasek": 0.1875,
+          "Hulkova": 0.1047,
+          "Someone_else": 0.0248
         },
         "tipsport": {
           "candidate": "Holásek_Jan",
@@ -6561,14 +6561,14 @@
           "ne": 1.26
         },
         "consensus": {
-          "Dvorak": 0.4748,
-          "Ceralova_Petrofova": 0.2001,
-          "Holasek": 0.2208,
-          "Hulkova": 0.0833,
-          "Someone_else": 0.021
+          "Dvorak": 0.4803,
+          "Ceralova_Petrofova": 0.1817,
+          "Holasek": 0.2124,
+          "Hulkova": 0.1015,
+          "Someone_else": 0.024
         },
-        "note": "Fortuna margin 55 %; Tipsport Jan Holásek fair 24 % (margin 9 %)",
-        "note_cs": "Fortuna marže 55 %; Tipsport Jan Holásek fair 24 % (marže 9 %)"
+        "note": "Fortuna margin 51 %; Tipsport Jan Holásek fair 24 % (margin 9 %)",
+        "note_cs": "Fortuna marže 51 %; Tipsport Jan Holásek fair 24 % (marže 9 %)"
       },
       {
         "n": 48,
@@ -6600,28 +6600,28 @@
         },
         "tipsport": {
           "candidate": "Klement_Josef",
-          "ano": 1.4,
-          "ne": 2.68
+          "ano": 1.3,
+          "ne": 3.14
         },
         "consensus": {
-          "Klement": 0.6459,
-          "Cerny": 0.2282,
-          "Smarda": 0.1098,
-          "Koten": 0.0118,
-          "Someone_else": 0.0043
+          "Klement": 0.6748,
+          "Cerny": 0.2096,
+          "Smarda": 0.1009,
+          "Koten": 0.0108,
+          "Someone_else": 0.0039
         },
-        "note": "Fortuna margin 41 %; Tipsport Josef Klement fair 68 % (margin 9 %)",
-        "note_cs": "Fortuna marže 41 %; Tipsport Josef Klement fair 68 % (marže 9 %)"
+        "note": "Fortuna margin 41 %; Tipsport Josef Klement fair 74 % (margin 9 %)",
+        "note_cs": "Fortuna marže 41 %; Tipsport Josef Klement fair 74 % (marže 9 %)"
       },
       {
         "n": 54,
         "fortuna": {
-          "Tretina": 0.5068,
-          "Kynera": 0.2748,
-          "Cerny": 0.1165,
-          "RedovaFajmonova": 0.0489,
-          "Ruzicka": 0.0489,
-          "Beranova": 0.004
+          "Tretina": 0.5228,
+          "Kynera": 0.2916,
+          "Cerny": 0.0803,
+          "RedovaFajmonova": 0.0461,
+          "Ruzicka": 0.0562,
+          "Beranova": 0.0031
         },
         "tipsport": {
           "candidate": "Třetina_Tomáš",
@@ -6629,16 +6629,16 @@
           "ne": 2.16
         },
         "consensus": {
-          "Tretina": 0.5458,
-          "Kynera": 0.2531,
-          "Cerny": 0.1073,
-          "RedovaFajmonova": 0.045,
-          "Ruzicka": 0.045,
-          "Beranova": 0.0037,
+          "Tretina": 0.5538,
+          "Kynera": 0.2726,
+          "Cerny": 0.075,
+          "RedovaFajmonova": 0.0431,
+          "Ruzicka": 0.0525,
+          "Beranova": 0.0029,
           "Someone_else": 0.0
         },
-        "note": "Fortuna margin 64 %; Tipsport Tomáš Třetina fair 58 % (margin 9 %)",
-        "note_cs": "Fortuna marže 64 %; Tipsport Tomáš Třetina fair 58 % (marže 9 %)"
+        "note": "Fortuna margin 55 %; Tipsport Tomáš Třetina fair 58 % (margin 9 %)",
+        "note_cs": "Fortuna marže 55 %; Tipsport Tomáš Třetina fair 58 % (marže 9 %)"
       },
       {
         "n": 57,
@@ -6664,24 +6664,24 @@
       {
         "n": 60,
         "fortuna": {
-          "Papousek": 0.7545,
-          "Sterba": 0.1325,
-          "Zitterbart": 0.0662,
-          "Someone_else": 0.0468
+          "Papousek": 0.754,
+          "Sterba": 0.1169,
+          "Zitterbart": 0.0827,
+          "Someone_else": 0.0464
         },
         "tipsport": {
           "candidate": "Papoušek_Zdeněk",
-          "ano": 1.15,
-          "ne": 4.6
+          "ano": 1.1,
+          "ne": 5.62
         },
         "consensus": {
-          "Papousek": 0.7991,
-          "Sterba": 0.1085,
-          "Zitterbart": 0.0542,
-          "Someone_else": 0.0383
+          "Papousek": 0.8204,
+          "Sterba": 0.0854,
+          "Zitterbart": 0.0604,
+          "Someone_else": 0.0339
         },
-        "note": "Fortuna margin 45 %; Tipsport Zdeněk Papoušek fair 84 % (margin 9 %)",
-        "note_cs": "Fortuna marže 45 %; Tipsport Zdeněk Papoušek fair 84 % (marže 9 %)"
+        "note": "Fortuna margin 46 %; Tipsport Zdeněk Papoušek fair 89 % (margin 9 %)",
+        "note_cs": "Fortuna marže 46 %; Tipsport Zdeněk Papoušek fair 89 % (marže 9 %)"
       },
       {
         "n": 63,
@@ -6740,17 +6740,17 @@
         },
         "tipsport": {
           "candidate": "Pešatová_Helena",
-          "ano": 2.2,
-          "ne": 1.58
+          "ano": 2.05,
+          "ne": 1.67
         },
         "consensus": {
-          "Korc": 0.4223,
-          "Pesatova": 0.4124,
-          "Krpel": 0.0797,
-          "Someone_else": 0.0856
+          "Korc": 0.4096,
+          "Pesatova": 0.4301,
+          "Krpel": 0.0773,
+          "Someone_else": 0.083
         },
-        "note": "Fortuna margin 49 %; Tipsport Helena Pešatová fair 41 % (margin 9 %)",
-        "note_cs": "Fortuna marže 49 %; Tipsport Helena Pešatová fair 41 % (marže 9 %)"
+        "note": "Fortuna margin 49 %; Tipsport Helena Pešatová fair 44 % (margin 9 %)",
+        "note_cs": "Fortuna marže 49 %; Tipsport Helena Pešatová fair 44 % (marže 9 %)"
       },
       {
         "n": 72,
@@ -6777,12 +6777,12 @@
       {
         "n": 75,
         "fortuna": {
-          "Brzyszkowska": 0.7269,
-          "Stanek": 0.0885,
-          "Szyja": 0.0885,
-          "Kazik": 0.0379,
-          "Polach": 0.0379,
-          "Someone_else": 0.0204
+          "Brzyszkowska": 0.7972,
+          "Stanek": 0.063,
+          "Szyja": 0.063,
+          "Polach": 0.0426,
+          "Kazik": 0.0239,
+          "Someone_else": 0.0103
         },
         "tipsport": {
           "candidate": "Brzyszkowská_Lenka",
@@ -6790,15 +6790,15 @@
           "ne": 5.62
         },
         "consensus": {
-          "Brzyszkowska": 0.8068,
-          "Stanek": 0.0626,
-          "Szyja": 0.0626,
-          "Kazik": 0.0268,
-          "Polach": 0.0268,
-          "Someone_else": 0.0144
+          "Brzyszkowska": 0.842,
+          "Stanek": 0.0491,
+          "Szyja": 0.0491,
+          "Polach": 0.0332,
+          "Kazik": 0.0186,
+          "Someone_else": 0.008
         },
-        "note": "Fortuna margin 78 %; Tipsport Lenka Brzyszkowská fair 89 % (margin 9 %)",
-        "note_cs": "Fortuna marže 78 %; Tipsport Lenka Brzyszkowská fair 89 % (marže 9 %)"
+        "note": "Fortuna margin 55 %; Tipsport Lenka Brzyszkowská fair 89 % (margin 9 %)",
+        "note_cs": "Fortuna marže 55 %; Tipsport Lenka Brzyszkowská fair 89 % (marže 9 %)"
       },
       {
         "n": 78,
@@ -6849,7 +6849,7 @@
   "blend": {
     "experiment": "senat-2026",
     "series": "blend",
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "rho": 0.55,
     "method": "log-odds pool of AI s modelem and de-vigged market, w_blind=(1-rho)/(2-rho)",
     "districts": [
@@ -6858,19 +6858,19 @@
         "candidates": [
           {
             "key": "Plevny",
-            "p": 0.5231
+            "p": 0.5099
           },
           {
             "key": "Tsoukernik",
-            "p": 0.3945
+            "p": 0.4201
           },
           {
             "key": "Cerna",
-            "p": 0.033
+            "p": 0.0306
           },
           {
             "key": "Someone_else",
-            "p": 0.0495
+            "p": 0.0395
           }
         ]
       },
@@ -6879,19 +6879,19 @@
         "candidates": [
           {
             "key": "Tresl",
-            "p": 0.6838
+            "p": 0.6643
           },
           {
             "key": "Mikolas",
-            "p": 0.2121
+            "p": 0.2348
           },
           {
             "key": "Steiner",
-            "p": 0.035
+            "p": 0.0436
           },
           {
             "key": "Someone_else",
-            "p": 0.069
+            "p": 0.0573
           }
         ]
       },
@@ -6900,23 +6900,23 @@
         "candidates": [
           {
             "key": "Aschenbrenner",
-            "p": 0.3807
+            "p": 0.3723
           },
           {
             "key": "Rehka",
-            "p": 0.5026
+            "p": 0.5134
           },
           {
             "key": "Kantorova",
-            "p": 0.056
+            "p": 0.0507
           },
           {
             "key": "Pouskova",
-            "p": 0.0184
+            "p": 0.0192
           },
           {
             "key": "Someone_else",
-            "p": 0.0423
+            "p": 0.0444
           }
         ]
       },
@@ -6946,23 +6946,23 @@
         "candidates": [
           {
             "key": "Med",
-            "p": 0.3769
+            "p": 0.383
           },
           {
             "key": "Chalupsky",
-            "p": 0.2607
+            "p": 0.249
           },
           {
             "key": "Kozar",
-            "p": 0.32
+            "p": 0.3276
           },
           {
             "key": "PavluRadova",
-            "p": 0.0227
+            "p": 0.0234
           },
           {
             "key": "Someone_else",
-            "p": 0.0197
+            "p": 0.0171
           }
         ]
       },
@@ -6971,23 +6971,23 @@
         "candidates": [
           {
             "key": "Stepanek",
-            "p": 0.8301
+            "p": 0.8659
           },
           {
             "key": "Danhova",
-            "p": 0.0998
+            "p": 0.0825
           },
           {
             "key": "Luftova",
-            "p": 0.0362
+            "p": 0.026
           },
           {
             "key": "Sorna",
-            "p": 0.0198
+            "p": 0.0149
           },
           {
             "key": "Someone_else",
-            "p": 0.0141
+            "p": 0.0107
           }
         ]
       },
@@ -6996,23 +6996,23 @@
         "candidates": [
           {
             "key": "Sablik",
-            "p": 0.3427
+            "p": 0.315
           },
           {
             "key": "Laska",
-            "p": 0.4559
+            "p": 0.4989
           },
           {
             "key": "Sarapatka",
-            "p": 0.1375
+            "p": 0.1264
           },
           {
             "key": "Broz",
-            "p": 0.0494
+            "p": 0.0462
           },
           {
             "key": "Someone_else",
-            "p": 0.0144
+            "p": 0.0135
           }
         ]
       },
@@ -7021,23 +7021,23 @@
         "candidates": [
           {
             "key": "Smoljak",
-            "p": 0.7971
+            "p": 0.785
           },
           {
             "key": "Peckova",
-            "p": 0.1616
+            "p": 0.1764
           },
           {
             "key": "Zalud",
-            "p": 0.022
+            "p": 0.0234
           },
           {
             "key": "Laube",
-            "p": 0.0122
+            "p": 0.0091
           },
           {
             "key": "Someone_else",
-            "p": 0.0072
+            "p": 0.0061
           }
         ]
       },
@@ -7046,19 +7046,19 @@
         "candidates": [
           {
             "key": "Padevet",
-            "p": 0.5097
+            "p": 0.5213
           },
           {
             "key": "J_Cizinsky",
-            "p": 0.396
+            "p": 0.3907
           },
           {
             "key": "Dudra",
-            "p": 0.0503
+            "p": 0.0458
           },
           {
             "key": "Someone_else",
-            "p": 0.044
+            "p": 0.0422
           }
         ]
       },
@@ -7067,19 +7067,19 @@
         "candidates": [
           {
             "key": "Sipova",
-            "p": 0.4791
+            "p": 0.4707
           },
           {
             "key": "Patak",
-            "p": 0.2983
+            "p": 0.3116
           },
           {
             "key": "Gerloch",
-            "p": 0.1117
+            "p": 0.1118
           },
           {
             "key": "Someone_else",
-            "p": 0.1108
+            "p": 0.1058
           }
         ]
       },
@@ -7088,23 +7088,23 @@
         "candidates": [
           {
             "key": "Linhart",
-            "p": 0.8417
+            "p": 0.843
           },
           {
             "key": "Hejcman",
-            "p": 0.0881
+            "p": 0.0905
           },
           {
             "key": "Lehka",
-            "p": 0.0495
+            "p": 0.0447
           },
           {
             "key": "Skalicky",
-            "p": 0.008
+            "p": 0.0084
           },
           {
             "key": "Someone_else",
-            "p": 0.0127
+            "p": 0.0134
           }
         ]
       },
@@ -7113,23 +7113,23 @@
         "candidates": [
           {
             "key": "Puta",
-            "p": 0.5533
+            "p": 0.5155
           },
           {
             "key": "Volfova",
-            "p": 0.2399
+            "p": 0.2838
           },
           {
             "key": "Vosecky",
-            "p": 0.158
+            "p": 0.1358
           },
           {
             "key": "Vomacka",
-            "p": 0.044
+            "p": 0.0572
           },
           {
             "key": "Someone_else",
-            "p": 0.0048
+            "p": 0.0077
           }
         ]
       },
@@ -7138,19 +7138,19 @@
         "candidates": [
           {
             "key": "Sobotka",
-            "p": 0.9377
+            "p": 0.9382
           },
           {
             "key": "Chovancova",
-            "p": 0.0537
+            "p": 0.0523
           },
           {
             "key": "Mraz",
-            "p": 0.0051
+            "p": 0.0056
           },
           {
             "key": "Someone_else",
-            "p": 0.0035
+            "p": 0.0038
           }
         ]
       },
@@ -7159,23 +7159,23 @@
         "candidates": [
           {
             "key": "Kaspar",
-            "p": 0.6834
+            "p": 0.7185
           },
           {
             "key": "Schulz",
-            "p": 0.1216
+            "p": 0.1186
           },
           {
             "key": "Brzobohata",
-            "p": 0.1324
+            "p": 0.1031
           },
           {
             "key": "Sehnal",
-            "p": 0.0445
+            "p": 0.0361
           },
           {
             "key": "Someone_else",
-            "p": 0.0182
+            "p": 0.0236
           }
         ]
       },
@@ -7184,23 +7184,23 @@
         "candidates": [
           {
             "key": "Dvorak",
-            "p": 0.5449
+            "p": 0.5484
           },
           {
             "key": "Holasek",
-            "p": 0.1899
+            "p": 0.1846
           },
           {
             "key": "Ceralova_Petrofova",
-            "p": 0.1686
+            "p": 0.1572
           },
           {
             "key": "Hulkova",
-            "p": 0.0758
+            "p": 0.087
           },
           {
             "key": "Someone_else",
-            "p": 0.0208
+            "p": 0.0228
           }
         ]
       },
@@ -7226,23 +7226,23 @@
         "candidates": [
           {
             "key": "Klement",
-            "p": 0.6384
+            "p": 0.6592
           },
           {
             "key": "Cerny",
-            "p": 0.2124
+            "p": 0.2001
           },
           {
             "key": "Smarda",
-            "p": 0.1213
+            "p": 0.1145
           },
           {
             "key": "Koten",
-            "p": 0.022
+            "p": 0.0207
           },
           {
             "key": "Someone_else",
-            "p": 0.0058
+            "p": 0.0055
           }
         ]
       },
@@ -7255,23 +7255,23 @@
           },
           {
             "key": "Kynera",
-            "p": 0.2054
+            "p": 0.2154
           },
           {
             "key": "Beranova",
-            "p": 0.0077
+            "p": 0.0065
           },
           {
             "key": "RedovaFajmonova",
-            "p": 0.0288
+            "p": 0.0277
           },
           {
             "key": "Ruzicka",
-            "p": 0.0267
+            "p": 0.0295
           },
           {
             "key": "Cerny",
-            "p": 0.045
+            "p": 0.0344
           },
           {
             "key": "Someone_else",
@@ -7305,19 +7305,19 @@
         "candidates": [
           {
             "key": "Papousek",
-            "p": 0.7912
+            "p": 0.8041
           },
           {
             "key": "Zitterbart",
-            "p": 0.074
+            "p": 0.0794
           },
           {
             "key": "Sterba",
-            "p": 0.0957
+            "p": 0.0807
           },
           {
             "key": "Someone_else",
-            "p": 0.0391
+            "p": 0.0359
           }
         ]
       },
@@ -7376,19 +7376,19 @@
         "candidates": [
           {
             "key": "Pesatova",
-            "p": 0.5637
+            "p": 0.5751
           },
           {
             "key": "Korc",
-            "p": 0.296
+            "p": 0.2879
           },
           {
             "key": "Krpel",
-            "p": 0.066
+            "p": 0.0645
           },
           {
             "key": "Someone_else",
-            "p": 0.0742
+            "p": 0.0725
           }
         ]
       },
@@ -7418,27 +7418,27 @@
         "candidates": [
           {
             "key": "Brzyszkowska",
-            "p": 0.7318
+            "p": 0.7645
           },
           {
             "key": "Szyja",
-            "p": 0.1024
+            "p": 0.0871
           },
           {
             "key": "Polach",
-            "p": 0.0428
+            "p": 0.0495
           },
           {
             "key": "Stanek",
-            "p": 0.0762
+            "p": 0.0645
           },
           {
             "key": "Kazik",
-            "p": 0.0283
+            "p": 0.022
           },
           {
             "key": "Someone_else",
-            "p": 0.0184
+            "p": 0.0123
           }
         ]
       },

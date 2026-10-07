@@ -1,0 +1,640 @@
+{
+  "experiment": "senat-2026",
+  "series": "blend",
+  "date": "2026-10-07",
+  "rho": 0.55,
+  "method": "log-odds pool of AI s modelem and de-vigged market, w_blind=(1-rho)/(2-rho)",
+  "districts": [
+    {
+      "n": 3,
+      "candidates": [
+        {
+          "key": "Plevny",
+          "p": 0.5099
+        },
+        {
+          "key": "Tsoukernik",
+          "p": 0.4201
+        },
+        {
+          "key": "Cerna",
+          "p": 0.0306
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0395
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "candidates": [
+        {
+          "key": "Tresl",
+          "p": 0.6643
+        },
+        {
+          "key": "Mikolas",
+          "p": 0.2348
+        },
+        {
+          "key": "Steiner",
+          "p": 0.0436
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0573
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "candidates": [
+        {
+          "key": "Aschenbrenner",
+          "p": 0.3723
+        },
+        {
+          "key": "Rehka",
+          "p": 0.5134
+        },
+        {
+          "key": "Kantorova",
+          "p": 0.0507
+        },
+        {
+          "key": "Pouskova",
+          "p": 0.0192
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0444
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "candidates": [
+        {
+          "key": "Fiala",
+          "p": 0.8874
+        },
+        {
+          "key": "Hrdinova",
+          "p": 0.0875
+        },
+        {
+          "key": "Usaty",
+          "p": 0.0249
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0001
+        }
+      ]
+    },
+    {
+      "n": 15,
+      "candidates": [
+        {
+          "key": "Med",
+          "p": 0.383
+        },
+        {
+          "key": "Chalupsky",
+          "p": 0.249
+        },
+        {
+          "key": "Kozar",
+          "p": 0.3276
+        },
+        {
+          "key": "PavluRadova",
+          "p": 0.0234
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0171
+        }
+      ]
+    },
+    {
+      "n": 18,
+      "candidates": [
+        {
+          "key": "Stepanek",
+          "p": 0.8659
+        },
+        {
+          "key": "Danhova",
+          "p": 0.0825
+        },
+        {
+          "key": "Luftova",
+          "p": 0.026
+        },
+        {
+          "key": "Sorna",
+          "p": 0.0149
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0107
+        }
+      ]
+    },
+    {
+      "n": 21,
+      "candidates": [
+        {
+          "key": "Sablik",
+          "p": 0.315
+        },
+        {
+          "key": "Laska",
+          "p": 0.4989
+        },
+        {
+          "key": "Sarapatka",
+          "p": 0.1264
+        },
+        {
+          "key": "Broz",
+          "p": 0.0462
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0135
+        }
+      ]
+    },
+    {
+      "n": 24,
+      "candidates": [
+        {
+          "key": "Smoljak",
+          "p": 0.785
+        },
+        {
+          "key": "Peckova",
+          "p": 0.1764
+        },
+        {
+          "key": "Zalud",
+          "p": 0.0234
+        },
+        {
+          "key": "Laube",
+          "p": 0.0091
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0061
+        }
+      ]
+    },
+    {
+      "n": 27,
+      "candidates": [
+        {
+          "key": "Padevet",
+          "p": 0.5213
+        },
+        {
+          "key": "J_Cizinsky",
+          "p": 0.3907
+        },
+        {
+          "key": "Dudra",
+          "p": 0.0458
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0422
+        }
+      ]
+    },
+    {
+      "n": 30,
+      "candidates": [
+        {
+          "key": "Sipova",
+          "p": 0.4707
+        },
+        {
+          "key": "Patak",
+          "p": 0.3116
+        },
+        {
+          "key": "Gerloch",
+          "p": 0.1118
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.1058
+        }
+      ]
+    },
+    {
+      "n": 33,
+      "candidates": [
+        {
+          "key": "Linhart",
+          "p": 0.843
+        },
+        {
+          "key": "Hejcman",
+          "p": 0.0905
+        },
+        {
+          "key": "Lehka",
+          "p": 0.0447
+        },
+        {
+          "key": "Skalicky",
+          "p": 0.0084
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0134
+        }
+      ]
+    },
+    {
+      "n": 36,
+      "candidates": [
+        {
+          "key": "Puta",
+          "p": 0.5155
+        },
+        {
+          "key": "Volfova",
+          "p": 0.2838
+        },
+        {
+          "key": "Vosecky",
+          "p": 0.1358
+        },
+        {
+          "key": "Vomacka",
+          "p": 0.0572
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0077
+        }
+      ]
+    },
+    {
+      "n": 39,
+      "candidates": [
+        {
+          "key": "Sobotka",
+          "p": 0.9382
+        },
+        {
+          "key": "Chovancova",
+          "p": 0.0523
+        },
+        {
+          "key": "Mraz",
+          "p": 0.0056
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0038
+        }
+      ]
+    },
+    {
+      "n": 42,
+      "candidates": [
+        {
+          "key": "Kaspar",
+          "p": 0.7185
+        },
+        {
+          "key": "Schulz",
+          "p": 0.1186
+        },
+        {
+          "key": "Brzobohata",
+          "p": 0.1031
+        },
+        {
+          "key": "Sehnal",
+          "p": 0.0361
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0236
+        }
+      ]
+    },
+    {
+      "n": 45,
+      "candidates": [
+        {
+          "key": "Dvorak",
+          "p": 0.5484
+        },
+        {
+          "key": "Holasek",
+          "p": 0.1846
+        },
+        {
+          "key": "Ceralova_Petrofova",
+          "p": 0.1572
+        },
+        {
+          "key": "Hulkova",
+          "p": 0.087
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0228
+        }
+      ]
+    },
+    {
+      "n": 48,
+      "candidates": [
+        {
+          "key": "Grulich",
+          "p": 0.9247
+        },
+        {
+          "key": "Sadovsky",
+          "p": 0.0751
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0002
+        }
+      ]
+    },
+    {
+      "n": 51,
+      "candidates": [
+        {
+          "key": "Klement",
+          "p": 0.6592
+        },
+        {
+          "key": "Cerny",
+          "p": 0.2001
+        },
+        {
+          "key": "Smarda",
+          "p": 0.1145
+        },
+        {
+          "key": "Koten",
+          "p": 0.0207
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0055
+        }
+      ]
+    },
+    {
+      "n": 54,
+      "candidates": [
+        {
+          "key": "Tretina",
+          "p": 0.6863
+        },
+        {
+          "key": "Kynera",
+          "p": 0.2154
+        },
+        {
+          "key": "Beranova",
+          "p": 0.0065
+        },
+        {
+          "key": "RedovaFajmonova",
+          "p": 0.0277
+        },
+        {
+          "key": "Ruzicka",
+          "p": 0.0295
+        },
+        {
+          "key": "Cerny",
+          "p": 0.0344
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0002
+        }
+      ]
+    },
+    {
+      "n": 57,
+      "candidates": [
+        {
+          "key": "Grolich",
+          "p": 0.9493
+        },
+        {
+          "key": "Absolonova",
+          "p": 0.0455
+        },
+        {
+          "key": "Fladr",
+          "p": 0.0048
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0003
+        }
+      ]
+    },
+    {
+      "n": 60,
+      "candidates": [
+        {
+          "key": "Papousek",
+          "p": 0.8041
+        },
+        {
+          "key": "Zitterbart",
+          "p": 0.0794
+        },
+        {
+          "key": "Sterba",
+          "p": 0.0807
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0359
+        }
+      ]
+    },
+    {
+      "n": 63,
+      "candidates": [
+        {
+          "key": "Navarik",
+          "p": 0.273
+        },
+        {
+          "key": "Vrana",
+          "p": 0.6831
+        },
+        {
+          "key": "Chromec",
+          "p": 0.0293
+        },
+        {
+          "key": "Obrtel",
+          "p": 0.0143
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0003
+        }
+      ]
+    },
+    {
+      "n": 66,
+      "candidates": [
+        {
+          "key": "Ostadal",
+          "p": 0.221
+        },
+        {
+          "key": "Kohajda",
+          "p": 0.5701
+        },
+        {
+          "key": "Skurek",
+          "p": 0.165
+        },
+        {
+          "key": "Jelinek",
+          "p": 0.0312
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0126
+        }
+      ]
+    },
+    {
+      "n": 69,
+      "candidates": [
+        {
+          "key": "Pesatova",
+          "p": 0.5751
+        },
+        {
+          "key": "Korc",
+          "p": 0.2879
+        },
+        {
+          "key": "Krpel",
+          "p": 0.0645
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0725
+        }
+      ]
+    },
+    {
+      "n": 72,
+      "candidates": [
+        {
+          "key": "Simetka",
+          "p": 0.6081
+        },
+        {
+          "key": "Barankova_Vilamova",
+          "p": 0.2919
+        },
+        {
+          "key": "Loprais",
+          "p": 0.0276
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0725
+        }
+      ]
+    },
+    {
+      "n": 75,
+      "candidates": [
+        {
+          "key": "Brzyszkowska",
+          "p": 0.7645
+        },
+        {
+          "key": "Szyja",
+          "p": 0.0871
+        },
+        {
+          "key": "Polach",
+          "p": 0.0495
+        },
+        {
+          "key": "Stanek",
+          "p": 0.0645
+        },
+        {
+          "key": "Kazik",
+          "p": 0.022
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0123
+        }
+      ]
+    },
+    {
+      "n": 78,
+      "candidates": [
+        {
+          "key": "Golan",
+          "p": 0.7778
+        },
+        {
+          "key": "Mitacek",
+          "p": 0.0987
+        },
+        {
+          "key": "Sedlarik",
+          "p": 0.0958
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0278
+        }
+      ]
+    },
+    {
+      "n": 81,
+      "candidates": [
+        {
+          "key": "Bazala",
+          "p": 0.8787
+        },
+        {
+          "key": "Vasica",
+          "p": 0.0805
+        },
+        {
+          "key": "Balastikova",
+          "p": 0.0201
+        },
+        {
+          "key": "Someone_else",
+          "p": 0.0207
+        }
+      ]
+    }
+  ]
+}
