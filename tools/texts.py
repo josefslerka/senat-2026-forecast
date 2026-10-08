@@ -557,6 +557,63 @@ JOURNAL.append(dict(
 </ol>
 <p><b>Next:</b> news and Betting for the last time on Thursday. Forecasts freeze Fri 9 Oct by 12:00.</p>"""))
 
+JOURNAL.append(dict(
+    date="2026-10-08",
+    title_cs="Den 7: poslední den kampaně, AI beze změny, předregistrace benchmarku z Wikipedie",
+    title_en="Day 7: last day of the campaign, AI unchanged, a Wikipedia benchmark pre-registered",
+    cs="""<p><b>AI ani AI s modelem se nemění.</b> Ve zprávách z posledního dne kampaně ani v reakcích na středeční debatu lídrů jsme nenašli nic, co by změnilo situaci v některém obvodu. Snapshoty jsme zamkli v 16:47, ještě před čtením kurzů. Tyto verze AI a AI s modelem jsou s velkou pravděpodobností ty, které budeme hodnotit. Zítra do 12:00 je změníme jen tehdy, pokud se objeví zásadní fakt.</p>
+<h3>Co se změnilo</h3>
+<ul>
+<li><b>Zprávy:</b> Přerovský deník zveřejnil profily všech čtyř kandidátů v Přerově. Oba hlavní soupeři, primátor Vrána (ANO) a radní Navařík (ODS), jsou ze stejného vedení města. V Chebu pokračují negativní články o Sandře Tsoukernik. Debata lídrů nepřinesla nic konkrétního k obvodům.</li>
+<li><b>Sázky:</b> v Praze 1 se favorit trhu otočil z Jana Čižinského na Padevěta (45 %). Padevět je i favoritem AI s modelem. V Pelhřimově roste Med (+6 p.b. na 28 %), Kozár zůstává favoritem (45 %). V Praze 5 posiluje Láska (64 %), ve Žďáru Klement (73 %). Trh se tak ve dvou sporných obvodech přiblížil našemu odhadu.</li>
+<li><b>Blend</b> se mění jen s trhem.</li>
+</ul>
+<h3>Předem zapsáno: benchmark z Wikipedie</h3>
+<p>Spočítali jsme denní návštěvnost článků o kandidátech na české Wikipedii (1. 8.–7. 10., článek má 93 ze 154 kandidátů). Jako vstup ji <b>nepoužíváme</b>, protože pozornost táhnou hlavně kauzy a známá jména. Po volbách ji ale vyhodnotíme jako jednoduchý srovnávací benchmark: <i>vyhraje nejčtenější kandidát obvodu</i> (průměr 24. 9.–7. 10.). Předpověď tohoto pravidla:</p>
+<p class="muted">3 Tsoukernik · 6 Steiner · 9 Řehka · 12 Ušatý · 15 Chalupský · 18 Štěpánek · 21 Šarapatka · 24 Pecková · 27 J. Čižinský · 30 Gerloch · 33 Linhart · 36 Půta · 39 Sobotka · 42 Sehnal · 45 Nebeská · 48 Grulich · 51 Šmarda · 54 Rédová Fajmonová · 57 Grolich · 60 Papoušek · 63 Obrtel · 66 Kohajda · 69 Lisková · 72 Šimetka · 75 Szyja · 78 Goláň · 81 Balaštíková</p>
+<p>Nejčtenější kandidát je favoritem trhu ve 13 z 25 obvodů, favoritem AI s modelem v 9. Google Trends jsme zkusili taky, ale pro senátní obvody vracejí samé nuly a pletou si jmenovce, proto je nepoužíváme. Data jsou v repozitáři.</p>
+<h3>Nové zdroje dne</h3>
+<p>Zdroje jsme dnes jen zapsali, žádný z nich nezměnil odhady.</p>
+<ul>
+<li>Přerovský deník (8. 10.): <a href="https://prerovsky.denik.cz/zpravy-region/o-senat-se-na-prerovsku-utkaji-ctyri-osobnosti-tady-jsou-jejich-profily/">O Senát se na Přerovsku utkají čtyři osobnosti</a>. Přerov (63), profily kandidátů.</li>
+<li>INFO.CZ a forum24 (8. 10.): další články o Sandře Tsoukernik a Rozvadově. Cheb (3), nic nového pro výsledek.</li>
+<li>Odkryto a Praha na dlani (8. 10.): Láskův protikorupční tým a jeho kampaňové výdaje. Praha 5 (21), drobnost.</li>
+<li>forum24 (8. 10.): dvacet uskupení nestihlo oznámit sponzory. O které jde, jsme neověřovali.</li>
+<li>Neotevřeno: iDNES „Zeman jako maskot voleb“ (vyžaduje souhlas s cílenou reklamou, podle adresy jde hlavně o komunální volby) a CNN Prima „předpovědi analytiků“ (cizí předpověď, ne vstup).</li>
+</ul>
+<h3>Chyby a nápravy</h3>
+<ol>
+<li><b>Druhá mezera v researchi: geografie uvnitř obvodu.</b> Z dat ČSÚ po obcích jsme zjistili, že Vrána v roce 2020 ve 2. kole <b>vyhrál město Přerov 55:45</b> a prohrál až na venkově. Náš model zná funkci „starosta“, ale ne velikost domácí bašty ani bašty soupeřů. Podobně Šípová (Kladno) bydlí v Doksech mimo obvod, kdežto Paták je z Kladna, kde žije 45 % voličů. Historicky ale bašta automaticky nevyhrává: starostové největšího města obvodu v letech 2020–2024 postoupili do 2. kola jen ve 27 % případů. <i>Proč jsme odhady neměnili:</i> všechny nálezy jdou směrem k trhu a analýzu jsme dělali kvůli sporu s trhem. Úprava den před uzávěrkou by byla skryté dorovnání na Sázky. <i>Náprava:</i> do modelu v2 přidáváme proměnnou „podíl voličů domácí obce × funkce × strana“ a historické výsledky po obcích. Po 1. kole změříme, jestli kandidáti s baštou model systematicky překonali.</li>
+<li><b>Včerejší dopočet kurzů Tipsportu se potvrdil.</b> U Brna (5,62) a Frýdku-Místku (1,67) odpovídal dopočtený kurz „Ne“ přesně skutečnému. Dnes jsme stránky otevírali pomaleji a Tipsport nás neblokoval.</li>
+</ol>
+<p><b>Dál:</b> v pátek dopoledne poslední rychlá kontrola zpráv a závěrečné kurzy. Odhady zamrazíme do 12:00, výsledky 1. kola budou v sobotu.</p>""",
+    en="""<p><b>AI and AI + model are unchanged.</b> The news from the last day of the campaign and the reactions to Wednesday's leaders' debate contained nothing that changes the race in any district. The snapshots were locked at 16:47, before reading the odds. These versions of AI and AI + model will very likely be the ones scored. By 12:00 tomorrow we will change them only if a major fact appears.</p>
+<h3>What changed</h3>
+<ul>
+<li><b>News:</b> Přerovský deník profiled all four Přerov candidates. Both front-runners, mayor Vrána (ANO) and councillor Navařík (ODS), sit in the same city leadership. In Cheb, negative coverage of Sandra Tsoukernik continues. The leaders' debate brought nothing district-specific.</li>
+<li><b>Betting:</b> in Praha 1 the market favourite flipped from Jan Čižinský to Padevět (45 %), who is also the AI + model favourite. In Pelhřimov, Med rises (+6 pp to 28 %) while Kozár stays the favourite (45 %). Láska strengthens in Praha 5 (64 %) and Klement in Žďár (73 %). In two disputed districts the market moved towards our forecast.</li>
+<li><b>Blend</b> moves only with the market.</li>
+</ul>
+<h3>Recorded in advance: a Wikipedia benchmark</h3>
+<p>We collected daily Czech Wikipedia pageviews of the candidates' articles (1 Aug–7 Oct; 93 of 154 candidates have an article). We do <b>not</b> use them as an input, because attention is driven mostly by scandals and famous names. After the election we will score them as a simple benchmark: <i>the most-viewed candidate in a district wins</i> (average 24 Sep–7 Oct). This rule predicts:</p>
+<p class="muted">3 Tsoukernik · 6 Steiner · 9 Řehka · 12 Ušatý · 15 Chalupský · 18 Štěpánek · 21 Šarapatka · 24 Pecková · 27 J. Čižinský · 30 Gerloch · 33 Linhart · 36 Půta · 39 Sobotka · 42 Sehnal · 45 Nebeská · 48 Grulich · 51 Šmarda · 54 Rédová Fajmonová · 57 Grolich · 60 Papoušek · 63 Obrtel · 66 Kohajda · 69 Lisková · 72 Šimetka · 75 Szyja · 78 Goláň · 81 Balaštíková</p>
+<p>The most-viewed candidate is the market favourite in 13 of 25 districts and the AI + model favourite in 9. We also tried Google Trends, but for Senate districts it returns mostly zeros and confuses namesakes, so we do not use it. The data are in the repository.</p>
+<h3>New sources today</h3>
+<p>Today's sources were only logged; none of them changed the forecasts.</p>
+<ul>
+<li>Přerovský deník (8 Oct): <a href="https://prerovsky.denik.cz/zpravy-region/o-senat-se-na-prerovsku-utkaji-ctyri-osobnosti-tady-jsou-jejich-profily/">O Senát se na Přerovsku utkají čtyři osobnosti</a>. Přerov (63), candidate profiles.</li>
+<li>INFO.CZ and forum24 (8 Oct): more pieces on Sandra Tsoukernik and Rozvadov. Cheb (3), nothing new for the outcome.</li>
+<li>Odkryto and Praha na dlani (8 Oct): Láska's anti-corruption team and his campaign spending. Praha 5 (21), minor.</li>
+<li>forum24 (8 Oct): twenty groupings missed the deadline to disclose sponsors. We did not check which ones.</li>
+<li>Not opened: iDNES “Zeman as the election mascot” (requires consent to targeted ads; per its URL mainly about municipal elections) and CNN Prima “analysts' predictions” (someone else's forecast, not an input).</li>
+</ul>
+<h3>Mistakes and fixes</h3>
+<ol>
+<li><b>A second research gap: geography within a district.</b> ČSÚ municipality-level data show that in 2020 Vrána <b>won the city of Přerov 55:45</b> in the runoff and lost only in the countryside. Our model knows the “mayor” role but not the size of a candidate's home base or the opponents' bases. Similarly, Šípová (Kladno) lives in Doksy, outside the district, while Paták is from Kladno, home to 45 % of the district's voters. Historically, however, a home base does not win automatically: mayors of a district's largest town reached the runoff only 27 % of the time in 2020–2024. <i>Why we did not change the forecasts:</i> every finding points towards the market, and we ran the analysis because of a disagreement with the market. A change the day before the freeze would be a hidden move towards Betting. <i>Fix:</i> model v2 gets a “home-town share of voters × role × party” variable and municipality-level history. After round 1 we will measure whether candidates with a home base systematically beat the model.</li>
+<li><b>Yesterday's Tipsport imputation held up.</b> In Brno (5.62) and Frýdek-Místek (1.67) the imputed “No” price matched the actual one exactly. Today we opened pages more slowly and Tipsport did not block us.</li>
+</ol>
+<p><b>Next:</b> on Friday morning a last quick news check and the closing odds. Forecasts freeze by 12:00; round 1 results come on Saturday.</p>"""))
+
 # "What's new today" box at the top of the overview, per date (short, hand-written; auto moves are added below it).
 CHANGES = {
     "2026-10-05": dict(
@@ -593,5 +650,16 @@ CHANGES = {
 <li><b>AI and AI + model unchanged:</b> the news on all 154 candidates contained nothing that changes the race in any district.</li>
 <li><b>Betting:</b> the market warms to Volfová in Česká Lípa (+6 pp), Kašpar in Kolín, Láska in Praha 5 and Štěpánek in Příbram. In Frýdek-Místek the favourite flipped to Pešatová, but only by 2 pp.</li>
 <li><b>Mistake of the day:</b> the 2 Oct research lacked the profiles of some minor candidates (Klas in Kladno, Korč in Frýdek-Místek). The journal explains why we did not change the forecasts and what we are changing for the future.</li>
+</ul>"""),
+    "2026-10-08": dict(
+        cs="""<ul>
+<li><b>Poslední den kampaně:</b> AI ani AI s modelem se nemění. Zítra do 12:00 odhady zamrazíme.</li>
+<li><b>Sázky:</b> v Praze 1 se favorit trhu otočil na Padevěta, stejně jako u AI s modelem. V Pelhřimově roste Med (+6 p.b.). Ve dvou sporných obvodech se tak trh přiblížil našemu odhadu.</li>
+<li><b>Předem zapsáno:</b> benchmark „vyhraje nejčtenější kandidát na Wikipedii“. Vyhodnotíme ho vedle ostatních sérií, viz deník.</li>
+</ul>""",
+        en="""<ul>
+<li><b>Last day of the campaign:</b> AI and AI + model are unchanged. Forecasts freeze tomorrow by 12:00.</li>
+<li><b>Betting:</b> in Praha 1 the market favourite flipped to Padevět, matching AI + model. In Pelhřimov, Med rises (+6 pp). In two disputed districts the market moved towards our forecast.</li>
+<li><b>Recorded in advance:</b> a “most-viewed on Wikipedia wins” benchmark, to be scored alongside the other series; see the journal.</li>
 </ul>"""),
 }

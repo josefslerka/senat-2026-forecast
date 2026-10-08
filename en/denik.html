@@ -32,7 +32,32 @@ table.cards td.nolabel{display:none}.sm-only{display:inline!important}}
 table.cards td b{white-space:nowrap}table.cards .pill{white-space:normal}
 </style></head><body><div class="wrap">
 <header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Overview</a><a href="pravidla.html">Rules</a><a href="model.html">Model</a><a href="denik.html">Journal</a><a href="archiv.html">Archive</a><a class="lang" href="../denik.html">CS</a></nav></header>
-<h1>Journal</h1><div class="card"><h2 style="margin-top:0">2026-10-07 — Day 6: AI unchanged, a gap in candidate profiles, the market warms to Volfová</h2><p><b>AI and AI + model are unchanged today.</b> We went through the last two days of news on all 154 candidates and found nothing that changes the race in any district. The blind snapshots were locked with a commit at 21:42, before reading the odds. They are identical to 6 Oct.</p>
+<h1>Journal</h1><div class="card"><h2 style="margin-top:0">2026-10-08 — Day 7: last day of the campaign, AI unchanged, a Wikipedia benchmark pre-registered</h2><p><b>AI and AI + model are unchanged.</b> The news from the last day of the campaign and the reactions to Wednesday's leaders' debate contained nothing that changes the race in any district. The snapshots were locked at 16:47, before reading the odds. These versions of AI and AI + model will very likely be the ones scored. By 12:00 tomorrow we will change them only if a major fact appears.</p>
+<h3>What changed</h3>
+<ul>
+<li><b>News:</b> Přerovský deník profiled all four Přerov candidates. Both front-runners, mayor Vrána (ANO) and councillor Navařík (ODS), sit in the same city leadership. In Cheb, negative coverage of Sandra Tsoukernik continues. The leaders' debate brought nothing district-specific.</li>
+<li><b>Betting:</b> in Praha 1 the market favourite flipped from Jan Čižinský to Padevět (45 %), who is also the AI + model favourite. In Pelhřimov, Med rises (+6 pp to 28 %) while Kozár stays the favourite (45 %). Láska strengthens in Praha 5 (64 %) and Klement in Žďár (73 %). In two disputed districts the market moved towards our forecast.</li>
+<li><b>Blend</b> moves only with the market.</li>
+</ul>
+<h3>Recorded in advance: a Wikipedia benchmark</h3>
+<p>We collected daily Czech Wikipedia pageviews of the candidates' articles (1 Aug–7 Oct; 93 of 154 candidates have an article). We do <b>not</b> use them as an input, because attention is driven mostly by scandals and famous names. After the election we will score them as a simple benchmark: <i>the most-viewed candidate in a district wins</i> (average 24 Sep–7 Oct). This rule predicts:</p>
+<p class="muted">3 Tsoukernik · 6 Steiner · 9 Řehka · 12 Ušatý · 15 Chalupský · 18 Štěpánek · 21 Šarapatka · 24 Pecková · 27 J. Čižinský · 30 Gerloch · 33 Linhart · 36 Půta · 39 Sobotka · 42 Sehnal · 45 Nebeská · 48 Grulich · 51 Šmarda · 54 Rédová Fajmonová · 57 Grolich · 60 Papoušek · 63 Obrtel · 66 Kohajda · 69 Lisková · 72 Šimetka · 75 Szyja · 78 Goláň · 81 Balaštíková</p>
+<p>The most-viewed candidate is the market favourite in 13 of 25 districts and the AI + model favourite in 9. We also tried Google Trends, but for Senate districts it returns mostly zeros and confuses namesakes, so we do not use it. The data are in the repository.</p>
+<h3>New sources today</h3>
+<p>Today's sources were only logged; none of them changed the forecasts.</p>
+<ul>
+<li>Přerovský deník (8 Oct): <a href="https://prerovsky.denik.cz/zpravy-region/o-senat-se-na-prerovsku-utkaji-ctyri-osobnosti-tady-jsou-jejich-profily/">O Senát se na Přerovsku utkají čtyři osobnosti</a>. Přerov (63), candidate profiles.</li>
+<li>INFO.CZ and forum24 (8 Oct): more pieces on Sandra Tsoukernik and Rozvadov. Cheb (3), nothing new for the outcome.</li>
+<li>Odkryto and Praha na dlani (8 Oct): Láska's anti-corruption team and his campaign spending. Praha 5 (21), minor.</li>
+<li>forum24 (8 Oct): twenty groupings missed the deadline to disclose sponsors. We did not check which ones.</li>
+<li>Not opened: iDNES “Zeman as the election mascot” (requires consent to targeted ads; per its URL mainly about municipal elections) and CNN Prima “analysts' predictions” (someone else's forecast, not an input).</li>
+</ul>
+<h3>Mistakes and fixes</h3>
+<ol>
+<li><b>A second research gap: geography within a district.</b> ČSÚ municipality-level data show that in 2020 Vrána <b>won the city of Přerov 55:45</b> in the runoff and lost only in the countryside. Our model knows the “mayor” role but not the size of a candidate's home base or the opponents' bases. Similarly, Šípová (Kladno) lives in Doksy, outside the district, while Paták is from Kladno, home to 45 % of the district's voters. Historically, however, a home base does not win automatically: mayors of a district's largest town reached the runoff only 27 % of the time in 2020–2024. <i>Why we did not change the forecasts:</i> every finding points towards the market, and we ran the analysis because of a disagreement with the market. A change the day before the freeze would be a hidden move towards Betting. <i>Fix:</i> model v2 gets a “home-town share of voters × role × party” variable and municipality-level history. After round 1 we will measure whether candidates with a home base systematically beat the model.</li>
+<li><b>Yesterday's Tipsport imputation held up.</b> In Brno (5.62) and Frýdek-Místek (1.67) the imputed “No” price matched the actual one exactly. Today we opened pages more slowly and Tipsport did not block us.</li>
+</ol>
+<p><b>Next:</b> on Friday morning a last quick news check and the closing odds. Forecasts freeze by 12:00; round 1 results come on Saturday.</p></div><div class="card"><h2 style="margin-top:0">2026-10-07 — Day 6: AI unchanged, a gap in candidate profiles, the market warms to Volfová</h2><p><b>AI and AI + model are unchanged today.</b> We went through the last two days of news on all 154 candidates and found nothing that changes the race in any district. The blind snapshots were locked with a commit at 21:42, before reading the odds. They are identical to 6 Oct.</p>
 <h3>What changed</h3>
 <ul>
 <li><b>News:</b> in Česká Lípa, Babiš was ill and missed the final rallies. Ministers campaigned for Volfová in his place and he joined by phone video from bed. In Cheb, negative press around Sandra Tsoukernik continues. In Vyškov, minister Schillerová and Grolich traded sharp attacks. These are minor; we did not change our forecasts.</li>
