@@ -565,7 +565,7 @@ JOURNAL.append(dict(
 <h3>Co se změnilo</h3>
 <ul>
 <li><b>Zprávy:</b> Přerovský deník zveřejnil profily všech čtyř kandidátů v Přerově. Oba hlavní soupeři, primátor Vrána (ANO) a radní Navařík (ODS), jsou ze stejného vedení města. V Chebu pokračují negativní články o Sandře Tsoukernik. Debata lídrů nepřinesla nic konkrétního k obvodům.</li>
-<li><b>Sázky:</b> v Praze 1 se favorit trhu otočil z Jana Čižinského na Padevěta (45 %). Padevět je i favoritem AI s modelem. V Pelhřimově roste Med (+6 p.b. na 28 %), Kozár zůstává favoritem (45 %). V Praze 5 posiluje Láska (64 %), ve Žďáru Klement (73 %). Trh se tak ve dvou sporných obvodech přiblížil našemu odhadu.</li>
+<li><b>Sázky:</b> v Praze 1 se favorit trhu otočil z Jana Čižinského na Padevěta (45 %). Padevět je i favoritem AI s modelem. V Pelhřimově roste Med (+6 p.b. na 28 %), Kozár zůstává favoritem (45 %). V Praze 5 posiluje Láska (64 %), ve Žďáru Klement (73 %). Ve dvou sporných obvodech (Pelhřimov, Praha 1) se trh přiblížil našemu odhadu, ve dvou (Praha 5, Litovel) se od něj vzdálil. Celkový rozdíl mezi trhem a AI s modelem zůstává zhruba stejný.</li>
 <li><b>Blend</b> se mění jen s trhem.</li>
 </ul>
 <h3>Předem zapsáno: benchmark z Wikipedie</h3>
@@ -591,7 +591,7 @@ JOURNAL.append(dict(
 <h3>What changed</h3>
 <ul>
 <li><b>News:</b> Přerovský deník profiled all four Přerov candidates. Both front-runners, mayor Vrána (ANO) and councillor Navařík (ODS), sit in the same city leadership. In Cheb, negative coverage of Sandra Tsoukernik continues. The leaders' debate brought nothing district-specific.</li>
-<li><b>Betting:</b> in Praha 1 the market favourite flipped from Jan Čižinský to Padevět (45 %), who is also the AI + model favourite. In Pelhřimov, Med rises (+6 pp to 28 %) while Kozár stays the favourite (45 %). Láska strengthens in Praha 5 (64 %) and Klement in Žďár (73 %). In two disputed districts the market moved towards our forecast.</li>
+<li><b>Betting:</b> in Praha 1 the market favourite flipped from Jan Čižinský to Padevět (45 %), who is also the AI + model favourite. In Pelhřimov, Med rises (+6 pp to 28 %) while Kozár stays the favourite (45 %). Láska strengthens in Praha 5 (64 %) and Klement in Žďár (73 %). In two disputed districts (Pelhřimov, Praha 1) the market moved towards our forecast, in two (Praha 5, Litovel) away from it. The overall gap between the market and AI + model is roughly unchanged.</li>
 <li><b>Blend</b> moves only with the market.</li>
 </ul>
 <h3>Recorded in advance: a Wikipedia benchmark</h3>
@@ -654,12 +654,12 @@ CHANGES = {
     "2026-10-08": dict(
         cs="""<ul>
 <li><b>Poslední den kampaně:</b> AI ani AI s modelem se nemění. Zítra do 12:00 odhady zamrazíme.</li>
-<li><b>Sázky:</b> v Praze 1 se favorit trhu otočil na Padevěta, stejně jako u AI s modelem. V Pelhřimově roste Med (+6 p.b.). Ve dvou sporných obvodech se tak trh přiblížil našemu odhadu.</li>
+<li><b>Sázky:</b> v Praze 1 se favorit trhu otočil na Padevěta, stejně jako u AI s modelem. V Pelhřimově roste Med (+6 p.b.). V Praze 5 a v Litovli se naopak trh od nás vzdálil, celkový rozdíl je stejný.</li>
 <li><b>Předem zapsáno:</b> benchmark „vyhraje nejčtenější kandidát na Wikipedii“. Vyhodnotíme ho vedle ostatních sérií, viz deník.</li>
 </ul>""",
         en="""<ul>
 <li><b>Last day of the campaign:</b> AI and AI + model are unchanged. Forecasts freeze tomorrow by 12:00.</li>
-<li><b>Betting:</b> in Praha 1 the market favourite flipped to Padevět, matching AI + model. In Pelhřimov, Med rises (+6 pp). In two disputed districts the market moved towards our forecast.</li>
+<li><b>Betting:</b> in Praha 1 the market favourite flipped to Padevět, matching AI + model. In Pelhřimov, Med rises (+6 pp). In Praha 5 and Litovel the market moved away from us; the overall gap is unchanged.</li>
 <li><b>Recorded in advance:</b> a “most-viewed on Wikipedia wins” benchmark, to be scored alongside the other series; see the journal.</li>
 </ul>"""),
 }
