@@ -572,6 +572,19 @@ JOURNAL.append(dict(
 <p>Spočítali jsme denní návštěvnost článků o kandidátech na české Wikipedii (1. 8.–7. 10., článek má 93 ze 154 kandidátů). Jako vstup ji <b>nepoužíváme</b>, protože pozornost táhnou hlavně kauzy a známá jména. Po volbách ji ale vyhodnotíme jako jednoduchý srovnávací benchmark: <i>vyhraje nejčtenější kandidát obvodu</i> (průměr 24. 9.–7. 10.). Předpověď tohoto pravidla:</p>
 <p class="muted">3 Tsoukernik · 6 Steiner · 9 Řehka · 12 Ušatý · 15 Chalupský · 18 Štěpánek · 21 Šarapatka · 24 Pecková · 27 J. Čižinský · 30 Gerloch · 33 Linhart · 36 Půta · 39 Sobotka · 42 Sehnal · 45 Nebeská · 48 Grulich · 51 Šmarda · 54 Rédová Fajmonová · 57 Grolich · 60 Papoušek · 63 Obrtel · 66 Kohajda · 69 Lisková · 72 Šimetka · 75 Szyja · 78 Goláň · 81 Balaštíková</p>
 <p>Nejčtenější kandidát je favoritem trhu ve 13 z 25 obvodů, favoritem AI s modelem v 9. Google Trends jsme zkusili taky, ale pro senátní obvody vracejí samé nuly a pletou si jmenovce, proto je nepoužíváme. Data jsou v repozitáři.</p>
+<h3>Předem zapsáno: hypotéza o domácích baštách</h3>
+<p>Podezíráme, že náš statistický model podceňuje kandidáty s velkou domácí baštou (viz Chyby a nápravy). Abychom si skupinu nemohli vybrat až podle výsledků, určili jsme ji mechanicky z dat ČSÚ: <i>současný starosta nebo primátor obce, kde žije aspoň 15 % voličů obvodu</i>.</p>
+<ul>
+<li>15 Kozár (Jindřichův Hradec, 16 % voličů), model 1. kolo 22,2 %</li>
+<li>27 J. Čižinský (Praha 7, 37 %), model 22,9 %</li>
+<li>36 Volfová (Česká Lípa, 25 %), model 28,8 %</li>
+<li>42 Kašpar (Kolín, 21 %), model 30,3 %</li>
+<li>63 Vrána (Přerov, 33 %), model 31,9 %</li>
+<li>75 Brzyszkowská (Orlová, 28 %), model 36,9 %</li>
+</ul>
+<p><b>Metrika:</b> skutečný výsledek v 1. kole minus průměr statistického modelu. <b>Srovnávací skupina:</b> ostatní kandidáti, kterým model dává aspoň 15 %. <b>Hypotéza:</b> baštoví kandidáti překonají model v průměru alespoň o 3 p.b. víc než srovnávací skupina. <b>Vyvráceno</b>, pokud bude rozdíl nulový nebo záporný. <i>Omezení:</i> šest kandidátů je malý vzorek. Starostka Poruby Baránková Vilamová vypadla, protože data ČSÚ za Ostravu nerozlišují městské obvody.</p>
+<h3>Předem zapsáno: pravidlo pro sobotní předpovědi STEM</h3>
+<p>CNN Prima ohlásila, že v sobotu po sečtení zhruba 80 % hlasů zveřejní pravděpodobnosti výhry ve 2. kole od analytiků STEM. Před 1. kolem žádnou předpověď nezveřejnila. Aby naše updaty po 1. kole nebyly jejich ozvěnou, <b>uděláme a zamkneme je commitem dřív, než se na čísla STEM podíváme</b>. Ta si pak zapíšeme jako externí benchmark pro 2. kolo, podobně jako model Seznam Zpráv pro 1. kolo.</p>
 <h3>Nové zdroje dne</h3>
 <p>Zdroje jsme dnes jen zapsali, žádný z nich nezměnil odhady.</p>
 <ul>
@@ -598,6 +611,19 @@ JOURNAL.append(dict(
 <p>We collected daily Czech Wikipedia pageviews of the candidates' articles (1 Aug–7 Oct; 93 of 154 candidates have an article). We do <b>not</b> use them as an input, because attention is driven mostly by scandals and famous names. After the election we will score them as a simple benchmark: <i>the most-viewed candidate in a district wins</i> (average 24 Sep–7 Oct). This rule predicts:</p>
 <p class="muted">3 Tsoukernik · 6 Steiner · 9 Řehka · 12 Ušatý · 15 Chalupský · 18 Štěpánek · 21 Šarapatka · 24 Pecková · 27 J. Čižinský · 30 Gerloch · 33 Linhart · 36 Půta · 39 Sobotka · 42 Sehnal · 45 Nebeská · 48 Grulich · 51 Šmarda · 54 Rédová Fajmonová · 57 Grolich · 60 Papoušek · 63 Obrtel · 66 Kohajda · 69 Lisková · 72 Šimetka · 75 Szyja · 78 Goláň · 81 Balaštíková</p>
 <p>The most-viewed candidate is the market favourite in 13 of 25 districts and the AI + model favourite in 9. We also tried Google Trends, but for Senate districts it returns mostly zeros and confuses namesakes, so we do not use it. The data are in the repository.</p>
+<h3>Recorded in advance: the home-base hypothesis</h3>
+<p>We suspect our statistical model underrates candidates with a large home base (see Mistakes and fixes). So that we cannot choose the group after seeing the results, we defined it mechanically from ČSÚ data: <i>a sitting mayor of a municipality that is home to at least 15 % of the district's voters</i>.</p>
+<ul>
+<li>15 Kozár (Jindřichův Hradec, 16 % of voters), model round 1 22.2 %</li>
+<li>27 J. Čižinský (Praha 7, 37 %), model 22.9 %</li>
+<li>36 Volfová (Česká Lípa, 25 %), model 28.8 %</li>
+<li>42 Kašpar (Kolín, 21 %), model 30.3 %</li>
+<li>63 Vrána (Přerov, 33 %), model 31.9 %</li>
+<li>75 Brzyszkowská (Orlová, 28 %), model 36.9 %</li>
+</ul>
+<p><b>Metric:</b> actual round-1 share minus the statistical model's mean. <b>Comparison group:</b> all other candidates the model gives at least 15 %. <b>Hypothesis:</b> home-base candidates beat the model by at least 3 pp more on average than the comparison group. <b>Refuted</b> if the difference is zero or negative. <i>Limitations:</i> six candidates is a small sample. Poruba mayor Baránková Vilamová drops out because ČSÚ data do not split Ostrava into city districts.</p>
+<h3>Recorded in advance: a rule for Saturday's STEM predictions</h3>
+<p>CNN Prima announced that on Saturday, once about 80 % of the votes are counted, it will publish runoff win probabilities from STEM analysts. It published no forecast before round 1. To keep our post-round-1 updates from echoing them, <b>we will make and lock our updates with a commit before looking at the STEM numbers</b>. We will then record those as an external benchmark for round 2, just as the Seznam Zprávy model serves for round 1.</p>
 <h3>New sources today</h3>
 <p>Today's sources were only logged; none of them changed the forecasts.</p>
 <ul>
@@ -655,11 +681,11 @@ CHANGES = {
         cs="""<ul>
 <li><b>Poslední den kampaně:</b> AI ani AI s modelem se nemění. Zítra do 12:00 odhady zamrazíme.</li>
 <li><b>Sázky:</b> v Praze 1 se favorit trhu otočil na Padevěta, stejně jako u AI s modelem. V Pelhřimově roste Med (+6 p.b.). V Praze 5 a v Litovli se naopak trh od nás vzdálil, celkový rozdíl je stejný.</li>
-<li><b>Předem zapsáno:</b> benchmark „vyhraje nejčtenější kandidát na Wikipedii“. Vyhodnotíme ho vedle ostatních sérií, viz deník.</li>
+<li><b>Předem zapsáno:</b> benchmark „vyhraje nejčtenější kandidát na Wikipedii“, hypotéza o domácích baštách (6 starostů velkých měst) a pravidlo, že sobotní updaty zamkneme dřív, než uvidíme předpovědi STEM. Podrobnosti v deníku.</li>
 </ul>""",
         en="""<ul>
 <li><b>Last day of the campaign:</b> AI and AI + model are unchanged. Forecasts freeze tomorrow by 12:00.</li>
 <li><b>Betting:</b> in Praha 1 the market favourite flipped to Padevět, matching AI + model. In Pelhřimov, Med rises (+6 pp). In Praha 5 and Litovel the market moved away from us; the overall gap is unchanged.</li>
-<li><b>Recorded in advance:</b> a “most-viewed on Wikipedia wins” benchmark, to be scored alongside the other series; see the journal.</li>
+<li><b>Recorded in advance:</b> a “most-viewed on Wikipedia wins” benchmark, a home-base hypothesis (6 big-town mayors) and a rule that Saturday's updates are locked before we see the STEM predictions. Details in the journal.</li>
 </ul>"""),
 }

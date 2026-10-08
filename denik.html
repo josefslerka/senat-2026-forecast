@@ -43,6 +43,19 @@ table.cards td b{white-space:nowrap}table.cards .pill{white-space:normal}
 <p>Spočítali jsme denní návštěvnost článků o kandidátech na české Wikipedii (1. 8.–7. 10., článek má 93 ze 154 kandidátů). Jako vstup ji <b>nepoužíváme</b>, protože pozornost táhnou hlavně kauzy a známá jména. Po volbách ji ale vyhodnotíme jako jednoduchý srovnávací benchmark: <i>vyhraje nejčtenější kandidát obvodu</i> (průměr 24. 9.–7. 10.). Předpověď tohoto pravidla:</p>
 <p class="muted">3 Tsoukernik · 6 Steiner · 9 Řehka · 12 Ušatý · 15 Chalupský · 18 Štěpánek · 21 Šarapatka · 24 Pecková · 27 J. Čižinský · 30 Gerloch · 33 Linhart · 36 Půta · 39 Sobotka · 42 Sehnal · 45 Nebeská · 48 Grulich · 51 Šmarda · 54 Rédová Fajmonová · 57 Grolich · 60 Papoušek · 63 Obrtel · 66 Kohajda · 69 Lisková · 72 Šimetka · 75 Szyja · 78 Goláň · 81 Balaštíková</p>
 <p>Nejčtenější kandidát je favoritem trhu ve 13 z 25 obvodů, favoritem AI s modelem v 9. Google Trends jsme zkusili taky, ale pro senátní obvody vracejí samé nuly a pletou si jmenovce, proto je nepoužíváme. Data jsou v repozitáři.</p>
+<h3>Předem zapsáno: hypotéza o domácích baštách</h3>
+<p>Podezíráme, že náš statistický model podceňuje kandidáty s velkou domácí baštou (viz Chyby a nápravy). Abychom si skupinu nemohli vybrat až podle výsledků, určili jsme ji mechanicky z dat ČSÚ: <i>současný starosta nebo primátor obce, kde žije aspoň 15 % voličů obvodu</i>.</p>
+<ul>
+<li>15 Kozár (Jindřichův Hradec, 16 % voličů), model 1. kolo 22,2 %</li>
+<li>27 J. Čižinský (Praha 7, 37 %), model 22,9 %</li>
+<li>36 Volfová (Česká Lípa, 25 %), model 28,8 %</li>
+<li>42 Kašpar (Kolín, 21 %), model 30,3 %</li>
+<li>63 Vrána (Přerov, 33 %), model 31,9 %</li>
+<li>75 Brzyszkowská (Orlová, 28 %), model 36,9 %</li>
+</ul>
+<p><b>Metrika:</b> skutečný výsledek v 1. kole minus průměr statistického modelu. <b>Srovnávací skupina:</b> ostatní kandidáti, kterým model dává aspoň 15 %. <b>Hypotéza:</b> baštoví kandidáti překonají model v průměru alespoň o 3 p.b. víc než srovnávací skupina. <b>Vyvráceno</b>, pokud bude rozdíl nulový nebo záporný. <i>Omezení:</i> šest kandidátů je malý vzorek. Starostka Poruby Baránková Vilamová vypadla, protože data ČSÚ za Ostravu nerozlišují městské obvody.</p>
+<h3>Předem zapsáno: pravidlo pro sobotní předpovědi STEM</h3>
+<p>CNN Prima ohlásila, že v sobotu po sečtení zhruba 80 % hlasů zveřejní pravděpodobnosti výhry ve 2. kole od analytiků STEM. Před 1. kolem žádnou předpověď nezveřejnila. Aby naše updaty po 1. kole nebyly jejich ozvěnou, <b>uděláme a zamkneme je commitem dřív, než se na čísla STEM podíváme</b>. Ta si pak zapíšeme jako externí benchmark pro 2. kolo, podobně jako model Seznam Zpráv pro 1. kolo.</p>
 <h3>Nové zdroje dne</h3>
 <p>Zdroje jsme dnes jen zapsali, žádný z nich nezměnil odhady.</p>
 <ul>

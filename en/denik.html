@@ -43,6 +43,19 @@ table.cards td b{white-space:nowrap}table.cards .pill{white-space:normal}
 <p>We collected daily Czech Wikipedia pageviews of the candidates' articles (1 Aug–7 Oct; 93 of 154 candidates have an article). We do <b>not</b> use them as an input, because attention is driven mostly by scandals and famous names. After the election we will score them as a simple benchmark: <i>the most-viewed candidate in a district wins</i> (average 24 Sep–7 Oct). This rule predicts:</p>
 <p class="muted">3 Tsoukernik · 6 Steiner · 9 Řehka · 12 Ušatý · 15 Chalupský · 18 Štěpánek · 21 Šarapatka · 24 Pecková · 27 J. Čižinský · 30 Gerloch · 33 Linhart · 36 Půta · 39 Sobotka · 42 Sehnal · 45 Nebeská · 48 Grulich · 51 Šmarda · 54 Rédová Fajmonová · 57 Grolich · 60 Papoušek · 63 Obrtel · 66 Kohajda · 69 Lisková · 72 Šimetka · 75 Szyja · 78 Goláň · 81 Balaštíková</p>
 <p>The most-viewed candidate is the market favourite in 13 of 25 districts and the AI + model favourite in 9. We also tried Google Trends, but for Senate districts it returns mostly zeros and confuses namesakes, so we do not use it. The data are in the repository.</p>
+<h3>Recorded in advance: the home-base hypothesis</h3>
+<p>We suspect our statistical model underrates candidates with a large home base (see Mistakes and fixes). So that we cannot choose the group after seeing the results, we defined it mechanically from ČSÚ data: <i>a sitting mayor of a municipality that is home to at least 15 % of the district's voters</i>.</p>
+<ul>
+<li>15 Kozár (Jindřichův Hradec, 16 % of voters), model round 1 22.2 %</li>
+<li>27 J. Čižinský (Praha 7, 37 %), model 22.9 %</li>
+<li>36 Volfová (Česká Lípa, 25 %), model 28.8 %</li>
+<li>42 Kašpar (Kolín, 21 %), model 30.3 %</li>
+<li>63 Vrána (Přerov, 33 %), model 31.9 %</li>
+<li>75 Brzyszkowská (Orlová, 28 %), model 36.9 %</li>
+</ul>
+<p><b>Metric:</b> actual round-1 share minus the statistical model's mean. <b>Comparison group:</b> all other candidates the model gives at least 15 %. <b>Hypothesis:</b> home-base candidates beat the model by at least 3 pp more on average than the comparison group. <b>Refuted</b> if the difference is zero or negative. <i>Limitations:</i> six candidates is a small sample. Poruba mayor Baránková Vilamová drops out because ČSÚ data do not split Ostrava into city districts.</p>
+<h3>Recorded in advance: a rule for Saturday's STEM predictions</h3>
+<p>CNN Prima announced that on Saturday, once about 80 % of the votes are counted, it will publish runoff win probabilities from STEM analysts. It published no forecast before round 1. To keep our post-round-1 updates from echoing them, <b>we will make and lock our updates with a commit before looking at the STEM numbers</b>. We will then record those as an external benchmark for round 2, just as the Seznam Zprávy model serves for round 1.</p>
 <h3>New sources today</h3>
 <p>Today's sources were only logged; none of them changed the forecasts.</p>
 <ul>
