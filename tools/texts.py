@@ -669,6 +669,15 @@ JOURNAL.append(dict(
 <li><b>Titulek není obsah.</b> Zprávu o Porubě jsme v prvním zápisu přiřadili k ostravskému senátnímu obvodu jen podle titulku. Šlo ale o komunální volby. Na odhady to vliv nemělo (krok A/B jsme stejně přeskočili). <i>Náprava:</i> zdroj, který by mohl změnit odhad, vždy otevřít, nestačí titulek.</li>
 <li><b>Tipsport nepovolí načítání stránek v rámu</b>, takže jsme detaily deseti obvodů, kde se změnil kurz Ano, otevírali postupně (8 s mezi stránkami). U ostatních 17 obvodů se kurz Ano nezměnil a kurz Ne přebíráme ze 8. 10. stejně jako v předchozích dnech.</li>
 </ol>
+<h3>Večerní doplněk (21:15)</h3>
+<p>Odhady jsou zamrazené a nic z toho je nemění. Jen zapisujeme, co se během prvního dne voleb stalo.</p>
+<ul>
+<li><b>Kladno (30):</b> Miloš Zeman, který volí v Lánech v tomto obvodu, u urny veřejně řekl, že volil Aleše Gerlocha (<a href="https://www.idnes.cz/volby/volby-2026-prezident-zeman-lany-petr-pavel-gerloch-senat-pro.A261008_193825_volby_sahu">iDNES</a>, 16:03). Může to ovlivnit jen voliče, kteří půjdou volit v sobotu.</li>
+<li><b>Celostátně:</b> prezident Pavel se po kritice vrátil z dovolené v Maroku, odvolil a zase odletěl. Babiš za úspěch považuje obhajobu výsledku ANO.</li>
+<li><b>Účast:</b> oficiální čísla nejsou, ČSÚ je zveřejní až v sobotu po 14:00. Jen útržky: podle ČTK v prvních hodinách 10–15 %, v Havířově kolem 10 % v 17:00, Přerovský deník píše o „slibné účasti“. Neověřené.</li>
+<li><b>Závěrečné kurzy Fortuny (13:46, jen pro srovnání, nehodnotí se):</b> proti hodnocenému čtení z 10:38 se pohnuly jen dva obvody. V Praze 1 posílil Jan Čižinský (2,00 → 1,90) a v Pelhřimově Med (2,70 → 2,50). V obou případech je to pohyb od nás. Ostatních 25 obvodů beze změny.</li>
+<li><b>Tipsport</b> bere sázky do soboty 12:00. Jeho poslední kurz kvůli načasování nezapíšeme, takže pro srovnání zůstává jen Fortuna.</li>
+</ul>
 <p><b>Dál:</b> v sobotu po 14:00 výsledky 1. kola z volby.gov.cz. Vyhodnotíme postupy do 2. kola pro všech pět sérií, porovnáme se Seznam Zprávami a s Wikipedií a ověříme hypotézu o domácích baštách. Pak přepočítáme model se skutečnými výsledky a uděláme updaty pro 2. kolo. Ty zamkneme dřív, než uvidíme předpovědi STEM.</p>""",
     en="""<p><b>The forecasts are frozen.</b> A final news check (10:25–10:35) found nothing that changes the race in any district. We therefore locked AI and AI + model unchanged at 10:35, before reading the odds (commit <code>ced8415</code>). <b>The 9 Oct snapshots are the ones we will score</b>: AI, Statistical model (as of 3 Oct), AI + model, Betting (odds read 10:36–10:42) and Blend. Polls open today at 14:00. <i>Note: this page went live only in the afternoon, after the polls had opened. The forecasts are unchanged; the commit times in the repository show they were made before 14:00 (lock 10:35, build 10:42).</i></p>
 <h3>What changed</h3>
@@ -695,6 +704,15 @@ JOURNAL.append(dict(
 <li><b>A headline is not the content.</b> In the first log entry we assigned the Poruba story to the Ostrava Senate district based on the headline alone. It was about the municipal election. It had no effect on the forecasts (step A/B was skipped anyway). <i>Fix:</i> always open any source that could change a forecast; the headline is not enough.</li>
 <li><b>Tipsport does not allow its pages in a frame</b>, so we opened the detail pages of the ten districts whose “Yes” price changed one by one (8 s apart). In the other 17 districts the “Yes” price did not change and the “No” price is carried from 8 Oct, as on previous days.</li>
 </ol>
+<h3>Evening addendum (21:15)</h3>
+<p>The forecasts are frozen and none of this changes them. We only record what happened on the first day of voting.</p>
+<ul>
+<li><b>Kladno (30):</b> Miloš Zeman, who votes in Lány in this district, said publicly at the ballot box that he voted for Aleš Gerloch (<a href="https://www.idnes.cz/volby/volby-2026-prezident-zeman-lany-petr-pavel-gerloch-senat-pro.A261008_193825_volby_sahu">iDNES</a>, 16:03). It can only affect those who vote on Saturday.</li>
+<li><b>Nationally:</b> after criticism, President Pavel flew back from his holiday in Morocco, voted and left again. Babiš says defending ANO's result would be a success.</li>
+<li><b>Turnout:</b> there are no official numbers; ČSÚ publishes them only after 14:00 on Saturday. Only fragments: per ČTK 10–15 % in the first hours, Havířov about 10 % at 17:00, Přerovský deník reports “promising turnout”. Unverified.</li>
+<li><b>Fortuna closing odds (13:46, reference only, not scored):</b> compared with the scored 10:38 read, only two districts moved. In Praha 1 Jan Čižinský strengthened (2.00 → 1.90) and in Pelhřimov Med (2.70 → 2.50). Both moves are away from us. The other 25 districts are unchanged.</li>
+<li><b>Tipsport</b> takes bets until 12:00 on Saturday. Because of timing we will not record its last price, so Fortuna is the only reference.</li>
+</ul>
 <p><b>Next:</b> on Saturday after 14:00, round 1 results from volby.gov.cz. We will score runoff qualification for all five series, compare with Seznam Zprávy and Wikipedia, and test the home-base hypothesis. Then we re-run the model with the actual results and update for round 2. Those updates will be locked before we see the STEM predictions.</p>"""))
 
 # "What's new today" box at the top of the overview, per date (short, hand-written; auto moves are added below it).
