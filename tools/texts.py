@@ -644,7 +644,7 @@ JOURNAL.append(dict(
     date="2026-10-09",
     title_cs="Den 8: freeze. Tyto odhady hodnotíme",
     title_en="Day 8: freeze. These are the forecasts we will score",
-    cs="""<p><b>Odhady jsou zamrazené.</b> Poslední kontrola zpráv (10:30–10:45) nenašla nic, co by změnilo situaci v některém obvodu. AI a AI s modelem jsme proto zamkli v 10:35 beze změny, ještě před čtením kurzů (commit <code>ced8415</code>). <b>Hodnotit budeme snapshoty z 9. 10.</b>: AI, Statistický model (stav 3. 10.), AI s modelem, Sázky (kurzy čtené 10:50–11:05) a Blend. Volby začínají dnes ve 14:00.</p>
+    cs="""<p><b>Odhady jsou zamrazené.</b> Poslední kontrola zpráv (10:25–10:35) nenašla nic, co by změnilo situaci v některém obvodu. AI a AI s modelem jsme proto zamkli v 10:35 beze změny, ještě před čtením kurzů (commit <code>ced8415</code>). <b>Hodnotit budeme snapshoty z 9. 10.</b>: AI, Statistický model (stav 3. 10.), AI s modelem, Sázky (kurzy čtené 10:36–10:42) a Blend. Volby začínají dnes ve 14:00.</p>
 <h3>Co se změnilo</h3>
 <ul>
 <li><b>Zprávy:</b> Babišovi lékař zakázal zbytek kampaně kvůli horečce. Jde o pokračování středeční nemoci, která ANO v posledních dnech mírně oslabuje. Jinak se objevily jen předvolební přehledy a rozhovory.</li>
@@ -654,7 +654,7 @@ JOURNAL.append(dict(
 <h3>Předem zapsáno: kurzy během voleb</h3>
 <p>Fortuna sázky uzavírá dnes ve 14:00, ale <b>Tipsport bere sázky až do soboty 12:00</b>, tedy i během hlasování. Pozdější kurzy už v sobě mají dění během voleb, třeba zprávy o volební účasti. Srovnávat s nimi naše páteční odhady by nebylo férové. Proto:</p>
 <ul>
-<li><b>Hodnocená série Sázky</b> = dnešní snapshot (kurzy čtené 10:50–11:05). Všech pět sérií tak vychází ze stejných informací.</li>
+<li><b>Hodnocená série Sázky</b> = dnešní snapshot (kurzy čtené 10:36–10:42). Všech pět sérií tak vychází ze stejných informací.</li>
 <li><b>Jen pro srovnání</b> si zapíšeme ještě kurzy Fortuny těsně před 14:00 a kurzy Tipsportu v sobotu kolem 11:30, tedy poslední cenu před uzavřením. Ukážou, kam se trh posunul během voleb, jestli k nám, nebo od nás. Do skóre nevstupují.</li>
 </ul>
 <h3>Nové zdroje dne</h3>
@@ -670,7 +670,7 @@ JOURNAL.append(dict(
 <li><b>Tipsport nepovolí načítání stránek v rámu</b>, takže jsme detaily deseti obvodů, kde se změnil kurz Ano, otevírali postupně (8 s mezi stránkami). U ostatních 17 obvodů se kurz Ano nezměnil a kurz Ne přebíráme ze 8. 10. stejně jako v předchozích dnech.</li>
 </ol>
 <p><b>Dál:</b> v sobotu po 14:00 výsledky 1. kola z volby.gov.cz. Vyhodnotíme postupy do 2. kola pro všech pět sérií, porovnáme se Seznam Zprávami a s Wikipedií a ověříme hypotézu o domácích baštách. Pak přepočítáme model se skutečnými výsledky a uděláme updaty pro 2. kolo. Ty zamkneme dřív, než uvidíme předpovědi STEM.</p>""",
-    en="""<p><b>The forecasts are frozen.</b> A final news check (10:30–10:45) found nothing that changes the race in any district. We therefore locked AI and AI + model unchanged at 10:35, before reading the odds (commit <code>ced8415</code>). <b>The 9 Oct snapshots are the ones we will score</b>: AI, Statistical model (as of 3 Oct), AI + model, Betting (odds read 10:50–11:05) and Blend. Polls open today at 14:00.</p>
+    en="""<p><b>The forecasts are frozen.</b> A final news check (10:25–10:35) found nothing that changes the race in any district. We therefore locked AI and AI + model unchanged at 10:35, before reading the odds (commit <code>ced8415</code>). <b>The 9 Oct snapshots are the ones we will score</b>: AI, Statistical model (as of 3 Oct), AI + model, Betting (odds read 10:36–10:42) and Blend. Polls open today at 14:00.</p>
 <h3>What changed</h3>
 <ul>
 <li><b>News:</b> Babiš's doctor banned him from the rest of the campaign because of a fever. This continues Wednesday's illness, which mildly weakens ANO's final days. Otherwise there were only election previews and interviews.</li>
@@ -680,7 +680,7 @@ JOURNAL.append(dict(
 <h3>Recorded in advance: odds during voting</h3>
 <p>Fortuna closes its markets today at 14:00, but <b>Tipsport takes bets until Saturday 12:00</b>, i.e. during voting. Later odds already reflect events during the election, such as turnout reports. Comparing them with our Friday forecasts would be unfair. Therefore:</p>
 <ul>
-<li><b>The scored Betting series</b> = today's snapshot (odds read 10:50–11:05). All five series are thus based on the same information.</li>
+<li><b>The scored Betting series</b> = today's snapshot (odds read 10:36–10:42). All five series are thus based on the same information.</li>
 <li><b>For reference only</b> we will also record Fortuna just before 14:00 and Tipsport on Saturday around 11:30, the last price before it closes. They will show where the market moved during voting, towards us or away from us. They do not enter the score.</li>
 </ul>
 <h3>New sources today</h3>
@@ -747,12 +747,12 @@ CHANGES = {
 </ul>"""),
     "2026-10-09": dict(
         cs="""<ul>
-<li><b>Freeze:</b> poslední kontrola zpráv nic nezměnila. Hodnotit budeme tyto snapshoty z 9. 10. (AI a AI s modelem zamčené v 10:35, kurzy čtené 10:50–11:05).</li>
+<li><b>Freeze:</b> poslední kontrola zpráv nic nezměnila. Hodnotit budeme tyto snapshoty z 9. 10. (AI a AI s modelem zamčené v 10:35, kurzy čtené 10:36–10:42).</li>
 <li><b>Sázky:</b> klidný den, favorit trhu se nikde nezměnil. Trh má jiného favorita než AI s modelem v 7 obvodech (Cheb, Plzeň, Pelhřimov, Praha 5, Kladno, Přerov, Litovel).</li>
 <li><b>Předem zapsáno:</b> Tipsport bere sázky i během voleb (do soboty 12:00). Hodnotíme dnešní kurzy, pozdější si zapíšeme jen pro srovnání.</li>
 </ul>""",
         en="""<ul>
-<li><b>Freeze:</b> the final news check changed nothing. These 9 Oct snapshots are the ones we will score (AI and AI + model locked at 10:35, odds read 10:50–11:05).</li>
+<li><b>Freeze:</b> the final news check changed nothing. These 9 Oct snapshots are the ones we will score (AI and AI + model locked at 10:35, odds read 10:36–10:42).</li>
 <li><b>Betting:</b> a quiet day; the market favourite changed nowhere. The market has a different favourite from AI + model in 7 districts (Cheb, Plzeň, Pelhřimov, Praha 5, Kladno, Přerov, Litovel).</li>
 <li><b>Recorded in advance:</b> Tipsport takes bets during voting (until Saturday 12:00). We score today's odds; later ones are recorded for reference only.</li>
 </ul>"""),
