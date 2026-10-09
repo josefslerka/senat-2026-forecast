@@ -640,6 +640,63 @@ JOURNAL.append(dict(
 </ol>
 <p><b>Next:</b> on Friday morning a last quick news check and the closing odds. Forecasts freeze by 12:00; round 1 results come on Saturday.</p>"""))
 
+JOURNAL.append(dict(
+    date="2026-10-09",
+    title_cs="Den 8: freeze. Tyto odhady hodnotíme",
+    title_en="Day 8: freeze. These are the forecasts we will score",
+    cs="""<p><b>Odhady jsou zamrazené.</b> Poslední kontrola zpráv (10:30–10:45) nenašla nic, co by změnilo situaci v některém obvodu. AI a AI s modelem jsme proto zamkli v 10:35 beze změny, ještě před čtením kurzů (commit <code>ced8415</code>). <b>Hodnotit budeme snapshoty z 9. 10.</b>: AI, Statistický model (stav 3. 10.), AI s modelem, Sázky (kurzy čtené 10:50–11:05) a Blend. Volby začínají dnes ve 14:00.</p>
+<h3>Co se změnilo</h3>
+<ul>
+<li><b>Zprávy:</b> Babišovi lékař zakázal zbytek kampaně kvůli horečce. Jde o pokračování středeční nemoci, která ANO v posledních dnech mírně oslabuje. Jinak se objevily jen předvolební přehledy a rozhovory.</li>
+<li><b>Sázky:</b> poslední den byl klidný. Favorit trhu se nezměnil v žádném obvodu, žádný kandidát se nepohnul o víc než 3 p.b. Nejvíc se změnila Plzeň (Řehka +2 na 63 %, tedy dál od nás) a Hradec Králové (Dvořák +3 na 51 %, blíž k nám). Celkový rozdíl mezi trhem a AI s modelem je stejný jako včera.</li>
+<li><b>Sporné obvody při freeze:</b> trh má jiného favorita než AI s modelem v 7 obvodech: Cheb, Plzeň, Pelhřimov, Praha 5, Kladno, Přerov a Litovel. Praha 1 a Frýdek-Místek mezi ně od středy a čtvrtka nepatří, protože trh se tam přesunul k našemu favoritovi. Při vyhodnocení ale použijeme předem zapsaný seznam 9 obvodů z 5. 10. a k tomu tento.</li>
+</ul>
+<h3>Předem zapsáno: kurzy během voleb</h3>
+<p>Fortuna sázky uzavírá dnes ve 14:00, ale <b>Tipsport bere sázky až do soboty 12:00</b>, tedy i během hlasování. Pozdější kurzy už v sobě mají dění během voleb, třeba zprávy o volební účasti. Srovnávat s nimi naše páteční odhady by nebylo férové. Proto:</p>
+<ul>
+<li><b>Hodnocená série Sázky</b> = dnešní snapshot (kurzy čtené 10:50–11:05). Všech pět sérií tak vychází ze stejných informací.</li>
+<li><b>Jen pro srovnání</b> si zapíšeme ještě kurzy Fortuny těsně před 14:00 a kurzy Tipsportu v sobotu kolem 11:30, tedy poslední cenu před uzavřením. Ukážou, kam se trh posunul během voleb, jestli k nám, nebo od nás. Do skóre nevstupují.</li>
+</ul>
+<h3>Nové zdroje dne</h3>
+<ul>
+<li>CNN Prima NEWS (8. 10.): <a href="https://cnn.iprima.cz/skolilo-me-to-doktor-mi-zakazal-pokracovat-v-kampani-rekl-babis-priznivcum-kopl-si-do-senatu-523920">Skolilo mě to, doktor mi zakázal pokračovat v kampani, řekl Babiš příznivcům</a>. Celostátní, mírné minus pro ANO, nic nového.</li>
+<li>XTV (8. 10.): rozhovor s Alešem Gerlochem. Kladno (30), nic nového. Živé Chebsko (8. 10.): programy kandidátů. Cheb (3).</li>
+<li>Vyřazeno: iDNES (8. 10.) <a href="https://www.idnes.cz/volby/ostrava/komunalni-volby-zameny-ostrava-poruba-hlasovaci-listky.A261008_122233_ostrava-zpravy_jog">chybné hlasovací lístky v Porubě</a>. Podle titulku vypadal jako zpráva o senátním obvodu, po otevření jde o komunální volby.</li>
+<li>Neotevřeno: iROZHLAS „Analýza senátních voleb obvod po obvodu“, Echo24 „10 nejnapínavějších soubojů“ a předpovědi analytiků CNN Prima. Jde o cizí předpovědi, ne o vstup. Přečteme je až po volbách.</li>
+</ul>
+<h3>Chyby a nápravy</h3>
+<ol>
+<li><b>Titulek není obsah.</b> Zprávu o Porubě jsme v prvním zápisu přiřadili k ostravskému senátnímu obvodu jen podle titulku. Šlo ale o komunální volby. Na odhady to vliv nemělo (krok A/B jsme stejně přeskočili). <i>Náprava:</i> zdroj, který by mohl změnit odhad, vždy otevřít, nestačí titulek.</li>
+<li><b>Tipsport nepovolí načítání stránek v rámu</b>, takže jsme detaily deseti obvodů, kde se změnil kurz Ano, otevírali postupně (8 s mezi stránkami). U ostatních 17 obvodů se kurz Ano nezměnil a kurz Ne přebíráme ze 8. 10. stejně jako v předchozích dnech.</li>
+</ol>
+<p><b>Dál:</b> v sobotu po 14:00 výsledky 1. kola z volby.gov.cz. Vyhodnotíme postupy do 2. kola pro všech pět sérií, porovnáme se Seznam Zprávami a s Wikipedií a ověříme hypotézu o domácích baštách. Pak přepočítáme model se skutečnými výsledky a uděláme updaty pro 2. kolo. Ty zamkneme dřív, než uvidíme předpovědi STEM.</p>""",
+    en="""<p><b>The forecasts are frozen.</b> A final news check (10:30–10:45) found nothing that changes the race in any district. We therefore locked AI and AI + model unchanged at 10:35, before reading the odds (commit <code>ced8415</code>). <b>The 9 Oct snapshots are the ones we will score</b>: AI, Statistical model (as of 3 Oct), AI + model, Betting (odds read 10:50–11:05) and Blend. Polls open today at 14:00.</p>
+<h3>What changed</h3>
+<ul>
+<li><b>News:</b> Babiš's doctor banned him from the rest of the campaign because of a fever. This continues Wednesday's illness, which mildly weakens ANO's final days. Otherwise there were only election previews and interviews.</li>
+<li><b>Betting:</b> the last day was quiet. The market favourite changed in no district and no candidate moved by more than 3 pp. The biggest moves were Plzeň (Řehka +2 to 63 %, away from us) and Hradec Králové (Dvořák +3 to 51 %, towards us). The overall gap between the market and AI + model is the same as yesterday.</li>
+<li><b>Disputed districts at the freeze:</b> the market has a different favourite from AI + model in 7 districts: Cheb, Plzeň, Pelhřimov, Praha 5, Kladno, Přerov and Litovel. Praha 1 and Frýdek-Místek have dropped out since Wednesday and Thursday because the market moved to our favourite there. For scoring we will use the 9-district list pre-registered on 5 Oct, and this one as well.</li>
+</ul>
+<h3>Recorded in advance: odds during voting</h3>
+<p>Fortuna closes its markets today at 14:00, but <b>Tipsport takes bets until Saturday 12:00</b>, i.e. during voting. Later odds already reflect events during the election, such as turnout reports. Comparing them with our Friday forecasts would be unfair. Therefore:</p>
+<ul>
+<li><b>The scored Betting series</b> = today's snapshot (odds read 10:50–11:05). All five series are thus based on the same information.</li>
+<li><b>For reference only</b> we will also record Fortuna just before 14:00 and Tipsport on Saturday around 11:30, the last price before it closes. They will show where the market moved during voting, towards us or away from us. They do not enter the score.</li>
+</ul>
+<h3>New sources today</h3>
+<ul>
+<li>CNN Prima NEWS (8 Oct): <a href="https://cnn.iprima.cz/skolilo-me-to-doktor-mi-zakazal-pokracovat-v-kampani-rekl-babis-priznivcum-kopl-si-do-senatu-523920">Babiš: the doctor banned me from continuing the campaign</a>. National, mild minus for ANO, nothing new.</li>
+<li>XTV (8 Oct): interview with Aleš Gerloch. Kladno (30), nothing new. Živé Chebsko (8 Oct): candidates' programmes. Cheb (3).</li>
+<li>Excluded: iDNES (8 Oct) <a href="https://www.idnes.cz/volby/ostrava/komunalni-volby-zameny-ostrava-poruba-hlasovaci-listky.A261008_122233_ostrava-zpravy_jog">wrong ballots in Poruba</a>. Judging by the headline it looked like a Senate-district story; once opened, it is about the municipal election.</li>
+<li>Not opened: iROZHLAS “district-by-district analysis”, Echo24 “10 most exciting races” and CNN Prima analysts' predictions. These are someone else's forecasts, not inputs. We will read them after the election.</li>
+</ul>
+<h3>Mistakes and fixes</h3>
+<ol>
+<li><b>A headline is not the content.</b> In the first log entry we assigned the Poruba story to the Ostrava Senate district based on the headline alone. It was about the municipal election. It had no effect on the forecasts (step A/B was skipped anyway). <i>Fix:</i> always open any source that could change a forecast; the headline is not enough.</li>
+<li><b>Tipsport does not allow its pages in a frame</b>, so we opened the detail pages of the ten districts whose “Yes” price changed one by one (8 s apart). In the other 17 districts the “Yes” price did not change and the “No” price is carried from 8 Oct, as on previous days.</li>
+</ol>
+<p><b>Next:</b> on Saturday after 14:00, round 1 results from volby.gov.cz. We will score runoff qualification for all five series, compare with Seznam Zprávy and Wikipedia, and test the home-base hypothesis. Then we re-run the model with the actual results and update for round 2. Those updates will be locked before we see the STEM predictions.</p>"""))
+
 # "What's new today" box at the top of the overview, per date (short, hand-written; auto moves are added below it).
 CHANGES = {
     "2026-10-05": dict(
@@ -687,5 +744,16 @@ CHANGES = {
 <li><b>Last day of the campaign:</b> AI and AI + model are unchanged. Forecasts freeze tomorrow by 12:00.</li>
 <li><b>Betting:</b> in Praha 1 the market favourite flipped to Padevět, matching AI + model. In Pelhřimov, Med rises (+6 pp). In Praha 5 and Litovel the market moved away from us; the overall gap is unchanged.</li>
 <li><b>Recorded in advance:</b> a “most-viewed on Wikipedia wins” benchmark, a home-base hypothesis (6 big-town mayors) and a rule that Saturday's updates are locked before we see the STEM predictions. Details in the journal.</li>
+</ul>"""),
+    "2026-10-09": dict(
+        cs="""<ul>
+<li><b>Freeze:</b> poslední kontrola zpráv nic nezměnila. Hodnotit budeme tyto snapshoty z 9. 10. (AI a AI s modelem zamčené v 10:35, kurzy čtené 10:50–11:05).</li>
+<li><b>Sázky:</b> klidný den, favorit trhu se nikde nezměnil. Trh má jiného favorita než AI s modelem v 7 obvodech (Cheb, Plzeň, Pelhřimov, Praha 5, Kladno, Přerov, Litovel).</li>
+<li><b>Předem zapsáno:</b> Tipsport bere sázky i během voleb (do soboty 12:00). Hodnotíme dnešní kurzy, pozdější si zapíšeme jen pro srovnání.</li>
+</ul>""",
+        en="""<ul>
+<li><b>Freeze:</b> the final news check changed nothing. These 9 Oct snapshots are the ones we will score (AI and AI + model locked at 10:35, odds read 10:50–11:05).</li>
+<li><b>Betting:</b> a quiet day; the market favourite changed nowhere. The market has a different favourite from AI + model in 7 districts (Cheb, Plzeň, Pelhřimov, Praha 5, Kladno, Přerov, Litovel).</li>
+<li><b>Recorded in advance:</b> Tipsport takes bets during voting (until Saturday 12:00). We score today's odds; later ones are recorded for reference only.</li>
 </ul>"""),
 }
