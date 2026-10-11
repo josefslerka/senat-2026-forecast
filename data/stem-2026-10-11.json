@@ -1,0 +1,437 @@
+{
+ "_warning": "Externí benchmark (STEM pro CNN Prima). NEČÍST v blind stages. Staženo PO locku 3dd3820 + f4179ec.",
+ "source": "https://cnn.iprima.cz/exkluzivni-predikce-senatnich-voleb-kdo-postoupi-a-kdo-uspeje-ve-druhem-kole-524058",
+ "chart": "https://flo.uri.sh/visualisation/30516580/embed",
+ "published": "2026-10-10 21:56 (akt. 2026-10-11 07:48)",
+ "retrieved": "2026-10-11",
+ "unit": "% šance stát se senátorem (výhra ve 2. kole), dle STEM",
+ "districts": [
+  {
+   "obvod": 3,
+   "name": "Cheb",
+   "candidates": [
+    {
+     "name": "M. Plevný",
+     "party": "STAN",
+     "p": 0.99
+    },
+    {
+     "name": "S. Tsoukernik",
+     "party": "ANO",
+     "p": 0.01
+    }
+   ]
+  },
+  {
+   "obvod": 6,
+   "name": "Louny",
+   "candidates": [
+    {
+     "name": "I. Trešl",
+     "party": "STAN",
+     "p": 0.99
+    },
+    {
+     "name": "J. Mikoláš",
+     "party": "ANO",
+     "p": 0.01
+    }
+   ]
+  },
+  {
+   "obvod": 9,
+   "name": "Plzeň-město",
+   "candidates": [
+    {
+     "name": "K. Řehka",
+     "party": "STAN",
+     "p": 0.99
+    },
+    {
+     "name": "L. Kantorová",
+     "party": "ANO",
+     "p": 0.01
+    }
+   ]
+  },
+  {
+   "obvod": 12,
+   "name": "Strakonice",
+   "candidates": [
+    {
+     "name": "T. Fiala",
+     "party": "NČ",
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "obvod": 15,
+   "name": "Pelhřimov",
+   "candidates": [
+    {
+     "name": "L. Med",
+     "party": "ODS",
+     "p": 0.99
+    },
+    {
+     "name": "M. Kozár",
+     "party": "ANO",
+     "p": 0.01
+    }
+   ]
+  },
+  {
+   "obvod": 18,
+   "name": "Příbram",
+   "candidates": [
+    {
+     "name": "P. Štěpánek",
+     "party": "STAN",
+     "p": 0.99
+    },
+    {
+     "name": "B. Daňhová",
+     "party": "ANO",
+     "p": 0.01
+    }
+   ]
+  },
+  {
+   "obvod": 21,
+   "name": "Praha 5",
+   "candidates": [
+    {
+     "name": "R. Sáblík",
+     "party": "ODS",
+     "p": 0.52
+    },
+    {
+     "name": "V. Láska",
+     "party": "SEN 21",
+     "p": 0.4
+    },
+    {
+     "name": "P. Prokšanová",
+     "party": "KSČM",
+     "p": 0.04
+    },
+    {
+     "name": "P. Spirov",
+     "party": "SPD",
+     "p": 0.02
+    },
+    {
+     "name": "Z. Šarapatka",
+     "party": "TOP 09",
+     "p": 0.02
+    }
+   ]
+  },
+  {
+   "obvod": 24,
+   "name": "Praha 9",
+   "candidates": [
+    {
+     "name": "D. Smoljak",
+     "party": "STAN",
+     "p": 0.99
+    },
+    {
+     "name": "D. Pecková",
+     "party": "ODS",
+     "p": 0.01
+    }
+   ]
+  },
+  {
+   "obvod": 27,
+   "name": "Praha 1",
+   "candidates": [
+    {
+     "name": "J. Padevět",
+     "party": "STAN",
+     "p": 0.99
+    },
+    {
+     "name": "J. Čižinský",
+     "party": "PRAHA SOBĚ",
+     "p": 0.01
+    }
+   ]
+  },
+  {
+   "obvod": 30,
+   "name": "Kladno",
+   "candidates": [
+    {
+     "name": "P. Paták",
+     "party": "ODS",
+     "p": 0.88
+    },
+    {
+     "name": "A. Sucharda Šípová",
+     "party": "Piráti",
+     "p": 0.12
+    }
+   ]
+  },
+  {
+   "obvod": 33,
+   "name": "Děčín",
+   "candidates": [
+    {
+     "name": "Z. Linhart",
+     "party": "STAN",
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "obvod": 36,
+   "name": "Česká Lípa",
+   "candidates": [
+    {
+     "name": "M. Půta",
+     "party": "SLK",
+     "p": 0.99
+    },
+    {
+     "name": "J. Volfová",
+     "party": "ANO",
+     "p": 0.01
+    }
+   ]
+  },
+  {
+   "obvod": 39,
+   "name": "Trutnov",
+   "candidates": [
+    {
+     "name": "J. Sobotka",
+     "party": "STAN",
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "obvod": 42,
+   "name": "Kolín",
+   "candidates": [
+    {
+     "name": "M. Kašpar",
+     "party": "STAN",
+     "p": 0.99
+    },
+    {
+     "name": "A. Brzobohatá",
+     "party": "ANO",
+     "p": 0.01
+    }
+   ]
+  },
+  {
+   "obvod": 45,
+   "name": "Hradec Králové",
+   "candidates": [
+    {
+     "name": "Z. Ceralová Petrofová",
+     "party": "ODS",
+     "p": 0.86
+    },
+    {
+     "name": "M. Dvořák",
+     "party": "STAN",
+     "p": 0.14
+    }
+   ]
+  },
+  {
+   "obvod": 48,
+   "name": "Rychnov nad Kněžnou",
+   "candidates": [
+    {
+     "name": "J. Grulich",
+     "party": "TOP 09",
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "obvod": 51,
+   "name": "Žďár nad Sázavou",
+   "candidates": [
+    {
+     "name": "J. Klement",
+     "party": "KDU-ČSL",
+     "p": 0.56
+    },
+    {
+     "name": "M. Šmarda",
+     "party": "Volt",
+     "p": 0.44
+    }
+   ]
+  },
+  {
+   "obvod": 54,
+   "name": "Znojmo",
+   "candidates": [
+    {
+     "name": "T. Třetina",
+     "party": "TOP 09",
+     "p": 0.99
+    },
+    {
+     "name": "J. Kyněra",
+     "party": "ANO",
+     "p": 0.01
+    }
+   ]
+  },
+  {
+   "obvod": 57,
+   "name": "Vyškov",
+   "candidates": [
+    {
+     "name": "J. Grolich",
+     "party": "KDU-ČSL",
+     "p": 1.0
+    }
+   ]
+  },
+  {
+   "obvod": 60,
+   "name": "Brno-město",
+   "candidates": [
+    {
+     "name": "Z. Papoušek",
+     "party": "ODS",
+     "p": 0.99
+    },
+    {
+     "name": "K. Zitterbart",
+     "party": "STAN",
+     "p": 0.01
+    }
+   ]
+  },
+  {
+   "obvod": 63,
+   "name": "Přerov",
+   "candidates": [
+    {
+     "name": "J. Navařík",
+     "party": "ODS",
+     "p": 0.53
+    },
+    {
+     "name": "P. Vrána",
+     "party": "ANO",
+     "p": 0.47
+    }
+   ]
+  },
+  {
+   "obvod": 66,
+   "name": "Litovel",
+   "candidates": [
+    {
+     "name": "M. Ošťádal",
+     "party": "24/7",
+     "p": 0.99
+    },
+    {
+     "name": "M. Škurek",
+     "party": "ANO",
+     "p": 0.01
+    }
+   ]
+  },
+  {
+   "obvod": 69,
+   "name": "Frýdek-Místek",
+   "candidates": [
+    {
+     "name": "P. Korč",
+     "party": "NMFM",
+     "p": 0.78
+    },
+    {
+     "name": "H. Pešatová",
+     "party": "STAN",
+     "p": 0.22
+    }
+   ]
+  },
+  {
+   "obvod": 72,
+   "name": "Ostrava-město",
+   "candidates": [
+    {
+     "name": "O. Šimetka",
+     "party": "ODS",
+     "p": 0.99
+    },
+    {
+     "name": "L. Baránková Vilamová",
+     "party": "ANO",
+     "p": 0.01
+    }
+   ]
+  },
+  {
+   "obvod": 75,
+   "name": "Karviná",
+   "candidates": [
+    {
+     "name": "L. Brzyszkowská",
+     "party": "ANO",
+     "p": 0.91
+    },
+    {
+     "name": "P. Kazík",
+     "party": "OK",
+     "p": 0.09
+    }
+   ]
+  },
+  {
+   "obvod": 78,
+   "name": "Zlín",
+   "candidates": [
+    {
+     "name": "T. Goláň",
+     "party": "ODS",
+     "p": 0.95
+    },
+    {
+     "name": "I. Mitáček",
+     "party": "STAN",
+     "p": 0.03
+    },
+    {
+     "name": "P. Dlouhý",
+     "party": "SEN 21",
+     "p": 0.02
+    }
+   ]
+  },
+  {
+   "obvod": 81,
+   "name": "Uherské Hradiště",
+   "candidates": [
+    {
+     "name": "J. Bazala",
+     "party": "KDU-ČSL",
+     "p": 0.99
+    },
+    {
+     "name": "J. Vašica",
+     "party": "ANO",
+     "p": 0.01
+    }
+   ]
+  }
+ ]
+}
