@@ -775,3 +775,107 @@ CHANGES = {
 <li><b>Recorded in advance:</b> Tipsport takes bets during voting (until Saturday 12:00). We score today's odds; later ones are recorded for reference only.</li>
 </ul>"""),
 }
+JOURNAL.append(dict(
+    date="2026-10-11", title_cs="Dny 9–10: výsledky 1. kola, průběžné skóre a předpovědi na 2. kolo",
+    title_en="Days 9–10: round-1 results, interim scores and runoff forecasts",
+    cs="""<p><b>1. kolo je sečtené.</b> V 5 obvodech je senátor zvolen hned: Strakonice (Fiala), Děčín (Linhart), Trutnov (Sobotka), Rychnov nad Kněžnou (Grulich) a Vyškov (Grolich). Ve 22 obvodech rozhodne 2. kolo 16.–17. 10. Všech pět sérií předpovídá, <i>kdo získá mandát</i>, takže úplné skóre bude až po 2. kole. Teď umíme spočítat jen průběžné: kolik pravděpodobnosti dala série kandidátům, kteří vypadli, a jestli její favorit postoupil. Tabulky jsou na stránce <a href="skore.html">Skóre</a>.</p>
+<h3>Průběžné skóre</h3>
+<ul>
+<li><b>Kdo bude ve hře:</b> favorit postoupil ve 26 z 27 obvodů u všech pěti sérií. AI netrefila Plzeň (Aschenbrenner skončil třetí), trh Litovel (Kohajda skončil třetí o 146 hlasů).</li>
+<li><b>Jasní favoriti, k trhu:</b> v pěti obvodech rozhodnutých v 1. kole dával trh vítězům 88–98 %, AI 71–87 %. Brier: Sázky 0,04, Blend 0,07, AI 0,36, AI s modelem 0,41, Statistický model 0,91. AI je u jasných favoritů zbytečně opatrná, statistický model ještě víc.</li>
+<li><b>Sporné obvody, zatím k nám:</b> v 7 obvodech, kde měl při freeze trh jiného favorita než AI s modelem, vede po 1. kole pětkrát náš favorit (Cheb, Pelhřimov, Kladno, Přerov, Litovel) a dvakrát favorit trhu (Plzeň, Praha 5). Pokud ve 2. kole vyhrají lídři 1. kola, bude mít AI s modelem v těchto obvodech Brier 2,7 a Sázky 5,3. Pokud vyhrají druzí, obrátí se to: Sázky 4,9, AI s modelem 7,6.</li>
+<li><b>Celkově:</b> Blend je zatím nejlepší v části skóre, která už je jistá (Brier za vyřazené kandidáty 0,74; Sázky 0,81; AI s modelem 0,96; AI 1,18). Předem zapsané pořadí „Blend ≈ Sázky > AI s modelem > Statistický model ≈ AI“ zatím platí.</li>
+<li><b>AI 2. 10. a AI 9. 10. mají skoro stejné skóre.</b> Týden zpráv odhady AI téměř nezměnil, protože jsme je měnili jen kvůli novým faktům.</li>
+</ul>
+<h3>Předem zapsané benchmarky</h3>
+<ul>
+<li><b>Postupy ANO (Seznam Zprávy):</b> z 23 sledovaných kandidátů ANO postoupilo 13. Seznam Zprávy čekaly 13,4 / 17,3 / 21,2 (nepříznivý / střední / příznivý scénář), náš statistický model 14,5. Blíž byl náš model, i on ale ANO přecenil. Brier na postup: náš model 0,156, Seznam Zprávy 0,188. Průměrná chyba v procentech 1. kola je u obou 3,7 p.b.</li>
+<li><b>Hypotéza domácích bašt: potvrzena</b>, ale se slabým vzorkem. Starostové s velkou baštou dopadli proti modelu v průměru o 5,6 p.b. lépe, ostatní kandidáti o 1,3 p.b. Rozdíl 4,2 p.b. je nad předem zapsaným prahem 3. Většinu ho ale nese Kašpar v Kolíně (+15), Brzyszkowská v Karviné dopadla hůř než model (−3,3). Šest kandidátů je málo. Do modelu v2 to bereme jako vážné podezření, ne jako jistotu.</li>
+<li><b>Wikipedie (vyhraje nejčtenější):</b> nejčtenější kandidát postoupil nebo vyhrál ve 14 z 27 obvodů. Přímo vyhrát může jen v těch, kde postoupil.</li>
+<li><b>Statistický model v procentech 1. kola:</b> průměrná chyba 5,3 p.b. na kandidáta.</li>
+</ul>
+<h3>Překvapení</h3>
+<ul>
+<li><b>Hradec Králové:</b> nezávislá kandidátka Monika Nebeská několik hodin vedla. Ve výsledcích z venkova měla přes 20 %, ve městě 12 %. Až s městem se dostal do čela Dvořák (25,1 %), druhá je Ceralová Petrofová (ODS). Nebeskou jsme neviděli my ani trh, všichni jsme ji měli jako okrajovou kandidátku.</li>
+<li><b>Žďár nad Sázavou:</b> Klement postoupil před Černého o <b>jediný hlas</b> (11 373 : 11 372).</li>
+<li><b>Praha 1:</b> Padevět skončil na 49,64 %, těsně pod hranicí, za kterou by vyhrál už v 1. kole.</li>
+</ul>
+<h3>Předpovědi pro 2. kolo</h3>
+<p>Postup byl stejný jako 5. 10. Nejdřív <b>AI</b>: agent dostal svůj předchozí odhad, výsledky 1. kola a zprávy, bez modelu a bez kurzů. Jeho odhad jsme uložili. Teprve potom <b>AI s modelem</b>: stejný agent dostal i <b>statistický model pro 2. kolo</b> (vrstva 2. kola, tentokrát se skutečnými výsledky 1. kola). V každém kroku odhad zkontroloval samostatný red-team. 17 obvodů jsme zamkli commitem v sobotu ve 22:01 (<code>3dd3820</code>), Prahu 1, 5, 9, Brno a Žďár v neděli ráno nad konečnými čísly (commit <code>f4179ec</code>, 8:23). <b>Předpovědi STEM pro CNN Prima jsme před zamčením neotevřeli</b>, jak jsme 8. 10. předem zapsali. Zapíšeme si je jako benchmark pro 2. kolo. <b>Kurzy na 2. kolo</b> zatím nevypsala Fortuna ani Tipsport (kontrola v neděli v 8:25). Sázky a Blend pro 2. kolo proto doplníme, až budou.</p>
+<ul>
+<li><b>Kde se AI a AI s modelem rozcházejí:</b> Přerov (AI: Vrána 51 %, AI s modelem: Navařík 62 %). Model trestá ANO ve 2. kole, ale v roce 2020 v Přerově Vránu podcenil o 13 bodů. V Praze 5 se AI s modelem otočila ze Sáblíka na Lásku (62 %). V Praze 1 se čistá AI otočila z Čižinského na Padevěta (93 %), protože Padevět měl v 1. kole o 22 bodů víc. Ve Žďáru je Klement favoritem u obou sérií, ale u AI jen těsně (56 %, AI s modelem 66 %). Model přičetl Klementovi všechny hlasy Černého, protože Šmardovu kandidátku (Volt) kóduje mimo bloky.</li>
+<li><b>Nejtěsnější souboje:</b> Kladno (Šípová 52–53 %), Frýdek-Místek (Pešatová 52–54 %), Hradec Králové (Dvořák 54 %; Hůlková z ANO veřejně podpořila Ceralovou Petrofovou).</li>
+<li><b>Jasní favoriti</b> (90 % a víc u obou sérií): Cheb, Louny, Příbram, Kolín, Ostrava, Uherské Hradiště, Znojmo (AI 84 %). Z ranních obvodů: Praha 1 (Padevět 93–94 %), Praha 9 (Smoljak 95–96 %) a Brno (Papoušek 84–86 %).</li>
+</ul>
+<h3>Chyby a nápravy</h3>
+<ul>
+<li><b>Poznámky o kurzech v souboru zpráv.</b> Do souboru zpráv, ze kterého čerpají agenti, jsme v pátek a v sobotu ráno zapsali i referenční poznámky o pohybu kurzů: kterým směrem se pohnuly a v Kladně i konkrétní kurz. Při sobotních updatech je zahlédli koordinátoři pěti obvodů. Podle jejich kontroly nic z toho nedostal žádný krok, který odhad počítal. V Pelhřimově ale koordinátor viděl, že se trh pohnul k Medovi, ještě před dokončením odhadu. Proto má Pelhřimov riziko kontaminace „moderate“, ostatní „low“. <i>Příčina:</i> jeden soubor pro zprávy i trh. <i>Náprava:</i> poznámky o trhu jsou teď v samostatném souboru, který agenti nedostávají, a soubor zpráv před každým spuštěním kontrolujeme. Riziko je uvedené na stránce každého obvodu.</li>
+<li><b>Jména ve skriptu na skóre.</b> Dvojitá příjmení (Sucharda Šípová, Baránková Vilamová) a jmenovci (dva Čižinští v Praze 1) rozbily párování jmen. Průběžná čísla v sobotu odpoledne proto chvíli ukazovala v Kladně opak pravdy. <i>Náprava:</i> příjmení se hledá v celém jméně a musí sedět i křestní jméno.</li>
+<li><b>Došlo vyhledávání.</b> V sobotu večer agenti vyčerpali limit webového vyhledávání. U většiny obvodů proto chybí ověření, kdo koho po 1. kole podpořil (<code>research_limitation</code>). Limit platí pro celý běh, takže se nedělal ani nedělní research pro Prahu, Brno a Žďár. Ten stál jen na titulcích Google News a přímo načtených stránkách. <i>Náprava:</i> před 2. kolem pustíme kontrolu podpor zvlášť, v novém běhu.</li>
+<li><b>Model pro 2. kolo má strop.</b> U jasných favoritů vrací vždy 96,8 %, což je strop jeho kalibrace, ne skutečný odhad. Bloky stran kóduje jen podle kandidátky, takže SLK, Naše Česko nebo Osobnosti pro kraj nemají žádné „své“ voliče z vyřazených kandidátů. Agenti to opravovali jako zapsané odchylky od modelu. Opravíme to v modelu v2.</li>
+</ul>
+<h3>Nové zdroje dne</h3>
+<ul>
+<li>ČSÚ: <a href="https://www.volbyhned.cz/app/senat/20261009/cs/results">volbyhned.cz, výsledky voleb do Senátu</a>. Hlavní web volby.gov.cz byl v sobotu mimo provoz.</li>
+<li>Zprávy z volební noci (prohlášení kandidátů, podpory pro 2. kolo): odkazy jsou v run logu každého obvodu v repozitáři.</li>
+</ul>
+<h3>Dál</h3>
+<p>Kurzy na 2. kolo a z nich Sázky a Blend. Předpovědi STEM zapíšeme jako benchmark. 2. kolo 16.–17. 10. Pak úplné vyhodnocení všech pěti sérií, zvlášť freeze z 9. 10. a zvlášť předpovědi na 2. kolo.</p>""",
+    en="""<p><b>Round 1 is counted.</b> Five seats were decided outright: Strakonice (Fiala), Děčín (Linhart), Trutnov (Sobotka), Rychnov nad Kněžnou (Grulich) and Vyškov (Grolich). The other 22 go to a runoff on 16–17 Oct. All five series forecast <i>who wins the seat</i>, so full scores come after round 2. For now we can only score part of it: how much probability each series put on eliminated candidates, and whether its favourite advanced. Tables are on the <a href="skore.html">Scores</a> page.</p>
+<h3>Interim scores</h3>
+<ul>
+<li><b>Who is still in the race:</b> the favourite advanced in 26 of 27 districts in all five series. AI missed Plzeň (Aschenbrenner finished third); the market missed Litovel (Kohajda finished third, 146 votes short).</li>
+<li><b>Clear favourites, market ahead:</b> in the five outright wins the market gave the winners 88–98 %, AI 71–87 %. Brier: Betting 0.04, Blend 0.07, AI 0.36, AI + model 0.41, statistical model 0.91. AI is too cautious on clear favourites, and the statistical model even more so.</li>
+<li><b>Disputed districts, us ahead so far:</b> in the 7 districts where the market's favourite at the freeze differed from AI + model's, our favourite leads after round 1 in five (Cheb, Pelhřimov, Kladno, Přerov, Litovel) and the market's in two (Plzeň, Praha 5). If the round-1 leaders win the runoffs, AI + model scores a Brier of 2.7 in these districts and Betting 5.3. If the runners-up win, it flips: Betting 4.9, AI + model 7.6.</li>
+<li><b>Overall:</b> Blend leads on the part of the score that is already settled (Brier on eliminated candidates 0.74; Betting 0.81; AI + model 0.96; AI 1.18). The pre-registered order "Blend ≈ Betting > AI + model > statistical model ≈ AI" holds so far.</li>
+<li><b>AI on 2 Oct and AI on 9 Oct score almost the same.</b> A week of news barely changed the AI forecasts, because we changed them only for new facts.</li>
+</ul>
+<h3>Pre-registered benchmarks</h3>
+<ul>
+<li><b>ANO candidates advancing (Seznam Zprávy):</b> 13 of the 23 tracked ANO candidates advanced. Seznam Zprávy expected 13.4 / 17.3 / 21.2 (unfavourable / middle / favourable scenario); our statistical model expected 14.5. Ours was closer, but it too overrated ANO. Brier on advancing: our model 0.156, Seznam Zprávy 0.188. Mean error in round-1 vote share is 3.7 pp for both.</li>
+<li><b>Home-base hypothesis: confirmed</b>, on a thin sample. Mayors with a big home base beat the model by 5.6 pp on average, other candidates by 1.3 pp. The 4.2 pp gap is above the pre-registered threshold of 3, but most of it comes from Kašpar in Kolín (+15); Brzyszkowská in Karviná did worse than the model (−3.3). Six candidates are not many. We take it into model v2 as a strong suspicion, not a certainty.</li>
+<li><b>Wikipedia (most-read wins):</b> the most-read candidate advanced or won in 14 of 27 districts. They can only go on to win where they advanced.</li>
+<li><b>Statistical model on round-1 shares:</b> mean error 5.3 pp per candidate.</li>
+</ul>
+<h3>Surprises</h3>
+<ul>
+<li><b>Hradec Králové:</b> independent candidate Monika Nebeská led for hours. She took over 20 % in the rural count and 12 % in the city. Dvořák (25.1 %) only went ahead once the city was counted; Ceralová Petrofová (ODS) is second. Neither we nor the market saw Nebeská coming; everyone treated her as a fringe candidate.</li>
+<li><b>Žďár nad Sázavou:</b> Klement beat Černý to the runoff by <b>one vote</b> (11,373 : 11,372).</li>
+<li><b>Praha 1:</b> Padevět ended on 49.64 %, just short of winning outright.</li>
+</ul>
+<h3>Round-2 forecasts</h3>
+<p>Same procedure as on 5 Oct. First <b>AI</b>: the agent got its previous forecast, the round-1 results and the news, with no model and no odds. We saved that forecast. Only then <b>AI + model</b>: the same agent also got the <b>round-2 statistical model</b> (the runoff layer, now with the actual round-1 shares). A separate red-team checked each step. We locked 17 districts in a commit on Saturday at 22:01 (<code>3dd3820</code>), and Praha 1, 5, 9, Brno and Žďár on Sunday morning on the final count (commit <code>f4179ec</code>, 8:23). <b>We did not open STEM's forecasts for CNN Prima before locking</b>, as pre-registered on 8 Oct. We will record them as a round-2 benchmark. <b>Runoff odds</b> have not been posted yet by Fortuna or Tipsport (checked Sunday 8:25), so round-2 Betting and Blend will follow once they are.</p>
+<ul>
+<li><b>Where AI and AI + model disagree:</b> Přerov (AI: Vrána 51 %, AI + model: Navařík 62 %). The model penalises ANO in runoffs, but it underrated Vrána here by 13 points in 2020. In Praha 5, AI + model flipped from Sáblík to Láska (62 %). In Praha 1, AI flipped from Čižinský to Padevět (93 %), because Padevět led round 1 by 22 points. In Žďár, Klement is the favourite in both series, but narrowly in AI (56 %; AI + model 66 %). The model credits Černý's whole vote to Klement because it codes Šmarda's list (Volt) outside the blocs.</li>
+<li><b>Closest races:</b> Kladno (Šípová 52–53 %), Frýdek-Místek (Pešatová 52–54 %), Hradec Králové (Dvořák 54 %; Hůlková of ANO publicly backed Ceralová Petrofová).</li>
+<li><b>Clear favourites</b> (90 % or more in both series): Cheb, Louny, Příbram, Kolín, Ostrava, Uherské Hradiště, Znojmo (AI 84 %). From the morning batch: Praha 1 (Padevět 93–94 %), Praha 9 (Smoljak 95–96 %) and Brno (Papoušek 84–86 %).</li>
+</ul>
+<h3>Mistakes and fixes</h3>
+<ul>
+<li><b>Odds notes in the news file.</b> On Friday and Saturday morning we wrote reference notes on odds moves into the news file the agents read from: which way the odds moved, and in Kladno an actual price. During Saturday's updates the coordinators of five districts saw them. By their own check, none of it reached any step that computed a forecast. In Pelhřimov, though, the coordinator saw that the market had moved towards Med before the forecast was finished. So Pelhřimov is marked "moderate" contamination risk and the others "low". <i>Cause:</i> one file for news and market notes. <i>Fix:</i> market notes now live in a separate file the agents never get, and we check the news file before every run. Each district page shows its risk.</li>
+<li><b>Names in the scoring script.</b> Double surnames (Sucharda Šípová, Baránková Vilamová) and namesakes (two Čižinskýs in Praha 1) broke name matching. For a while on Saturday afternoon the interim numbers showed the opposite of the truth in Kladno. <i>Fix:</i> the surname is now searched for anywhere in the full name, and the given name must match too.</li>
+<li><b>Web search ran out.</b> On Saturday evening the agents used up their web-search budget, so most districts lack a check of who endorsed whom after round 1 (<code>research_limitation</code>). The budget covers the whole run, so Sunday's research for Praha, Brno and Žďár was limited too, to Google News headlines and directly fetched pages. <i>Fix:</i> before round 2 we run a separate endorsement check in a fresh run.</li>
+<li><b>The round-2 model has a ceiling.</b> For clear favourites it always returns 96.8 %, which is its calibration cap, not a real estimate. It also codes party blocs from the ballot only, so SLK, Naše Česko or Osobnosti pro kraj get no "own" voters from eliminated candidates. Agents corrected for this as recorded deviations from the model. To be fixed in model v2.</li>
+</ul>
+<h3>New sources</h3>
+<ul>
+<li>ČSÚ: <a href="https://www.volbyhned.cz/app/senat/20261009/cs/results">volbyhned.cz, Senate results</a>. The main site volby.gov.cz was down on Saturday.</li>
+<li>Election-night news (candidate statements, runoff endorsements): links are in each district's run log in the repository.</li>
+</ul>
+<h3>Next</h3>
+<p>Runoff odds, and from them Betting and Blend. STEM's forecasts recorded as a benchmark. Runoff on 16–17 Oct. Then full scoring of all five series, the 9 Oct freeze and the round-2 forecasts scored separately.</p>"""))
+
+CHANGES["2026-10-11"] = {
+    "cs": """<ul>
+<li><b>1. kolo:</b> 5 senátorů zvoleno hned (Strakonice, Děčín, Trutnov, Rychnov, Vyškov), 22 obvodů jde do 2. kola 16.–17. 10. <a href="skore.html">Průběžné skóre</a>: favorit postoupil ve 26 z 27 u všech sérií. Trh byl lepší u jasných favoritů, ve sporných obvodech zatím vede pětkrát náš favorit a dvakrát favorit trhu.</li>
+<li><b>Předpovědi na 2. kolo</b> (AI a AI s modelem) jsou zamčené (<code>3dd3820</code>, <code>f4179ec</code>) ještě před STEM a před kurzy. Otevřené souboje: Kladno, Frýdek-Místek, Hradec Králové, Přerov (tam se AI a AI s modelem neshodnou).</li>
+<li><b>Předem zapsané benchmarky:</b> postoupilo 13 z 23 kandidátů ANO (náš model čekal 14,5, Seznam Zprávy 17,3). Hypotéza domácích bašt se potvrdila (+4,2 p.b.).</li>
+<li><b>Chyba:</b> v souboru zpráv pro agenty byly poznámky o kurzech. Pelhřimov má proto riziko kontaminace „moderate“. Podrobně v deníku.</li>
+</ul>""",
+    "en": """<ul>
+<li><b>Round 1:</b> 5 senators elected outright (Strakonice, Děčín, Trutnov, Rychnov, Vyškov); 22 districts go to the runoff on 16–17 Oct. <a href="skore.html">Interim scores</a>: the favourite advanced in 26 of 27 in every series. The market did better on clear favourites; in the disputed districts our favourite leads in five and the market's in two.</li>
+<li><b>Round-2 forecasts</b> (AI and AI + model) are locked (<code>3dd3820</code>, <code>f4179ec</code>) before STEM and before odds. Open races: Kladno, Frýdek-Místek, Hradec Králové, Přerov (where AI and AI + model disagree).</li>
+<li><b>Pre-registered benchmarks:</b> 13 of 23 ANO candidates advanced (our model expected 14.5, Seznam Zprávy 17.3). The home-base hypothesis is confirmed (+4.2 pp).</li>
+<li><b>Mistake:</b> the agents' news file contained odds notes. Pelhřimov is therefore marked "moderate" contamination risk. Details in the journal.</li>
+</ul>""",
+}
