@@ -1,0 +1,1131 @@
+{
+  "experiment": "senat-2026",
+  "series": "statistical-model-r2",
+  "date": "2026-10-12",
+  "results_file": "r1-2026-10-11-0801.json",
+  "coefficients": {
+    "runoff_beta": {
+      "margin": 0.6781475112951243,
+      "reservoir": 0.3430338645340152,
+      "gov": -3.693721875887158,
+      "ano": -3.4887733647431203
+    },
+    "runoff_sd": 5.585950797756139,
+    "calib_exp": 0.55
+  },
+  "districts": [
+    {
+      "n": 3,
+      "decided_r1": false,
+      "exp_share_A": 66.0,
+      "candidates": [
+        {
+          "name": "Miroslav Plevný",
+          "list": "STAN",
+          "p": 0.9646,
+          "r1": 40.08
+        },
+        {
+          "name": "Sandra Tsoukernik",
+          "list": "ANO",
+          "p": 0.0354,
+          "r1": 27.08
+        },
+        {
+          "name": "Štěpánka Černá",
+          "list": "VOK",
+          "p": 0.0,
+          "r1": 12.3
+        },
+        {
+          "name": "Vladimír Keblúšek",
+          "list": "NČ",
+          "p": 0.0,
+          "r1": 10.61
+        },
+        {
+          "name": "Ivan Reis",
+          "list": "SPD",
+          "p": 0.0,
+          "r1": 6.41
+        },
+        {
+          "name": "Pavel Hojda",
+          "list": "KSČM",
+          "p": 0.0,
+          "r1": 3.49
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "decided_r1": false,
+      "exp_share_A": 71.6,
+      "candidates": [
+        {
+          "name": "Ivo Trešl",
+          "list": "STAN",
+          "p": 0.9683,
+          "r1": 43.5
+        },
+        {
+          "name": "Jaroslav Mikoláš",
+          "list": "ANO",
+          "p": 0.0317,
+          "r1": 25.55
+        },
+        {
+          "name": "Vladislav Hrbáček",
+          "list": "SPD",
+          "p": 0.0,
+          "r1": 10.92
+        },
+        {
+          "name": "Leo Steiner",
+          "list": "JsmePRO!",
+          "p": 0.0,
+          "r1": 10.1
+        },
+        {
+          "name": "Ivana Hluštíková",
+          "list": "Zelení+Piráti",
+          "p": 0.0,
+          "r1": 6.46
+        },
+        {
+          "name": "Jiří Kobza",
+          "list": "Stačilo!",
+          "p": 0.0,
+          "r1": 3.43
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "decided_r1": false,
+      "exp_share_A": 68.9,
+      "candidates": [
+        {
+          "name": "Karel Řehka",
+          "list": "STAN",
+          "p": 0.9683,
+          "r1": 32.86
+        },
+        {
+          "name": "Lucie Kantorová",
+          "list": "ANO",
+          "p": 0.0317,
+          "r1": 27.26
+        },
+        {
+          "name": "Lumír Aschenbrenner",
+          "list": "ODS+KoruČes+TOP",
+          "p": 0.0,
+          "r1": 20.1
+        },
+        {
+          "name": "Daniela Pousková",
+          "list": "PRO PLZEŇ",
+          "p": 0.0,
+          "r1": 7.92
+        },
+        {
+          "name": "Július Líška",
+          "list": "SPD",
+          "p": 0.0,
+          "r1": 4.8
+        },
+        {
+          "name": "Jiří Valenta",
+          "list": "KSČM",
+          "p": 0.0,
+          "r1": 3.07
+        },
+        {
+          "name": "Bohumír Janský",
+          "list": "SEN 21",
+          "p": 0.0,
+          "r1": 2.88
+        },
+        {
+          "name": "Jaroslav Novák",
+          "list": "JaSaN",
+          "p": 0.0,
+          "r1": 1.07
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "decided_r1": true,
+      "exp_share_A": null,
+      "candidates": [
+        {
+          "name": "Tomáš Fiala",
+          "list": "NČ",
+          "p": 1.0,
+          "r1": 55.41
+        },
+        {
+          "name": "Miroslav Ušatý",
+          "list": "Svob+SPD+Trikol",
+          "p": 0.0,
+          "r1": 23.9
+        },
+        {
+          "name": "Jana Hrdinová",
+          "list": "KDU-ČSL",
+          "p": 0.0,
+          "r1": 20.67
+        }
+      ]
+    },
+    {
+      "n": 15,
+      "decided_r1": false,
+      "exp_share_A": 59.4,
+      "candidates": [
+        {
+          "name": "Ladislav Med",
+          "list": "KDUODSSTANTOPST",
+          "p": 0.8441,
+          "r1": 30.48
+        },
+        {
+          "name": "Michal Kozár",
+          "list": "ANO",
+          "p": 0.1559,
+          "r1": 27.15
+        },
+        {
+          "name": "Jaroslav Chalupský",
+          "list": "HSR",
+          "p": 0.0,
+          "r1": 25.11
+        },
+        {
+          "name": "Karolína Kubisková",
+          "list": "VÝZVA",
+          "p": 0.0,
+          "r1": 8.65
+        },
+        {
+          "name": "Lucie Pavlů Řádová",
+          "list": "SPD",
+          "p": 0.0,
+          "r1": 5.69
+        },
+        {
+          "name": "Pavel Hodáč",
+          "list": "KSČM",
+          "p": 0.0,
+          "r1": 2.88
+        }
+      ]
+    },
+    {
+      "n": 18,
+      "decided_r1": false,
+      "exp_share_A": 73.9,
+      "candidates": [
+        {
+          "name": "Petr Štěpánek",
+          "list": "STAN",
+          "p": 0.9683,
+          "r1": 43.7
+        },
+        {
+          "name": "Barbora Daňhová",
+          "list": "ANO",
+          "p": 0.0317,
+          "r1": 25.21
+        },
+        {
+          "name": "Simona Luftová",
+          "list": "Zelení+Piráti",
+          "p": 0.0,
+          "r1": 12.07
+        },
+        {
+          "name": "Josef Šorna",
+          "list": "SPD+PRO",
+          "p": 0.0,
+          "r1": 9.4
+        },
+        {
+          "name": "Frank Thomas Podstatzky-Lichtenstein",
+          "list": "ČZS",
+          "p": 0.0,
+          "r1": 5.82
+        },
+        {
+          "name": "Pavel Vermach",
+          "list": "SMS",
+          "p": 0.0,
+          "r1": 3.77
+        }
+      ]
+    },
+    {
+      "n": 21,
+      "decided_r1": false,
+      "exp_share_A": 53.7,
+      "candidates": [
+        {
+          "name": "Václav Láska",
+          "list": "SEN 21",
+          "p": 0.6448,
+          "r1": 32.54
+        },
+        {
+          "name": "Radko Sáblík",
+          "list": "KDUČSL+ODS+STAN",
+          "p": 0.3552,
+          "r1": 27.1
+        },
+        {
+          "name": "Zdeněk Šarapatka",
+          "list": "Piráti+TOP+LES",
+          "p": 0.0,
+          "r1": 19.75
+        },
+        {
+          "name": "Lubomír Brož",
+          "list": "ANO",
+          "p": 0.0,
+          "r1": 13.43
+        },
+        {
+          "name": "Pavel Spirov",
+          "list": "SPD",
+          "p": 0.0,
+          "r1": 4.64
+        },
+        {
+          "name": "Petra Prokšanová",
+          "list": "KSČM",
+          "p": 0.0,
+          "r1": 1.58
+        },
+        {
+          "name": "Ľubomír Augustín",
+          "list": "PŘÍSAHA",
+          "p": 0.0,
+          "r1": 0.93
+        }
+      ]
+    },
+    {
+      "n": 24,
+      "decided_r1": false,
+      "exp_share_A": 67.5,
+      "candidates": [
+        {
+          "name": "David Smoljak",
+          "list": "KDUZelSTANPiTOP",
+          "p": 0.9682,
+          "r1": 48.92
+        },
+        {
+          "name": "Dagmar Pecková",
+          "list": "ODS",
+          "p": 0.0318,
+          "r1": 23.06
+        },
+        {
+          "name": "Radek Žalud",
+          "list": "ANO",
+          "p": 0.0,
+          "r1": 14.7
+        },
+        {
+          "name": "Bedřich Laube",
+          "list": "Svo+SPD+Tri+PRO",
+          "p": 0.0,
+          "r1": 8.09
+        },
+        {
+          "name": "Darina Batyiová",
+          "list": "Kruh",
+          "p": 0.0,
+          "r1": 5.21
+        }
+      ]
+    },
+    {
+      "n": 27,
+      "decided_r1": false,
+      "exp_share_A": 64.9,
+      "candidates": [
+        {
+          "name": "Jiří Padevět",
+          "list": "ODSSTANPirátTOP",
+          "p": 0.9544,
+          "r1": 49.64
+        },
+        {
+          "name": "Jan Čižinský",
+          "list": "KDU+Zel+PHASOBĚ",
+          "p": 0.0456,
+          "r1": 27.74
+        },
+        {
+          "name": "Ján Dudra",
+          "list": "ANO",
+          "p": 0.0,
+          "r1": 12.22
+        },
+        {
+          "name": "Pavel Čižinský",
+          "list": "Levice",
+          "p": 0.0,
+          "r1": 2.9
+        },
+        {
+          "name": "Jiří Pavel Pešek",
+          "list": "Švýcarská dem.",
+          "p": 0.0,
+          "r1": 2.62
+        },
+        {
+          "name": "Jiří Morštadt",
+          "list": "Generace",
+          "p": 0.0,
+          "r1": 1.68
+        },
+        {
+          "name": "Vojtěch Ryvola",
+          "list": "GEN",
+          "p": 0.0,
+          "r1": 1.38
+        },
+        {
+          "name": "Jan Štern",
+          "list": "TEAM",
+          "p": 0.0,
+          "r1": 0.98
+        },
+        {
+          "name": "Vladimír Kolman",
+          "list": "SOCDEM",
+          "p": 0.0,
+          "r1": 0.8
+        }
+      ]
+    },
+    {
+      "n": 30,
+      "decided_r1": false,
+      "exp_share_A": 50.9,
+      "candidates": [
+        {
+          "name": "Adéla Sucharda Šípová",
+          "list": "ZelSTAPirTOPSEN",
+          "p": 0.5396,
+          "r1": 30.8
+        },
+        {
+          "name": "Petr Paták",
+          "list": "ODS",
+          "p": 0.4604,
+          "r1": 29.44
+        },
+        {
+          "name": "Aleš Gerloch",
+          "list": "ANO",
+          "p": 0.0,
+          "r1": 22.16
+        },
+        {
+          "name": "Jan Klas",
+          "list": "NČ",
+          "p": 0.0,
+          "r1": 8.1
+        },
+        {
+          "name": "Marcela Machalová",
+          "list": "SPD",
+          "p": 0.0,
+          "r1": 6.14
+        },
+        {
+          "name": "Jaroslav Pelc",
+          "list": "PŘÍSAHA",
+          "p": 0.0,
+          "r1": 3.34
+        }
+      ]
+    },
+    {
+      "n": 33,
+      "decided_r1": true,
+      "exp_share_A": null,
+      "candidates": [
+        {
+          "name": "Zbyněk Linhart",
+          "list": "STAN+SLK",
+          "p": 1.0,
+          "r1": 52.22
+        },
+        {
+          "name": "Michal Hejcman",
+          "list": "ANO",
+          "p": 0.0,
+          "r1": 20.13
+        },
+        {
+          "name": "Anna Lehká",
+          "list": "MÍSTNÍ HNHRM",
+          "p": 0.0,
+          "r1": 10.45
+        },
+        {
+          "name": "Jan Skalický",
+          "list": "PRO",
+          "p": 0.0,
+          "r1": 10.35
+        },
+        {
+          "name": "Miroslav Štross",
+          "list": "Zelen+Pirát+SEN",
+          "p": 0.0,
+          "r1": 6.83
+        }
+      ]
+    },
+    {
+      "n": 36,
+      "decided_r1": false,
+      "exp_share_A": 44.4,
+      "candidates": [
+        {
+          "name": "Jitka Volfová",
+          "list": "ANO",
+          "p": 0.2813,
+          "r1": 35.05
+        },
+        {
+          "name": "Martin Půta",
+          "list": "SLK",
+          "p": 0.7187,
+          "r1": 32.66
+        },
+        {
+          "name": "Jiří Vosecký",
+          "list": "NK",
+          "p": 0.0,
+          "r1": 14.94
+        },
+        {
+          "name": "Vít Vomáčka",
+          "list": "ODS",
+          "p": 0.0,
+          "r1": 13.37
+        },
+        {
+          "name": "Leoš Hamrský",
+          "list": "KSČM",
+          "p": 0.0,
+          "r1": 3.95
+        }
+      ]
+    },
+    {
+      "n": 39,
+      "decided_r1": true,
+      "exp_share_A": null,
+      "candidates": [
+        {
+          "name": "Jan Sobotka",
+          "list": "STAN",
+          "p": 1.0,
+          "r1": 58.42
+        },
+        {
+          "name": "Zuzana Chovancová",
+          "list": "ANO",
+          "p": 0.0,
+          "r1": 28.61
+        },
+        {
+          "name": "Radek Mráz",
+          "list": "SPD",
+          "p": 0.0,
+          "r1": 7.31
+        },
+        {
+          "name": "Hynek Beran",
+          "list": "PRO",
+          "p": 0.0,
+          "r1": 5.63
+        }
+      ]
+    },
+    {
+      "n": 42,
+      "decided_r1": false,
+      "exp_share_A": 76.5,
+      "candidates": [
+        {
+          "name": "Michael Kašpar",
+          "list": "STAN",
+          "p": 0.9683,
+          "r1": 45.26
+        },
+        {
+          "name": "Andrea Brzobohatá",
+          "list": "ANO",
+          "p": 0.0317,
+          "r1": 25.54
+        },
+        {
+          "name": "Roman Schulz",
+          "list": "ODS+TOP 09",
+          "p": 0.0,
+          "r1": 17.25
+        },
+        {
+          "name": "Antonín Dušek",
+          "list": "SPD",
+          "p": 0.0,
+          "r1": 4.19
+        },
+        {
+          "name": "Pavel Sehnal",
+          "list": "APB",
+          "p": 0.0,
+          "r1": 4.14
+        },
+        {
+          "name": "Jiří Rynekr",
+          "list": "KSČM",
+          "p": 0.0,
+          "r1": 2.34
+        },
+        {
+          "name": "František Třeštik",
+          "list": "JaSaN",
+          "p": 0.0,
+          "r1": 1.24
+        }
+      ]
+    },
+    {
+      "n": 45,
+      "decided_r1": false,
+      "exp_share_A": 52.2,
+      "candidates": [
+        {
+          "name": "Martin Dvořák",
+          "list": "ZelSTANPiTOPHDK",
+          "p": 0.5848,
+          "r1": 25.13
+        },
+        {
+          "name": "Zuzana Ceralová Petrofová",
+          "list": "ODS",
+          "p": 0.4152,
+          "r1": 21.94
+        },
+        {
+          "name": "Jana Hůlková",
+          "list": "ANO",
+          "p": 0.0,
+          "r1": 18.4
+        },
+        {
+          "name": "Monika Nebeská",
+          "list": "NK",
+          "p": 0.0,
+          "r1": 14.99
+        },
+        {
+          "name": "Jan Holásek",
+          "list": "VPM+HP+MY+RH+NČ",
+          "p": 0.0,
+          "r1": 12.18
+        },
+        {
+          "name": "Ivan Picek",
+          "list": "SPD",
+          "p": 0.0,
+          "r1": 5.33
+        },
+        {
+          "name": "Vladimír Dryml",
+          "list": "ČSSD",
+          "p": 0.0,
+          "r1": 2.01
+        }
+      ]
+    },
+    {
+      "n": 48,
+      "decided_r1": true,
+      "exp_share_A": null,
+      "candidates": [
+        {
+          "name": "Jan Grulich",
+          "list": "KDUODSSTPTOPLES",
+          "p": 1.0,
+          "r1": 62.19
+        },
+        {
+          "name": "Petr Sadovský",
+          "list": "ANO",
+          "p": 0.0,
+          "r1": 37.8
+        }
+      ]
+    },
+    {
+      "n": 51,
+      "decided_r1": false,
+      "exp_share_A": 42.6,
+      "candidates": [
+        {
+          "name": "Michal Šmarda",
+          "list": "SOM+Volt+HR",
+          "p": 0.2169,
+          "r1": 27.6
+        },
+        {
+          "name": "Josef Klement",
+          "list": "KDU-ČSL",
+          "p": 0.7831,
+          "r1": 25.62
+        },
+        {
+          "name": "Radek Černý",
+          "list": "ODS+Piráti+STO",
+          "p": 0.0,
+          "r1": 25.62
+        },
+        {
+          "name": "Radek Koten",
+          "list": "SPD",
+          "p": 0.0,
+          "r1": 16.49
+        },
+        {
+          "name": "David Moos",
+          "list": "SD-SN",
+          "p": 0.0,
+          "r1": 4.65
+        }
+      ]
+    },
+    {
+      "n": 54,
+      "decided_r1": false,
+      "exp_share_A": 66.2,
+      "candidates": [
+        {
+          "name": "Tomáš Třetina",
+          "list": "KDUODSSTANPiTOP",
+          "p": 0.9682,
+          "r1": 35.55
+        },
+        {
+          "name": "Jiří Kyněra",
+          "list": "ANO",
+          "p": 0.0318,
+          "r1": 22.28
+        },
+        {
+          "name": "Jindřich Růžička",
+          "list": "NK",
+          "p": 0.0,
+          "r1": 18.67
+        },
+        {
+          "name": "Petra Rédová Fajmonová",
+          "list": "Stačilo!",
+          "p": 0.0,
+          "r1": 11.78
+        },
+        {
+          "name": "Bohumila Beranová",
+          "list": "HR",
+          "p": 0.0,
+          "r1": 6.65
+        },
+        {
+          "name": "Pavel Černý",
+          "list": "PŘÍSAHA",
+          "p": 0.0,
+          "r1": 5.04
+        }
+      ]
+    },
+    {
+      "n": 57,
+      "decided_r1": true,
+      "exp_share_A": null,
+      "candidates": [
+        {
+          "name": "Jan Grolich",
+          "list": "KDU-ČSL",
+          "p": 1.0,
+          "r1": 63.34
+        },
+        {
+          "name": "Petra Absolonová",
+          "list": "ANO",
+          "p": 0.0,
+          "r1": 29.99
+        },
+        {
+          "name": "Jaroslav Fládr",
+          "list": "PŘÍSAHA",
+          "p": 0.0,
+          "r1": 6.66
+        }
+      ]
+    },
+    {
+      "n": 60,
+      "decided_r1": false,
+      "exp_share_A": 62.0,
+      "candidates": [
+        {
+          "name": "Zdeněk Papoušek",
+          "list": "KDUODSPirTOPFBr",
+          "p": 0.9076,
+          "r1": 42.08
+        },
+        {
+          "name": "Karel Zitterbart",
+          "list": "STAN",
+          "p": 0.0924,
+          "r1": 24.45
+        },
+        {
+          "name": "Jaroslav Štěrba",
+          "list": "ANO",
+          "p": 0.0,
+          "r1": 20.12
+        },
+        {
+          "name": "Jaroslav Turánek",
+          "list": "SPD",
+          "p": 0.0,
+          "r1": 6.27
+        },
+        {
+          "name": "Veronika Holcnerová",
+          "list": "Kruh",
+          "p": 0.0,
+          "r1": 4.11
+        },
+        {
+          "name": "Klára Alžběta Samková",
+          "list": "Stačilo!",
+          "p": 0.0,
+          "r1": 2.94
+        }
+      ]
+    },
+    {
+      "n": 63,
+      "decided_r1": false,
+      "exp_share_A": 57.8,
+      "candidates": [
+        {
+          "name": "Jakub Navařík",
+          "list": "KDU+ODS+STA+TOP",
+          "p": 0.7929,
+          "r1": 38.54
+        },
+        {
+          "name": "Petr Vrána",
+          "list": "ANO",
+          "p": 0.2071,
+          "r1": 37.62
+        },
+        {
+          "name": "Marek Obrtel",
+          "list": "ČSNS",
+          "p": 0.0,
+          "r1": 15.04
+        },
+        {
+          "name": "Dan Chromec",
+          "list": "SPD",
+          "p": 0.0,
+          "r1": 8.78
+        }
+      ]
+    },
+    {
+      "n": 66,
+      "decided_r1": false,
+      "exp_share_A": 59.5,
+      "candidates": [
+        {
+          "name": "Marek Ošťádal",
+          "list": "24/7",
+          "p": 0.8401,
+          "r1": 32.17
+        },
+        {
+          "name": "Martin Škurek",
+          "list": "ANO",
+          "p": 0.1599,
+          "r1": 28.78
+        },
+        {
+          "name": "Michael Kohajda",
+          "list": "KDU-ČSL",
+          "p": 0.0,
+          "r1": 28.44
+        },
+        {
+          "name": "Pavel Jelínek",
+          "list": "SPD",
+          "p": 0.0,
+          "r1": 9.37
+        },
+        {
+          "name": "Zdeněk Beil",
+          "list": "Levice",
+          "p": 0.0,
+          "r1": 1.21
+        }
+      ]
+    },
+    {
+      "n": 69,
+      "decided_r1": false,
+      "exp_share_A": 51.5,
+      "candidates": [
+        {
+          "name": "Helena Pešatová",
+          "list": "STAN+Piráti+TOP",
+          "p": 0.5563,
+          "r1": 34.75
+        },
+        {
+          "name": "Petr Korč",
+          "list": "NMFM",
+          "p": 0.4437,
+          "r1": 32.47
+        },
+        {
+          "name": "Tomáš Krpel",
+          "list": "SPD",
+          "p": 0.0,
+          "r1": 13.01
+        },
+        {
+          "name": "Zdeněk Navrátil",
+          "list": "Evo",
+          "p": 0.0,
+          "r1": 9.53
+        },
+        {
+          "name": "Nela Lisková",
+          "list": "NEZLOMNÍ",
+          "p": 0.0,
+          "r1": 4.89
+        },
+        {
+          "name": "René Hompora",
+          "list": "Švýcarská dem.",
+          "p": 0.0,
+          "r1": 3.07
+        },
+        {
+          "name": "Petr Hrnčárek",
+          "list": "KSČM",
+          "p": 0.0,
+          "r1": 2.26
+        }
+      ]
+    },
+    {
+      "n": 72,
+      "decided_r1": false,
+      "exp_share_A": 68.1,
+      "candidates": [
+        {
+          "name": "Ondřej Šimetka",
+          "list": "KDUODSSTANPiTOP",
+          "p": 0.9682,
+          "r1": 46.74
+        },
+        {
+          "name": "Lucie Baránková Vilamová",
+          "list": "ANO",
+          "p": 0.0318,
+          "r1": 30.61
+        },
+        {
+          "name": "Milan Loprais",
+          "list": "SPD+PRO",
+          "p": 0.0,
+          "r1": 12.75
+        },
+        {
+          "name": "Petr Jančík",
+          "list": "Ostravak",
+          "p": 0.0,
+          "r1": 6.22
+        },
+        {
+          "name": "Štefan Režný",
+          "list": "ReMeK",
+          "p": 0.0,
+          "r1": 1.87
+        },
+        {
+          "name": "Radoslav Štědroň",
+          "list": "Švýcarská dem.",
+          "p": 0.0,
+          "r1": 1.16
+        },
+        {
+          "name": "Radek Iwoniak",
+          "list": "ČSSD",
+          "p": 0.0,
+          "r1": 0.61
+        }
+      ]
+    },
+    {
+      "n": 75,
+      "decided_r1": false,
+      "exp_share_A": 55.9,
+      "candidates": [
+        {
+          "name": "Lenka Brzyszkowská",
+          "list": "ANO",
+          "p": 0.7267,
+          "r1": 33.62
+        },
+        {
+          "name": "Petr Kazík",
+          "list": "OK",
+          "p": 0.2733,
+          "r1": 14.31
+        },
+        {
+          "name": "Mariam Szyja",
+          "list": "ZelSTAPirTOPSEN",
+          "p": 0.0,
+          "r1": 14.1
+        },
+        {
+          "name": "Aleš Polách",
+          "list": "ODS+Soukromníci",
+          "p": 0.0,
+          "r1": 13.92
+        },
+        {
+          "name": "Pavel Staněk",
+          "list": "SPD",
+          "p": 0.0,
+          "r1": 12.43
+        },
+        {
+          "name": "Roman Galia",
+          "list": "SOCDEM",
+          "p": 0.0,
+          "r1": 9.1
+        },
+        {
+          "name": "Karel Světnička",
+          "list": "JaSaN",
+          "p": 0.0,
+          "r1": 2.48
+        }
+      ]
+    },
+    {
+      "n": 78,
+      "decided_r1": false,
+      "exp_share_A": 57.3,
+      "candidates": [
+        {
+          "name": "Tomáš Goláň",
+          "list": "KDU+ODS+TOP 09",
+          "p": 0.7732,
+          "r1": 33.54
+        },
+        {
+          "name": "Ivo Mitáček",
+          "list": "STAN",
+          "p": 0.2268,
+          "r1": 22.83
+        },
+        {
+          "name": "Vladimír Sedlařík",
+          "list": "ANO",
+          "p": 0.0,
+          "r1": 18.87
+        },
+        {
+          "name": "Pavel Dlouhý",
+          "list": "SEN 21",
+          "p": 0.0,
+          "r1": 12.16
+        },
+        {
+          "name": "Lubomír Nečas",
+          "list": "SPD",
+          "p": 0.0,
+          "r1": 10.7
+        },
+        {
+          "name": "Jan Doleček",
+          "list": "KSČM",
+          "p": 0.0,
+          "r1": 1.86
+        }
+      ]
+    },
+    {
+      "n": 81,
+      "decided_r1": false,
+      "exp_share_A": 70.4,
+      "candidates": [
+        {
+          "name": "Josef Bazala",
+          "list": "KDU-ČSL",
+          "p": 0.9683,
+          "r1": 47.81
+        },
+        {
+          "name": "Jiří Vašica",
+          "list": "ANO",
+          "p": 0.0317,
+          "r1": 28.34
+        },
+        {
+          "name": "Kristýna Zelienková",
+          "list": "ZVUK 12",
+          "p": 0.0,
+          "r1": 9.4
+        },
+        {
+          "name": "Otakar Březina",
+          "list": "SD-SN",
+          "p": 0.0,
+          "r1": 7.12
+        },
+        {
+          "name": "David Skyba",
+          "list": "SPD",
+          "p": 0.0,
+          "r1": 4.08
+        },
+        {
+          "name": "Margita Balaštíková",
+          "list": "HOČ",
+          "p": 0.0,
+          "r1": 3.22
+        }
+      ]
+    }
+  ]
+}

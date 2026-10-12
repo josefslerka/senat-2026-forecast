@@ -821,6 +821,15 @@ JOURNAL.append(dict(
 <li>ČSÚ: <a href="https://www.volbyhned.cz/app/senat/20261009/cs/results">volbyhned.cz, výsledky voleb do Senátu</a>. Hlavní web volby.gov.cz byl v sobotu mimo provoz.</li>
 <li>Zprávy z volební noci (prohlášení kandidátů, podpory pro 2. kolo): odkazy jsou v run logu každého obvodu v repozitáři.</li>
 </ul>
+<h3>Doplněk (ne 11. 10. večer): první kurzy na 2. kolo</h3>
+<p>Tipsport ve 2. kole vypsal sázku „Kdo získá více hlasů“ (souboj dvou kandidátů), zatím jen na <b>11 z 22 obvodů</b>: Cheb, Louny, Plzeň, Pelhřimov, Příbram, Praha 5, Praha 9, Praha 1, Kladno, Česká Lípa a Kolín. Moravské obvody a Hradec Králové chybí. Fortuna Senát nenabízí vůbec (kontrola 19:55). Kurzy jsme četli až po zamčení všech našich předpovědí na 2. kolo.</p>
+<ul>
+<li><b>Favorit:</b> ve všech 11 obvodech má trh stejného favorita jako AI i AI s modelem.</li>
+<li><b>Kladno:</b> Tipsport otevřel na 1,85 : 1,85 (50 : 50) a během chvíle se posunul na 1,70 : 2,01 (Šípová asi 55 %). My máme Šípovou 52–53 %.</li>
+<li><b>Kde je trh jistější než my</b> (stejný favorit): Praha 5 (Láska 80 % vs. 62 %), Česká Lípa (Půta 84 % vs. 74 %), Pelhřimov (Med 94 % vs. 82 %).</li>
+</ul>
+<p><b>Předem zapisujeme:</b> hodnocená série Sázky (a z ní Blend) pro 2. kolo = <b>poslední čtení kurzů před uzavřením sázek</b>. Otevírací a dnešní kurzy jsou jen reference. Kurzy se teprve usazují, jak ukazuje Kladno. Obvody, které do uzavření nikdo nevypíše, budou mít v Sázkách a Blendu prázdno a hodnotíme je zvlášť. Kurz 1,01 je u Tipsportu nejnižší možný, takže z něj vychází jen „jasný favorit“, ne přesná pravděpodobnost.</p>
+<p><i>Upřesnění (12. 10.):</i> Tipsport ve 20:20 vypsal všech 22 obvodů (Kladno už 1,65 : 2,08, Šípová asi 55 %). Předem zapsané pravidlo výše platí beze změny. Nové čtení kurzů je v deníku 12. 10.</p>
 <h3>Dál</h3>
 <p>Kurzy na 2. kolo a z nich Sázky a Blend. Předpovědi STEM zapíšeme jako benchmark. 2. kolo 16.–17. 10. Pak úplné vyhodnocení všech pěti sérií, zvlášť freeze z 9. 10. a zvlášť předpovědi na 2. kolo.</p>""",
     en="""<p><b>In short:</b> We predicted who would reach the runoff as well as the bookmakers: the favourite advanced in 26 of 27 districts in all five series. The bookmakers did better on clear favourites because they were more confident, while AI was needlessly cautious. Where we disagreed with the market, our favourite leads after round 1 in five districts and the market's in two, so the runoff will decide. Blend, the combination of AI and the market, is doing best so far. Our statistical model predicted ANO's advancement better than the Seznam Zprávy data model.</p>
@@ -866,6 +875,15 @@ JOURNAL.append(dict(
 <li>ČSÚ: <a href="https://www.volbyhned.cz/app/senat/20261009/cs/results">volbyhned.cz, Senate results</a>. The main site volby.gov.cz was down on Saturday.</li>
 <li>Election-night news (candidate statements, runoff endorsements): links are in each district's run log in the repository.</li>
 </ul>
+<h3>Addendum (Sun 11 Oct, evening): first runoff odds</h3>
+<p>For round 2 Tipsport posted a "who gets more votes" market (a two-candidate duel), so far for only <b>11 of 22 districts</b>: Cheb, Louny, Plzeň, Pelhřimov, Příbram, Praha 5, Praha 9, Praha 1, Kladno, Česká Lípa and Kolín. The Moravian districts and Hradec Králové are missing. Fortuna offers no Senate market at all (checked 19:55). We read the odds only after all our runoff forecasts were locked.</p>
+<ul>
+<li><b>Favourite:</b> in all 11 districts the market has the same favourite as AI and AI + model.</li>
+<li><b>Kladno:</b> Tipsport opened at 1.85 : 1.85 (50 : 50) and shortly moved to 1.70 : 2.01 (Šípová about 55 %). We have Šípová at 52–53 %.</li>
+<li><b>Where the market is more confident than us</b> (same favourite): Praha 5 (Láska 80 % vs 62 %), Česká Lípa (Půta 84 % vs 74 %), Pelhřimov (Med 94 % vs 82 %).</li>
+</ul>
+<p><b>Pre-registered:</b> the scored Betting series (and Blend built from it) for round 2 = <b>the last odds reading before betting closes</b>. Opening and today's odds are reference only. The prices are still settling, as Kladno shows. Districts nobody posts by the close will have no Betting or Blend number and are scored separately. Odds of 1.01 are Tipsport's floor, so they only say "clear favourite", not a precise probability.</p>
+<p><i>Clarification (12 Oct):</i> by 20:20 Tipsport had posted all 22 districts (Kladno already 1.65 : 2.08, Šípová about 55 %). The pre-registered rule above stands unchanged. The new odds reading is in the 12 Oct journal entry.</p>
 <h3>Next</h3>
 <p>Runoff odds, and from them Betting and Blend. STEM's forecasts recorded as a benchmark. Runoff on 16–17 Oct. Then full scoring of all five series, the 9 Oct freeze and the round-2 forecasts scored separately.</p>"""))
 
@@ -881,5 +899,104 @@ CHANGES["2026-10-11"] = {
 <li><b>Round-2 forecasts</b> (AI and AI + model) are locked (<code>3dd3820</code>, <code>f4179ec</code>) before STEM and before odds. Open races: Kladno, Frýdek-Místek, Hradec Králové, Přerov (where AI and AI + model disagree).</li>
 <li><b>Pre-registered benchmarks:</b> 13 of 23 ANO candidates advanced (our model expected 14.5, Seznam Zprávy 17.3). The home-base hypothesis is confirmed (+4.2 pp).</li>
 <li><b>Mistake:</b> the agents' news file contained odds notes. Pelhřimov is therefore marked "moderate" contamination risk. Details in the journal.</li>
+</ul>""",
+}
+
+JOURNAL.append(dict(
+    date="2026-10-12", title_cs="Den 11: podpory pro 2. kolo, update Litovle, první Sázky a Blend na 2. kolo",
+    title_en="Day 11: runoff endorsements, Litovel update, first round-2 Betting and Blend",
+    cs="""<p><b>V kostce:</b> Kontrola podpor ve všech 22 obvodech přinesla dva nové fakty. V Litovli jsme odhad mírně zvýšili, ve Znojmě jsme ho nechali beze změny. Poprvé máme na 2. kolo Sázky (Tipsport i Fortuna) a Blend. Trh má stejného favorita jako AI s modelem ve 19 z 20 obvodů s kurzy. Výjimkou je <b>Kladno, kde se trh přes noc otočil k Patákovi</b> (57 %), zatímco my máme Šípovou 52–53 %. U jasných favoritů je trh jako v 1. kole jistější než my.</p>
+<h3>Podpory pro 2. kolo (pouze zprávy, bez kurzů)</h3>
+<p>V sobotu večer agentům došlo vyhledávání, a proto jsme dnes ráno v novém běhu prošli podpory ve všech 22 obvodech. Čerpali jsme z Google News za poslední tři dny a z článků otevřených v prohlížeči. Kurzy jsme během té doby neotevřeli.</p>
+<ul>
+<li><b>Litovel: nový fakt, update.</b> Michael Kohajda (KDU-ČSL, 3. místo, 28,4 %, za postupem o 146 hlasů) oznámil, že ve 2. kole podpoří Ošťádala. AI: Ošťádal 80 → <b>83 %</b>, AI s modelem 86 → <b>88 %</b>. Red-team v obou krocích souhlasil. Proč tak málo: předchozí odhad už počítal s tím, že Kohajdovi voliči půjdou převážně k Ošťádalovi. Podpora navíc zazněla jen jako zmínka v jednom článku, bez výzvy voličům a bez postoje stran. Hlavní nejistotou zůstává, kolik jeho voličů vůbec přijde.</li>
+<li><b>Znojmo: nové fakty, bez změny.</b> Stačilo! (11,8 %) podpoří Kyněru (ANO), Hlas regionů (6,7 %) Třetinu, nezávislý Růžička (18,7 %) nepodpoří nikoho a Přísaha zatím váhá. Účinky se zhruba vyruší (čistý posun +1 b. u AI a +0,2 b. u AI s modelem). Je to pod prahem 2 b., takže update přeskočen a platí odhady z 10. 10. (Třetina 84 / 91 %).</li>
+<li><b>Hradec Králové:</b> Hůlková (ANO) podpořila Ceralovou Petrofovou už v sobotu večer a obě předpovědi to započítaly. Od Nebeské ani Holáska jsme podporu nenašli.</li>
+<li><b>Plzeň:</b> končící senátor Aschenbrenner (ODS) podle titulku iDNES „Řehku asi nepodpoří“. To jen potvrzuje stav, se kterým předpovědi počítají.</li>
+<li><b>Žďár:</b> Černý, který prohrál o jeden hlas, nikoho nepodpořil a o přepočtu zatím nerozhodl.</li>
+<li>V ostatních obvodech jsme žádnou podporu nenašli. ANO ani Babiš nedoporučili, koho volit tam, kde ANO ve 2. kole nemá kandidáta.</li>
+</ul>
+<p>Nové snapshoty AI a AI s modelem jsme zamkli commitem <code>8e6e795</code> (9:49). Mění se v nich jen Litovel, ostatní obvody jsou kopie z 11. 10.</p>
+<h3>Kurzy na 2. kolo: první Sázky a Blend</h3>
+<p>Tipsport i Fortuna vypisují souboj „Kdo získá více hlasů“ ve všech 22 obvodech. Postup: power de-vig zvlášť u každé kanceláře, potom průměr obou. Kurz 1,01 bereme jako dolní mez. Kancelář, která má kurz favorita uzamčený, vynecháváme. V Praze 1 (Padevět) a v Kolíně (Kašpar) jsou uzamčené obě, takže tam Sázky ani Blend nemají číslo. V Příbrami a Uherském Hradišti počítáme jen s Tipsportem. Hodnotit se bude až poslední čtení před uzavřením sázek, jak jsme předem zapsali 11. 10. Dnešní čísla jsou průběžná.</p>
+<ul>
+<li><b>K nám:</b> stejného favorita jako AI s modelem má trh ve 19 z 20 obvodů s kurzy. V Hradci (Dvořák 66 %), Frýdku-Místku (Pešatová 61 %) a Praze 5 (Láska 79 %) je trh na naší straně proti STEM (CNN Prima). V Přerově je trh (Navařík 68 %) ve shodě s AI s modelem (62 %), čistá AI má těsně Vránu (51 %).</li>
+<li><b>Od nás:</b> v <b>Kladně</b> se trh mezi nedělním večerem a pondělním ránem otočil: Tipsport z Šípová 1,65 / Paták 2,08 na Šípová 2,08 / Paták 1,65, Fortuna (vypsala nově) Paták 1,65. Trh teď dává Patákovi 57 %, my Šípové 52–53 % a STEM Patákovi 88 %. Blend je v Kladně těsně pro Pataka (54 %). Zprávu, která by obrat vysvětlovala, jsme nenašli. Kurz jsme nehledali, abychom podle něj nic neměnili.</li>
+<li><b>Trh je jistější než my</b> (stejný favorit): Karviná (Brzyszkowská 87 % vs. 65–72 %), Brno (Papoušek 97 % vs. 84–86 %), Pelhřimov (Med 91 % vs. 78–82 %), Česká Lípa (Půta 84 % vs. 72–74 %), Praha 5 (79 % vs. 62–64 %), Hradec (66 % vs. 54 %). <b>Blízko nás:</b> Zlín (Goláň 75 % vs. 73–74 %), Žďár (Klement 57 % vs. 56–66 %).</li>
+<li><b>Celkově:</b> na 2. kolo vypadají naše odhady jako v 1. kole. S trhem se shodneme ve volbě favorita, ale jsme opatrnější. V 1. kole to u jasných favoritů vyšlo lépe pro trh. Kladno je teď jediný obvod, kde stojíme proti trhu i STEM.</li>
+<li><b>Citlivost na metodu:</b> u vyrovnaných soubojů na metodě de-vigu skoro nezáleží (Kladno 56–57 % proporčně / Shin / power, Hradec 63–64 %). U kurzu 1,01 záleží hodně (Plzeň 95 / 97 / 99 %, Brno 91 / 94 / 97 %). Hlavní skóre počítáme metodou power, jak je předem zapsané, ostatní metody uvedeme při vyhodnocení jako citlivostní analýzu.</li>
+</ul>
+<h3>Chyby a nápravy</h3>
+<ul>
+<li><b>Bod ke sledování ve Znojmě byl zadaný příliš hrubě.</b> Předpověď z 10. 10. psala, že podpora Kyněry od Růžičky <i>nebo</i> Stačilo! sníží Třetinovi šance o 8–12 b. Nastala jen menší část: Stačilo! se podporou přidalo ke Kyněrovi, Růžička ne. Navíc s přesunem voličů Stačilo! k Kyněrovi odhad už počítal. Oba red-teamy upozornily, že dodatečný výklad takového bodu je zčásti účelový. <i>Náprava:</i> v bodech ke sledování uvádíme každou událost zvlášť a ke každé zvlášť velikost posunu.</li>
+<li><b>Pořadí lock a kurzy.</b> Kurzy na 2. kolo jsme začali číst (9:47) ještě před commitem locku (9:49), protože update Litovle ještě běžel. Litovelský řádek jsme při čtení skryli a otevřeli ho až po locku (9:49:28 a 9:49:40). Ostatní obvody se dnes neměnily a agenti pro Litovel ani Znojmo kurzy neviděli. Pořadí je doložené časy commitů a hlavičkami souborů s kurzy.</li>
+<li><b>Doplněk z 11. 10.</b> uváděl „11 z 22 obvodů, Fortuna nic“. Ve 20:20 už Tipsport vypsal všech 22 obvodů. Doplnili jsme to do zápisu z 11. 10. Předem zapsané pravidlo jsme neměnili.</li>
+</ul>
+<h3>Nové zdroje dne</h3>
+<ul>
+<li><a href="https://olomoucky.denik.cz/zpravy-region/senatni-volby-obvod-66-litovel-kohajda/">Olomoucký deník: Kohajda podpoří Ošťádala</a> (11. 10.), použito (Litovel).</li>
+<li><a href="https://znojemsky.denik.cz/komunalni-volby/neuspesni-kandidati-senat-znojemsko-podpora-finaliste/">Znojemský deník / ČTK: neúspěšní kandidáti rozděleni</a> (11. 10.), použito (Znojmo, skip).</li>
+<li><a href="https://hradecky.denik.cz/zpravy-region/jana-hulkova-senat-kandidatka-prvni-kolo-podpora/">Hradecký deník: Hůlková podpoří Ceralovou Petrofovou</a> (10. 10.), už započteno.</li>
+<li><a href="https://www.idnes.cz/volby/plzen/senatni-volby-2026-ods-lumir-aschenbrenner-neobhajil.A261011_131926_plzen-volby_vb">iDNES: Aschenbrenner „Řehku asi nepodpořím“</a> (11. 10., placený obsah, jen titulek), bez změny.</li>
+<li><a href="https://www.denik.cz/komunalni-volby/radek-cerny-michal-smarda-josef-klement-senatni-volby-zdar-obvod-51-jeden-hlas-rozdil/">Deník: Černý (Žďár) respektuje prohru o hlas</a>, bez podpory, bez změny.</li>
+<li><a href="https://rakovnicky.denik.cz/zpravy-region/boj-o-senat-tresl-chce-znovu-do-terenu-mikolas-rozjizdi-dalsi-kampan/">Rakovnický deník: Trešl a Mikoláš jednají o podpoře</a>, nic konkrétního.</li>
+<li><a href="https://www.forum24.cz/babisova-kandidatka-chce-dobyt-senat-na-ceskolipsku-v-ceste-ji-stoji-hejtman-puta">forum24: Česká Lípa, rozhodnou voliči Voseckého a Vomáčky</a>, bez podpory.</li>
+<li>Kurzy: Tipsport (událost 8537281) a Fortuna (politika, „Kdo získá více hlasů – 2. kolo“), soubory <code>raw-*-2026-10-12-r2.txt</code>.</li>
+</ul>
+<h3>Dál</h3>
+<p>Kurzy denně do uzavření sázek (hodnotí se poslední čtení). Další kontrola podpor jen při nové zprávě, update jen při faktu, který může rozhodnout souboj, a vždy lock před kurzy. 2. kolo 16.–17. 10.</p>""",
+    en="""<p><b>In short:</b> An endorsement check across all 22 districts found two new facts. In Litovel we raised the forecast slightly; in Znojmo we left it unchanged. For the first time we have round-2 Betting (Tipsport and Fortuna) and Blend. The market has the same favourite as AI + model in 19 of the 20 districts with odds. The exception is <b>Kladno, where the market flipped overnight to Paták</b> (57 %) while we have Šípová at 52–53 %. On clear favourites the market is, as in round 1, more confident than we are.</p>
+<h3>Runoff endorsements (news only, no odds)</h3>
+<p>On Saturday evening the agents ran out of web search, so this morning a fresh run checked endorsements in all 22 districts. We used Google News for the last three days and articles opened in the browser. No odds were opened while we did this.</p>
+<ul>
+<li><b>Litovel: new fact, updated.</b> Michael Kohajda (KDU-ČSL, 3rd, 28.4 %, 146 votes short of the runoff) said he will back Ošťádal in round 2. AI: Ošťádal 80 → <b>83 %</b>, AI + model 86 → <b>88 %</b>. The red-team agreed in both steps. Why so small: the previous forecast already assumed Kohajda's voters would go mostly to Ošťádal. The endorsement also appeared only as a mention in one article, with no appeal to voters and no party position. The main uncertainty is still how many of his voters turn out at all.</li>
+<li><b>Znojmo: new facts, no change.</b> Stačilo! (11.8 %) backs Kyněra (ANO), Hlas regionů (6.7 %) backs Třetina, independent Růžička (18.7 %) backs nobody, and Přísaha is undecided. The effects roughly cancel (net +1 pp for AI, +0.2 pp for AI + model). That is under the 2 pp threshold, so the update was skipped and the 10 Oct forecasts stand (Třetina 84 / 91 %).</li>
+<li><b>Hradec Králové:</b> Hůlková (ANO) backed Ceralová Petrofová on Saturday evening, and both forecasts already include it. We found no endorsement from Nebeská or Holásek.</li>
+<li><b>Plzeň:</b> outgoing senator Aschenbrenner (ODS) "will probably not back Řehka", per an iDNES headline. This only confirms what the forecasts already assume.</li>
+<li><b>Žďár:</b> Černý, who lost by one vote, endorsed nobody and has not yet decided on a recount.</li>
+<li>We found no endorsements in the other districts. Neither ANO nor Babiš recommended a vote where ANO has no runoff candidate.</li>
+</ul>
+<p>We locked the new AI and AI + model snapshots in commit <code>8e6e795</code> (9:49). Only Litovel changes in them; the other districts are copies of 11 Oct.</p>
+<h3>Runoff odds: first Betting and Blend</h3>
+<p>Tipsport and Fortuna both offer a "who gets more votes" duel in all 22 districts. Method: power de-vig for each bookmaker separately, then the mean of the two. Odds of 1.01 are treated as the floor. A bookmaker with the favourite's price locked is left out. In Praha 1 (Padevět) and Kolín (Kašpar) both are locked, so Betting and Blend have no number there. In Příbram and Uherské Hradiště we use Tipsport only. Only the last reading before betting closes is scored, as pre-registered on 11 Oct. Today's numbers are interim.</p>
+<ul>
+<li><b>Towards us:</b> the market has the same favourite as AI + model in 19 of 20 districts with odds. In Hradec (Dvořák 66 %), Frýdek-Místek (Pešatová 61 %) and Praha 5 (Láska 79 %) the market sides with us against STEM (CNN Prima). In Přerov the market (Navařík 68 %) agrees with AI + model (62 %); pure AI narrowly has Vrána (51 %).</li>
+<li><b>Away from us:</b> in <b>Kladno</b> the market flipped between Sunday evening and Monday morning: Tipsport went from Šípová 1.65 / Paták 2.08 to Šípová 2.08 / Paták 1.65, and Fortuna (newly posted) has Paták at 1.65. The market now gives Paták 57 %, we have Šípová at 52–53 %, and STEM has Paták at 88 %. Blend narrowly favours Paták in Kladno (54 %). We found no news story that would explain the flip. We did not go looking for one because of the odds, so as not to change anything on the market's account.</li>
+<li><b>The market is more confident than us</b> (same favourite): Karviná (Brzyszkowská 87 % vs 65–72 %), Brno (Papoušek 97 % vs 84–86 %), Pelhřimov (Med 91 % vs 78–82 %), Česká Lípa (Půta 84 % vs 72–74 %), Praha 5 (79 % vs 62–64 %), Hradec (66 % vs 54 %). <b>Close to us:</b> Zlín (Goláň 75 % vs 73–74 %), Žďár (Klement 57 % vs 56–66 %).</li>
+<li><b>Overall:</b> for round 2 our forecasts look as they did in round 1. We agree with the market on the favourite but are more cautious. In round 1 that worked out better for the market on clear favourites. Kladno is now the only district where we stand against both the market and STEM.</li>
+<li><b>Sensitivity to method:</b> in close races the de-vig method barely matters (Kladno 56–57 % proportional / Shin / power, Hradec 63–64 %). At odds of 1.01 it matters a lot (Plzeň 95 / 97 / 99 %, Brno 91 / 94 / 97 %). The main score uses the power method, as pre-registered; the other methods will be shown at scoring as a sensitivity analysis.</li>
+</ul>
+<h3>Mistakes and fixes</h3>
+<ul>
+<li><b>The Znojmo watch item was too coarse.</b> The 10 Oct forecast said that an endorsement of Kyněra by Růžička <i>or</i> Stačilo! would cut Třetina's chances by 8–12 pp. Only the smaller part happened: Stačilo! endorsed Kyněra, Růžička did not. The forecast also already assumed Stačilo! voters would move to Kyněra. Both red-teams noted that reinterpreting such an item after the fact is partly self-serving. <i>Fix:</i> watch items now list each event separately, each with its own size of shift.</li>
+<li><b>Order of lock and odds.</b> We started reading the runoff odds (9:47) before the lock commit (9:49), because the Litovel update was still running. The Litovel line was hidden during the reading and opened only after the lock (9:49:28 and 9:49:40). No other district changed today, and the Litovel and Znojmo agents never saw odds. The order is documented by commit times and the headers of the odds files.</li>
+<li><b>The 11 Oct addendum</b> said "11 of 22 districts, nothing at Fortuna". By 20:20 Tipsport had posted all 22 districts. We added this to the 11 Oct entry; the pre-registered rule was not changed.</li>
+</ul>
+<h3>New sources</h3>
+<ul>
+<li><a href="https://olomoucky.denik.cz/zpravy-region/senatni-volby-obvod-66-litovel-kohajda/">Olomoucký deník: Kohajda backs Ošťádal</a> (11 Oct), used (Litovel).</li>
+<li><a href="https://znojemsky.denik.cz/komunalni-volby/neuspesni-kandidati-senat-znojemsko-podpora-finaliste/">Znojemský deník / ČTK: eliminated candidates split</a> (11 Oct), used (Znojmo, skip).</li>
+<li><a href="https://hradecky.denik.cz/zpravy-region/jana-hulkova-senat-kandidatka-prvni-kolo-podpora/">Hradecký deník: Hůlková backs Ceralová Petrofová</a> (10 Oct), already included.</li>
+<li><a href="https://www.idnes.cz/volby/plzen/senatni-volby-2026-ods-lumir-aschenbrenner-neobhajil.A261011_131926_plzen-volby_vb">iDNES: Aschenbrenner "will probably not back Řehka"</a> (11 Oct, paywalled, headline only), no change.</li>
+<li><a href="https://www.denik.cz/komunalni-volby/radek-cerny-michal-smarda-josef-klement-senatni-volby-zdar-obvod-51-jeden-hlas-rozdil/">Deník: Černý (Žďár) accepts the one-vote loss</a>, no endorsement, no change.</li>
+<li><a href="https://rakovnicky.denik.cz/zpravy-region/boj-o-senat-tresl-chce-znovu-do-terenu-mikolas-rozjizdi-dalsi-kampan/">Rakovnický deník: Trešl and Mikoláš negotiating support</a>, nothing concrete.</li>
+<li><a href="https://www.forum24.cz/babisova-kandidatka-chce-dobyt-senat-na-ceskolipsku-v-ceste-ji-stoji-hejtman-puta">forum24: Česká Lípa, Vosecký's and Vomáčka's voters will decide</a>, no endorsement.</li>
+<li>Odds: Tipsport (event 8537281) and Fortuna (politics, "Kdo získá více hlasů – 2. kolo"), files <code>raw-*-2026-10-12-r2.txt</code>.</li>
+</ul>
+<h3>Next</h3>
+<p>Odds daily until betting closes (the last reading is scored). Another endorsement check only on new news; an update only for a fact that could decide a race, and always a lock before odds. Runoff on 16–17 Oct.</p>"""))
+
+CHANGES["2026-10-12"] = {
+    "cs": """<ul>
+<li><b>Podpory pro 2. kolo:</b> Kohajda (Litovel, 28 %) podpořil Ošťádala → AI 80 → 83 %, AI s modelem 86 → 88 %. Ve Znojmě se podpory rozdělily (Stačilo! Kyněra, Hlas regionů Třetina, Růžička nikoho), odhad beze změny. Lock <code>8e6e795</code> před kurzy.</li>
+<li><b>První Sázky a Blend na 2. kolo</b> (Tipsport + Fortuna, souboj dvou kandidátů). Trh má stejného favorita jako AI s modelem v 19 z 20 obvodů s kurzy, ale u jasných favoritů je jistější než my (Karviná, Brno, Pelhřimov, Česká Lípa, Praha 5, Hradec). V Praze 1 a Kolíně jsou kurzy uzamčené.</li>
+<li><b>Kladno se otočilo:</b> trh přes noc z Šípové na Pataka (57 %), my máme Šípovou 52–53 %, STEM Pataka 88 %. Blend těsně Paták (54 %).</li>
+<li><b>Chyba:</b> bod ke sledování ve Znojmě byl zadaný příliš hrubě (dvě různé podpory spojené do jednoho bodu). Podrobně v deníku.</li>
+</ul>""",
+    "en": """<ul>
+<li><b>Runoff endorsements:</b> Kohajda (Litovel, 28 %) backed Ošťádal → AI 80 → 83 %, AI + model 86 → 88 %. In Znojmo the endorsements split (Stačilo! Kyněra, Hlas regionů Třetina, Růžička nobody), forecast unchanged. Locked in <code>8e6e795</code> before odds.</li>
+<li><b>First round-2 Betting and Blend</b> (Tipsport + Fortuna, two-candidate duels). The market has the same favourite as AI + model in 19 of 20 districts with odds, but is more confident than us on clear favourites (Karviná, Brno, Pelhřimov, Česká Lípa, Praha 5, Hradec). Praha 1 and Kolín odds are locked.</li>
+<li><b>Kladno flipped:</b> overnight the market moved from Šípová to Paták (57 %); we have Šípová at 52–53 %, STEM Paták at 88 %. Blend narrowly Paták (54 %).</li>
+<li><b>Mistake:</b> the Znojmo watch item was too coarse (two different endorsements lumped into one item). Details in the journal.</li>
 </ul>""",
 }

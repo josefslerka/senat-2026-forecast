@@ -96,5 +96,70 @@ def main(date: str) -> None:
         print(d["n"], " | ".join(f"{k} {v*100:.0f}" for k, v in top), "·", d["note"])
 
 
+def parse_h2h(path: Path) -> dict[int, list]:
+    """Round-2 head-to-head lines: `N: A 1.40 x B 2.68` (Tipsport) or `N: A 1.40 B 2.68` (Fortuna); `zamč.` = locked."""
+    out = {}
+    if not path.exists():
+        return out
+    for line in path.read_text().splitlines():
+        if not line.strip() or line.startswith("#"):
+            continue
+        n, rest = line.split(":", 1)
+        toks = [t for t in rest.split() if t != "x"]
+        out[int(n)] = [(toks[0], None if toks[1].startswith("zam") else float(toks[1])),
+                       (toks[2], None if toks[3].startswith("zam") else float(toks[3]))]
+    return out
+
+
+def main_r2(date: str) -> None:
+    """Round 2 (pre-registered 11. 10.): power de-vig of each two-way book; odds 1.01 kept as the floor; a book with a
+    locked price is skipped for that district; consensus = mean of the available books; no book -> no Sázky/Blend."""
+    books = {"fortuna": parse_h2h(MK / f"raw-fortuna-{date}-r2.txt"), "tipsport": parse_h2h(MK / f"raw-tipsport-{date}-r2.txt")}
+    aim = json.loads((SNAP / f"{date}-aimodel.json").read_text())
+    res = {"experiment": "senat-2026", "series": "market", "date": date, "round": 2,
+           "method": "Round 2: Fortuna + Tipsport head-to-head ('who gets more votes'), power de-vig per book, "
+                     "1.01 kept as floor, locked book skipped, consensus = mean of available books; mapped to AI keys",
+           "districts": []}
+    for d in aim["districts"]:
+        n = d["n"]
+        keys = {c["key"]: c["name"] for c in d["candidates"]}
+        def to_key(tok: str) -> str:
+            sk = surname_key(tok)
+            for k, name in keys.items():
+                fn = fold(name)
+                if k != "Someone_else" and sk and (sk in fn or fn.split()[-1] in sk):
+                    return k
+            raise SystemExit(f"{n}: {tok} not matched to {list(keys)}")
+        fair_by, notes = {}, []
+        for bk, data in books.items():
+            row = data.get(n)
+            if not row:
+                continue
+            if any(o is None for _, o in row):
+                notes.append(f"{bk.capitalize()} locked (skipped)")
+                continue
+            fair = power_fair({tok: o for tok, o in row})
+            fair_by[bk] = {to_key(tok): p for tok, p in fair.items()}
+            notes.append(f"{bk.capitalize()} margin {(sum(1 / o for _, o in row) - 1) * 100:.0f} %")
+        if not fair_by:
+            if notes:
+                res["districts"].append({"n": n, "consensus": None, "note": "; ".join(notes),
+                                         "note_cs": "; ".join(notes).replace("locked (skipped)", "uzamčeno (vynecháno)").replace("margin", "marže")})
+            continue
+        fin = set().union(*fair_by.values())
+        cons = {k: sum(fb.get(k, 0.0) for fb in fair_by.values()) / len(fair_by) for k in fin}
+        for k in keys:
+            cons.setdefault(k, 0.0)
+        note = "; ".join(notes)
+        res["districts"].append({"n": n, **{bk: {k: round(v, 4) for k, v in fb.items()} for bk, fb in fair_by.items()},
+                                 "consensus": {k: round(v, 4) for k, v in cons.items()},
+                                 "note": note, "note_cs": note.replace("locked (skipped)", "uzamčeno (vynecháno)").replace("margin", "marže")})
+    (MK / f"{date}.json").write_text(json.dumps(res, ensure_ascii=False, indent=2))
+    for d in res["districts"]:
+        top = sorted((d["consensus"] or {}).items(), key=lambda kv: -kv[1])[:2]
+        print(d["n"], " | ".join(f"{k} {v*100:.1f}" for k, v in top) or "—", "·", d["note"])
+
+
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else "2026-10-05")
+    args = [a for a in sys.argv[1:] if a != "--r2"]
+    (main_r2 if "--r2" in sys.argv else main)(args[0] if args else "2026-10-05")

@@ -1,0 +1,408 @@
+{
+  "experiment": "senat-2026",
+  "series": "market",
+  "date": "2026-10-12",
+  "round": 2,
+  "method": "Round 2: Fortuna + Tipsport head-to-head ('who gets more votes'), power de-vig per book, 1.01 kept as floor, locked book skipped, consensus = mean of available books; mapped to AI keys",
+  "districts": [
+    {
+      "n": 3,
+      "fortuna": {
+        "Plevny": 0.9701,
+        "Tsoukernik": 0.0299
+      },
+      "tipsport": {
+        "Plevny": 0.9855,
+        "Tsoukernik": 0.0145
+      },
+      "consensus": {
+        "Plevny": 0.9778,
+        "Tsoukernik": 0.0222,
+        "Cerna": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna margin 8 %; Tipsport margin 5 %",
+      "note_cs": "Fortuna marže 8 %; Tipsport marže 5 %"
+    },
+    {
+      "n": 6,
+      "fortuna": {
+        "Tresl": 0.9847,
+        "Mikolas": 0.0153
+      },
+      "tipsport": {
+        "Tresl": 0.9847,
+        "Mikolas": 0.0153
+      },
+      "consensus": {
+        "Tresl": 0.9847,
+        "Mikolas": 0.0153,
+        "Steiner": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna margin 6 %; Tipsport margin 6 %",
+      "note_cs": "Fortuna marže 6 %; Tipsport marže 6 %"
+    },
+    {
+      "n": 9,
+      "fortuna": {
+        "Rehka": 0.9859,
+        "Kantorova": 0.0141
+      },
+      "tipsport": {
+        "Rehka": 0.9855,
+        "Kantorova": 0.0145
+      },
+      "consensus": {
+        "Rehka": 0.9857,
+        "Kantorova": 0.0143,
+        "Aschenbrenner": 0.0,
+        "Pouskova": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna margin 4 %; Tipsport margin 5 %",
+      "note_cs": "Fortuna marže 4 %; Tipsport marže 5 %"
+    },
+    {
+      "n": 15,
+      "fortuna": {
+        "Med": 0.8881,
+        "Kozar": 0.1119
+      },
+      "tipsport": {
+        "Med": 0.9355,
+        "Kozar": 0.0645
+      },
+      "consensus": {
+        "Med": 0.9118,
+        "Kozar": 0.0882,
+        "Chalupsky": 0.0,
+        "PavluRadova": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna margin 8 %; Tipsport margin 9 %",
+      "note_cs": "Fortuna marže 8 %; Tipsport marže 9 %"
+    },
+    {
+      "n": 18,
+      "tipsport": {
+        "Stepanek": 0.9859,
+        "Danhova": 0.0141
+      },
+      "consensus": {
+        "Stepanek": 0.9859,
+        "Danhova": 0.0141,
+        "Luftova": 0.0,
+        "Sorna": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna locked (skipped); Tipsport margin 4 %",
+      "note_cs": "Fortuna uzamčeno (vynecháno); Tipsport marže 4 %"
+    },
+    {
+      "n": 21,
+      "fortuna": {
+        "Laska": 0.805,
+        "Sablik": 0.195
+      },
+      "tipsport": {
+        "Laska": 0.7832,
+        "Sablik": 0.2168
+      },
+      "consensus": {
+        "Laska": 0.7941,
+        "Sablik": 0.2059,
+        "Sarapatka": 0.0,
+        "Broz": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna margin 9 %; Tipsport margin 9 %",
+      "note_cs": "Fortuna marže 9 %; Tipsport marže 9 %"
+    },
+    {
+      "n": 24,
+      "fortuna": {
+        "Smoljak": 0.9847,
+        "Peckova": 0.0153
+      },
+      "tipsport": {
+        "Smoljak": 0.9837,
+        "Peckova": 0.0163
+      },
+      "consensus": {
+        "Peckova": 0.0158,
+        "Smoljak": 0.9842,
+        "Zalud": 0.0,
+        "Laube": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna margin 6 %; Tipsport margin 7 %",
+      "note_cs": "Fortuna marže 6 %; Tipsport marže 7 %"
+    },
+    {
+      "n": 27,
+      "consensus": null,
+      "note": "Fortuna locked (skipped); Tipsport locked (skipped)",
+      "note_cs": "Fortuna uzamčeno (vynecháno); Tipsport uzamčeno (vynecháno)"
+    },
+    {
+      "n": 30,
+      "fortuna": {
+        "Sipova": 0.4312,
+        "Patak": 0.5688
+      },
+      "tipsport": {
+        "Sipova": 0.4345,
+        "Patak": 0.5655
+      },
+      "consensus": {
+        "Sipova": 0.4328,
+        "Patak": 0.5672,
+        "Gerloch": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna margin 8 %; Tipsport margin 9 %",
+      "note_cs": "Fortuna marže 8 %; Tipsport marže 9 %"
+    },
+    {
+      "n": 36,
+      "fortuna": {
+        "Puta": 0.807,
+        "Volfova": 0.193
+      },
+      "tipsport": {
+        "Puta": 0.8777,
+        "Volfova": 0.1223
+      },
+      "consensus": {
+        "Volfova": 0.1577,
+        "Puta": 0.8423,
+        "Vosecky": 0.0,
+        "Vomacka": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna margin 8 %; Tipsport margin 9 %",
+      "note_cs": "Fortuna marže 8 %; Tipsport marže 9 %"
+    },
+    {
+      "n": 42,
+      "consensus": null,
+      "note": "Fortuna locked (skipped); Tipsport locked (skipped)",
+      "note_cs": "Fortuna uzamčeno (vynecháno); Tipsport uzamčeno (vynecháno)"
+    },
+    {
+      "n": 45,
+      "fortuna": {
+        "Dvorak": 0.6816,
+        "Ceralova_Petrofova": 0.3184
+      },
+      "tipsport": {
+        "Dvorak": 0.6433,
+        "Ceralova_Petrofova": 0.3567
+      },
+      "consensus": {
+        "Dvorak": 0.6624,
+        "Ceralova_Petrofova": 0.3376,
+        "Holasek": 0.0,
+        "Hulkova": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna margin 8 %; Tipsport margin 9 %",
+      "note_cs": "Fortuna marže 8 %; Tipsport marže 9 %"
+    },
+    {
+      "n": 51,
+      "fortuna": {
+        "Klement": 0.5474,
+        "Smarda": 0.4526
+      },
+      "tipsport": {
+        "Klement": 0.5848,
+        "Smarda": 0.4152
+      },
+      "consensus": {
+        "Smarda": 0.4339,
+        "Klement": 0.5661,
+        "Cerny": 0.0,
+        "Koten": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna margin 9 %; Tipsport margin 9 %",
+      "note_cs": "Fortuna marže 9 %; Tipsport marže 9 %"
+    },
+    {
+      "n": 54,
+      "fortuna": {
+        "Tretina": 0.9847,
+        "Kynera": 0.0153
+      },
+      "tipsport": {
+        "Tretina": 0.9696,
+        "Kynera": 0.0304
+      },
+      "consensus": {
+        "Tretina": 0.9772,
+        "Kynera": 0.0228,
+        "Beranova": 0.0,
+        "RedovaFajmonova": 0.0,
+        "Ruzicka": 0.0,
+        "Cerny": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna margin 6 %; Tipsport margin 9 %",
+      "note_cs": "Fortuna marže 6 %; Tipsport marže 9 %"
+    },
+    {
+      "n": 60,
+      "fortuna": {
+        "Papousek": 0.9701,
+        "Zitterbart": 0.0299
+      },
+      "tipsport": {
+        "Papousek": 0.9702,
+        "Zitterbart": 0.0298
+      },
+      "consensus": {
+        "Papousek": 0.9702,
+        "Zitterbart": 0.0298,
+        "Sterba": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna margin 8 %; Tipsport margin 8 %",
+      "note_cs": "Fortuna marže 8 %; Tipsport marže 8 %"
+    },
+    {
+      "n": 63,
+      "fortuna": {
+        "Navarik": 0.6787,
+        "Vrana": 0.3213
+      },
+      "tipsport": {
+        "Navarik": 0.6787,
+        "Vrana": 0.3213
+      },
+      "consensus": {
+        "Navarik": 0.6787,
+        "Vrana": 0.3213,
+        "Chromec": 0.0,
+        "Obrtel": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna margin 9 %; Tipsport margin 9 %",
+      "note_cs": "Fortuna marže 9 %; Tipsport marže 9 %"
+    },
+    {
+      "n": 66,
+      "fortuna": {
+        "Ostadal": 0.9583,
+        "Skurek": 0.0417
+      },
+      "tipsport": {
+        "Ostadal": 0.9702,
+        "Skurek": 0.0298
+      },
+      "consensus": {
+        "Skurek": 0.0357,
+        "Ostadal": 0.9643,
+        "Kohajda": 0.0,
+        "Jelinek": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna margin 8 %; Tipsport margin 8 %",
+      "note_cs": "Fortuna marže 8 %; Tipsport marže 8 %"
+    },
+    {
+      "n": 69,
+      "fortuna": {
+        "Pesatova": 0.629,
+        "Korc": 0.371
+      },
+      "tipsport": {
+        "Pesatova": 0.5848,
+        "Korc": 0.4152
+      },
+      "consensus": {
+        "Korc": 0.3931,
+        "Pesatova": 0.6069,
+        "Krpel": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna margin 9 %; Tipsport margin 9 %",
+      "note_cs": "Fortuna marže 9 %; Tipsport marže 9 %"
+    },
+    {
+      "n": 72,
+      "fortuna": {
+        "Simetka": 0.9701,
+        "Barankova_Vilamova": 0.0299
+      },
+      "tipsport": {
+        "Simetka": 0.9841,
+        "Barankova_Vilamova": 0.0159
+      },
+      "consensus": {
+        "Simetka": 0.9771,
+        "Barankova_Vilamova": 0.0229,
+        "Loprais": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna margin 8 %; Tipsport margin 7 %",
+      "note_cs": "Fortuna marže 8 %; Tipsport marže 7 %"
+    },
+    {
+      "n": 75,
+      "fortuna": {
+        "Brzyszkowska": 0.8881,
+        "Kazik": 0.1119
+      },
+      "tipsport": {
+        "Brzyszkowska": 0.8603,
+        "Kazik": 0.1397
+      },
+      "consensus": {
+        "Brzyszkowska": 0.8742,
+        "Kazik": 0.1258,
+        "Polach": 0.0,
+        "Szyja": 0.0,
+        "Stanek": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna margin 8 %; Tipsport margin 9 %",
+      "note_cs": "Fortuna marže 8 %; Tipsport marže 9 %"
+    },
+    {
+      "n": 78,
+      "fortuna": {
+        "Golan": 0.7369,
+        "Mitacek": 0.2631
+      },
+      "tipsport": {
+        "Golan": 0.7692,
+        "Mitacek": 0.2308
+      },
+      "consensus": {
+        "Mitacek": 0.2469,
+        "Golan": 0.7531,
+        "Sedlarik": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna margin 9 %; Tipsport margin 9 %",
+      "note_cs": "Fortuna marže 9 %; Tipsport marže 9 %"
+    },
+    {
+      "n": 81,
+      "tipsport": {
+        "Bazala": 0.9841,
+        "Vasica": 0.0159
+      },
+      "consensus": {
+        "Bazala": 0.9841,
+        "Vasica": 0.0159,
+        "Balastikova": 0.0,
+        "Someone_else": 0.0
+      },
+      "note": "Fortuna locked (skipped); Tipsport margin 7 %",
+      "note_cs": "Fortuna uzamčeno (vynecháno); Tipsport marže 7 %"
+    }
+  ]
+}
