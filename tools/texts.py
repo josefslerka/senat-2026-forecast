@@ -1000,3 +1000,80 @@ CHANGES["2026-10-12"] = {
 <li><b>Mistake:</b> the Znojmo watch item was too coarse (two different endorsements lumped into one item). Details in the journal.</li>
 </ul>""",
 }
+
+JOURNAL.append(dict(
+    date="2026-10-13", title_cs="Den 12: bez updatu, kurzy se hýbou k nám i od nás",
+    title_en="Day 12: no update, odds move both towards and away from us",
+    cs="""<p><b>V kostce:</b> Ve zprávách jsme nenašli nic, co by mohlo rozhodnout některý souboj. Předpovědi AI a AI s modelem proto zůstávají beze změny (lock <code>e22cfd9</code>, 12:26). Kurzy se od pondělního rána pohnuly v devíti obvodech, nikde se ale neotočil favorit. Kladno je beze změny: trh Paták 57 %, my Šípová 52–53 %.</p>
+<h3>Zprávy (bez kurzů)</h3>
+<ul>
+<li><b>Celostátně:</b> SPD oznámila, že její neúspěšní kandidáti podpoří ve 2. kole kandidáty ANO. ODS podpoří opoziční kandidáty tam, kde sama nemá finalistu. Obojí odpovídá tomu, jak se bloky (vláda × opozice) chovají a s čím předpovědi už počítají. Bez změny.</li>
+<li><b>Uherské Hradiště:</b> tři vyřazení kandidáti (dohromady asi 14 %) podpoří Vašicu (ANO), Zelienková (9,4 %) Bazalu. Bazala vedl v 1. kole 47,8 : 28,3 %, takže ani úplný přesun hlasů pořadí nemění. Bez změny.</li>
+<li><b>Zlín:</b> vyřazení kandidáti nepodpoří nikoho. <b>Žďár:</b> Černý o přepočtu rozhodne „příští týden“. <b>Česká Lípa:</b> lídr vítězné Živé Lípy (nekandidoval do Senátu) fandí Půtovi a myslí si, že souběžná kandidatura Volfové stála ANO radnici. Jen slabý signál.</li>
+<li>V ostatních sporných obvodech (Kladno, Praha 5, Hradec, Frýdek-Místek, Přerov, Karviná, Pelhřimov) nic nového.</li>
+</ul>
+<p>Snapshoty AI a AI s modelem pro 13. 10. jsou kopie z 12. 10., zamčené commitem <code>e22cfd9</code> (12:26:57) před čtením kurzů (Tipsport 12:27:09, Fortuna 12:27:18).</p>
+<h3>Kurzy: co se změnilo od pondělního rána</h3>
+<p>V pondělí v 15:10 jsme kurzy přečetli ještě jednou (nehodnoceno, jen pro záznam vývoje). Fortuna u trhu uvádí konec sázek <b>v pátek 16. 10. ve 14:00</b>. Hodnotit budeme poslední čtení před tímto časem.</p>
+<ul>
+<li><b>K nám</b> (trh se přiblížil AI s modelem): Hradec (Dvořák 66 → 60 %, my 54 %), Žďár (Klement 57 → 63 %, my 66 %), Karviná (Brzyszkowská 87 → 81 %, my 65 %), Přerov (Navařík 68 → 65 %, my 62 %), Frýdek-Místek (Pešatová 61 → 59 %, my 54 %), Praha 5 (Láska 79 → 78 %, my 62 %).</li>
+<li><b>Od nás:</b> Česká Lípa (Půta 84 → 90 %, my 74 %), Zlín (Goláň 75 → 80 %, my 74 %), Pelhřimov (Med 91 → 94 %, my 82 %).</li>
+<li><b>Beze změny:</b> Kladno (Paták 57 %) a jasní favorité (97–99 %).</li>
+<li><b>Celkově:</b> šest obvodů k nám, tři od nás. Největší posuny jsou zhruba stejně velké oběma směry (Hradec −7, Žďár +6, Karviná −6 proti Česká Lípa +6, Zlín +5). Na tom, kdo je favorit, se trh s námi shoduje dál v 19 z 20 obvodů. Blend: Kladno Paták 54 %, Hradec Dvořák 58 %, Žďár Klement 64 %.</li>
+</ul>
+<h3>Chyby a nápravy</h3>
+<p>Dnes žádná nová. Pořadí lock → kurzy bylo dodrženo (časy výše).</p>
+<h3>Nové zdroje dne</h3>
+<ul>
+<li><a href="https://www.ceskenoviny.cz/zpravy/2886683">ČTK: neúspěšní kandidáti SPD podpoří kandidáty ANO</a> (12. 10.), bez změny.</li>
+<li><a href="https://www.forum24.cz/souboj-o-senat-vrcholi-ods-podpori-opozicni-kandidaty-proti-vladni-koalici">forum24: ODS podpoří opoziční kandidáty</a> (12. 10.), bez změny.</li>
+<li><a href="https://slovacky.denik.cz/zpravy-region/slovacko-uherske-hradiste-senat-volby-obvod-81-2kolo-bazala-vasica-podpora-neuspesni-kandidati/">Slovácký deník: vyřazení kandidáti spíš za Vašicou</a> (12. 10.), bez změny.</li>
+<li><a href="https://www.idnes.cz/volby/jihlava/vysocina-zdarsko-senatni-volby-senat-radek-cerny-hlasy-prepocitani.A261013_080042_jihlava-volby_epsal">iDNES: Černý (Žďár) zvažuje přepočet</a> (13. 10.), bez změny.</li>
+<li><a href="https://www.idnes.cz/volby/liberec/vysledky-voleb-ziva-lipa-jakub-mencl-zluta-bunda-porazil-ano-puta.A261011_125650_liberec-volby_jape">iDNES: Živá Lípa porazila ANO, lídr fandí Půtovi</a> (11. 10.), slabý signál, bez změny.</li>
+<li>Kurzy: <code>raw-*-2026-10-12pm-r2.txt</code> (po 15:10, nehodnoceno) a <code>raw-*-2026-10-13-r2.txt</code>.</li>
+</ul>
+<h3>Dál</h3>
+<p>Kurzy denně, hodnocené čtení v pátek před 14:00. Update jen při faktu, který může rozhodnout souboj (např. přepočet ve Žďáru), vždy lock před kurzy. 2. kolo 16.–17. 10.</p>""",
+    en="""<p><b>In short:</b> The news contained nothing that could decide a race, so the AI and AI + model forecasts stay unchanged (lock <code>e22cfd9</code>, 12:26). Since Monday morning the odds moved in nine districts, but no favourite flipped. Kladno is unchanged: market Paták 57 %, we Šípová 52–53 %.</p>
+<h3>News (no odds)</h3>
+<ul>
+<li><b>Nationally:</b> SPD said its eliminated candidates will back ANO's candidates in round 2. ODS will back opposition candidates where it has no finalist. Both match how the blocs (government vs opposition) behave and what the forecasts already assume. No change.</li>
+<li><b>Uherské Hradiště:</b> three eliminated candidates (about 14 % together) back Vašica (ANO), Zelienková (9.4 %) backs Bazala. Bazala led round 1 by 47.8 to 28.3 %, so even a full transfer does not change the order. No change.</li>
+<li><b>Zlín:</b> eliminated candidates back nobody. <b>Žďár:</b> Černý will decide on a recount "next week". <b>Česká Lípa:</b> the leader of the winning local party Živá Lípa (not a Senate candidate) is rooting for Půta and thinks Volfová's parallel Senate run cost ANO the town hall. A weak signal only.</li>
+<li>Nothing new in the other contested districts (Kladno, Praha 5, Hradec, Frýdek-Místek, Přerov, Karviná, Pelhřimov).</li>
+</ul>
+<p>The 13 Oct AI and AI + model snapshots are copies of 12 Oct, locked in commit <code>e22cfd9</code> (12:26:57) before reading odds (Tipsport 12:27:09, Fortuna 12:27:18).</p>
+<h3>Odds: what changed since Monday morning</h3>
+<p>We also read the odds on Monday at 15:10 (not scored, recorded only to track the trend). Fortuna lists betting as closing <b>on Friday 16 Oct at 14:00</b>. The last reading before then will be scored.</p>
+<ul>
+<li><b>Towards us</b> (market moved closer to AI + model): Hradec (Dvořák 66 → 60 %, we 54 %), Žďár (Klement 57 → 63 %, we 66 %), Karviná (Brzyszkowská 87 → 81 %, we 65 %), Přerov (Navařík 68 → 65 %, we 62 %), Frýdek-Místek (Pešatová 61 → 59 %, we 54 %), Praha 5 (Láska 79 → 78 %, we 62 %).</li>
+<li><b>Away from us:</b> Česká Lípa (Půta 84 → 90 %, we 74 %), Zlín (Goláň 75 → 80 %, we 74 %), Pelhřimov (Med 91 → 94 %, we 82 %).</li>
+<li><b>Unchanged:</b> Kladno (Paták 57 %) and the clear favourites (97–99 %).</li>
+<li><b>Overall:</b> six districts towards us, three away. The largest moves are about equally large in both directions (Hradec −7, Žďár +6, Karviná −6 vs Česká Lípa +6, Zlín +5). On the favourite the market still agrees with us in 19 of 20 districts. Blend: Kladno Paták 54 %, Hradec Dvořák 58 %, Žďár Klement 64 %.</li>
+</ul>
+<h3>Mistakes and fixes</h3>
+<p>None new today. The lock → odds order was kept (times above).</p>
+<h3>New sources</h3>
+<ul>
+<li><a href="https://www.ceskenoviny.cz/zpravy/2886683">ČTK: SPD's eliminated candidates will back ANO</a> (12 Oct), no change.</li>
+<li><a href="https://www.forum24.cz/souboj-o-senat-vrcholi-ods-podpori-opozicni-kandidaty-proti-vladni-koalici">forum24: ODS will back opposition candidates</a> (12 Oct), no change.</li>
+<li><a href="https://slovacky.denik.cz/zpravy-region/slovacko-uherske-hradiste-senat-volby-obvod-81-2kolo-bazala-vasica-podpora-neuspesni-kandidati/">Slovácký deník: eliminated candidates lean to Vašica</a> (12 Oct), no change.</li>
+<li><a href="https://www.idnes.cz/volby/jihlava/vysocina-zdarsko-senatni-volby-senat-radek-cerny-hlasy-prepocitani.A261013_080042_jihlava-volby_epsal">iDNES: Černý (Žďár) considering a recount</a> (13 Oct), no change.</li>
+<li><a href="https://www.idnes.cz/volby/liberec/vysledky-voleb-ziva-lipa-jakub-mencl-zluta-bunda-porazil-ano-puta.A261011_125650_liberec-volby_jape">iDNES: Živá Lípa beat ANO, leader roots for Půta</a> (11 Oct), weak signal, no change.</li>
+<li>Odds: <code>raw-*-2026-10-12pm-r2.txt</code> (Mon 15:10, not scored) and <code>raw-*-2026-10-13-r2.txt</code>.</li>
+</ul>
+<h3>Next</h3>
+<p>Odds daily; the scored reading is on Friday before 14:00. An update only for a fact that could decide a race (e.g. a recount in Žďár), always with a lock before odds. Runoff on 16–17 Oct.</p>"""))
+
+CHANGES["2026-10-13"] = {
+    "cs": """<ul>
+<li><b>Předpovědi beze změny:</b> ve zprávách nic, co by rozhodlo souboj (SPD podpoří ANO, ODS opozici, podpory na Slovácku). Lock <code>e22cfd9</code> před kurzy.</li>
+<li><b>Sázky:</b> kurzy se pohnuly v devíti obvodech, favorit se nikde neotočil. K nám: Hradec, Žďár, Karviná, Přerov, Frýdek-Místek, Praha 5. Od nás: Česká Lípa, Zlín, Pelhřimov. Kladno beze změny (Paták 57 %).</li>
+<li><b>Uzávěrka sázek:</b> pátek 16. 10. ve 14:00. Hodnotí se poslední čtení před ní.</li>
+</ul>""",
+    "en": """<ul>
+<li><b>Forecasts unchanged:</b> nothing in the news that could decide a race (SPD backs ANO, ODS backs the opposition, endorsements in Slovácko). Locked in <code>e22cfd9</code> before odds.</li>
+<li><b>Betting:</b> odds moved in nine districts, no favourite flipped. Towards us: Hradec, Žďár, Karviná, Přerov, Frýdek-Místek, Praha 5. Away: Česká Lípa, Zlín, Pelhřimov. Kladno unchanged (Paták 57 %).</li>
+<li><b>Betting closes:</b> Friday 16 Oct at 14:00. The last reading before then is scored.</li>
+</ul>""",
+}
