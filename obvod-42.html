@@ -2,8 +2,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Obvod 42 — Kolín</title><meta name="description" content="Senát 2026 — veřejný experiment s AI forecastingem">
 <style>
-:root{--bg:#fbfaf7;--fg:#1d1d1b;--muted:#6b6a64;--line:#e4e1d8;--card:#fff;--accent:#2f5d8a;--bar:#2f5d8a;--bar2:#c9d6e3;--warn:#9a5b00}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#151514;--fg:#ecebe6;--muted:#a3a19a;--line:#2e2d2a;--card:#1d1d1b;--accent:#8fb4dc;--bar:#8fb4dc;--bar2:#33424f;--warn:#e0a24a}}
+:root{--s1:#2a78d6;--s2:#eb6834;--bg:#fbfaf7;--fg:#1d1d1b;--muted:#6b6a64;--line:#e4e1d8;--card:#fff;--accent:#2f5d8a;--bar:#2f5d8a;--bar2:#c9d6e3;--warn:#9a5b00}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--s1:#3987e5;--s2:#d95926;--bg:#151514;--fg:#ecebe6;--muted:#a3a19a;--line:#2e2d2a;--card:#1d1d1b;--accent:#8fb4dc;--bar:#8fb4dc;--bar2:#33424f;--warn:#e0a24a}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif}
 .wrap{max-width:980px;margin:0 auto;padding:24px 16px 64px}
 header{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:24px}
@@ -29,12 +29,20 @@ table.cards td::before{content:attr(data-label);color:var(--muted);text-align:le
 table.cards td.head{font-weight:600;font-size:17px}table.cards td.head::before{content:none}
 table.cards td.nolabel{display:none}.sm-only{display:inline!important}}
 .sm-only{display:none}
+.sm{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px 22px;margin-top:16px}
+.sm figure{margin:0}.sm figcaption{font-size:13px;line-height:1.35}.sm figcaption .r{display:flex;justify-content:space-between;gap:8px}
+.sm figcaption b{font-size:14px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sm .v{white-space:nowrap;color:var(--muted)}.sm .v i{display:inline-block;width:10px;height:2px;vertical-align:middle;margin:0 3px 0 6px}
+.sm svg{width:100%;height:auto;display:block;overflow:visible}.sm .ax{stroke:var(--line);stroke-width:1}.sm .mid{stroke:var(--muted);stroke-width:.75;stroke-dasharray:2 3;opacity:.7}
+.sm .r1{fill:var(--line);opacity:.3}.sm text{fill:var(--muted);font-size:9px;font-family:inherit}
+.sm .l1,.sm .l2{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}.sm .l1{stroke:var(--s1)}.sm .l2{stroke:var(--s2)}.sm .l1.o,.sm .l2.o{stroke-width:1.4;stroke-dasharray:1.5 2.5;opacity:.9}
+.sm .d1{fill:var(--s1)}.sm text.e1,.sm text.e2{fill:var(--fg);font-size:10px;font-weight:600}.sm .d2{fill:var(--s2)}.sm .hit{fill:transparent}.sm .hit:hover+circle,.sm .hit:hover{stroke:var(--fg)}
+.key i{display:inline-block;width:16px;height:2px;vertical-align:middle;margin:0 5px 0 12px}
 @media (min-width:641px){.scroll.r2wrap{overflow:visible}table.r2 thead{position:sticky;top:0;z-index:2}table.r2 thead th{background:var(--bg)}
 table.r2 th.gs,table.r2 td.gs{border-left:1px solid var(--line);padding-left:10px}
 table.r2 tr.grp th{text-transform:none;letter-spacing:0;font-size:13px;color:var(--fg);border-bottom:0;padding-bottom:0}}
 table.cards td b{white-space:nowrap}table.cards .pill{white-space:normal}
 </style></head><body><div class="wrap">
-<header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Přehled</a><a href="pravidla.html">Pravidla</a><a href="model.html">Model</a><a href="skore.html">Skóre</a><a href="denik.html">Deník</a><a href="archiv.html">Archiv</a><a class="lang" href="en/obvod-42.html">EN</a></nav></header>
+<header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Přehled</a><a href="pravidla.html">Pravidla</a><a href="model.html">Model</a><a href="skore.html">Skóre</a><a href="vyvoj.html">Vývoj</a><a href="denik.html">Deník</a><a href="archiv.html">Archiv</a><a class="lang" href="en/obvod-42.html">EN</a></nav></header>
 
 <p><a href="index.html">← zpět na přehled</a></p>
 <h1>Obvod 42 — Kolín</h1><p class="lead"><span class="pill">volné místo (Kárník nekandiduje)</span>

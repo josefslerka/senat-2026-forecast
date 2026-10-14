@@ -203,8 +203,8 @@ def write_snapshot(out: Path, name: str, snap: dict) -> dict:
 # ── HTML ────────────────────────────────────────────────────────────────────
 
 CSS = """
-:root{--bg:#fbfaf7;--fg:#1d1d1b;--muted:#6b6a64;--line:#e4e1d8;--card:#fff;--accent:#2f5d8a;--bar:#2f5d8a;--bar2:#c9d6e3;--warn:#9a5b00}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#151514;--fg:#ecebe6;--muted:#a3a19a;--line:#2e2d2a;--card:#1d1d1b;--accent:#8fb4dc;--bar:#8fb4dc;--bar2:#33424f;--warn:#e0a24a}}
+:root{--s1:#2a78d6;--s2:#eb6834;--bg:#fbfaf7;--fg:#1d1d1b;--muted:#6b6a64;--line:#e4e1d8;--card:#fff;--accent:#2f5d8a;--bar:#2f5d8a;--bar2:#c9d6e3;--warn:#9a5b00}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--s1:#3987e5;--s2:#d95926;--bg:#151514;--fg:#ecebe6;--muted:#a3a19a;--line:#2e2d2a;--card:#1d1d1b;--accent:#8fb4dc;--bar:#8fb4dc;--bar2:#33424f;--warn:#e0a24a}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif}
 .wrap{max-width:980px;margin:0 auto;padding:24px 16px 64px}
 header{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:24px}
@@ -230,6 +230,14 @@ table.cards td::before{content:attr(data-label);color:var(--muted);text-align:le
 table.cards td.head{font-weight:600;font-size:17px}table.cards td.head::before{content:none}
 table.cards td.nolabel{display:none}.sm-only{display:inline!important}}
 .sm-only{display:none}
+.sm{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px 22px;margin-top:16px}
+.sm figure{margin:0}.sm figcaption{font-size:13px;line-height:1.35}.sm figcaption .r{display:flex;justify-content:space-between;gap:8px}
+.sm figcaption b{font-size:14px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sm .v{white-space:nowrap;color:var(--muted)}.sm .v i{display:inline-block;width:10px;height:2px;vertical-align:middle;margin:0 3px 0 6px}
+.sm svg{width:100%;height:auto;display:block;overflow:visible}.sm .ax{stroke:var(--line);stroke-width:1}.sm .mid{stroke:var(--muted);stroke-width:.75;stroke-dasharray:2 3;opacity:.7}
+.sm .r1{fill:var(--line);opacity:.3}.sm text{fill:var(--muted);font-size:9px;font-family:inherit}
+.sm .l1,.sm .l2{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}.sm .l1{stroke:var(--s1)}.sm .l2{stroke:var(--s2)}.sm .l1.o,.sm .l2.o{stroke-width:1.4;stroke-dasharray:1.5 2.5;opacity:.9}
+.sm .d1{fill:var(--s1)}.sm text.e1,.sm text.e2{fill:var(--fg);font-size:10px;font-weight:600}.sm .d2{fill:var(--s2)}.sm .hit{fill:transparent}.sm .hit:hover+circle,.sm .hit:hover{stroke:var(--fg)}
+.key i{display:inline-block;width:16px;height:2px;vertical-align:middle;margin:0 5px 0 12px}
 @media (min-width:641px){.scroll.r2wrap{overflow:visible}table.r2 thead{position:sticky;top:0;z-index:2}table.r2 thead th{background:var(--bg)}
 table.r2 th.gs,table.r2 td.gs{border-left:1px solid var(--line);padding-left:10px}
 table.r2 tr.grp th{text-transform:none;letter-spacing:0;font-size:13px;color:var(--fg);border-bottom:0;padding-bottom:0}}
@@ -240,7 +248,7 @@ PALETTE = ["#2f5d8a", "#c0703a", "#5b8a3c", "#8a4f7d", "#a8a39a", "#6a8fb0", "#b
 
 L = {
     "cs": dict(title="Senát 2026 — veřejný experiment s AI forecastingem", home="Přehled", rules="Pravidla",
-               journal="Deník", archive="Archiv", score="Skóre", other="EN", district="Obvod", fav="Favorit",
+               journal="Deník", evo="Vývoj", archive="Archiv", score="Skóre", other="EN", district="Obvod", fav="Favorit",
                p="P(výhra)", band="Pásmo", dist="Rozdělení", status="Stav", cand="Kandidát",
                party="Strana / podpora", why="Proč", watch="Na co se dívat", meta="Technické údaje",
                stage="Fáze", blind="blind (bez kurzů)", final="final (po zohlednění trhu)",
@@ -249,7 +257,7 @@ L = {
                rl="Omezení researche", model="Model", ai="AI agent (blind)", stat="Statistický model", r1="Podíl v 1. kole (model, 80% interval)", adv="P(postup / výhra v 1. kole)", inothers="v „ostatních“", modelnote="Model nezná kandidáty bez stranické i komunální základny (nová hnutí, osobní značka) — tam ho podceňuje.", otherslist="Ostatní kandidáti na lístku", ballotsrc="Kandidáti a volební strany podle oficiálního seznamu ČSÚ (volby.gov.cz).", posthoc="dodatečný nezávislý red-team", updated="Stav k",
                foot="Predikce generuje AI pipeline (Claude) s člověkem ve smyčce. Nejde o sázkové tipy. Obsah CC BY 4.0, kód MIT."),
     "en": dict(title="Czech Senate 2026 — a public AI forecasting experiment", home="Overview", rules="Rules",
-               journal="Journal", archive="Archive", score="Scores", other="CS", district="District", fav="Favourite",
+               journal="Journal", evo="Trends", archive="Archive", score="Scores", other="CS", district="District", fav="Favourite",
                p="P(win)", band="Band", dist="Distribution", status="Status", cand="Candidate",
                party="Party / backing", why="Why", watch="What to watch", meta="Technical details",
                stage="Stage", blind="blind (no odds)", final="final (market-aware)",
@@ -286,7 +294,7 @@ def layout(lang: str, page: str, title: str, body: str) -> str:
     t = L[lang]
     prefix = "" if lang == "cs" else ""
     nav = (f'<a href="index.html">{t["home"]}</a><a href="pravidla.html">{t["rules"]}</a>'
-           f'<a href="model.html">{t["model"]}</a><a href="skore.html">{t["score"]}</a><a href="denik.html">{t["journal"]}</a><a href="archiv.html">{t["archive"]}</a>'
+           f'<a href="model.html">{t["model"]}</a><a href="skore.html">{t["score"]}</a><a href="vyvoj.html">{t["evo"]}</a><a href="denik.html">{t["journal"]}</a><a href="archiv.html">{t["archive"]}</a>'
            f'<a class="lang" href="{other_lang_link(lang, page)}">{t["other"]}</a>')
     return f"""<!doctype html><html lang="{lang}"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -597,6 +605,98 @@ def build_five(out: Path, date: str, model_date: str, ai0_date: str = "2026-10-0
 
 
 # ── Round 2 (after round-1 results) ─────────────────────────────────────────────────────────────
+EVO_TXT = {
+    "cs": dict(title="Vývoj pravděpodobností", s1="AI (čistý agent)", s2="Sázky", solid="plná = vítěz 1. kola", dotted="tečkovaná = druhý z 1. kola",
+               lead="Šance, že se senátorem stane <b>vítěz 1. kola</b> (plná čára) a <b>druhý z 1. kola</b> (tečkovaná), den po dni od 2. 10. Po 1. kole je tečkovaná zrcadlem plné (dohromady 100 %), před ním ne – kandidátů bylo víc. Modrá je čistá AI – agent bez statistického modelu a bez kurzů, tedy to, co experiment testuje; oranžová jsou sázkové kanceláře (od 5. 10.). Všechny panely mají stejnou stupnici 0–100 % (popsanou u prvního) a stejnou časovou osu, tečkovaná čára je 50 %, světlý pruh je hlasování a sčítání 1. kola (9.–10. 10.); přes něj čáry nevedou, protože změna je skok kvůli výsledku, ne vývoj. Tečka 9. 10. je hodnocená předpověď před volbami (freeze). Po 1. kole čára začíná 10. 10. večer (u Prahy 1, 5, 9, Brna a Žďáru až 11. 10. ráno, kdy bylo dosčítáno). Před 1. kolem jsou čísla nižší, protože kandidátů bylo víc. Panely jsou seřazené od nejtěsnějších. Čísla na konci čar jsou z posledního dne, po najetí myší na bod se ukáže den a hodnota.",
+               gap="Sázky 10.–11. 10. nebyly (trh na 1. kolo uzavřen, na 2. kolo ještě nevypsán) — čára je přerušená.", nomk="bez kurzů"),
+    "en": dict(title="How the probabilities moved", s1="AI (agent only)", s2="Betting", solid="solid = round-1 winner", dotted="dotted = round-1 runner-up",
+               lead="Chance that the <b>round-1 winner</b> (solid line) and the <b>runner-up</b> (dotted) becomes senator, day by day since 2 Oct. After round 1 the dotted line mirrors the solid one (they sum to 100 %); before it they do not – there were more candidates. Blue is pure AI – the agent without the statistical model and without odds, i.e. what the experiment tests; orange is the bookmakers (from 5 Oct). All panels share one 0–100 % scale (labelled on the first) and one time axis; the dotted line is 50 %, the light band is round-1 voting and counting (9–10 Oct). Lines do not cross it, because the change there is a jump caused by the result, not a trend. The dot on 9 Oct is the scored pre-election forecast (freeze). After round 1 the line starts on the evening of 10 Oct (for Praha 1, 5, 9, Brno and Žďár on the morning of 11 Oct, after the final count). Before round 1 the numbers are lower because there were more candidates. Panels are ordered from the closest race. Numbers at the line ends are from the latest day; hover a point to see the day and value.",
+               gap="No betting odds on 10–11 Oct (round-1 market closed, round-2 market not yet open) — the line is broken.", nomk="no odds"),
+}
+
+
+def evolution_page(lang: str, out: Path, results: Path, date: str) -> str:
+    X, t = EVO_TXT[lang], L[lang]
+    snaps = out / "data" / "snapshots"
+    R = {int(k): v for k, v in json.loads(results.read_text())["districts"].items()}
+    d0, d1 = dt.date(2026, 10, 2), dt.date(2026, 10, 16)
+    days = [(d0 + dt.timedelta(i)).isoformat() for i in range((dt.date.fromisoformat(date) - d0).days + 1)]
+    load = lambda name: json.loads((snaps / name).read_text()) if (snaps / name).exists() else None  # noqa: E731
+    AIM, last = {}, None  # pure AI; a day without a new snapshot = the previous forecast still stands (forward-fill)
+    for dd in days:
+        s_ = load(f"{dd}-ai.json") or (load(f"{dd}-blind.json") if dd == "2026-10-02" else None)
+        last = {x["n"]: dist_of(x) for x in s_["districts"]} if s_ else last
+        if last:
+            AIM[dd] = last
+    MKT = {dd: {x["n"]: x.get("consensus") for x in s["districts"]} for dd in days if (s := load(f"{dd}-market.json"))}
+    cur = load(f"{date}-ai.json")
+    W, H, PX0, PX1, PY0, PY1 = 220, 92, 4, 196, 6, 86
+    xs = lambda dd: PX0 + (dt.date.fromisoformat(dd) - d0).days / (d1 - d0).days * (PX1 - PX0)  # noqa: E731
+    ys = lambda p: PY1 - p * (PY1 - PY0)  # noqa: E731
+    lab = lambda dd: f"{int(dd[8:])}. {int(dd[5:7])}." if lang == "cs" else f"{int(dd[8:])} Oct"  # noqa: E731
+    panels, axes_by = [], {}
+    sur = lambda nm: " ".join(nm.split()[1:]) or nm  # noqa: E731 — keep double surnames (Ceralová Petrofová)
+    for d in cur["districts"]:
+        n = d["n"]
+        fin, decided = r1_pair(R[n])
+        if decided:
+            continue
+        names = {c["key"]: c["name"] for c in d["candidates"]}
+        k = next((k for k, nm in names.items() if nm == r1_name(fin[0], names)), None)
+        k2 = next((k_ for k_, nm in names.items() if nm == r1_name(fin[1], names)), None)
+        if k is None:
+            continue
+        fkeys = {k, k2}
+        def series(src, k=k):
+            pts = []
+            for dd in days:
+                dist = (src.get(dd) or {}).get(n)
+                if not dist or dist.get(k) is None:
+                    continue
+                if dd >= "2026-10-10" and sum(v for kk, v in dist.items() if kk not in fkeys) > 0.01:
+                    continue  # still the pre-round-1 forecast (district locked for round 2 later)
+                pts.append((dd, dist[k]))
+            return pts
+        a, m = series(AIM), series(MKT)
+        a2, m2 = (series(AIM, k2), series(MKT, k2)) if k2 else ([], [])
+        def path(pts):
+            segs, prev = [], None
+            for dd, p in pts:
+                gap = prev is None or (dt.date.fromisoformat(dd) - dt.date.fromisoformat(prev)).days > 1 or prev <= "2026-10-09" < dd
+                segs.append(f'{"M" if gap else "L"}{xs(dd):.1f},{ys(p):.1f}')
+                prev = dd
+            return "".join(segs)
+        def dots(pts, cls, nm):
+            return "".join(f'<circle class="hit" cx="{xs(dd):.1f}" cy="{ys(p):.1f}" r="5"><title>{lab(dd)} · {nm}: {pct(p)}</title></circle>'
+                           f'<circle class="{cls}" cx="{xs(dd):.1f}" cy="{ys(p):.1f}" r="{(2.6 if dd == pts[-1][0] else 2 if dd == "2026-10-09" else 0) if " o" not in cls else 0}"/>' for dd, p in pts)
+        r1x0, r1x1 = xs("2026-10-09") + 1.5, xs("2026-10-10") - 1.5
+        ticks = "".join(f'<text x="{xs(dd):.1f}" y="{H + 2}" text-anchor="middle">{lab(dd)}</text>' for dd in ("2026-10-02", "2026-10-09", "2026-10-16"))
+        axes = axes_by[n] = (f'<text x="{PX0 - 3}" y="{ys(.5) + 3:.1f}" text-anchor="end">50</text><text x="{PX0 - 3}" y="{PY0 + 3}" text-anchor="end">100</text>')
+        ends = [[ys(pts[-1][1]), pts, cls] for pts, cls in ((a, "e1"), (m, "e2")) if pts and pts[-1][0] == days[-1]]
+        if len(ends) == 2 and abs(ends[0][0] - ends[1][0]) < 9:  # keep end labels apart
+            hi, lo = sorted(ends, key=lambda e: e[0])
+            mid = (hi[0] + lo[0]) / 2
+            hi[0], lo[0] = mid - 4.5, mid + 4.5
+        endlab = "".join(f'<text class="{cls}" x="{xs(pts[-1][0]) + 6:.1f}" y="{y + 3:.1f}">{round(pts[-1][1] * 100)}</text>' for y, pts, cls in ends)
+        svg = (f'<svg viewBox="0 {0} {W} {H + 6}" role="img" aria-label="{esc(d["name"])}: {esc(X["s1"])} {pct(a[-1][1]) if a else "—"}, {esc(X["s2"])} {pct(m[-1][1]) if m else "—"}">'
+               f'<rect class="r1" x="{r1x0:.1f}" y="{PY0}" width="{r1x1 - r1x0:.1f}" height="{PY1 - PY0}"/>'
+               f'<line class="ax" x1="{PX0}" x2="{PX1}" y1="{PY1}" y2="{PY1}"/><line class="mid" x1="{PX0}" x2="{PX1}" y1="{ys(.5):.1f}" y2="{ys(.5):.1f}"/>'
+               ""
+               + (f'<path class="l2 o" d="{path(m2)}"/>' if m2 else "") + (f'<path class="l1 o" d="{path(a2)}"/>' if a2 else "")
+               + (f'<path class="l2" d="{path(m)}"/>' if m else "") + (f'<path class="l1" d="{path(a)}"/>' if a else "")
+               + (dots(m2, "d2 o", f'{X["s2"]} · {sur(names[k2])}') if m2 else "") + (dots(a2, "d1 o", f'{X["s1"]} · {sur(names[k2])}') if a2 else "")
+               + (dots(m, "d2", f'{X["s2"]} · {sur(names[k])}') if m else "") + (dots(a, "d1", f'{X["s1"]} · {sur(names[k])}') if a else "") + endlab + ticks + "\x00AXES\x00</svg>")
+        val = "" if m and m[-1][0] == days[-1] else f'<span class="v">{X["nomk"]}</span>'
+        close = abs((a[-1][1] if a else .5) - .5)
+        panels.append((close, n, f'<figure><figcaption><b><a href="obvod-{n:02d}.html">{esc(d["name"])}</a></b><span class="r"><span>{esc(sur(names[k]))} <span class="muted">vs {esc(sur(names[k2])) if k2 else ""}</span></span>{val}</span></figcaption>{svg}</figure>'))
+    panels.sort()
+    panels = [(c, n, p.replace("\x00AXES\x00", axes_by[n] if i == 0 else "")) for i, (c, n, p) in enumerate(panels)]
+    key = (f'<p class="key muted" style="font-size:14px"><i style="background:var(--s1)"></i>{X["s1"]}<i style="background:var(--s2)"></i>{X["s2"]}'
+           f'<span style="margin-left:18px">{X["solid"]}</span> · <span>{X["dotted"]}</span></p>')
+    return (f'<p class="lead">{X["lead"]}</p>{key}<div class="sm">' + "".join(p for _, _, p in panels) + "</div>"
+            f'<p class="muted" style="font-size:14px;margin-top:20px">{X["gap"]}</p>')
+
+
 R2_TXT = {
     "cs": dict(r1="Výsledek 1. kola", r2="Předpovědi pro 2. kolo (16.–17. 10.)", freeze="Před volbami — hodnocený freeze (9. 10.)",
                elected="zvolen/a v 1. kole", runoff="2. kolo", g_ours="Naše předpovědi", g_mkt="Trh", g_comb="Kombinace", blendnote="<b>AI + sázky</b> (v deníku do 14. 10. jako Blend) je vážený průměr AI s modelem (31 %) a sázek (69 %) v log-odds. Váhy jsou předregistrované od 5. 10.", g_ext="Externí", decided="Zvoleni už v 1. kole", votes="Hlasy", share="Podíl", count="sečteno",
@@ -816,4 +916,5 @@ def build_round2(out: Path, date: str, results: Path, model_r2: Path, score_json
                           for e in sorted(JOURNAL, key=lambda e: e["date"], reverse=True))
         (base / "denik.html").write_text(simple_page(lang, "denik.html", L[lang]["journal"], journal), encoding="utf-8")
         (base / "archiv.html").write_text(archive_page(lang, out), encoding="utf-8")
+        (base / "vyvoj.html").write_text(simple_page(lang, "vyvoj.html", EVO_TXT[lang]["title"], evolution_page(lang, out, results, date)), encoding="utf-8")
     print(f"Built round-2 site for {date} (market: {market_date}) → {out}")
