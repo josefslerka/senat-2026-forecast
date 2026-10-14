@@ -1164,6 +1164,7 @@ JOURNAL.append(dict(
 ))
 
 CHANGES["2026-10-14"] = {
+    "time": "07:58",  # lock 07:58:18, odds read 07:58:33–07:58:49
     "cs": """<ul>
 <li><b>Hradec Králové:</b> Ceralovou Petrofovou podpořili další vyřazení kandidáti (Holásek, Nebeská, Picek). Dvořák v AI i AI s modelem 54 → <b>51 %</b>, pořád těsný favorit.</li>
 <li><b>Plzeň:</b> Aschenbrenner (ODS) na billboardu Kantorové (ANO), vedení ODS protestuje. Přepočítáno, změna pod 2 body → beze změny (Řehka 82 / 94 %).</li>

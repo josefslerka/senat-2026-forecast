@@ -573,7 +573,7 @@ def build_five(out: Path, date: str, model_date: str, ai0_date: str = "2026-10-0
         intro = INTRO[lang]
         ov = layout(lang, "index.html", t["title"], f"""
 <h1>{esc(t['title'])}</h1><p class="lead">{intro['lead']}</p>
-<div class="card" style="border-left:4px solid var(--accent, #3b5b8c)"><h2 style="margin-top:0">{"Co je dnes nového" if lang == "cs" else "What's new today"} ({esc(date)})</h2>
+<div class="card" style="border-left:4px solid var(--accent, #3b5b8c)"><h2 style="margin-top:0">{"Co je dnes nového" if lang == "cs" else "What's new today"} ({esc(date)}{(", data k " if lang == "cs" else ", data as of ") + esc(CHANGES[date]["time"]) if CHANGES.get(date, {}).get("time") else ""})</h2>
 {CHANGES.get(date, {}).get(lang, "")}
 <p class="muted" style="font-size:14px;margin-bottom:0">{"Posuny oproti předchozímu snapshotu každé série (změna favorita nebo ≥ 5 p.b.):" if lang == "cs" else "Moves vs. each series' previous snapshot (favourite change or ≥ 5 pp):"}</p>
 {changes_html(lang, cur_series, prev_series, names_by_n, S, kept={'model': model_date} if model_date < date else None)}
@@ -793,7 +793,7 @@ def build_round2(out: Path, date: str, results: Path, model_r2: Path, score_json
         intro = INTRO[lang]
         ov = layout(lang, "index.html", t["title"], f"""
 <h1>{esc(t['title'])}</h1><p class="lead">{intro['lead']}</p>
-<div class="card" style="border-left:4px solid var(--accent, #3b5b8c)"><h2 style="margin-top:0">{"Co je dnes nového" if lang == "cs" else "What's new today"} ({esc(date)})</h2>
+<div class="card" style="border-left:4px solid var(--accent, #3b5b8c)"><h2 style="margin-top:0">{"Co je dnes nového" if lang == "cs" else "What's new today"} ({esc(date)}{(", data k " if lang == "cs" else ", data as of ") + esc(CHANGES[date]["time"]) if CHANGES.get(date, {}).get("time") else ""})</h2>
 {CHANGES.get(date, {}).get(lang, "")}
 <p style="margin-bottom:0"><a href="skore.html">{X['scoretitle']} →</a> · <a href="denik.html">{"Podrobně v deníku →" if lang == "cs" else "Details in the journal →"}</a></p></div>
 <h2>{X['r2']}</h2><p class="muted" style="font-size:14px">{X['r2note']}{'' if market else ' ' + X['nomarket']}</p>
