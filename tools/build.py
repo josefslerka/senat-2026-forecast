@@ -230,6 +230,9 @@ table.cards td::before{content:attr(data-label);color:var(--muted);text-align:le
 table.cards td.head{font-weight:600;font-size:17px}table.cards td.head::before{content:none}
 table.cards td.nolabel{display:none}.sm-only{display:inline!important}}
 .sm-only{display:none}
+@media (min-width:641px){.scroll.r2wrap{overflow:visible}table.r2 thead{position:sticky;top:0;z-index:2}table.r2 thead th{background:var(--bg)}
+table.r2 th.gs,table.r2 td.gs{border-left:1px solid var(--line);padding-left:10px}
+table.r2 tr.grp th{text-transform:none;letter-spacing:0;font-size:13px;color:var(--fg);border-bottom:0;padding-bottom:0}}
 table.cards td b{white-space:nowrap}table.cards .pill{white-space:normal}
 """
 
@@ -426,8 +429,8 @@ if __name__ == "__main__":
 
 # ── Five-series build (from 2026-10-05): AI · Model · AI s modelem · Sázky · Blend ───────────
 SERIES_LABELS = {
-    "cs": dict(ai="AI", model="Statistický model", aimodel="AI s modelem", market="Sázky", blend="Blend", ai0="AI 2. 10."),
-    "en": dict(ai="AI", model="Statistical model", aimodel="AI + model", market="Betting", blend="Blend", ai0="AI 2 Oct"),
+    "cs": dict(ai="AI", model="Statistický model", aimodel="AI s modelem", market="Sázky", blend="AI + sázky", ai0="AI 2. 10."),
+    "en": dict(ai="AI", model="Statistical model", aimodel="AI + model", market="Betting", blend="AI + betting", ai0="AI 2 Oct"),
 }
 MARKET_DIR = VAULT / "data" / "senat-market"
 
@@ -596,13 +599,13 @@ def build_five(out: Path, date: str, model_date: str, ai0_date: str = "2026-10-0
 # ── Round 2 (after round-1 results) ─────────────────────────────────────────────────────────────
 R2_TXT = {
     "cs": dict(r1="Výsledek 1. kola", r2="Předpovědi pro 2. kolo (16.–17. 10.)", freeze="Před volbami — hodnocený freeze (9. 10.)",
-               elected="zvolen/a v 1. kole", runoff="2. kolo", votes="Hlasy", share="Podíl", count="sečteno",
+               elected="zvolen/a v 1. kole", runoff="2. kolo", g_ours="Naše předpovědi", g_mkt="Trh", g_comb="Kombinace", blendnote="<b>AI + sázky</b> (v deníku do 14. 10. jako Blend) je vážený průměr AI s modelem (31 %) a sázek (69 %) v log-odds. Váhy jsou předregistrované od 5. 10.", g_ext="Externí", decided="Zvoleni už v 1. kole", votes="Hlasy", share="Podíl", count="sečteno",
                nomarket="Kurzy na 2. kolo zatím nejsou načtené.", source="Zdroj: ČSÚ (volbyhned.cz)",
                scoretitle="Průběžné hodnocení po 1. kole",
                r2note="Pravděpodobnost výhry ve 2. kole. Hodnotí se zvlášť od freeze; freeze (9. 10.) se hodnotí na konečném vítězi.",
                stemnote='<p class="muted" style="font-size:14px"><b>STEM (CNN Prima)</b> je externí benchmark, ne naše série. Šance zveřejnila <a href="https://cnn.iprima.cz/exkluzivni-predikce-senatnich-voleb-kdo-postoupi-a-kdo-uspeje-ve-druhem-kole-524058">CNN Prima NEWS</a> 10. 10. ve 21:56. Naše předpovědi na 2. kolo jsme zamkli dřív, než jsme je viděli (<code>3dd3820</code>, <code>f4179ec</code>). Po 2. kole STEM vyhodnotíme stejně jako naše série.</p>'),
     "en": dict(r1="Round-1 result", r2="Round-2 forecasts (16–17 Oct)", freeze="Before the election — scored freeze (9 Oct)",
-               elected="elected in round 1", runoff="runoff", votes="Votes", share="Share", count="counted",
+               elected="elected in round 1", runoff="runoff", g_ours="Our forecasts", g_mkt="Market", g_comb="Combined", blendnote="<b>AI + betting</b> (called Blend in the journal until 14 Oct) is a weighted average of AI + model (31 %) and betting (69 %) in log-odds. The weights are pre-registered since 5 Oct.", g_ext="External", decided="Elected in round 1", votes="Votes", share="Share", count="counted",
                nomarket="Round-2 odds not read yet.", source="Source: ČSÚ (volbyhned.cz)",
                scoretitle="Interim scores after round 1",
                r2note="Probability of winning the runoff. Scored separately from the freeze; the freeze (9 Oct) is scored on the final winner.",
@@ -737,7 +740,7 @@ def build_round2(out: Path, date: str, results: Path, model_r2: Path, score_json
         t, S, X = L[lang], SERIES_LABELS[lang], R2_TXT[lang]
         SL = "STEM (CNN Prima)"
         base = out if lang == "cs" else out / "en"
-        rows = []
+        rows, decided_list = [], []
         for d in ai["districts"]:
             n = d["n"]
             r = R[n]
@@ -745,20 +748,19 @@ def build_round2(out: Path, date: str, results: Path, model_r2: Path, score_json
             names = {c["key"]: c["name"] for c in d["candidates"]}
             keys = list(names)
             r1cell = " · ".join(f"{esc(' '.join(r1_name(c, names).split()[1:]) or r1_name(c, names))} {num_cs(c['pct'], lang)}" for c in fin)
+            gs = lambda c: c.replace("<td", '<td class="gs"', 1)  # noqa: E731 — group separator
             if decided:
-                st = f"{X['elected']}: {r1_name(fin[0], names)}"
-                cells = "".join(f'<td data-label="{esc(S[s])}">—</td>' for s in ("ai", "model", "aimodel", "market", "blend")) + (f'<td class="muted" data-label="{SL}">—</td>' if STEM else "")
+                decided_list.append(f'<a href="obvod-{n:02d}.html">{esc(d["name"])}</a> ({n}): {esc(r1_name(fin[0], names))} {num_cs(fin[0]["pct"], lang)} %')
             else:
-                st = X["runoff"]
                 md = keyed_model(MR2[n], keys, names) if n in MR2 else None
-                cells = (leader_cell(dist_of(d), names, label=S["ai"]) + leader_cell(md, names, label=S["model"])
+                cells = (gs(leader_cell(dist_of(d), names, label=S["ai"])) + leader_cell(md, names, label=S["model"])
                          + leader_cell(dist_of(AIM[n]) if n in AIM else None, names, label=S["aimodel"])
-                         + leader_cell((MK.get(n) or {}).get("consensus"), names, label=S["market"])
-                         + leader_cell(dist_of(BL[n]) if n in BL else None, names, label=S["blend"]))
+                         + gs(leader_cell((MK.get(n) or {}).get("consensus"), names, label=S["market"]))
+                         + gs(leader_cell(dist_of(BL[n]) if n in BL else None, names, label=S["blend"])))
                 if STEM:
-                    cells += leader_cell(stem_dist(n, names), names, label=SL).replace("<td", '<td style="color:var(--muted,#777)"', 1)
-            rows.append(f'<tr><td class="num nolabel">{n}</td><td class="head"><a href="obvod-{n:02d}.html"><span class="sm-only">{n} · </span>{esc(d["name"])}</a></td>'
-                        f'<td data-label="{esc(X["r1"])}">{r1cell}</td>{cells}<td data-label="{esc(t["status"])}"><span class="pill">{esc(st)}</span></td></tr>')
+                    cells += gs(leader_cell(stem_dist(n, names), names, label=SL)).replace("<td", '<td style="color:var(--muted,#777)"', 1)
+                rows.append(f'<tr><td class="num nolabel">{n}</td><td class="head"><a href="obvod-{n:02d}.html"><span class="sm-only">{n} · </span>{esc(d["name"])}</a></td>'
+                            f'<td data-label="{esc(X["r1"])}">{r1cell}</td>{cells}</tr>')
             # district page: round-1 result + round-2 table on top of the freeze page
             r1rows = "".join(f'<tr{" style=font-weight:600" if c in fin else ""}><td>{esc(r1_name(c, names))}</td><td class="muted">{esc(c["party"])}</td>'
                              f'<td class="num">{format(c["votes"], ",").replace(",", chr(0x202f))}</td><td class="num">{num_cs(c["pct"], lang, 2)} %</td></tr>'
@@ -797,9 +799,12 @@ def build_round2(out: Path, date: str, results: Path, model_r2: Path, score_json
 {CHANGES.get(date, {}).get(lang, "")}
 <p style="margin-bottom:0"><a href="skore.html">{X['scoretitle']} →</a> · <a href="denik.html">{"Podrobně v deníku →" if lang == "cs" else "Details in the journal →"}</a></p></div>
 <h2>{X['r2']}</h2><p class="muted" style="font-size:14px">{X['r2note']}{'' if market else ' ' + X['nomarket']}</p>
-<div class="scroll"><table class="cards"><thead><tr><th>#</th><th>{t['district']}</th><th>{X['r1']}</th><th>{S['ai']}</th><th>{S['model']}</th>
-<th>{S['aimodel']}</th><th>{S['market']}</th><th>{S['blend']}</th>{'<th class="muted">' + SL + '</th>' if STEM else ''}<th>{t['status']}</th></tr></thead>
+<div class="scroll r2wrap"><table class="cards r2"><thead><tr class="grp"><th colspan="3"></th><th class="gs" colspan="3">{X['g_ours']}</th><th class="gs">{X['g_mkt']}</th><th class="gs">{X['g_comb']}</th>{'<th class="gs">' + X['g_ext'] + '</th>' if STEM else ''}</tr>
+<tr><th>#</th><th>{t['district']}</th><th>{X['r1']}</th><th class="gs">{S['ai']}</th><th>{S['model']}</th>
+<th>{S['aimodel']}</th><th class="gs">{S['market']}</th><th class="gs">{S['blend']}</th>{'<th class="gs muted">' + SL + '</th>' if STEM else ''}</tr></thead>
 <tbody>{''.join(rows)}</tbody></table></div>
+{'<p style="font-size:15px"><b>' + X['decided'] + ':</b> ' + ' · '.join(decided_list) + '</p>' if decided_list else ''}
+<p class="muted" style="font-size:14px">{X['blendnote']}</p>
 {X['stemnote'] if STEM else ''}
 <div class="card">{intro['body']}</div>""")
         (base / "index.html").write_text(ov, encoding="utf-8")
