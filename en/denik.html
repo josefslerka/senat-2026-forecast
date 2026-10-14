@@ -32,7 +32,46 @@ table.cards td.nolabel{display:none}.sm-only{display:inline!important}}
 table.cards td b{white-space:nowrap}table.cards .pill{white-space:normal}
 </style></head><body><div class="wrap">
 <header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Overview</a><a href="pravidla.html">Rules</a><a href="model.html">Model</a><a href="skore.html">Scores</a><a href="denik.html">Journal</a><a href="archiv.html">Archive</a><a class="lang" href="../denik.html">CS</a></nav></header>
-<h1>Journal</h1><div class="card"><h2 style="margin-top:0">2026-10-13 — Day 12: no update, odds move both towards and away from us</h2><p><b>In short:</b> The news contained nothing that could decide a race, so the AI and AI + model forecasts stay unchanged (lock <code>e22cfd9</code>, 12:26). Since Monday morning the odds moved in nine districts, but no favourite flipped. Kladno is unchanged: market Paták 57 %, we Šípová 52–53 %.</p>
+<h1>Journal</h1><div class="card"><h2 style="margin-top:0">2026-10-14 — Day 13: Hradec 54 → 51 after new endorsements, Deník N as a benchmark</h2><p><b>In short:</b> On Tuesday evening we re-ran Hradec Králové. More eliminated candidates (Holásek, Nebeská, Picek) endorsed Ceralová Petrofová. AI and AI + model now give Dvořák <b>51 %</b> instead of 54 %, so he is still a narrow favourite. We also re-ran Plzeň after the row over Aschenbrenner's billboard, but the change came out below 2 points, so it stays (Řehka 82 / 94 %). Other districts unchanged. Kladno unchanged: market Paták 57 %, we Šípová 52–53 %.</p>
+<h3>News (no odds)</h3>
+<ul>
+<li><b>Hradec Králové (update):</b> four eliminated candidates endorsed Ceralová Petrofová: Hůlková (ANO, 18.4 %, already counted), Nebeská (independent, 15.0 %), Holásek (outgoing senator, 12.2 %) and Picek (SPD, 5.3 %, as the "lesser evil"). Mayor Springerová backs Dvořák (she did before round 1 too). New for us are Holásek (we expected him to lean to Dvořák), Nebeská and Picek. Endorsements do not move all votes, though: eliminated candidates' voters turn out little in round 2. The agent therefore moved Dvořák by only 3 points (54 → 51 in both series, band 34–67 %). The model alone gives 58.5 %. The −7.5 point deviation reflects what the model cannot see: where eliminated voters lean (it codes both finalists as the "democratic bloc"). Red-team in both steps: minor (step A would accept 50:50).</li>
+<li><b>Plzeň (no change):</b> outgoing senator Aschenbrenner (ODS, 20.1 %) appeared on a billboard for Kantorová (ANO). Ex-PM Fiala and ODS chair Kupka called it "unacceptable". Aschenbrenner told Deník N he urged no one to vote for anyone and "doesn't care how voters read it". We knew since 11 Oct that he would not back Řehka. Only the billboard is new, worth about −2 points, roughly offset by the final round-1 count (Řehka's lead 5.6 instead of 4.7 points). The result is below the 2-point threshold, so no update (AI 82 %, AI + model 94 %). We will re-run if Aschenbrenner explicitly urges a vote for Kantorová.</li>
+<li><b>Cheb:</b> the VOK movement (Černá, 12.3 %) backs Plevný. <b>Kolín:</b> Schulz (17.3 %) backs Kašpar. <b>Praha 1:</b> governor Grolich roots for Čižinský. No effect on clear favourites.</li>
+<li><b>Žďár and Pelhřimov:</b> we found no primary source for Černý backing Klement or Chalupský backing Med. The latest verifiable report on Černý (iDNES 13 Oct) says he backed nobody. No change.</li>
+</ul>
+<p>Hradec v3 was committed on Tuesday at 17:38. The 14 Oct AI and AI + model snapshots were locked in commit <code>783af35</code> (14 Oct 07:58:18) before reading odds (Tipsport 07:58:33, Fortuna 07:58:49).</p>
+<h3>External benchmark: Deník N</h3>
+<p>Deník N (Jan Wirnitzer, 13 Oct) published a verbal round-2 prediction ("ANO faces a crushing defeat…"). No numbers, just "clear favourite / favourite / slight favourite / even". We stored it as an external benchmark (like STEM). Our agents did not see it.</p>
+<ul>
+<li><b>It differs from AI + model on the favourite only in Kladno:</b> Paták as a "slight favourite" (like the market and STEM). Pure AI also differs in Přerov (Deník N: even, leaning Navařík).</li>
+<li>It calls Praha 5, Hradec, Přerov and Frýdek-Místek even. That matches our 51–62 % band.</li>
+<li>In the evaluation we can only compare favourite hits, not Brier scores.</li>
+</ul>
+<h3>Odds: what changed since Tuesday noon</h3>
+<p>We read the odds once more on Tuesday at 17:17 (not scored, for the record only). Below is Tuesday noon vs Wednesday morning, with AI + model as of today's lock.</p>
+<ul>
+<li><b>Towards us:</b> Hradec (Dvořák 60 → 54 %, we 51 %; the market moved the same way as we did), Pelhřimov (Med 94 → 91 %, we 82 %), Přerov (Navařík 65 → 63 %, we 62 %), Karviná (Brzyszkowská 81 → 80 %, we 65 %).</li>
+<li><b>Away from us:</b> Žďár (Klement 63 → 71 %, we 66 %; the market is now more confident than us), Zlín (Goláň 80 → 82 %, we 74 %), Frýdek-Místek (Pešatová 58.5 → 59.5 %, we 54 %), Praha 5 (Láska 77.6 → 78.3 %, we 62 %).</li>
+<li><b>Unchanged:</b> Kladno (Paták 57 %) and the clear favourites.</li>
+<li><b>Overall:</b> four districts towards us, four away. The biggest moves are Hradec (−6, towards us) and Žďár (+8, away). The market still agrees with us on the favourite in 19 of 20 districts. Blend: Kladno Paták 54 %, Hradec Dvořák 53 %, Žďár Klement 70 %.</li>
+</ul>
+<h3>Errors and fixes</h3>
+<ul>
+<li><b>Missed endorsement:</b> Nebeská endorsed Ceralová Petrofová over the weekend, while on 12 Oct we wrote "no endorsement from Nebeská or Holásek found". We were alerted only by the Deník N article. We verified the facts in another source (Salonky HK), and the agents never saw Deník N's verdict. Of six endorsement claims in the article we verified three (Hradec, Kolín, Cheb – VOK). Three we found nowhere else (Žďár, Pelhřimov, Keblúšek in Cheb) and did not use. Holásek and Picek spoke only on Tuesday, so we could not have found them earlier. <b>Fix:</b> in contested districts, search for endorsements by the name of each eliminated candidate, not just a generic "round-2 endorsement" query.</li>
+<li><b>Order of odds → update:</b> we read the evening odds (17:17) on Tuesday before launching the Hradec update. The agents doing the update did not see them. The trigger was the article, not a market move. But the update went the same way as the market, so we say so openly.</li>
+<li><b>Quarantine:</b> while searching, agents saw headlines "General Řehka confirmed the bookmakers' tips" and "The bet on the general paid off" (Plzeň, apparently about round 1). They did not open them and saw no numbers.</li>
+</ul>
+<h3>New sources of the day</h3>
+<ul>
+<li><a href="https://salonkyhk.cz/ceralovou-petrofovou-podporili-i-holasek-a-picek-ma-za-sebou-ctyri-soupere/">Salonky HK: Holásek and Picek also back Ceralová Petrofová</a> (13 Oct), <b>Hradec update</b>.</li>
+<li><a href="https://www.forum24.cz/neprijatelne-absolutne-to-nechapu-fiala-zuri-kvuli-senatorovi-ods-ceka-reakci-vedeni-strany">forum24: Fiala and Kupka on Aschenbrenner's billboard</a> (13 Oct) and <a href="https://denikn.cz/minuta/2218695">Deník N: "I don't care how voters read it"</a> (13 Oct), Plzeň re-run, no change.</li>
+<li><a href="https://vokk.cz/stepanka-cerna-miri-do-senatu-parlamentu-cr/">VOK backs Plevný</a>, <a href="https://kolinsky.denik.cz/komunalni-volby/kaspar-vs-brzobohata-kandidati-do-senatu-odpovidali-na-stejne-otazky/">Kolínský deník: Schulz backs Kašpar</a>, <a href="https://www.prahain.cz/politika/necekana-podpora-z-brna-grolich-prozradil-komu-fandi-do-senatu-28989.html">PrahaIN: Grolich roots for Čižinský</a>, no change.</li>
+<li>Deník N: "ANO faces a crushing defeat… Round-2 Senate prediction" (13 Oct), external benchmark, not given to agents.</li>
+<li>Odds: <code>raw-*-2026-10-13e-r2.txt</code> (17:17, not scored) and <code>raw-*-2026-10-14-r2.txt</code>.</li>
+</ul>
+<h3>Next</h3>
+<p>Thursday: one more round of news and odds. Friday: the scored odds reading before 14:00 (planned 12:00–13:30). We will re-run Plzeň if Aschenbrenner explicitly urges a vote for Kantorová. Round 2 on 16–17 Oct.</p></div><div class="card"><h2 style="margin-top:0">2026-10-13 — Day 12: no update, odds move both towards and away from us</h2><p><b>In short:</b> The news contained nothing that could decide a race, so the AI and AI + model forecasts stay unchanged (lock <code>e22cfd9</code>, 12:26). Since Monday morning the odds moved in nine districts, but no favourite flipped. Kladno is unchanged: market Paták 57 %, we Šípová 52–53 %.</p>
 <h3>News (no odds)</h3>
 <ul>
 <li><b>Nationally:</b> SPD said its eliminated candidates will back ANO's candidates in round 2. ODS will back opposition candidates where it has no finalist. Both match how the blocs (government vs opposition) behave and what the forecasts already assume. No change.</li>
