@@ -1117,6 +1117,7 @@ JOURNAL.append(dict(
 <li><a href="https://www.forum24.cz/neprijatelne-absolutne-to-nechapu-fiala-zuri-kvuli-senatorovi-ods-ceka-reakci-vedeni-strany">forum24: Fiala a Kupka k Aschenbrennerovu billboardu</a> (13. 10.) a <a href="https://denikn.cz/minuta/2218695">Deník N: „Mně je jedno, jak si to volič vysvětlí“</a> (13. 10.), Plzeň přepočítána, bez změny.</li>
 <li><a href="https://vokk.cz/stepanka-cerna-miri-do-senatu-parlamentu-cr/">VOK podporuje Plevného</a>, <a href="https://kolinsky.denik.cz/komunalni-volby/kaspar-vs-brzobohata-kandidati-do-senatu-odpovidali-na-stejne-otazky/">Kolínský deník: Schulz podporuje Kašpara</a>, <a href="https://www.prahain.cz/politika/necekana-podpora-z-brna-grolich-prozradil-komu-fandi-do-senatu-28989.html">PrahaIN: Grolich fandí Čižinskému</a>, bez změny.</li>
 <li>Deník N: „ANO hrozí drtivá porážka… Predikce druhého kola senátních voleb“ (13. 10.), externí benchmark, agentům nepředán.</li>
+<li><a href="https://www.median.eu/cs/?p=3814">Median: sněmovní volební model, září 2026</a> (<a href="https://x.com/MEDIANCZ/status/2110283889767780354">zveřejněno 14. 10.</a>): ANO 29,5 % (−4,5), STAN 17,0 % (+5,0), ODS 12,5 % (+1,5). Celostátní kontext: ANO slábne, STAN roste (sedí s pražskými komunály). Sběr proběhl v září, tedy před 1. kolem, jehož výsledky už máme. Proto bez updatu.</li>
 <li>Kurzy: <code>raw-*-2026-10-13e-r2.txt</code> (17:17, nehodnoceno) a <code>raw-*-2026-10-14-r2.txt</code>.</li>
 </ul>
 <h3>Dál</h3>
@@ -1157,6 +1158,7 @@ JOURNAL.append(dict(
 <li><a href="https://www.forum24.cz/neprijatelne-absolutne-to-nechapu-fiala-zuri-kvuli-senatorovi-ods-ceka-reakci-vedeni-strany">forum24: Fiala and Kupka on Aschenbrenner's billboard</a> (13 Oct) and <a href="https://denikn.cz/minuta/2218695">Deník N: "I don't care how voters read it"</a> (13 Oct), Plzeň re-run, no change.</li>
 <li><a href="https://vokk.cz/stepanka-cerna-miri-do-senatu-parlamentu-cr/">VOK backs Plevný</a>, <a href="https://kolinsky.denik.cz/komunalni-volby/kaspar-vs-brzobohata-kandidati-do-senatu-odpovidali-na-stejne-otazky/">Kolínský deník: Schulz backs Kašpar</a>, <a href="https://www.prahain.cz/politika/necekana-podpora-z-brna-grolich-prozradil-komu-fandi-do-senatu-28989.html">PrahaIN: Grolich roots for Čižinský</a>, no change.</li>
 <li>Deník N: "ANO faces a crushing defeat… Round-2 Senate prediction" (13 Oct), external benchmark, not given to agents.</li>
+<li><a href="https://www.median.eu/cs/?p=3814">Median: Chamber voting model, September 2026</a> (<a href="https://x.com/MEDIANCZ/status/2110283889767780354">published 14 Oct</a>): ANO 29.5 % (−4.5), STAN 17.0 % (+5.0), ODS 12.5 % (+1.5). National context: ANO weakening, STAN rising (consistent with the Prague municipal result). Fieldwork was in September, before round 1, whose results we already have. So no update.</li>
 <li>Odds: <code>raw-*-2026-10-13e-r2.txt</code> (17:17, not scored) and <code>raw-*-2026-10-14-r2.txt</code>.</li>
 </ul>
 <h3>Next</h3>
