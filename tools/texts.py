@@ -1215,7 +1215,7 @@ JOURNAL.append(dict(
 </ul>
 <h3>Další</h3>
 <ul>
-<li><b>Michal Sirový</b> doporučil náš web a vybral nejzajímavější duely: Praha 5, Kladno, Hradec a Zlín, Žďár, Přerov a Karviná. Sedí to s obvody, kde si jsme nejméně jistí. Jen Karvinou máme jako favoritku ANO (Brzyszkowská 65–80 %).</li>
+<li><b><a href="https://x.com/sssirda">Michal Sirový</a></b> doporučil náš web a vybral nejzajímavější duely: Praha 5, Kladno, Hradec a Zlín, Žďár, Přerov a Karviná. Sedí to s obvody, kde si jsme nejméně jistí. Jen Karvinou máme jako favoritku ANO (Brzyszkowská 65–80 %).</li>
 <li><b>Virtuální sázení</b> jsme předregistrovali ve středu (<a href="paper-bets/PREREGISTRACE.md">pravidla</a>, commit <code>e6e7a2b</code>). Seznam sázek na 2. kolo vznikne v pátek z hodnoceného čtení kurzů a zveřejníme ho před otevřením volebních místností.</li>
 <li><b>Na webu nově:</b> Blend se jmenuje „AI + sázky“ (jen název, data beze změny; v log-odds 31 % AI s modelem, 69 % sázky) a stránka <a href="vyvoj.html">Vývoj</a> ukazuje čistou AI proti sázkám v každém obvodu od 2. 10.</li>
 </ul>
@@ -1262,7 +1262,7 @@ JOURNAL.append(dict(
 </ul>
 <h3>Other</h3>
 <ul>
-<li><b>Michal Sirový</b> recommended our site and picked the most interesting duels: Praha 5, Kladno, Hradec and Zlín, Žďár, Přerov and Karviná. That matches the districts where we are least sure. Only Karviná we have as an ANO favourite (Brzyszkowská 65–80 %).</li>
+<li><b><a href="https://x.com/sssirda">Michal Sirový</a></b> recommended our site and picked the most interesting duels: Praha 5, Kladno, Hradec and Zlín, Žďár, Přerov and Karviná. That matches the districts where we are least sure. Only Karviná we have as an ANO favourite (Brzyszkowská 65–80 %).</li>
 <li><b>Paper betting</b> was pre-registered on Wednesday (<a href="../paper-bets/PREREGISTRACE.md">rules</a>, commit <code>e6e7a2b</code>). The round-2 bet list will be generated on Friday from the scored odds reading and published before polls open.</li>
 <li><b>New on the site:</b> the blend is now called "AI + betting" (label only, data unchanged; in log-odds 31 % AI + model, 69 % betting), and the <a href="vyvoj.html">Trends</a> page shows pure AI vs betting per district since 2 Oct.</li>
 </ul>
