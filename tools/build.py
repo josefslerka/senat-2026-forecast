@@ -464,6 +464,9 @@ def leader_cell(dist: dict[str, float] | None, names: dict[str, str], hide: bool
     if not dist:
         return f"<td{cls}>—</td>"
     k = max(dist, key=dist.get)
+    top = sorted(dist.values(), reverse=True)
+    if len(top) > 1 and abs(top[0] - top[1]) < 1e-9:  # exact tie (e.g. both bookmakers at evens)
+        return f'<td{cls}><span><b>50 : 50</b></span></td>'
     nm = names.get(k, k)
     return f'<td{cls}><span>{esc(nm.split()[-1] if k != "Someone_else" else "Ostatní")} <b>{pct(dist[k])}</b></span></td>'
 
@@ -703,13 +706,15 @@ R2_TXT = {
                nomarket="Kurzy na 2. kolo zatím nejsou načtené.", source="Zdroj: ČSÚ (volbyhned.cz)",
                scoretitle="Průběžné hodnocení po 1. kole",
                r2note="Pravděpodobnost výhry ve 2. kole. Hodnotí se zvlášť od freeze; freeze (9. 10.) se hodnotí na konečném vítězi.",
-               stemnote='<p class="muted" style="font-size:14px"><b>STEM (CNN Prima)</b> je externí benchmark, ne naše série. Šance zveřejnila <a href="https://cnn.iprima.cz/exkluzivni-predikce-senatnich-voleb-kdo-postoupi-a-kdo-uspeje-ve-druhem-kole-524058">CNN Prima NEWS</a> 10. 10. ve 21:56. Naše předpovědi na 2. kolo jsme zamkli dřív, než jsme je viděli (<code>3dd3820</code>, <code>f4179ec</code>). Po 2. kole STEM vyhodnotíme stejně jako naše série.</p>'),
+               stemnote='<p class="muted" style="font-size:14px"><b>STEM (CNN Prima)</b> je externí benchmark, ne naše série. Šance zveřejnila <a href="https://cnn.iprima.cz/exkluzivni-predikce-senatnich-voleb-kdo-postoupi-a-kdo-uspeje-ve-druhem-kole-524058">CNN Prima NEWS</a> 10. 10. ve 21:56. Naše předpovědi na 2. kolo jsme zamkli dřív, než jsme je viděli (<code>3dd3820</code>, <code>f4179ec</code>). Po 2. kole STEM vyhodnotíme stejně jako naše série.</p>',
+               sznote='<p class="muted" style="font-size:14px"><b>Seznam Zprávy</b> je druhý externí benchmark: model Konstantina Sulimenka, který Seznam Zprávy zveřejnily <a href="https://www.seznamzpravy.cz/clanek/volby-do-senatu-ano-bude-hur-model-predpovida-hnuti-zavrseni-senatniho-debaklu-317588">12. 10. v 18:00</a>. Čísla jsme opsali z grafu v článku 14. 10. Naši agenti je neviděli. Po 2. kole ho vyhodnotíme stejně jako STEM.</p>'),
     "en": dict(r1="Round-1 result", r2="Round-2 forecasts (16–17 Oct)", freeze="Before the election — scored freeze (9 Oct)",
                elected="elected in round 1", runoff="runoff", g_ours="Our forecasts", g_mkt="Market", g_comb="Combined", blendnote="<b>AI + betting</b> (called Blend in the journal until 14 Oct) is a weighted average of AI + model (31 %) and betting (69 %) in log-odds. The weights are pre-registered since 5 Oct.", g_ext="External", decided="Elected in round 1", votes="Votes", share="Share", count="counted",
                nomarket="Round-2 odds not read yet.", source="Source: ČSÚ (volbyhned.cz)",
                scoretitle="Interim scores after round 1",
                r2note="Probability of winning the runoff. Scored separately from the freeze; the freeze (9 Oct) is scored on the final winner.",
-               stemnote='<p class="muted" style="font-size:14px"><b>STEM (CNN Prima)</b> is an external benchmark, not one of our series. The probabilities were published by <a href="https://cnn.iprima.cz/exkluzivni-predikce-senatnich-voleb-kdo-postoupi-a-kdo-uspeje-ve-druhem-kole-524058">CNN Prima NEWS</a> on 10 Oct at 21:56. Our round-2 forecasts were locked before we saw them (<code>3dd3820</code>, <code>f4179ec</code>). After round 2 we score STEM the same way as our series.</p>'),
+               stemnote='<p class="muted" style="font-size:14px"><b>STEM (CNN Prima)</b> is an external benchmark, not one of our series. The probabilities were published by <a href="https://cnn.iprima.cz/exkluzivni-predikce-senatnich-voleb-kdo-postoupi-a-kdo-uspeje-ve-druhem-kole-524058">CNN Prima NEWS</a> on 10 Oct at 21:56. Our round-2 forecasts were locked before we saw them (<code>3dd3820</code>, <code>f4179ec</code>). After round 2 we score STEM the same way as our series.</p>',
+               sznote='<p class="muted" style="font-size:14px"><b>Seznam Zprávy</b> is a second external benchmark: a model by Konstantin Sulimenko published by Seznam Zprávy <a href="https://www.seznamzpravy.cz/clanek/volby-do-senatu-ano-bude-hur-model-predpovida-hnuti-zavrseni-senatniho-debaklu-317588">on 12 Oct at 18:00</a>. We copied the numbers from the article\'s chart on 14 Oct. Our agents never saw them. After round 2 we score it the same way as STEM.</p>'),
 }
 
 
@@ -797,7 +802,7 @@ def score_tables(lang: str, score: dict) -> str:
 
 def build_round2(out: Path, date: str, results: Path, model_r2: Path, score_json: Path, freeze_date: str = "2026-10-09",
                  model_date: str = "2026-10-03", market_date: str | None = None, rho: float = 0.55,
-                 score_intro: dict | None = None, stem: Path | None = None) -> None:
+                 score_intro: dict | None = None, stem: Path | None = None, seznam: Path | None = None) -> None:
     sys.path.insert(0, str(VAULT / "scripts"))
     from forecast_math import blend_dist  # noqa: E402
     snaps = out / "data" / "snapshots"
@@ -825,20 +830,21 @@ def build_round2(out: Path, date: str, results: Path, model_r2: Path, score_json
     AI, AIM, MR2, MK, BL = by(ai), by(aim), by(mr2), by(market), by(blend)
     FZ = {k: by(v) for k, v in fz.items()}
     score = json.loads(score_json.read_text())
-    STEM = {d["obvod"]: d["candidates"] for d in json.loads(stem.read_text())["districts"]} if stem else {}
+    load_ext = lambda p: {d["obvod"]: d["candidates"] for d in json.loads(p.read_text())["districts"]} if p else {}  # noqa: E731
+    EXTS = [(lbl, D, note) for lbl, D, note in (("STEM (CNN Prima)", load_ext(stem), "stemnote"),
+                                                 ("Seznam Zprávy", load_ext(seznam), "sznote")) if D]
 
-    def stem_dist(n: int, names: dict[str, str]) -> dict[str, float] | None:
-        if n not in STEM:
+    def ext_dist(D: dict, n: int, names: dict[str, str]) -> dict[str, float] | None:
+        if n not in D:
             return None
         out_ = {}
-        for c in STEM[n]:
+        for c in D[n]:
             sur = fold(c["name"].split(". ", 1)[-1].split()[-1])
             k = next((k for k, nm in names.items() if k != "Someone_else" and fold(nm.split()[-1]) == sur), "Someone_else")
             out_[k] = out_.get(k, 0.0) + c["p"]
         return out_
     for lang in ("cs", "en"):
         t, S, X = L[lang], SERIES_LABELS[lang], R2_TXT[lang]
-        SL = "STEM (CNN Prima)"
         base = out if lang == "cs" else out / "en"
         rows, decided_list = [], []
         for d in ai["districts"]:
@@ -857,8 +863,9 @@ def build_round2(out: Path, date: str, results: Path, model_r2: Path, score_json
                          + leader_cell(dist_of(AIM[n]) if n in AIM else None, names, label=S["aimodel"])
                          + gs(leader_cell((MK.get(n) or {}).get("consensus"), names, label=S["market"]))
                          + gs(leader_cell(dist_of(BL[n]) if n in BL else None, names, label=S["blend"])))
-                if STEM:
-                    cells += gs(leader_cell(stem_dist(n, names), names, label=SL)).replace("<td", '<td style="color:var(--muted,#777)"', 1)
+                for i, (lbl, D, _) in enumerate(EXTS):
+                    c_ = leader_cell(ext_dist(D, n, names), names, label=lbl).replace("<td", '<td style="color:var(--muted,#777)"', 1)
+                    cells += gs(c_) if i == 0 else c_
                 rows.append(f'<tr><td class="num nolabel">{n}</td><td class="head"><a href="obvod-{n:02d}.html"><span class="sm-only">{n} · </span>{esc(d["name"])}</a></td>'
                             f'<td data-label="{esc(X["r1"])}">{r1cell}</td>{cells}</tr>')
             # district page: round-1 result + round-2 table on top of the freeze page
@@ -872,8 +879,7 @@ def build_round2(out: Path, date: str, results: Path, model_r2: Path, score_json
                 md = keyed_model(MR2[n], keys, names) if n in MR2 else None
                 cols = [(S["ai"], dist_of(d)), (S["model"], md), (S["aimodel"], dist_of(AIM[n]) if n in AIM else None),
                         (S["market"], (MK.get(n) or {}).get("consensus")), (S["blend"], dist_of(BL[n]) if n in BL else None)]
-                if STEM:
-                    cols.append((SL, stem_dist(n, names)))
+                cols += [(lbl, ext_dist(D, n, names)) for lbl, D, _ in EXTS]
                 head = "".join(f"<th>{esc(h)}</th>" for h, _ in cols)
                 body = "".join(f'<tr><td>{esc(names[k])}</td>' + "".join(
                     f'<td class="num">{pct(dd[k]) if dd and dd.get(k) is not None else "—"}</td>' for _, dd in cols) + "</tr>" for k in fkeys)
@@ -899,13 +905,13 @@ def build_round2(out: Path, date: str, results: Path, model_r2: Path, score_json
 {CHANGES.get(date, {}).get(lang, "")}
 <p style="margin-bottom:0"><a href="skore.html">{X['scoretitle']} →</a> · <a href="denik.html">{"Podrobně v deníku →" if lang == "cs" else "Details in the journal →"}</a></p></div>
 <h2>{X['r2']}</h2><p class="muted" style="font-size:14px">{X['r2note']}{'' if market else ' ' + X['nomarket']}</p>
-<div class="scroll r2wrap"><table class="cards r2"><thead><tr class="grp"><th colspan="3"></th><th class="gs" colspan="3">{X['g_ours']}</th><th class="gs">{X['g_mkt']}</th><th class="gs">{X['g_comb']}</th>{'<th class="gs">' + X['g_ext'] + '</th>' if STEM else ''}</tr>
+<div class="scroll r2wrap"><table class="cards r2"><thead><tr class="grp"><th colspan="3"></th><th class="gs" colspan="3">{X['g_ours']}</th><th class="gs">{X['g_mkt']}</th><th class="gs">{X['g_comb']}</th>{f'<th class="gs" colspan="{len(EXTS)}">' + X['g_ext'] + '</th>' if EXTS else ''}</tr>
 <tr><th>#</th><th>{t['district']}</th><th>{X['r1']}</th><th class="gs">{S['ai']}</th><th>{S['model']}</th>
-<th>{S['aimodel']}</th><th class="gs">{S['market']}</th><th class="gs">{S['blend']}</th>{'<th class="gs muted">' + SL + '</th>' if STEM else ''}</tr></thead>
+<th>{S['aimodel']}</th><th class="gs">{S['market']}</th><th class="gs">{S['blend']}</th>{''.join(f'<th class="{"gs " if i == 0 else ""}muted">{lbl}</th>' for i, (lbl, _, _) in enumerate(EXTS))}</tr></thead>
 <tbody>{''.join(rows)}</tbody></table></div>
 {'<p style="font-size:15px"><b>' + X['decided'] + ':</b> ' + ' · '.join(decided_list) + '</p>' if decided_list else ''}
 <p class="muted" style="font-size:14px">{X['blendnote']}</p>
-{X['stemnote'] if STEM else ''}
+{''.join(X[note] for _, _, note in EXTS)}
 <div class="card">{intro['body']}</div>""")
         (base / "index.html").write_text(ov, encoding="utf-8")
         si = (score_intro or {}).get(lang, "")

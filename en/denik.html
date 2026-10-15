@@ -43,7 +43,53 @@ table.r2 tr.grp th{text-transform:none;letter-spacing:0;font-size:13px;color:var
 table.cards td b{white-space:nowrap}table.cards .pill{white-space:normal}
 </style></head><body><div class="wrap">
 <header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Overview</a><a href="pravidla.html">Rules</a><a href="model.html">Model</a><a href="skore.html">Scores</a><a href="vyvoj.html">Trends</a><a href="denik.html">Journal</a><a href="archiv.html">Archive</a><a class="lang" href="../denik.html">CS</a></nav></header>
-<h1>Journal</h1><div class="card"><h2 style="margin-top:0">2026-10-14 — Day 13: Hradec 54 → 51 after new endorsements, Deník N as a benchmark</h2><p><b>In short:</b> On Tuesday evening we re-ran Hradec Králové. More eliminated candidates (Holásek, Nebeská, Picek) endorsed Ceralová Petrofová. AI and AI + model now give Dvořák <b>51 %</b> instead of 54 %, so he is still a narrow favourite. We also re-ran Plzeň after the row over Aschenbrenner's billboard, but the change came out below 2 points, so it stays (Řehka 82 / 94 %). Other districts unchanged. Kladno unchanged: market Paták 57 %, we Šípová 52–53 %.</p>
+<h1>Journal</h1><div class="card"><h2 style="margin-top:0">2026-10-15 — Day 14: no change, Hradec 50 : 50 in the market, Seznam Zprávy as a second external benchmark</h2><p><b>In short:</b> On Thursday we found no fact that would change a forecast, so AI and AI + model stay at Wednesday's state. In Hradec the market reached exactly <b>50 : 50</b> (Wednesday morning Dvořák 54 %, we 51 %). Next to STEM we added the <b>Seznam Zprávy</b> model to the table; it gives numbers, so after the election we will score it with Brier too. The blend is now called <b>"AI + betting"</b> and there is a new <a href="vyvoj.html">Trends</a> page.</p>
+<h3>News (no odds)</h3>
+<ul>
+<li><b>Plzeň (no change):</b> Aschenbrenner told iDNES the billboard with Kantorová will be pasted over. ODS paid for the space and let ANO use it. He says he does not support ANO. On Tuesday we counted the billboard at about −2 points for Řehka; now it goes away and no call to vote for Kantorová came. Actor Ondřej Vetchý also came to support Řehka. Net effect at most +1 to +2 for Řehka, below the update threshold (AI 82 %, AI + model 94 %).</li>
+<li><b>Brno (no change):</b> per ČTK, Holcnerová (Kruh, 4.1 %) backs Zitterbart. Štěrba (ANO, 20.1 %) has leaned to Zitterbart since Saturday; already counted. Turánek (SPD) and Samková (Stačilo!) back nobody. Governor Grolich backs Papoušek. Papoušek led round 1 42 : 24; a small endorsement does not change that.</li>
+<li><b>Žďár:</b> nothing new on a recount or on Černý endorsing. In Žďárský deník Klement mentioned Černý's pre-election video aimed at his private life. So a Černý → Klement endorsement still has not happened and does not look likely.</li>
+<li><b>Pelhřimov:</b> still no primary source for Chalupský backing Med. <b>Kladno:</b> the report "Kladeňáci will file a court complaint" concerns the city's municipal election, not the Senate.</li>
+</ul>
+<p>The 15 Oct AI and AI + model snapshots were locked in commit <code>ead144b</code> (15 Oct 14:09:49); only then did we read odds (Tipsport and Fortuna 14:10–14:12).</p>
+<h3>External benchmark #2: Seznam Zprávy</h3>
+<p>Seznam Zprávy (Konstantin Sulimenko, 12 Oct 18:00) published a round-2 model with probabilities for all 22 duels. On the site it now sits in the "External" group next to STEM, and after the election we will score it like our own series (Brier, log score, hits). Our agents did not see it.</p>
+<ul>
+<li><b>It differs from AI + model on the favourite in two districts:</b> Kladno (Paták 57 %, like the market) and Žďár (Šmarda 53 %, the only source to pick him).</li>
+<li><b>Biggest gap:</b> Hradec. Seznam gives Dvořák 77 %, we 51 %, the market 50 %, STEM 14 %.</li>
+</ul>
+<h3>Odds: what changed since Wednesday morning</h3>
+<p>We read the odds once more on Wednesday evening (not scored, for the record only). Below is Wednesday morning vs this afternoon, with AI + model as of today's lock.</p>
+<ul>
+<li><b>Towards us:</b> Hradec (Dvořák 54 → 50 %, we 51 %; both bookmakers price both at 1.84–1.85), Frýdek-Místek (Pešatová 59.5 → 58.5 %, we 54 %), Praha 5 (Láska 78.3 → 77.6 %, we 62 %), Kladno (Paták 56.7 → 56.3 %, we Šípová 52 %).</li>
+<li><b>Away from us:</b> Zlín (Goláň 82.4 → 85.7 %, we 74 %), Žďár (Klement 71.3 → 73.7 %, we 66 %), Karviná (Brzyszkowská 80.3 → 82.5 %, we 65 %), and slightly Pelhřimov, Litovel and Cheb (under 1 point).</li>
+<li><b>Unchanged:</b> Přerov (Navařík 63 %) and the other clear favourites.</li>
+<li><b>Overall:</b> the biggest move (Hradec, −4) is towards us, but more districts moved away. The market is still more confident than us on favourites, most in Karviná, Zlín and Žďár. The market still differs from AI + model on the favourite only in Kladno; Hradec is now a tie. AI + betting: Kladno Paták 54 %, Hradec Dvořák 50.3 %, Žďár Klement 71 %.</li>
+</ul>
+<h3>Errors and fixes</h3>
+<ul>
+<li><b>Correction to 14 Oct:</b> on Wednesday we wrote that Keblúšek's (Naše Česko, 10.6 %) endorsement of Plevný in Cheb was unverified. He did endorse him (ČTK 14 Oct 12:47, published after our morning search). Ondřej Nezdara pointed this out, thank you. Cheb unchanged: Plevný is a clear favourite (round 1 40.1 : 27.1).</li>
+<li><b>Table and ties:</b> on an exact tie (Hradec market 50 : 50) the table showed "Petrofová 50 %" only because of data order. Fixed: a tie now shows "50 : 50".</li>
+<li><b>Quarantine:</b> a headline about bookmakers before round 2 appeared under an iDNES article. We did not open it.</li>
+</ul>
+<h3>Other</h3>
+<ul>
+<li><b>Michal Sirový</b> recommended our site and picked the most interesting duels: Praha 5, Kladno, Hradec and Zlín, Žďár, Přerov and Karviná. That matches the districts where we are least sure. Only Karviná we have as an ANO favourite (Brzyszkowská 65–80 %).</li>
+<li><b>Paper betting</b> was pre-registered on Wednesday (<a href="../paper-bets/PREREGISTRACE.md">rules</a>, commit <code>e6e7a2b</code>). The round-2 bet list will be generated on Friday from the scored odds reading and published before polls open.</li>
+<li><b>New on the site:</b> the blend is now called "AI + betting" (label only, data unchanged; in log-odds 31 % AI + model, 69 % betting), and the <a href="vyvoj.html">Trends</a> page shows pure AI vs betting per district since 2 Oct.</li>
+</ul>
+<h3>New sources of the day</h3>
+<ul>
+<li><a href="https://www.idnes.cz/volby/plzen/aschenbrenner-senat-plzen-billboard-ods-plakat-podpora-volby-2026-lucie-kantorova-ano.A261014_104536_plzen-volby_vb">iDNES: Aschenbrenner, billboard to be pasted over</a> (14 Oct) and <a href="https://plzensky.denik.cz/zpravy-region/poprask-kolem-billboardu-podpora-politiku-i-herce-boj-o-senat-v-plzni-vrcholi/">Plzeňský deník: Senate fight in Plzeň peaks</a> (15 Oct), Plzeň no change.</li>
+<li><a href="https://www.metro.cz/kraje/jihomoravsky-kraj/nekteri-neuspesni-kandidati-do-senatu-v-brne-podpori-zitterbarta-jini-nikoho.A261014_174533_metro-brno-zpravy_air">Metro/ČTK: in Brno some back Zitterbart, others nobody</a> (14 Oct), no change.</li>
+<li><a href="https://www.metro.cz/kraje/karlovarsky-kraj/senatora-plevneho-z-chebu-podpori-ve-druhem-kole-i-dva-nepostupujici-kandidati.A261014_143044_metro-vary-zpravy_air">Metro/ČTK: two eliminated candidates back Plevný</a> (14 Oct), correction, Cheb no change.</li>
+<li><a href="https://zdarsky.denik.cz/prezidentske-volby/senatni-volby-zdar-obvod-51-druhe-kolo-klement-rozhovor-smarda-senator/">Žďárský deník: interview with Klement</a> (15 Oct), no change.</li>
+<li><a href="https://www.idnes.cz/volby/praha/kladenaci-podavaji-stiznost-proti-vysledkum-voleb.A261013_182644_praha-volby_jira">iDNES: Kladeňáci to file a complaint</a> (13 Oct), discarded: municipal election, not Senate.</li>
+<li><a href="https://www.seznamzpravy.cz/clanek/volby-do-senatu-ano-bude-hur-model-predpovida-hnuti-zavrseni-senatniho-debaklu-317588">Seznam Zprávy: round-2 model</a> (12 Oct, <a href="https://e.infogram.com/92ead4b4-743a-4a76-a6ab-c6be3e0b85b5?src=embed">chart</a>), external benchmark, not given to agents.</li>
+<li>Odds: <code>raw-*-2026-10-14e-r2.txt</code> (Wednesday evening, not scored) and <code>raw-*-2026-10-15-r2.txt</code>.</li>
+</ul>
+<h3>Next</h3>
+<p>Friday morning: last news sweep, then lock and the <b>scored odds reading before 14:00</b> (planned 12:00–13:30; Fortuna and Tipsport take bets until 14:00). Right after that, the round-2 paper-bet list. Round 2 on 16–17 Oct; scoring of all series and external benchmarks on Saturday evening.</p></div><div class="card"><h2 style="margin-top:0">2026-10-14 — Day 13: Hradec 54 → 51 after new endorsements, Deník N as a benchmark</h2><p><b>In short:</b> On Tuesday evening we re-ran Hradec Králové. More eliminated candidates (Holásek, Nebeská, Picek) endorsed Ceralová Petrofová. AI and AI + model now give Dvořák <b>51 %</b> instead of 54 %, so he is still a narrow favourite. We also re-ran Plzeň after the row over Aschenbrenner's billboard, but the change came out below 2 points, so it stays (Řehka 82 / 94 %). Other districts unchanged. Kladno unchanged: market Paták 57 %, we Šípová 52–53 %.</p>
 <h3>News (no odds)</h3>
 <ul>
 <li><b>Hradec Králové (update):</b> four eliminated candidates endorsed Ceralová Petrofová: Hůlková (ANO, 18.4 %, already counted), Nebeská (independent, 15.0 %), Holásek (outgoing senator, 12.2 %) and Picek (SPD, 5.3 %, as the "lesser evil"). Mayor Springerová backs Dvořák (she did before round 1 too). New for us are Holásek (we expected him to lean to Dvořák), Nebeská and Picek. Endorsements do not move all votes, though: eliminated candidates' voters turn out little in round 2. The agent therefore moved Dvořák by only 3 points (54 → 51 in both series, band 34–67 %). The model alone gives 58.5 %. The −7.5 point deviation reflects what the model cannot see: where eliminated voters lean (it codes both finalists as the "democratic bloc"). Red-team in both steps: minor (step A would accept 50:50).</li>
