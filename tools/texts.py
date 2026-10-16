@@ -1295,3 +1295,92 @@ CHANGES["2026-10-15"] = {
 <li><b>On the site:</b> the blend is now called "AI + betting", and a new <a href="vyvoj.html">Trends</a> page shows pure AI vs betting per district.</li>
 </ul>""",
 }
+
+JOURNAL.append(dict(
+    date="2026-10-16", title_cs="Den 15: hodnocené kurzy 2. kola, virtuální sázky a oprava STEM",
+    title_en="Day 15: scored round-2 odds, paper bets and a STEM correction",
+    cs="""<p><b>V kostce:</b> Před uzávěrkou ve 14:00 jsme naposledy přečetli kurzy. Toto čtení se hodnotí. Trh se od čtvrtka pohnul jen málo, nejvíc ve Žďáru (Klement 74 → 77 %). V Hradci se nově mírně přiklání k Ceralové Petrofové (50,8 %), takže jiného favorita než my má teď trh ve dvou obvodech, v Kladně a v Hradci. Ve zprávách jsme nenašli nic, co by měnilo předpověď. Seznam virtuálních sázek na 2. kolo je zamčený. Čísla externího benchmarku STEM jsme opravili na konečnou verzi grafu.</p>
+<h3>Zprávy (bez kurzů)</h3>
+<ul>
+<li>V pátečním hledání (Google News za poslední den, obecně i všech osm sporných duelů) byly hlavně praktické návody k volbě, rozhlasové duely a regionální texty „před finále“ (Kladno, Přerov, Karviná, Litovel, Hradec). Žádná nová podpora od vyřazených kandidátů. Ošťádal (Litovel) podle iDNES kampaň nedělá, z 1. kola je ale jasný favorit. <b>AI i AI s modelem beze změny.</b></li>
+<li><b>Mezera:</b> dva články jsme neotevřeli, protože se nám nepodařilo rozbalit odkaz z Google News: Olomoucký Report „Kdo stojí za kým? Druhé kolo Senátu rozděluje poražené i známé tváře“ a Radiožurnál „Spor o billboard, tancovačka s Babišem a kanibalismus opozice“. Podle titulků jde o souhrny, plzeňský billboard už máme započtený.</li>
+</ul>
+<h3>Pořadí kroků a hodnocené čtení</h3>
+<ul>
+<li><b>Kurzy:</b> Tipsport v 13:50:36, Fortuna v 13:50:53–59, commit <code>5642951</code> v 13:51:08. Ráno v 6:25 jsme kurzy četli jen pro záznam, to se nehodnotí.</li>
+<li><b>Odchylka od plánu:</b> ranní hledání zpráv a lock měly proběhnout před čtením kurzů. Tentokrát jsme je udělali až po něm (13:52–13:56). <i>Příčina:</i> páteční harmonogram jsme podcenili a hodnocené čtení kurzů jsme stihli až na poslední chvíli. <i>Proč to nevadí:</i> hledání nic nenašlo a snapshoty pro 16. 10. jsou přesná kopie zámku z 15. 10. (<code>ead144b</code>). Lock <code>f13557a</code> je ze 13:56:58, kurzy ho tedy ovlivnit nemohly. <i>Náprava:</i> v den uzávěrky začínáme hledáním zpráv ráno a hodnocené čtení kurzů plánujeme nejpozději na 13:00.</li>
+</ul>
+<h3>Sázky: co se změnilo od čtvrtka</h3>
+<ul>
+<li><b>K nám:</b> Frýdek-Místek (Pešatová 58,5 → 57,0 %, my 54 %), Karviná (Brzyszkowská 82,5 → 81,7 %, my 65 %).</li>
+<li><b>Od nás:</b> Žďár (Klement 73,7 → 77,1 %, my 66 %), Kladno (Paták 56,3 → 57,7 %, my Šípová 52 %), Hradec (z 50 : 50 na Ceralovou Petrofovou 50,8 %, my Dvořák 51 %), Zlín (Goláň 85,7 → 86,9 %), Česká Lípa (Půta 90,6 → 91,6 %), o méně než bod Přerov a Litovel.</li>
+<li><b>Celkově:</b> dva obvody se posunuly k nám, sedm od nás, všechno kromě Žďáru o méně než 1,5 bodu. Jiného favorita než AI s modelem má trh v Kladně (Paták) a nově v Hradci (Ceralová Petrofová, o vlásek). AI + sázky: Kladno Paták 54,7 %, Hradec Ceralová Petrofová 50,2 %, Žďár Klement 74 %.</li>
+</ul>
+<h3>Virtuální sázky na 2. kolo</h3>
+<p>Podle <a href="paper-bets/PREREGISTRACE.md">předregistrovaného pravidla</a> vznikl seznam z hodnocených kurzů a ze snapshotů 16. 10. (<a href="paper-bets/r2-2026-10-16.json">seznam</a>, commit <code>9aef889</code> v 13:58:00, před otevřením místností). AI by sázela 14×, Statistický model 8×, AI s modelem 10×, AI + sázky ani jednou. Srovnávací strategie „vždy favorit trhu“ má 20 sázek. Skoro všechny sázky našich sérií jdou na outsidery, protože jsme u favoritů méně jistí než trh. 2. kolo tak hlavně otestuje, jestli je ta nižší jistota oprávněná. První verze seznamu ze 13:51 (<code>3fc8e6a</code>) brala AI + sázky ještě ze čtvrtka a měla navíc jednu sázku (Žďár, Šmarda). Platí verze ze 13:58, jinak jsou obě shodné.</p>
+<h3>Interní test: přelivový model</h3>
+<p>Ve čtvrtek ve 22:27 jsme commitem <code>4ff7354</code> předregistrovali interní model přelivu hlasů po okrscích. Žádnou sérii nemění, v sobotu ho vyhodnotíme vedle ostatních.</p>
+<h3>Chyby a nápravy</h3>
+<ul>
+<li><b>STEM ze staré verze grafu.</b> Graf STEM jsme stáhli 11. 10. v 8:33, v jeho verzi ze 7:48. Ta vznikla ještě během sčítání (asi 80 % hlasů) a v Praze 5 v ní figurovalo všech pět kandidátů. Ve 12:51 STEM graf po dosčítání 1. kola přepočítal. Všimli jsme si toho při kontrole grafu. Změny: <b>Praha 5</b> Sáblík 52 → <b>70 %</b> (Láska 40 → 30 %, vyřazení kandidáti už ne), <b>Hradec Králové</b> Ceralová Petrofová 86 → <b>71 %</b> (Dvořák 14 → 29 %). O 1 bod se pohnuly Kladno (Paták 88 → 87), Česká Lípa (Půta 99 → 98), Žďár (Klement 56 → 55), Frýdek-Místek (Korč 78 → 77), Karviná (Brzyszkowská 91 → 90) a Zlín (Goláň 95 → 96, Mitáček 4). Čísla STEM v zápisech z 11., 12. a 15. 10. jsou ze staré verze, platí tato oprava. <i>Příčina:</i> externí benchmark jsme uložili hned po zveřejnění a neověřili, jestli ho autor po dosčítání neaktualizoval. <i>Náprava:</i> u externích benchmarků před vyhodnocením znovu stáhneme zdroj a uložíme konečnou verzi zveřejněnou před volbami. Starý soubor necháváme pro záznam (<code>data/stem/2026-10-11.json</code>), skóre počítáme z nového (<code>data/stem/2026-10-11-1251.json</code>). Obě verze vznikly až po našem locku 2. kola.</li>
+</ul>
+<h3>Nové zdroje dne</h3>
+<ul>
+<li><a href="https://flo.uri.sh/visualisation/30516580/embed">Graf STEM pro CNN Prima</a> (aktualizován 11. 10. ve 12:51), externí benchmark, agentům nepředán.</li>
+<li>iROZHLAS: „Kdo ovládne Senát? Starostové jsou přeborníci druhých kol“ (16. 10.), Kladenský deník: „Šípová, nebo Paták?“ (16. 10.), Přerovský deník: „Vrána nebo Navařík?“ (16. 10.), Karvinský a havířovský deník: „Kazík vs. Brzyszkowská“ (16. 10.), iDNES: „jen Ošťádal kampaň nedělá“ (16. 10.). Souhrny bez nové podpory, beze změny.</li>
+<li>Neotevřeno: Olomoucký Report „Kdo stojí za kým?“ (15. 10.), Radiožurnál „Spor o billboard, tancovačka s Babišem…“ (16. 10.).</li>
+<li>Kurzy: <code>raw-*-2026-10-16m-r2.txt</code> (ráno, nehodnoceno) a <code>raw-*-2026-10-16-r2.txt</code> (13:50, hodnoceno).</li>
+</ul>
+<h3>Dál</h3>
+<p>2. kolo probíhá 16.–17. 10. V sobotu večer vyhodnotíme všech pět sérií, externí benchmarky (STEM, Seznam Zprávy, Deník N), přelivový model i virtuální sázky.</p>""",
+    en="""<p><b>In short:</b> We read the odds for the last time before the 14:00 close. This is the reading that gets scored. The market has barely moved since Thursday, most in Žďár (Klement 74 → 77 %). In Hradec it now leans slightly to Ceralová Petrofová (50.8 %), so the market now differs from us on the favourite in two districts, Kladno and Hradec. The news contained nothing that changes a forecast. The round-2 paper-bet list is locked. We corrected the STEM external benchmark to its final chart version.</p>
+<h3>News (no odds)</h3>
+<ul>
+<li>Friday's search (Google News for the last day, general queries plus all eight contested duels) found mostly practical voting guides, radio duels and regional "final round" pieces (Kladno, Přerov, Karviná, Litovel, Hradec). No new endorsements from eliminated candidates. Per iDNES, Ošťádal (Litovel) is not campaigning, but he is a clear favourite after round 1. <b>AI and AI + model unchanged.</b></li>
+<li><b>Gap:</b> we did not open two articles because we could not resolve their Google News links: Olomoucký Report "Who stands behind whom? The Senate runoff splits the losers and familiar faces" and Radiožurnál "A billboard row, dancing with Babiš and the opposition's cannibalism". By their headlines they are round-ups; the Plzeň billboard is already counted.</li>
+</ul>
+<h3>Order of steps and the scored reading</h3>
+<ul>
+<li><b>Odds:</b> Tipsport at 13:50:36, Fortuna at 13:50:53–59, commit <code>5642951</code> at 13:51:08. A 6:25 morning reading was for the record only and is not scored.</li>
+<li><b>Deviation from the plan:</b> the morning news search and the lock were supposed to come before reading the odds. This time they came after it (13:52–13:56). <i>Cause:</i> we underestimated Friday's schedule and only made the scored reading at the last minute. <i>Why it does not matter:</i> the search found nothing, and the 16 Oct snapshots are an exact copy of the 15 Oct lock (<code>ead144b</code>). Lock <code>f13557a</code> is from 13:56:58, so the odds could not have influenced it. <i>Fix:</i> on a closing day we start with the morning news search and plan the scored odds reading for 13:00 at the latest.</li>
+</ul>
+<h3>Betting: what changed since Thursday</h3>
+<ul>
+<li><b>Towards us:</b> Frýdek-Místek (Pešatová 58.5 → 57.0 %, we 54 %), Karviná (Brzyszkowská 82.5 → 81.7 %, we 65 %).</li>
+<li><b>Away from us:</b> Žďár (Klement 73.7 → 77.1 %, we 66 %), Kladno (Paták 56.3 → 57.7 %, we Šípová 52 %), Hradec (from 50 : 50 to Ceralová Petrofová 50.8 %, we Dvořák 51 %), Zlín (Goláň 85.7 → 86.9 %), Česká Lípa (Půta 90.6 → 91.6 %), and by under a point Přerov and Litovel.</li>
+<li><b>Overall:</b> two districts moved towards us and seven away, all except Žďár by less than 1.5 points. The market differs from AI + model on the favourite in Kladno (Paták) and now in Hradec (Ceralová Petrofová, by a hair). AI + betting: Kladno Paták 54.7 %, Hradec Ceralová Petrofová 50.2 %, Žďár Klement 74 %.</li>
+</ul>
+<h3>Round-2 paper bets</h3>
+<p>Following the <a href="../paper-bets/PREREGISTRACE.md">pre-registered rule</a>, the list was built from the scored odds and the 16 Oct snapshots (<a href="../paper-bets/r2-2026-10-16.json">list</a>, commit <code>9aef889</code> at 13:58:00, before polls opened). AI would bet 14 times, the Statistical model 8, AI + model 10, AI + betting none. The "always the market favourite" benchmark has 20 bets. Almost all of our series' bets are on underdogs, because we are less sure about favourites than the market. So round 2 mainly tests whether that lower confidence is justified. A first version of the list at 13:51 (<code>3fc8e6a</code>) still used Thursday's AI + betting and had one extra bet (Žďár, Šmarda). The 13:58 version is the valid one; otherwise the two are identical.</p>
+<h3>Internal test: transfer model</h3>
+<p>On Thursday at 22:27 we pre-registered an internal precinct-level vote-transfer model in commit <code>4ff7354</code>. It changes no series; we will score it on Saturday alongside the others.</p>
+<h3>Errors and fixes</h3>
+<ul>
+<li><b>STEM from an old chart version.</b> We downloaded STEM's chart on 11 Oct at 8:33, in its 7:48 version. That version was made while votes were still being counted (about 80 %) and still listed all five candidates in Praha 5. At 12:51 STEM recalculated the chart after the round-1 count finished. We noticed it while checking the chart. Changes: <b>Praha 5</b> Sáblík 52 → <b>70 %</b> (Láska 40 → 30 %, eliminated candidates dropped), <b>Hradec Králové</b> Ceralová Petrofová 86 → <b>71 %</b> (Dvořák 14 → 29 %). One-point moves: Kladno (Paták 88 → 87), Česká Lípa (Půta 99 → 98), Žďár (Klement 56 → 55), Frýdek-Místek (Korč 78 → 77), Karviná (Brzyszkowská 91 → 90) and Zlín (Goláň 95 → 96, Mitáček 4). STEM figures in the 11, 12 and 15 Oct entries are from the old version; this correction applies. <i>Cause:</i> we saved the external benchmark right after publication and did not check whether its author updated it after the count. <i>Fix:</i> before scoring, we re-download every external benchmark and store the final version published before the vote. The old file stays on record (<code>data/stem/2026-10-11.json</code>); scoring uses the new one (<code>data/stem/2026-10-11-1251.json</code>). Both versions came after our round-2 lock.</li>
+</ul>
+<h3>New sources of the day</h3>
+<ul>
+<li><a href="https://flo.uri.sh/visualisation/30516580/embed">STEM chart for CNN Prima</a> (updated 11 Oct at 12:51), external benchmark, not given to agents.</li>
+<li>iROZHLAS: "Who will control the Senate? Mayors are runoff champions" (16 Oct), Kladenský deník: "Šípová or Paták?" (16 Oct), Přerovský deník: "Vrána or Navařík?" (16 Oct), Karvinský a havířovský deník: "Kazík vs. Brzyszkowská" (16 Oct), iDNES: "only Ošťádal is not campaigning" (16 Oct). Round-ups with no new endorsement; no change.</li>
+<li>Not opened: Olomoucký Report "Who stands behind whom?" (15 Oct), Radiožurnál "A billboard row, dancing with Babiš…" (16 Oct).</li>
+<li>Odds: <code>raw-*-2026-10-16m-r2.txt</code> (morning, not scored) and <code>raw-*-2026-10-16-r2.txt</code> (13:50, scored).</li>
+</ul>
+<h3>Next</h3>
+<p>Round 2 runs 16–17 Oct. On Saturday evening we will score all five series, the external benchmarks (STEM, Seznam Zprávy, Deník N), the transfer model and the paper bets.</p>""",
+))
+
+CHANGES["2026-10-16"] = {
+    "time": "13:58",  # scored odds 13:50, lock 13:56:58, paper bets 13:58:00
+    "cs": """<ul>
+<li><b>Hodnocené kurzy 2. kola</b> (13:50, před uzávěrkou ve 14:00): největší posun Žďár (Klement 74 → 77 %, od nás). V Hradci se trh nově mírně přiklání k Ceralové Petrofové (50,8 %).</li>
+<li><b>Zprávy:</b> nic, co by měnilo předpověď. AI i AI s modelem beze změny.</li>
+<li><b>Virtuální sázky na 2. kolo</b> jsou zamčené (<a href="paper-bets/r2-2026-10-16.json">seznam</a>): AI 14, model 8, AI s modelem 10, AI + sázky 0. Skoro všechny jdou na outsidery.</li>
+<li><b>Oprava:</b> STEM v tabulce je teď z konečné verze grafu (Praha 5 Sáblík 70 %, Hradec Ceralová Petrofová 71 %).</li>
+</ul>""",
+    "en": """<ul>
+<li><b>Scored round-2 odds</b> (13:50, before the 14:00 close): the biggest move is Žďár (Klement 74 → 77 %, away from us). In Hradec the market now leans slightly to Ceralová Petrofová (50.8 %).</li>
+<li><b>News:</b> nothing that changes a forecast. AI and AI + model unchanged.</li>
+<li><b>Round-2 paper bets</b> are locked (<a href="../paper-bets/r2-2026-10-16.json">list</a>): AI 14, model 8, AI + model 10, AI + betting 0. Almost all are on underdogs.</li>
+<li><b>Correction:</b> STEM in the table now uses the final chart version (Praha 5 Sáblík 70 %, Hradec Ceralová Petrofová 71 %).</li>
+</ul>""",
+}
