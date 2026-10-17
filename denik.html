@@ -43,7 +43,57 @@ table.r2 tr.grp th{text-transform:none;letter-spacing:0;font-size:13px;color:var
 table.cards td b{white-space:nowrap}table.cards .pill{white-space:normal}
 </style></head><body><div class="wrap">
 <header><a class="brand" href="index.html">Senát 2026 · forecast</a><nav><a href="index.html">Přehled</a><a href="pravidla.html">Pravidla</a><a href="model.html">Model</a><a href="skore.html">Skóre</a><a href="vyvoj.html">Vývoj</a><a href="denik.html">Deník</a><a href="archiv.html">Archiv</a><a class="lang" href="en/denik.html">EN</a></nav></header>
-<h1>Deník</h1><div class="card"><h2 style="margin-top:0">2026-10-16 — Den 15: hodnocené kurzy 2. kola, virtuální sázky a oprava STEM</h2><p><b>V kostce:</b> Před uzávěrkou ve 14:00 jsme naposledy přečetli kurzy. Toto čtení se hodnotí. Trh se od čtvrtka pohnul jen málo, nejvíc ve Žďáru (Klement 74 → 77 %). V Hradci se nově mírně přiklání k Ceralové Petrofové (50,8 %), takže jiného favorita než my má teď trh ve dvou obvodech, v Kladně a v Hradci. Ve zprávách jsme nenašli nic, co by měnilo předpověď. Seznam virtuálních sázek na 2. kolo je zamčený. Čísla externího benchmarku STEM jsme opravili na konečnou verzi grafu.</p>
+<h1>Deník</h1><div class="card"><h2 style="margin-top:0">2026-10-17 — Den 16: výsledky 2. kola a konečné skóre</h2><p><b>V kostce:</b> Všech 22 duelů je sečteno, výsledky jsou z volby.gov.cz (stav 17:38). Hlavní hodnocení, tedy předpovědi zamčené 9. 10. před 1. kolem, vyhrála kombinace <b>AI + sázky</b> (Brier 0,352). Čistá AI skončila druhá (0,369) a porazila samotné sázkové kurzy (0,381). Ve 2. kole byly naopak nejpřesnější <b>sázky</b> (0,169), těsně před AI + sázky (0,170). Čistá AI byla ve 2. kole až šestá z osmi (0,227). V šesti obvodech ze 22 vyhrál druhý z 1. kola. Žádný z 13 finalistů ANO nezvítězil. Podrobné skóre je na stránce <a href="skore.html">Skóre</a>.</p>
+<h3>Výsledky 2. kola</h3>
+<ul>
+<li><b>Otočeno proti 1. kolu (6):</b> Kladno Paták 51,7 : 48,3 Sucharda Šípová, Česká Lípa Půta 55,8 : 44,2 Volfová, Hradec Králové Ceralová Petrofová 60,2 : 39,8 Dvořák, Žďár nad Sázavou Klement 54,1 : 45,9 Šmarda, Frýdek-Místek Korč 52,1 : 47,9 Pešatová, Karviná Kazík 52,9 : 47,1 Brzyszkowská.</li>
+<li><b>Lídr 1. kola vyhrál (16):</b> Cheb Plevný, Louny Trešl, Plzeň-město Řehka, Pelhřimov Med, Příbram Štěpánek, Praha 5 Láska (53,2 : 46,8), Praha 9 Smoljak, Praha 1 Padevět, Kolín Kašpar, Znojmo Třetina, Brno-město Papoušek, Přerov Navařík (56,9 : 43,1), Litovel Ošťádal, Ostrava-město Šimetka, Zlín Goláň, Uherské Hradiště Bazala.</li>
+<li>Už v 1. kole byli zvoleni Fiala (Strakonice), Linhart (Děčín), Sobotka (Trutnov), Grulich (Rychnov nad Kněžnou) a Grolich (Vyškov).</li>
+<li>Účast ve 2. kole byla 13–27 %, nejnižší v Karviné.</li>
+</ul>
+<h3>Hlavní hodnocení: předpovědi z 9. 10. (27 obvodů)</h3>
+<p>Brier, nižší je lepší: <b>AI + sázky 0,352</b> · AI 2. 10. 0,368 · AI 0,369 · AI s modelem 0,375 · Sázky 0,381 · Statistický model 0,418. Favorit vyhrál ve 21 obvodech z 27 u všech našich sérií, u sázek ve 20.</p>
+<ul>
+<li><b>Proti předregistraci:</b> 5. 10. jsme čekali pořadí AI + sázky ≈ Sázky &gt; AI s modelem &gt; Statistický model ≈ AI. Kombinace AI a sázek skutečně vyhrála. Čistá AI ale dopadla lépe, než jsme čekali: porazila samotné sázky i AI s modelem. Statistický model skončil poslední.</li>
+<li><b>9 předregistrovaných sporných obvodů:</b> AI 2. 10. 0,594 · AI 0,599 · AI + sázky 0,604 · AI s modelem 0,638 · Sázky 0,655 · Statistický model 0,665.</li>
+<li><b>První odhad stačil:</b> AI z 2. 10. (0,368) je prakticky stejně dobrá jako AI po týdnu updatů z 9. 10. (0,369).</li>
+</ul>
+<h3>2. kolo: předpovědi z 16. 10.</h3>
+<p>Na 20 duelech, kde mají čísla všechny série (v Praze 1 a Kolíně byla u sázkových kanceláří jedna strana zamčená): <b>Sázky 0,169</b> · AI + sázky 0,170 · STEM 0,188 · AI s modelem 0,188 · Statistický model 0,188 · AI 0,227 · Seznam Zprávy 0,236 · přelivový model 0,268.</p>
+<ul>
+<li><b>K nám:</b> v Karviné a ve Frýdku-Místku se mýlil i trh, a víc než my. Kazíkovi jsme dávali 35 %, trh 18 %. Korčovi jsme dávali 46 %, trh 43 %.</li>
+<li><b>Od nás:</b> v Kladně a v Hradci měl trh správného favorita (Paták, Ceralová Petrofová) a AI s modelem ne. U jasných favoritů dával trh vyšší čísla než my a měl pravdu, například Česká Lípa (Půta: my 74 %, trh 92 %), Žďár (Klement: 66 a 77 %) nebo Zlín (Goláň: 74 a 87 %).</li>
+<li><b>Celkově:</b> ve 2. kole byly sázky přesnější než všechny naše série. AI + sázky je druhá, o 0,002 za nimi.</li>
+</ul>
+<h3>Externí srovnání</h3>
+<ul>
+<li><b>STEM (CNN Prima):</b> 0,188 na 20 společných duelech, favorit vyhrál v 18 z 20. Mýlil se v Praze 5 a v Karviné.</li>
+<li><b>Seznam Zprávy:</b> 0,236, favorit vyhrál v 16 z 20.</li>
+<li><b>Deník N</b> (13. 10., jen slovní verdikty, Brier spočítat nejde): trefil vítěze v 19 z 21 obvodů, kde tipoval. Mýlil se v Karviné („jasná favoritka“ Brzyszkowská) a v Hradci (vyrovnané, mírně Dvořák). Ve Frýdku-Místku netipoval. Trefil Kladno, Českou Lípu a Žďár, kde vyhrál druhý z 1. kola.</li>
+<li><b>Wikipedie</b> (předregistrováno 8. 10., „nejčtenější kandidát vyhraje“): 10 z 27.</li>
+</ul>
+<h3>Přelivový model (interní test)</h3>
+<p>Předregistrovaný model přelivu hlasů po okrscích (<code>4ff7354</code>) dopadl nejhůř ze všech (Brier 0,268). Podíl lídra 1. kola odhadl s průměrnou chybou 6,8 procentního bodu, při validaci na minulých volbách to bylo 5,9. Účast 2. kola odhadl dobře: průměrná chyba −1,1 bodu, průměrná absolutní 2,7 bodu. Do modelu ho přidávat nebudeme.</p>
+<h3>Virtuální sázky</h3>
+<p>Podle <a href="paper-bets/PREREGISTRACE.md">předregistrovaného pravidla</a>, 100 Kč na sázku:</p>
+<ul>
+<li><b>Sázky z 9. 10. na zisk mandátu:</b> AI + sázky +1 011 Kč (6 z 10 sázek vyšlo), AI s modelem +272 Kč, AI +1 Kč, Statistický model −25 Kč. Srovnávací strategie „vždy favorit trhu“ −36 Kč.</li>
+<li><b>Sázky na 2. kolo z 16. 10.:</b> AI −960 Kč (vyšla 1 ze 14), AI s modelem −560 Kč (1 z 10), Statistický model −205 Kč (2 z 8). AI + sázky nevsadily nic. „Vždy favorit trhu“ −82 Kč.</li>
+<li>Vypořádání: <code>data/senat-paper-bets/*-settled.txt</code> ve vaultu.</li>
+</ul>
+<h3>Kontrola metody</h3>
+<p>Přepočítali jsme kurzy na pravděpodobnost i jinými metodami odstranění marže (proporcionální, Shin). Brier sázek se mění nejvýš o 0,011 a pořadí sérií zůstává stejné. Předregistrovaná metoda (power) není pro trh nevýhodná.</p>
+<h3>Chyby a nápravy</h3>
+<ul>
+<li><b>Výpadek zdroje výsledků.</b> Po 14:00 nebyl dostupný web volbyhned.cz, ze kterého jsme stahovali výsledky 1. kola. <i>Příčina:</i> přetížení během sčítání. <i>Náprava:</i> skript teď stahuje z oficiálního volby.gov.cz a při chybě to zkusí znovu, případně přejde na druhý zdroj. Data obou zdrojů mají stejný formát. Na výsledek to vliv nemá.</li>
+</ul>
+<h3>Nové zdroje dne</h3>
+<ul>
+<li><a href="https://volby.gov.cz/">volby.gov.cz</a>: oficiální výsledky 2. kola, průběžně 14:17–17:38. Uloženo v <code>data/senat-results/r2-2026-10-17-*.json</code>.</li>
+<li>Kurzy Tipsport a Fortuna 17. 10. v 8:35, během hlasování: jen záznam, nehodnotí se (<code>raw-*-2026-10-17m-r2.txt</code>). Proti pátku se výrazně pohnula jen Karviná (Brzyszkowská 81,7 → 73,8 %).</li>
+</ul>
+<h3>Dál</h3>
+<p>Rozbor chyb a lekce pro další experimenty (kalibrace, souvislost mezi obvody, kurzy a objem sázek) zpracujeme zvlášť a v článku.</p></div><div class="card"><h2 style="margin-top:0">2026-10-16 — Den 15: hodnocené kurzy 2. kola, virtuální sázky a oprava STEM</h2><p><b>V kostce:</b> Před uzávěrkou ve 14:00 jsme naposledy přečetli kurzy. Toto čtení se hodnotí. Trh se od čtvrtka pohnul jen málo, nejvíc ve Žďáru (Klement 74 → 77 %). V Hradci se nově mírně přiklání k Ceralové Petrofové (50,8 %), takže jiného favorita než my má teď trh ve dvou obvodech, v Kladně a v Hradci. Ve zprávách jsme nenašli nic, co by měnilo předpověď. Seznam virtuálních sázek na 2. kolo je zamčený. Čísla externího benchmarku STEM jsme opravili na konečnou verzi grafu.</p>
 <h3>Zprávy (bez kurzů)</h3>
 <ul>
 <li>V pátečním hledání (Google News za poslední den, obecně i všech osm sporných duelů) byly hlavně praktické návody k volbě, rozhlasové duely a regionální texty „před finále“ (Kladno, Přerov, Karviná, Litovel, Hradec). Žádná nová podpora od vyřazených kandidátů. Ošťádal (Litovel) podle iDNES kampaň nedělá, z 1. kola je ale jasný favorit. <b>AI i AI s modelem beze změny.</b></li>
